@@ -1,0 +1,101 @@
+{
+  "_ui": {
+    "nodes": {
+      "9a9b40a3-0252-4521-8b1d-2fe9a71f571b": {
+        "position": {
+          "left": 340,
+          "top": 140
+        },
+        "type": "execute_actions"
+      },
+      "a62c269e-5a30-49ab-bcd5-b8b5680b7795": {
+        "position": {
+          "left": 340,
+          "top": 260
+        },
+        "type": "execute_actions"
+      },
+      "d9fb2424-ca7e-4eb8-9fbb-9cb6752b1c97": {
+        "position": {
+          "left": 340,
+          "top": 40
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Internal - Update survey counters",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "survey_parenting_count",
+            "name": "survey parenting count"
+          },
+          "type": "set_contact_field",
+          "uuid": "f398dc7c-b7f5-45e3-b8cf-8ab685682841",
+          "value": "@(if(fields.current_day_in_program>= 2, if(fields.survey_parenting_count<0,1, fields.survey_parenting_count), fields.survey_parenting_count))"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "9a9b40a3-0252-4521-8b1d-2fe9a71f571b",
+          "uuid": "af2174ef-072e-4e13-b80b-47003b987f4c"
+        }
+      ],
+      "uuid": "d9fb2424-ca7e-4eb8-9fbb-9cb6752b1c97"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "survey_behave_count",
+            "name": "survey behave count"
+          },
+          "type": "set_contact_field",
+          "uuid": "fde02661-dc64-4187-ba0a-0b7620e5a04f",
+          "value": "@(if(fields.current_day_in_program>= 2, if(fields.survey_behave_count<0,1, fields.survey_behave_count), fields.survey_behave_count))"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "a62c269e-5a30-49ab-bcd5-b8b5680b7795",
+          "uuid": "064c12fe-8cde-4e8e-ba1e-4c3b0ed44092"
+        }
+      ],
+      "uuid": "9a9b40a3-0252-4521-8b1d-2fe9a71f571b"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "survey_covid_count",
+            "name": "survey covid count"
+          },
+          "type": "set_contact_field",
+          "uuid": "62c23649-faa9-4daf-9fdf-6734cb23eb62",
+          "value": "@(if(fields.current_day_in_program>= 3, if(fields.survey_covid_count<0,1, fields.survey_covid_count), fields.survey_covid_count))"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "26cc3377-322d-470b-b83c-8019fca7c433"
+        }
+      ],
+      "uuid": "a62c269e-5a30-49ab-bcd5-b8b5680b7795"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "2215997f-8256-40ff-8f62-0dd4a8f574d8",
+  "revision": 1
+}

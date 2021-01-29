@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "5d20ad15-5bfd-4389-97d2-77b8f6866651": {
+        "position": {
+          "left": 0,
+          "top": 340
+        },
+        "type": "execute_actions"
+      },
+      "5d30ff57-9dfb-43df-b5fc-dfd41eff5e95": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "f84cbd50-4181-48da-b3c0-43918b15fa8e": {
+        "config": {},
+        "position": {
+          "left": 280,
+          "top": 440
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Active - Name that tune",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Name that tune\n•\tFirst person gets to choose or sing a song.\n•\tEveryone else must guess the name of the tune (to make it harder, they can guess the singer).\n•\tThe first one to guess it right becomes the next leader who will choose or sing the next song. ",
+          "type": "send_msg",
+          "uuid": "13f5cb5d-a771-495b-8985-8790fc2fe093"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "8c6ac546-7402-422e-ab0e-102b0b30cafa"
+        }
+      ],
+      "uuid": "5d30ff57-9dfb-43df-b5fc-dfd41eff5e95"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "fe5eae06-6436-4e3b-9911-c70bbedce133",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "cb9e1a51-d408-4e11-bf98-b78bd0310ddb",
+          "value": "Teen16"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f84cbd50-4181-48da-b3c0-43918b15fa8e",
+          "uuid": "276280a7-7ba9-41b3-b53c-a78ed9fd9fb1"
+        }
+      ],
+      "uuid": "5d20ad15-5bfd-4389-97d2-77b8f6866651"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "0ce9ae67-85d4-4371-884a-8c1de261eb02"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "fee24964-81d0-4685-b32f-dfad859e3b6c"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "26700f9b-0caa-4020-8854-b9a6b148361d"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "74be9292-cc37-400d-b509-351018055db6",
+            "type": "has_only_text",
+            "uuid": "2ffe7715-8e0f-44dd-9610-22ef2d45a28f"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "076e8511-8fad-404b-a630-93d615d0a8b6",
+            "type": "has_only_text",
+            "uuid": "d71331af-83c7-4f4b-927a-61e9b9a327c3"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "fee24964-81d0-4685-b32f-dfad859e3b6c",
+            "name": "Complete",
+            "uuid": "74be9292-cc37-400d-b509-351018055db6"
+          },
+          {
+            "exit_uuid": "26700f9b-0caa-4020-8854-b9a6b148361d",
+            "name": "Expired",
+            "uuid": "076e8511-8fad-404b-a630-93d615d0a8b6"
+          }
+        ],
+        "default_category_uuid": "076e8511-8fad-404b-a630-93d615d0a8b6",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "f84cbd50-4181-48da-b3c0-43918b15fa8e"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "ffdddcb6-b10a-49d6-8ebc-0b1dbacb4114",
+  "revision": 1
+}

@@ -1,0 +1,1410 @@
+{
+  "_ui": {
+    "nodes": {
+      "a3a1e383-2622-443d-ba26-90609302f6b5": {
+        "position": {
+          "left": 160,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "7587c68b-d551-45a7-905c-86166d02e809": {
+        "config": {},
+        "position": {
+          "left": 160,
+          "top": 100
+        },
+        "type": "split_by_subflow"
+      },
+      "4de314bf-5f73-48f4-8ab5-b6d3fc98df81": {
+        "position": {
+          "left": 680,
+          "top": 260
+        },
+        "type": "execute_actions"
+      },
+      "0a0bc6c6-c717-4768-a8a0-adfe23c4c4cd": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "from_theme",
+            "name": "from theme",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 160,
+          "top": 280
+        },
+        "type": "split_by_contact_field"
+      },
+      "04e45769-f9a4-4b53-a61c-45023de6d2d5": {
+        "position": {
+          "left": 680,
+          "top": 560
+        },
+        "type": "execute_actions"
+      },
+      "f7b430e7-f2ff-4732-a44d-9b64acf0238c": {
+        "position": {
+          "left": 940,
+          "top": 600
+        },
+        "type": "execute_actions"
+      },
+      "8973b381-64e0-4488-9549-008a6df6b3fe": {
+        "type": "split_by_contact_field",
+        "position": {
+          "left": 140,
+          "top": 720
+        },
+        "config": {
+          "operand": {
+            "id": "type_of_media",
+            "type": "field",
+            "name": "type of media"
+          },
+          "cases": {}
+        }
+      },
+      "289098ed-895f-44b7-a595-7a4e1349ceae": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 540,
+          "top": 740
+        },
+        "type": "wait_for_response"
+      },
+      "075aecfc-fe82-4e91-b277-e92dd1df6ee5": {
+        "position": {
+          "left": 80,
+          "top": 840
+        },
+        "type": "execute_actions"
+      },
+      "bf77e467-2c33-4051-9738-015c3fb993ce": {
+        "position": {
+          "left": 320,
+          "top": 880
+        },
+        "type": "execute_actions"
+      },
+      "f0ae00e0-6efb-4103-93f4-64a5159b58c6": {
+        "position": {
+          "left": 940,
+          "top": 1040
+        },
+        "type": "execute_actions"
+      },
+      "ba2ec9cd-ff8d-4b21-92da-aeb003c7ce3d": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 80,
+          "top": 1100
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "2dd539dd-0d3e-4cc6-bbf1-bcb711e257bf": {
+        "position": {
+          "left": 400,
+          "top": 1260
+        },
+        "type": "execute_actions"
+      },
+      "9f75deca-cc18-4c26-8767-f3bb3f4cdc4f": {
+        "position": {
+          "left": 660,
+          "top": 1360
+        },
+        "type": "execute_actions"
+      },
+      "999c2947-1005-47a4-bbc2-595bada258c8": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 420,
+          "top": 1580
+        },
+        "type": "wait_for_response"
+      },
+      "b9e0821e-77b0-45b7-997e-f64d3576eac7": {
+        "position": {
+          "left": 240,
+          "top": 1720
+        },
+        "type": "execute_actions"
+      },
+      "2b89ab57-233d-43a8-9557-023843f45b24": {
+        "position": {
+          "left": 520,
+          "top": 1720
+        },
+        "type": "execute_actions"
+      },
+      "7c6bad5d-fa5a-4e8d-9c96-fd638f84a0cc": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 600,
+          "top": 2000
+        },
+        "type": "wait_for_response"
+      },
+      "4cf59ce3-b5d6-41a2-aa1d-5167a38e4745": {
+        "position": {
+          "left": 200,
+          "top": 2060
+        },
+        "type": "execute_actions"
+      },
+      "0bce6963-4929-4934-b289-b405a5a31fa3": {
+        "position": {
+          "left": 820,
+          "top": 2140
+        },
+        "type": "execute_actions"
+      },
+      "e66f5d60-a586-4a22-a5cc-c126dfc54b3e": {
+        "position": {
+          "left": 420,
+          "top": 2200
+        },
+        "type": "execute_actions"
+      },
+      "e8ba0a99-1027-4560-b835-8741c63b6e62": {
+        "position": {
+          "left": 1140,
+          "top": 2480
+        },
+        "type": "execute_actions"
+      },
+      "082f76d4-5de3-4a67-b0f9-b3af47d4bc59": {
+        "position": {
+          "left": 400,
+          "top": 2640
+        },
+        "type": "execute_actions"
+      },
+      "818edfaa-cc6b-4da0-b9b9-f4d8057e9b25": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 800,
+          "top": 2640
+        },
+        "type": "wait_for_response"
+      },
+      "c6591b69-86f9-4d47-abf8-bf82c23dbd6f": {
+        "position": {
+          "left": 380,
+          "top": 2840
+        },
+        "type": "execute_actions"
+      },
+      "97dfb92b-19e8-4ad6-907b-a816d6e32e31": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 880,
+          "top": 3160
+        },
+        "type": "wait_for_response"
+      },
+      "23d5f9aa-6dad-43f9-bef7-5696ddfb267c": {
+        "position": {
+          "left": 460,
+          "top": 3220
+        },
+        "type": "execute_actions"
+      },
+      "92eb71f4-0571-4d59-9119-751b1fd750ea": {
+        "position": {
+          "left": 960,
+          "top": 3340
+        },
+        "type": "execute_actions"
+      },
+      "efefb1d3-9f62-4e8d-a8b5-6e109fdb9568": {
+        "position": {
+          "left": 440,
+          "top": 3400
+        },
+        "type": "execute_actions"
+      },
+      "71ff5fe5-85b0-4c3e-a461-821ccd392929": {
+        "position": {
+          "left": 300,
+          "top": 3760
+        },
+        "type": "execute_actions"
+      },
+      "46035216-74fe-4cf9-bb51-a1e44a338128": {
+        "position": {
+          "left": 820,
+          "top": 3840
+        },
+        "type": "execute_actions"
+      },
+      "c20569e6-7a2b-4eda-b14c-c2c8c9f8c836": {
+        "position": {
+          "left": 420,
+          "top": 4000
+        },
+        "type": "execute_actions"
+      },
+      "078fc1db-b7f1-4e76-9362-9ff70d705088": {
+        "config": {},
+        "position": {
+          "left": 300,
+          "top": 4080
+        },
+        "type": "split_by_subflow"
+      },
+      "67baaedf-c81f-4976-8a84-62e5e14831d0": {
+        "config": {},
+        "position": {
+          "left": 720,
+          "top": 4120
+        },
+        "type": "split_by_subflow"
+      },
+      "0c154448-a2fa-48de-b0b8-e99ed89de34d": {
+        "position": {
+          "left": 640,
+          "top": 4400
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 19
+  },
+  "name": "PLH - Content - Positive - Budget with children",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "category": "",
+          "name": "skill",
+          "type": "set_run_result",
+          "uuid": "273763d2-394a-494d-8bc2-dfac93f15236",
+          "value": "Family budgeting"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7587c68b-d551-45a7-905c-86166d02e809",
+          "uuid": "e1560ebd-181b-451f-8617-c13f66624140"
+        }
+      ],
+      "uuid": "a3a1e383-2622-443d-ba26-90609302f6b5"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Update incomplete toolkits",
+            "uuid": "a682c361-8bea-420a-8bbc-fc84a202fbcb"
+          },
+          "type": "enter_flow",
+          "uuid": "cc087f40-7c22-4a4a-b34f-4a016f9ac51d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0a0bc6c6-c717-4768-a8a0-adfe23c4c4cd",
+          "uuid": "04c1093e-a753-4bce-b868-4402a3bbb1cf"
+        },
+        {
+          "destination_uuid": "0a0bc6c6-c717-4768-a8a0-adfe23c4c4cd",
+          "uuid": "523ce419-812b-46ca-83eb-e2eac5c31002"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "ddc253ea-7020-4664-a446-96a78ce305b9",
+            "type": "has_only_text",
+            "uuid": "43cb8d04-562a-450f-bcff-4427d0785a55"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "f4d09532-c623-46e1-802b-790c84c0d829",
+            "type": "has_only_text",
+            "uuid": "bfc88c48-1a46-44de-8b27-7596b2b441bf"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "04c1093e-a753-4bce-b868-4402a3bbb1cf",
+            "name": "Complete",
+            "uuid": "ddc253ea-7020-4664-a446-96a78ce305b9"
+          },
+          {
+            "exit_uuid": "523ce419-812b-46ca-83eb-e2eac5c31002",
+            "name": "Expired",
+            "uuid": "f4d09532-c623-46e1-802b-790c84c0d829"
+          }
+        ],
+        "default_category_uuid": "f4d09532-c623-46e1-802b-790c84c0d829",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "7587c68b-d551-45a7-905c-86166d02e809"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Millions of families are struggling to make ends meet. When money is tight, this can make us feel anxious, stressed, and sad. How we understand and talk about money with our children is important. Our children can also help us to spend and save in ways that will benefit the family.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "f49f45c8-127a-4d13-85d8-f4cf81b89106"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "04e45769-f9a4-4b53-a61c-45023de6d2d5",
+          "uuid": "fd707941-a384-4b51-9a66-260b34c663a3"
+        }
+      ],
+      "uuid": "4de314bf-5f73-48f4-8ab5-b6d3fc98df81"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "8973b381-64e0-4488-9549-008a6df6b3fe",
+          "uuid": "4acf423b-2098-4498-92de-3310a051616f"
+        },
+        {
+          "destination_uuid": "4de314bf-5f73-48f4-8ab5-b6d3fc98df81",
+          "uuid": "6a2ec956-5215-407c-940a-c5a6ef18d3d9"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes"
+            ],
+            "category_uuid": "46a25b83-bf2a-4c79-9f46-73cbe60f810a",
+            "type": "has_any_word",
+            "uuid": "0bdf3a03-12cf-4eb8-aa62-5c50b97213f5"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "4acf423b-2098-4498-92de-3310a051616f",
+            "name": "Yes",
+            "uuid": "46a25b83-bf2a-4c79-9f46-73cbe60f810a"
+          },
+          {
+            "exit_uuid": "6a2ec956-5215-407c-940a-c5a6ef18d3d9",
+            "name": "Other",
+            "uuid": "b5300083-dfcd-4df9-a778-6d44682b231c"
+          }
+        ],
+        "default_category_uuid": "b5300083-dfcd-4df9-a778-6d44682b231c",
+        "operand": "@fields.from_theme",
+        "type": "switch"
+      },
+      "uuid": "0a0bc6c6-c717-4768-a8a0-adfe23c4c4cd"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image:@(fields.image_path & \"family_budgeting.jpg\")"
+          ],
+          "text": "Would you like to learn more about this tip?",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "uuid": "189a3124-e971-43f3-ae85-3b5bd8ce0b7a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "289098ed-895f-44b7-a595-7a4e1349ceae",
+          "uuid": "2829b36e-eac2-4064-a1da-d46571ede2db"
+        }
+      ],
+      "uuid": "04e45769-f9a4-4b53-a61c-45023de6d2d5"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "01b45836-3541-4a7a-9eae-4cc114db621a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "04e45769-f9a4-4b53-a61c-45023de6d2d5",
+          "uuid": "6dc9e720-804f-4044-be01-0a603870ab79"
+        }
+      ],
+      "uuid": "f7b430e7-f2ff-4732-a44d-9b64acf0238c"
+    },
+    {
+      "uuid": "8973b381-64e0-4488-9549-008a6df6b3fe",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "59822f32-8b93-4b49-afd8-b3937004580f",
+        "cases": [
+          {
+            "arguments": [
+              "high"
+            ],
+            "type": "has_any_word",
+            "uuid": "8a644ab0-7d0c-4934-9899-612c209fa324",
+            "category_uuid": "a86f9f43-59c4-4c53-ae69-5342e72383fd"
+          },
+          {
+            "arguments": [
+              "medium"
+            ],
+            "type": "has_any_word",
+            "uuid": "69c05e56-6d32-4538-8d76-b5c23eb0a613",
+            "category_uuid": "c3eb8550-c66f-459b-b959-a15081277fb9"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "75fbb598-9dd1-40c7-9f72-b4a7c2fbf719",
+            "name": "High",
+            "uuid": "a86f9f43-59c4-4c53-ae69-5342e72383fd"
+          },
+          {
+            "uuid": "c3eb8550-c66f-459b-b959-a15081277fb9",
+            "name": "Medium",
+            "exit_uuid": "118c4277-ed2e-4a20-9d3a-7f167b4f152e"
+          },
+          {
+            "exit_uuid": "a5e85a6d-c170-4ad3-95e3-6e475b596047",
+            "name": "Other",
+            "uuid": "59822f32-8b93-4b49-afd8-b3937004580f"
+          }
+        ],
+        "operand": "@fields.type_of_media"
+      },
+      "exits": [
+        {
+          "destination_uuid": "075aecfc-fe82-4e91-b277-e92dd1df6ee5",
+          "uuid": "75fbb598-9dd1-40c7-9f72-b4a7c2fbf719"
+        },
+        {
+          "uuid": "118c4277-ed2e-4a20-9d3a-7f167b4f152e",
+          "destination_uuid": "bf77e467-2c33-4051-9738-015c3fb993ce"
+        },
+        {
+          "destination_uuid": "2dd539dd-0d3e-4cc6-bbf1-bcb711e257bf",
+          "uuid": "a5e85a6d-c170-4ad3-95e3-6e475b596047"
+        }
+      ]
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "8973b381-64e0-4488-9549-008a6df6b3fe",
+          "uuid": "2f293701-a09b-4bf8-83da-5077a222fcaa"
+        },
+        {
+          "destination_uuid": "f0ae00e0-6efb-4103-93f4-64a5159b58c6",
+          "uuid": "b35c0a8c-e1f8-4f9d-8ede-db8dbbc66f66"
+        },
+        {
+          "destination_uuid": "f7b430e7-f2ff-4732-a44d-9b64acf0238c",
+          "uuid": "06177f1e-3a85-4677-aa67-5ab6d41e8e61"
+        },
+        {
+          "destination_uuid": "f0ae00e0-6efb-4103-93f4-64a5159b58c6",
+          "uuid": "8f6a4982-66c5-426e-bdf0-cf4e68a9bcab"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes y"
+            ],
+            "category_uuid": "b1ef8141-8317-43b3-94ef-5598b4897f94",
+            "type": "has_any_word",
+            "uuid": "399cb75b-f840-4dc6-83c2-5d55a604e09c"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "d306c3e1-74f7-4ea3-b6d5-8aaee61c1f22",
+            "type": "has_any_word",
+            "uuid": "06081da2-75d4-43dd-9429-a91f7503a433"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "2f293701-a09b-4bf8-83da-5077a222fcaa",
+            "name": "Yes",
+            "uuid": "b1ef8141-8317-43b3-94ef-5598b4897f94"
+          },
+          {
+            "exit_uuid": "b35c0a8c-e1f8-4f9d-8ede-db8dbbc66f66",
+            "name": "No",
+            "uuid": "d306c3e1-74f7-4ea3-b6d5-8aaee61c1f22"
+          },
+          {
+            "exit_uuid": "06177f1e-3a85-4677-aa67-5ab6d41e8e61",
+            "name": "Other",
+            "uuid": "083a63df-6024-45f3-bd9f-16d1bf7bc601"
+          },
+          {
+            "exit_uuid": "8f6a4982-66c5-426e-bdf0-cf4e68a9bcab",
+            "name": "No Response",
+            "uuid": "c81eee37-4e3f-4ddc-9504-c56c176eee1d"
+          }
+        ],
+        "default_category_uuid": "083a63df-6024-45f3-bd9f-16d1bf7bc601",
+        "operand": "@input.text",
+        "result_name": "Result 3",
+        "type": "switch",
+        "wait": {
+          "timeout": {
+            "category_uuid": "c81eee37-4e3f-4ddc-9504-c56c176eee1d",
+            "seconds": 3600
+          },
+          "type": "msg"
+        }
+      },
+      "uuid": "289098ed-895f-44b7-a595-7a4e1349ceae"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "video:@(fields.voiceover_video_path & \"Family_Budgeting.m4v\")"
+          ],
+          "text": "Here's a video to help you make a budget and save money together as a family.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "fc483902-4e1e-468e-a0b4-d0be03a7f55b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "ba2ec9cd-ff8d-4b21-92da-aeb003c7ce3d",
+          "uuid": "88dda4cd-4e7c-4251-bf4a-17aeb625f048"
+        }
+      ],
+      "uuid": "075aecfc-fe82-4e91-b277-e92dd1df6ee5"
+    },
+    {
+      "uuid": "bf77e467-2c33-4051-9738-015c3fb993ce",
+      "actions": [
+        {
+          "attachments": [
+            "audio:@(fields.voiceover_audio_path & \"Family_Budgeting.mp3\")"
+          ],
+          "text": "Here's an audio message to help you make a budget and save money together as a family.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "f8bf8c85-3c8c-4370-83d9-aaf2e8a67d3f"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "6d937bea-e7d5-4405-b4a7-e63db6ab7ce0",
+          "destination_uuid": "ba2ec9cd-ff8d-4b21-92da-aeb003c7ce3d"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always type \"Help\" at anytime if you want this tip at another time. Chat to you later!",
+          "type": "send_msg",
+          "uuid": "95279939-e6fa-4cc5-aed1-20477a0a4fbe"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "6644d67f-3691-4882-ba7f-19a37a8d44e5"
+        }
+      ],
+      "uuid": "f0ae00e0-6efb-4103-93f4-64a5159b58c6"
+    },
+    {
+      "uuid": "ba2ec9cd-ff8d-4b21-92da-aeb003c7ce3d",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "e9342a71-c581-4fc5-9fce-b2c74db04776",
+        "cases": [],
+        "categories": [
+          {
+            "uuid": "e9342a71-c581-4fc5-9fce-b2c74db04776",
+            "name": "All Responses",
+            "exit_uuid": "4ae359af-5906-4989-bdd2-d93bf080f597"
+          },
+          {
+            "uuid": "7452132b-5894-44a5-a584-27af8299abd2",
+            "name": "No Response",
+            "exit_uuid": "f3dd950a-9966-4beb-b1da-779155344dc3"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg",
+          "timeout": {
+            "seconds": 120,
+            "category_uuid": "7452132b-5894-44a5-a584-27af8299abd2"
+          }
+        },
+        "result_name": "Result 8"
+      },
+      "exits": [
+        {
+          "uuid": "4ae359af-5906-4989-bdd2-d93bf080f597",
+          "destination_uuid": "2dd539dd-0d3e-4cc6-bbf1-bcb711e257bf"
+        },
+        {
+          "uuid": "f3dd950a-9966-4beb-b1da-779155344dc3",
+          "destination_uuid": "2dd539dd-0d3e-4cc6-bbf1-bcb711e257bf"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Making a budget with your children and teens.\nA budget is how we decide what we will spend our money on, even in stressful times. Making a budget together helps children understand that we all need to make hard decisions in difficult times. It can also help you have enough at the end of the month so that you need to borrow less.",
+          "type": "send_msg",
+          "uuid": "de4c7256-14f7-49bc-a209-60e1ae72199a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "9f75deca-cc18-4c26-8767-f3bb3f4cdc4f",
+          "uuid": "e4b0de85-cec7-408b-8925-0abaadd43b0d"
+        }
+      ],
+      "uuid": "2dd539dd-0d3e-4cc6-bbf1-bcb711e257bf"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "Do you want 4 quick steps to help you make a budget and save money with your children?",
+          "type": "send_msg",
+          "uuid": "84f889be-5d6f-4f4f-aa2f-5925b77ec71a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "999c2947-1005-47a4-bbc2-595bada258c8",
+          "uuid": "7086fe3e-59de-48bb-90a8-ff071b8be70d"
+        }
+      ],
+      "uuid": "9f75deca-cc18-4c26-8767-f3bb3f4cdc4f"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "b9e0821e-77b0-45b7-997e-f64d3576eac7",
+          "uuid": "1cfe7dce-7b32-4d4e-86a2-cb719d60cf48"
+        },
+        {
+          "destination_uuid": "f0ae00e0-6efb-4103-93f4-64a5159b58c6",
+          "uuid": "655b30a6-aa75-4b9a-98d1-9f9f24926af0"
+        },
+        {
+          "destination_uuid": "2b89ab57-233d-43a8-9557-023843f45b24",
+          "uuid": "e48f5ea9-7ce8-40c8-8ba5-35df6355e2c7"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes y"
+            ],
+            "category_uuid": "def9ed17-9895-4ac7-8a50-15ba8a48d35c",
+            "type": "has_any_word",
+            "uuid": "fda48328-cb56-4f62-aba3-1c19bf63f983"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "f0151c93-d2df-4ff8-9141-1e144cf28f58",
+            "type": "has_any_word",
+            "uuid": "8305a59b-c293-4ee4-b852-528ce307dd04"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "1cfe7dce-7b32-4d4e-86a2-cb719d60cf48",
+            "name": "Yes",
+            "uuid": "def9ed17-9895-4ac7-8a50-15ba8a48d35c"
+          },
+          {
+            "exit_uuid": "655b30a6-aa75-4b9a-98d1-9f9f24926af0",
+            "name": "No",
+            "uuid": "f0151c93-d2df-4ff8-9141-1e144cf28f58"
+          },
+          {
+            "exit_uuid": "e48f5ea9-7ce8-40c8-8ba5-35df6355e2c7",
+            "name": "Other",
+            "uuid": "82c28686-05dc-4aee-9e52-9d677765d3fe"
+          }
+        ],
+        "default_category_uuid": "82c28686-05dc-4aee-9e52-9d677765d3fe",
+        "operand": "@input.text",
+        "result_name": "Result 4",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "999c2947-1005-47a4-bbc2-595bada258c8"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Step 1: What do we spend on now?\n\n• Get a piece of paper (or old newspaper or a cardboard box) and a pen.\n• Draw pictures of all the things that you and your family spend money on each month.\n• Write next to each picture how much each thing costs.\n• Add up how much money you have to spend each month.",
+          "type": "send_msg",
+          "uuid": "85818441-b98c-48c6-a013-6188182e057c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "4cf59ce3-b5d6-41a2-aa1d-5167a38e4745",
+          "uuid": "e3cd4961-52a7-4d44-8fc2-88a74839d7be"
+        }
+      ],
+      "uuid": "b9e0821e-77b0-45b7-997e-f64d3576eac7"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "e6c254e9-46b8-4baa-94b9-7e28ed822273"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "9f75deca-cc18-4c26-8767-f3bb3f4cdc4f",
+          "uuid": "73f2b4c2-1626-46f2-b250-e07c0457cd0b"
+        }
+      ],
+      "uuid": "2b89ab57-233d-43a8-9557-023843f45b24"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "e66f5d60-a586-4a22-a5cc-c126dfc54b3e",
+          "uuid": "570abf25-0476-45d4-9bb8-f9d4e37dfa8d"
+        },
+        {
+          "destination_uuid": "f0ae00e0-6efb-4103-93f4-64a5159b58c6",
+          "uuid": "d15708c8-7813-455b-a7ad-ecdbf102d2eb"
+        },
+        {
+          "destination_uuid": "0bce6963-4929-4934-b289-b405a5a31fa3",
+          "uuid": "ebb4311a-6250-466a-a508-994f444149cd"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes y"
+            ],
+            "category_uuid": "29c4cf72-de91-498f-8d4d-bd0b430aabc3",
+            "type": "has_any_word",
+            "uuid": "48de0c8c-0516-4121-9cda-512366635ddf"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "3d778cfa-21ff-4bc3-83cb-bfff7999e6cf",
+            "type": "has_any_word",
+            "uuid": "e003d202-7301-43e7-871d-cc48742d9dcb"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "570abf25-0476-45d4-9bb8-f9d4e37dfa8d",
+            "name": "Yes",
+            "uuid": "29c4cf72-de91-498f-8d4d-bd0b430aabc3"
+          },
+          {
+            "exit_uuid": "d15708c8-7813-455b-a7ad-ecdbf102d2eb",
+            "name": "No",
+            "uuid": "3d778cfa-21ff-4bc3-83cb-bfff7999e6cf"
+          },
+          {
+            "exit_uuid": "ebb4311a-6250-466a-a508-994f444149cd",
+            "name": "Other",
+            "uuid": "ae24473b-e15c-4a37-8dd4-7cc858e19af9"
+          }
+        ],
+        "default_category_uuid": "ae24473b-e15c-4a37-8dd4-7cc858e19af9",
+        "operand": "@input.text",
+        "result_name": "Result 5",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "7c6bad5d-fa5a-4e8d-9c96-fd638f84a0cc"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image:@(fields.image_path & \"draw_budget.jpg\")"
+          ],
+          "text": "Do you want to receive Step 2? ",
+          "type": "send_msg",
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "uuid": "252c39dd-0d4a-48db-a11c-708baa3e9940"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7c6bad5d-fa5a-4e8d-9c96-fd638f84a0cc",
+          "uuid": "49fbbb02-2649-454e-8cac-633e826e38a4"
+        }
+      ],
+      "uuid": "4cf59ce3-b5d6-41a2-aa1d-5167a38e4745"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean. ",
+          "type": "send_msg",
+          "uuid": "5d771405-e99d-4468-a7a7-6c031ededd5a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "4cf59ce3-b5d6-41a2-aa1d-5167a38e4745",
+          "uuid": "398a3ff0-17cc-4e32-bb1e-86c399efb9bb"
+        }
+      ],
+      "uuid": "0bce6963-4929-4934-b289-b405a5a31fa3"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Step 2: Talk about needs and wants\n\n• Needs: Which things are important or must haves for your family to survive? (like food, soap to wash hands, needs for ill or disabled family members).\n• Wants: Which things are nice to have but not essential?\n• Discuss with your children what things you could try to spend less on as a family.",
+          "type": "send_msg",
+          "uuid": "dbe1b039-ce9b-4f9f-bcd6-e1cdca78f43d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "082f76d4-5de3-4a67-b0f9-b3af47d4bc59",
+          "uuid": "15219047-af07-4cba-8990-d2c550718a3a"
+        }
+      ],
+      "uuid": "e66f5d60-a586-4a22-a5cc-c126dfc54b3e"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "3973e8fd-de81-4c3e-9237-0de28bf1b2c1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "082f76d4-5de3-4a67-b0f9-b3af47d4bc59",
+          "uuid": "0a355e22-74f7-463d-a485-14b43a5d2def"
+        }
+      ],
+      "uuid": "e8ba0a99-1027-4560-b835-8741c63b6e62"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "Do you want to receive Step 3?",
+          "type": "send_msg",
+          "uuid": "acb967eb-60b8-4477-9fa4-5608997c563c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "818edfaa-cc6b-4da0-b9b9-f4d8057e9b25",
+          "uuid": "655ddf28-ae25-4e26-a808-f2a209b8b4ad"
+        }
+      ],
+      "uuid": "082f76d4-5de3-4a67-b0f9-b3af47d4bc59"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "c6591b69-86f9-4d47-abf8-bf82c23dbd6f",
+          "uuid": "066cc6f3-ebab-4dec-a3e1-98723ac5c0a7"
+        },
+        {
+          "destination_uuid": "f0ae00e0-6efb-4103-93f4-64a5159b58c6",
+          "uuid": "0afedb90-2c77-4aa1-8908-c2997a0c5add"
+        },
+        {
+          "destination_uuid": "e8ba0a99-1027-4560-b835-8741c63b6e62",
+          "uuid": "14a88954-ee15-4bf4-9952-2d5a570e54ab"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes y"
+            ],
+            "category_uuid": "aa8fcfcf-27f2-41fa-b90d-6ce0f90261bf",
+            "type": "has_any_word",
+            "uuid": "b5655232-7020-444b-a62b-e4bf853b4883"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "a3dd2754-b4cb-4f23-8ff7-d4228634450a",
+            "type": "has_any_word",
+            "uuid": "fc61bd55-7cfe-40b1-aef6-5ff0e371e071"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "066cc6f3-ebab-4dec-a3e1-98723ac5c0a7",
+            "name": "Yes",
+            "uuid": "aa8fcfcf-27f2-41fa-b90d-6ce0f90261bf"
+          },
+          {
+            "exit_uuid": "0afedb90-2c77-4aa1-8908-c2997a0c5add",
+            "name": "No",
+            "uuid": "a3dd2754-b4cb-4f23-8ff7-d4228634450a"
+          },
+          {
+            "exit_uuid": "14a88954-ee15-4bf4-9952-2d5a570e54ab",
+            "name": "Other",
+            "uuid": "d1159116-f650-4de0-a648-0753974de865"
+          }
+        ],
+        "default_category_uuid": "d1159116-f650-4de0-a648-0753974de865",
+        "operand": "@input.text",
+        "result_name": "Result 6",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "818edfaa-cc6b-4da0-b9b9-f4d8057e9b25"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Step 3: Build your own budget\n\n• Find a bag of stones or anything with lots of bits. This is your money for the month.\n• As a family, decide what you will spend on what, and put the stones on your picture.\n• If you can save even a tiny amount for the future, or for an emergency  – it can make a big difference over time.",
+          "type": "send_msg",
+          "uuid": "b108a138-cb14-4432-882b-5befa5183098"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "23d5f9aa-6dad-43f9-bef7-5696ddfb267c",
+          "uuid": "3c112044-0c65-4053-922d-ac04e167c3ec"
+        }
+      ],
+      "uuid": "c6591b69-86f9-4d47-abf8-bf82c23dbd6f"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "efefb1d3-9f62-4e8d-a8b5-6e109fdb9568",
+          "uuid": "37ab898e-a41d-47f1-81d7-d2e683074d93"
+        },
+        {
+          "destination_uuid": "f0ae00e0-6efb-4103-93f4-64a5159b58c6",
+          "uuid": "ca259e23-94e7-4b54-848a-b0e259f03fa8"
+        },
+        {
+          "destination_uuid": "92eb71f4-0571-4d59-9119-751b1fd750ea",
+          "uuid": "93e56dc2-440e-4add-8e17-832a3add731b"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes y"
+            ],
+            "category_uuid": "7a493868-73fb-4cb4-9de7-38f90cba0605",
+            "type": "has_any_word",
+            "uuid": "fa712a0f-c074-4eac-88d8-f4d114d8b791"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "ae9329ba-fc55-41ab-a8b8-dd1d54516f17",
+            "type": "has_any_word",
+            "uuid": "8032c09d-eeea-4e8e-8be2-f6c4eafa1195"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "37ab898e-a41d-47f1-81d7-d2e683074d93",
+            "name": "Yes",
+            "uuid": "7a493868-73fb-4cb4-9de7-38f90cba0605"
+          },
+          {
+            "exit_uuid": "ca259e23-94e7-4b54-848a-b0e259f03fa8",
+            "name": "No",
+            "uuid": "ae9329ba-fc55-41ab-a8b8-dd1d54516f17"
+          },
+          {
+            "exit_uuid": "93e56dc2-440e-4add-8e17-832a3add731b",
+            "name": "Other",
+            "uuid": "006071db-f51a-4ece-830c-809193d32839"
+          }
+        ],
+        "default_category_uuid": "006071db-f51a-4ece-830c-809193d32839",
+        "operand": "@input.text",
+        "result_name": "Result 7",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "97dfb92b-19e8-4ad6-907b-a816d6e32e31"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "Do you want to receive Step 4?",
+          "type": "send_msg",
+          "uuid": "cf2bd8a0-da1a-45c7-990e-c4393787c58a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "97dfb92b-19e8-4ad6-907b-a816d6e32e31",
+          "uuid": "da097d8c-ebf3-4daa-8aca-f94d0506bf9a"
+        }
+      ],
+      "uuid": "23d5f9aa-6dad-43f9-bef7-5696ddfb267c"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean. ",
+          "type": "send_msg",
+          "uuid": "465d6c23-d4a3-4a6f-9244-1d2454a92841"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "23d5f9aa-6dad-43f9-bef7-5696ddfb267c",
+          "uuid": "aa3ab0ff-9b39-402d-8efd-49252052468e"
+        }
+      ],
+      "uuid": "92eb71f4-0571-4d59-9119-751b1fd750ea"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Step 4: Find out where you can get extra help\n\nYour government or community groups may be giving money, vouchers, or food parcels to families in need. Ask about whether places in your community are giving support.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "a8867939-bb7e-4320-9815-c685027b0e02"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "71ff5fe5-85b0-4c3e-a461-821ccd392929",
+          "uuid": "9d5f309c-62d4-4f1d-9796-9448b792be62"
+        }
+      ],
+      "uuid": "efefb1d3-9f62-4e8d-a8b5-6e109fdb9568"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Well done for adding another tool to your Parenting Toolkit! Millions of families find that learning ways to manage money as a family reduces family arguments and brings everyone together. That's real success!",
+          "type": "send_msg",
+          "uuid": "9dd32b6e-ab25-47e0-8b6d-7386c504d9d6"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "c20569e6-7a2b-4eda-b14c-c2c8c9f8c836",
+          "uuid": "7dec4442-ac3d-4d4f-847f-ad95f89ff52f"
+        }
+      ],
+      "uuid": "71ff5fe5-85b0-4c3e-a461-821ccd392929"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "81c2b1f6-65f0-47ab-aabe-00b20d87ede7",
+          "value": "budget"
+        },
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "8b3c1a3e-f12e-4e5e-b968-c7f97f6bd8bb",
+          "value": "tip"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "67baaedf-c81f-4976-8a84-62e5e14831d0",
+          "uuid": "b1a13c56-08ca-43fe-aed9-c0d988ec91fc"
+        }
+      ],
+      "uuid": "46035216-74fe-4cf9-bb51-a1e44a338128"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "0e5ed5f8-419d-45dd-b40f-e409932e276d",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "078fc1db-b7f1-4e76-9362-9ff70d705088",
+          "uuid": "a2f88b85-f76d-424e-b8f2-94f2f5d70db3"
+        }
+      ],
+      "uuid": "c20569e6-7a2b-4eda-b14c-c2c8c9f8c836"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Update toolkits",
+            "uuid": "074bc4c5-8c69-4e5b-9176-79b44bfa40da"
+          },
+          "type": "enter_flow",
+          "uuid": "2c251c7c-fe12-43e3-95fd-f5d5d0603f08"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "46035216-74fe-4cf9-bb51-a1e44a338128",
+          "uuid": "2028c12f-423d-4d8c-b16b-3de90935eae6"
+        },
+        {
+          "destination_uuid": "67baaedf-c81f-4976-8a84-62e5e14831d0",
+          "uuid": "db08b3f7-71ce-4067-b706-ea7203642380"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "0bd1bb64-1776-4c2d-b592-6040dd00568c",
+            "type": "has_only_text",
+            "uuid": "5a20b781-e3f2-46e5-96bc-32ee40ff8584"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "6c85e18c-2918-403a-88e3-e2c4658a7af6",
+            "type": "has_only_text",
+            "uuid": "9925f26f-b3c0-4d1c-92d9-60dfb224576b"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "2028c12f-423d-4d8c-b16b-3de90935eae6",
+            "name": "Complete",
+            "uuid": "0bd1bb64-1776-4c2d-b592-6040dd00568c"
+          },
+          {
+            "exit_uuid": "db08b3f7-71ce-4067-b706-ea7203642380",
+            "name": "Expired",
+            "uuid": "6c85e18c-2918-403a-88e3-e2c4658a7af6"
+          }
+        ],
+        "default_category_uuid": "6c85e18c-2918-403a-88e3-e2c4658a7af6",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "078fc1db-b7f1-4e76-9362-9ff70d705088"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Feedback - Feedback for content",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "f6003f5d-b090-48bc-87bb-1059ea81914f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0c154448-a2fa-48de-b0b8-e99ed89de34d",
+          "uuid": "b967b142-7317-4981-9e39-6249c615ea42"
+        },
+        {
+          "destination_uuid": "0c154448-a2fa-48de-b0b8-e99ed89de34d",
+          "uuid": "4348b8a6-f6b9-4689-bfdf-18bbfbb5c050"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "253ae747-9d37-45e7-bfca-42db46ad1fd6",
+            "type": "has_only_text",
+            "uuid": "dd9ed066-57d6-495d-8426-bbe5bb65b276"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "4fc8fbe6-fd4f-4c98-a12c-b698265e6131",
+            "type": "has_only_text",
+            "uuid": "100e83da-ebfb-4eb7-8cb7-17be10eb5b2f"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "b967b142-7317-4981-9e39-6249c615ea42",
+            "name": "Complete",
+            "uuid": "253ae747-9d37-45e7-bfca-42db46ad1fd6"
+          },
+          {
+            "exit_uuid": "4348b8a6-f6b9-4689-bfdf-18bbfbb5c050",
+            "name": "Expired",
+            "uuid": "4fc8fbe6-fd4f-4c98-a12c-b698265e6131"
+          }
+        ],
+        "default_category_uuid": "4fc8fbe6-fd4f-4c98-a12c-b698265e6131",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "67baaedf-c81f-4976-8a84-62e5e14831d0"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Remember you can always type \"Help\" if you ever want more parenting tips or support. Chat to you later!",
+          "type": "send_msg",
+          "uuid": "8713528e-cefa-4bfd-aa40-bd8bc95f6705"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "59e48d4f-f748-467a-b72a-3195c81ac629"
+        }
+      ],
+      "uuid": "0c154448-a2fa-48de-b0b8-e99ed89de34d"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "00149311-fe8d-47e2-a4a2-6c99f9dc9f53",
+  "revision": 20
+}

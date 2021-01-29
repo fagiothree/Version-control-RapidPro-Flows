@@ -1,0 +1,69 @@
+{
+  "_ui": {
+    "nodes": {
+      "9b943d09-f64e-4a39-833a-7febf47441d3": {
+        "position": {
+          "left": 640,
+          "top": 180
+        },
+        "type": "execute_actions"
+      },
+      "0919cf9e-82b9-4ba2-9fac-f8bd6dd5b839": {
+        "position": {
+          "left": 1140,
+          "top": 500
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 14
+  },
+  "name": "PLH - Introductory - First message",
+  "nodes": [
+    {
+      "uuid": "9b943d09-f64e-4a39-833a-7febf47441d3",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Good morning! We are so happy to be sharing these parenting tips with you. ",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "6e3566de-552a-4a5f-8b84-09990375eea5"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "2d2e8cda-255b-43f0-99fc-988c0eb24b48",
+          "destination_uuid": null
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Good morning! We are so happy to be  sharing these parenting tips with you. They were developed by Parenting for Lifelong Health (PLH) with the WHO and UNICEF for YOU. They include advice on parenting and reducing stress, as well as lots of fun activities to do with your children.\n\nYou can also come back to any topic at any time by typing \"Help\".\n\nYou can always choose to stop receiving messages by typing \"Help\" and then selecting \"Technical support\".",
+          "type": "send_msg",
+          "uuid": "90800a30-34ef-4586-a855-049a908fef1f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "2466cdda-d7f6-4b60-9ec2-14476e64c8e8"
+        }
+      ],
+      "uuid": "0919cf9e-82b9-4ba2-9fac-f8bd6dd5b839"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "097ff24d-577e-4179-b2dd-ee7c37317f4d",
+  "revision": 17
+}

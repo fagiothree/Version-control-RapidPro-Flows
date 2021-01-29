@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "492c52af-37ed-4ce1-b28d-3f6635fc60c9": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "df5379cf-05dc-46e3-9deb-5347714ad5e4": {
+        "config": {},
+        "position": {
+          "left": 180,
+          "top": 500
+        },
+        "type": "split_by_subflow"
+      },
+      "e25f4018-434f-4537-ac88-659800f1e19c": {
+        "position": {
+          "left": 0,
+          "top": 320
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Active - Name that tune",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Name that tune\n•\tFirst person gets to choose or sing a song.\n•\tEveryone else must guess the name of the tune (to make it harder they can guess the singer).\n•\tThe first one to guess it right becomes the next leader who will choose or sing the next song.",
+          "type": "send_msg",
+          "uuid": "f1ddcc4a-da40-4cfd-abad-ca7d56032bcc"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "169ea80a-22aa-4a6f-837b-9f700d4c1da5"
+        }
+      ],
+      "uuid": "492c52af-37ed-4ce1-b28d-3f6635fc60c9"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "33b99aa7-b97a-460f-9082-a2ab4cd2147a",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "943d0d44-fff5-4deb-b7a8-2fd92c18dbba",
+          "value": "Child13"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "df5379cf-05dc-46e3-9deb-5347714ad5e4",
+          "uuid": "6b99a9ba-f458-4e22-be25-9839f07f781d"
+        }
+      ],
+      "uuid": "e25f4018-434f-4537-ac88-659800f1e19c"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "90b5e939-0f8e-467b-b8d4-149b5b4f86a5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "82faddf0-04aa-41b9-8264-fda3bf8a587b"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "edce9cfb-cc56-4cc1-b0c5-969e613b85bd"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "121da815-2af0-4680-a771-182b07e0b0d7",
+            "type": "has_only_text",
+            "uuid": "2eaf4470-6519-4d20-a569-a8bf850f713a"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "4ad1c642-dc04-4ffa-a8b6-948a26de2673",
+            "type": "has_only_text",
+            "uuid": "3e1dbab3-28ed-41af-9bd1-9f078cf38df2"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "82faddf0-04aa-41b9-8264-fda3bf8a587b",
+            "name": "Complete",
+            "uuid": "121da815-2af0-4680-a771-182b07e0b0d7"
+          },
+          {
+            "exit_uuid": "edce9cfb-cc56-4cc1-b0c5-969e613b85bd",
+            "name": "Expired",
+            "uuid": "4ad1c642-dc04-4ffa-a8b6-948a26de2673"
+          }
+        ],
+        "default_category_uuid": "4ad1c642-dc04-4ffa-a8b6-948a26de2673",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "df5379cf-05dc-46e3-9deb-5347714ad5e4"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "c5dd3d5e-298e-454c-8ff0-cdb5d94d559c",
+  "revision": 1
+}

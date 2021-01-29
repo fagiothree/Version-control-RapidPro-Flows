@@ -1,0 +1,274 @@
+{
+  "_ui": {
+    "nodes": {
+      "4dff5a67-c06a-40d1-9324-0de90580e707": {
+        "position": {
+          "left": 600,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "24e53f66-7bde-4f29-b94c-249e5953a12d": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "type_of_media",
+            "name": "type of media",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 520,
+          "top": 240
+        },
+        "type": "split_by_contact_field"
+      },
+      "19f97f45-1ffc-4614-90d3-02fae8e3290b": {
+        "position": {
+          "left": 500,
+          "top": 540
+        },
+        "type": "execute_actions"
+      },
+      "62517ae7-2493-4d3e-9a41-ae0cce938f85": {
+        "position": {
+          "left": 780,
+          "top": 560
+        },
+        "type": "execute_actions"
+      },
+      "61185199-9158-46bf-9788-e2758e04360c": {
+        "position": {
+          "left": 220,
+          "top": 580
+        },
+        "type": "execute_actions"
+      },
+      "f696ea54-1a7f-4cc8-8bbc-853923574027": {
+        "position": {
+          "left": 360,
+          "top": 1080
+        },
+        "type": "execute_actions"
+      },
+      "6c569d29-0f31-46a6-bf86-65e673bdf83b": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 320,
+          "top": 780
+        },
+        "config": {
+          "cases": {}
+        }
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 3
+  },
+  "name": "PLH - Content - Relax - CheckIn - Three is a magical number",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Hello! Did you know that 3 is a magical number? Breathe in to the count of three and breathe out to the count of three. How do you feel now? Do you feel any different?",
+          "type": "send_msg",
+          "uuid": "a2588edb-74f0-498d-b67d-25e42faaa953"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "24e53f66-7bde-4f29-b94c-249e5953a12d",
+          "uuid": "a7a4e085-4b64-4a34-8554-e4b7eb3e028a"
+        }
+      ],
+      "uuid": "4dff5a67-c06a-40d1-9324-0de90580e707"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "61185199-9158-46bf-9788-e2758e04360c",
+          "uuid": "3543dfda-1b80-4c1d-8f7e-1d5cdea645af"
+        },
+        {
+          "destination_uuid": "19f97f45-1ffc-4614-90d3-02fae8e3290b",
+          "uuid": "3b308ad6-539f-4ef1-bc94-199278bb1213"
+        },
+        {
+          "destination_uuid": "62517ae7-2493-4d3e-9a41-ae0cce938f85",
+          "uuid": "d9768245-4912-4cff-95cf-d1318fb88626"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "high"
+            ],
+            "category_uuid": "db26357a-1f6d-4fb6-859c-53d2dabe3392",
+            "type": "has_any_word",
+            "uuid": "3a6925ee-caee-4ba5-b488-af4427f1ea22"
+          },
+          {
+            "arguments": [
+              "medium"
+            ],
+            "category_uuid": "7d0aac77-db83-4e72-bfe7-0361fb62f3e7",
+            "type": "has_any_word",
+            "uuid": "f718725a-bac3-4b8a-af61-86cd87400036"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "3543dfda-1b80-4c1d-8f7e-1d5cdea645af",
+            "name": "High",
+            "uuid": "db26357a-1f6d-4fb6-859c-53d2dabe3392"
+          },
+          {
+            "exit_uuid": "3b308ad6-539f-4ef1-bc94-199278bb1213",
+            "name": "medium",
+            "uuid": "7d0aac77-db83-4e72-bfe7-0361fb62f3e7"
+          },
+          {
+            "exit_uuid": "d9768245-4912-4cff-95cf-d1318fb88626",
+            "name": "Other",
+            "uuid": "b2c80165-1134-4ca8-91e2-21aecde63be8"
+          }
+        ],
+        "default_category_uuid": "b2c80165-1134-4ca8-91e2-21aecde63be8",
+        "operand": "@fields.type_of_media",
+        "type": "switch"
+      },
+      "uuid": "24e53f66-7bde-4f29-b94c-249e5953a12d"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "audio:@(fields.voiceover_audio_path & \"Magical_Number.mp3\")"
+          ],
+          "text": "Here's an audio message to guide you through this activity!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "da95b3c5-5d66-48a3-8299-0fe3f7ce59a4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "6c569d29-0f31-46a6-bf86-65e673bdf83b",
+          "uuid": "4115aa90-5402-4b17-825f-9967aadb94a6"
+        }
+      ],
+      "uuid": "19f97f45-1ffc-4614-90d3-02fae8e3290b"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "What are your three favourite foods? Can you name three things you can see right now? \nCan you hear three sounds you can hear right now? \nWhat are the three things you are grateful for right now?\nBreathe in to the count of three and breathe out to the count of three. How do you feel now? Do you feel any different? \nThree is a magical number! ",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "0d7c5d79-c80c-4114-bc0e-8ee08f496d96"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f696ea54-1a7f-4cc8-8bbc-853923574027",
+          "uuid": "98441094-073a-4f49-8a92-c44d7b91fd14"
+        }
+      ],
+      "uuid": "62517ae7-2493-4d3e-9a41-ae0cce938f85"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "video:@(fields.voiceover_video_path & \"Magical_Number.m4v\")"
+          ],
+          "text": "Here's a video to guide through this activity!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "67290940-19c3-4983-b28f-0382f297e8cd"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "6c569d29-0f31-46a6-bf86-65e673bdf83b",
+          "uuid": "6e88acda-c3a2-460a-b0fd-c279d514ca01"
+        }
+      ],
+      "uuid": "61185199-9158-46bf-9788-e2758e04360c"
+    },
+    {
+      "uuid": "6c569d29-0f31-46a6-bf86-65e673bdf83b",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "308b0e68-6a5d-4151-93e7-447845180510",
+        "cases": [],
+        "categories": [
+          {
+            "uuid": "308b0e68-6a5d-4151-93e7-447845180510",
+            "name": "All Responses",
+            "exit_uuid": "4dc74690-52fa-4401-ab22-3c7dd9575aad"
+          },
+          {
+            "uuid": "7f5c321f-1b35-412c-bfdc-634ba468a4dc",
+            "name": "No Response",
+            "exit_uuid": "95641c51-cbc0-4eb1-b14b-8b8f57f63b3e"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg",
+          "timeout": {
+            "seconds": 120,
+            "category_uuid": "7f5c321f-1b35-412c-bfdc-634ba468a4dc"
+          }
+        },
+        "result_name": "Result 1"
+      },
+      "exits": [
+        {
+          "uuid": "4dc74690-52fa-4401-ab22-3c7dd9575aad",
+          "destination_uuid": "62517ae7-2493-4d3e-9a41-ae0cce938f85"
+        },
+        {
+          "uuid": "95641c51-cbc0-4eb1-b14b-8b8f57f63b3e",
+          "destination_uuid": "62517ae7-2493-4d3e-9a41-ae0cce938f85"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "We hope that was helpful! Remember you can always type \"Help\" at anytime if you need an activity to help you relax or reduce stress. Chat to you later!",
+          "type": "send_msg",
+          "uuid": "6fd4faef-2a35-4dc5-90d2-6d00ddf9c35c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "604e4fd9-cdfb-42f2-ab05-413ad3f63fb1"
+        }
+      ],
+      "uuid": "f696ea54-1a7f-4cc8-8bbc-853923574027"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "392a6e37-612f-4014-9d54-e83e03b44a81",
+  "revision": 11
+}

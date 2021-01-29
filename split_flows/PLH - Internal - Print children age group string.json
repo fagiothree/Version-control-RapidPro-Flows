@@ -1,0 +1,726 @@
+{
+  "_ui": {
+    "nodes": {
+      "09818245-719e-4f73-885e-409b30686dc1": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "parent_teenager",
+            "name": "parent teenager",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 1020,
+          "top": 260
+        },
+        "type": "split_by_contact_field"
+      },
+      "0f63abf1-ce96-477c-848a-510d3baa5b91": {
+        "position": {
+          "left": 620,
+          "top": 700
+        },
+        "type": "execute_actions"
+      },
+      "29dc9258-7e3d-4a5a-9333-b8523c863183": {
+        "position": {
+          "left": 860,
+          "top": 680
+        },
+        "type": "execute_actions"
+      },
+      "446f85ed-e473-4ac8-bee1-781c5117fc99": {
+        "position": {
+          "left": 1100,
+          "top": 560
+        },
+        "type": "execute_actions"
+      },
+      "46838972-d0f7-4f65-b364-a076d32c9f0c": {
+        "position": {
+          "left": 40,
+          "top": 860
+        },
+        "type": "execute_actions"
+      },
+      "51a98b3c-019b-4cf9-82dd-17f58e40c201": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "parent_teenager",
+            "name": "parent teenager",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 60,
+          "top": 280
+        },
+        "type": "split_by_contact_field"
+      },
+      "7614656e-a69b-4687-a79f-a637546e3bae": {
+        "position": {
+          "left": 240,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "99c6c7d0-0c5d-464e-af80-abccd8260ff0": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "parent_young_child",
+            "name": "parent young child",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 240,
+          "top": 120
+        },
+        "type": "split_by_contact_field"
+      },
+      "a872b99f-a05c-46fe-9065-497e76d8a5f2": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "parent_teenager",
+            "name": "parent teenager",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 760,
+          "top": 360
+        },
+        "type": "split_by_contact_field"
+      },
+      "b0abc9c0-32ce-4bfc-8b44-ad90fb396d26": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "parent_teenager",
+            "name": "parent teenager",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 340,
+          "top": 280
+        },
+        "type": "split_by_contact_field"
+      },
+      "b61753b6-7ac8-4865-b7cc-5b5dd1931a05": {
+        "position": {
+          "left": 500,
+          "top": 440
+        },
+        "type": "execute_actions"
+      },
+      "b73dacd0-6baa-4f2e-8412-9fbb917f4ba7": {
+        "position": {
+          "left": 1260,
+          "top": 340
+        },
+        "type": "execute_actions"
+      },
+      "e0ca29b1-a4e8-4677-a992-9d7c7b7423bd": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "parent_baby",
+            "name": "parent baby",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 500,
+          "top": 40
+        },
+        "type": "split_by_contact_field"
+      },
+      "e1542b5f-3604-43e1-b31e-7c501ffa36f9": {
+        "position": {
+          "left": 300,
+          "top": 720
+        },
+        "type": "execute_actions"
+      },
+      "f4168ce2-b26c-4417-a36b-186e465706bc": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "parent_young_child",
+            "name": "parent young child",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 700,
+          "top": 180
+        },
+        "type": "split_by_contact_field"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Internal - Print children age group string",
+  "nodes": [
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "99c6c7d0-0c5d-464e-af80-abccd8260ff0",
+          "uuid": "01cfa585-95e1-441e-bb83-c777c5fa4518"
+        },
+        {
+          "destination_uuid": "f4168ce2-b26c-4417-a36b-186e465706bc",
+          "uuid": "6971c718-d27b-49e5-a8c0-06d0d14e7c6f"
+        },
+        {
+          "uuid": "567feee2-b3e6-4921-95b0-9884f6a2d2d6"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "true"
+            ],
+            "category_uuid": "39ea8dbd-e172-4aaa-8b52-f4ca89d4eba2",
+            "type": "has_any_word",
+            "uuid": "16a8dce5-d3b7-4b13-8437-bc5c32bf15a3"
+          },
+          {
+            "arguments": [
+              "false"
+            ],
+            "category_uuid": "d346eae3-c814-4d14-b375-8636450b88a7",
+            "type": "has_any_word",
+            "uuid": "4f3b3b79-fdba-4f8c-ab17-ec23019a109e"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "01cfa585-95e1-441e-bb83-c777c5fa4518",
+            "name": "True",
+            "uuid": "39ea8dbd-e172-4aaa-8b52-f4ca89d4eba2"
+          },
+          {
+            "exit_uuid": "6971c718-d27b-49e5-a8c0-06d0d14e7c6f",
+            "name": "False",
+            "uuid": "d346eae3-c814-4d14-b375-8636450b88a7"
+          },
+          {
+            "exit_uuid": "567feee2-b3e6-4921-95b0-9884f6a2d2d6",
+            "name": "Other",
+            "uuid": "353d0cb4-c447-423a-bc5b-7d6aa4db2676"
+          }
+        ],
+        "default_category_uuid": "353d0cb4-c447-423a-bc5b-7d6aa4db2676",
+        "operand": "@fields.parent_baby",
+        "type": "switch"
+      },
+      "uuid": "e0ca29b1-a4e8-4677-a992-9d7c7b7423bd"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "51a98b3c-019b-4cf9-82dd-17f58e40c201",
+          "uuid": "4e2bfe56-dec0-4ca6-922c-607d52fdf15b"
+        },
+        {
+          "destination_uuid": "b0abc9c0-32ce-4bfc-8b44-ad90fb396d26",
+          "uuid": "50bb7642-55af-475b-9ffd-0bf41efff57b"
+        },
+        {
+          "uuid": "b2643fd6-32cd-4bde-b4e5-798bef0c7098"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "true"
+            ],
+            "category_uuid": "809aa599-e596-4f2d-974c-c02d2681f6f9",
+            "type": "has_any_word",
+            "uuid": "c2784967-c4a5-44af-bdf1-de9bf901553d"
+          },
+          {
+            "arguments": [
+              "false"
+            ],
+            "category_uuid": "b6e2e94d-b234-47e4-a4b5-c84e2c1a6d6e",
+            "type": "has_any_word",
+            "uuid": "056edc95-0834-4e6f-954e-0d5a508cb890"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "4e2bfe56-dec0-4ca6-922c-607d52fdf15b",
+            "name": "True",
+            "uuid": "809aa599-e596-4f2d-974c-c02d2681f6f9"
+          },
+          {
+            "exit_uuid": "50bb7642-55af-475b-9ffd-0bf41efff57b",
+            "name": "False",
+            "uuid": "b6e2e94d-b234-47e4-a4b5-c84e2c1a6d6e"
+          },
+          {
+            "exit_uuid": "b2643fd6-32cd-4bde-b4e5-798bef0c7098",
+            "name": "Other",
+            "uuid": "fcfa1b29-5491-4fff-a924-497142fc0266"
+          }
+        ],
+        "default_category_uuid": "fcfa1b29-5491-4fff-a924-497142fc0266",
+        "operand": "@fields.parent_young_child",
+        "type": "switch"
+      },
+      "uuid": "99c6c7d0-0c5d-464e-af80-abccd8260ff0"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "a872b99f-a05c-46fe-9065-497e76d8a5f2",
+          "uuid": "b5bbe5d9-dd00-4a7e-bcbb-8750d1abf5a5"
+        },
+        {
+          "destination_uuid": "09818245-719e-4f73-885e-409b30686dc1",
+          "uuid": "9ac7836e-2294-4560-8904-1f46fafa5f41"
+        },
+        {
+          "uuid": "17ca9de1-6e29-4b6b-99df-4b7cea437270"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "true"
+            ],
+            "category_uuid": "464bfa91-0572-426e-ba5a-2be9887a30cb",
+            "type": "has_any_word",
+            "uuid": "7461b541-b26f-4048-a668-6775c4378c11"
+          },
+          {
+            "arguments": [
+              "false"
+            ],
+            "category_uuid": "eeb593a2-4ea8-4338-b196-d6c5081004d7",
+            "type": "has_any_word",
+            "uuid": "21563a8e-912c-4853-bbaa-a202508eb310"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "b5bbe5d9-dd00-4a7e-bcbb-8750d1abf5a5",
+            "name": "True",
+            "uuid": "464bfa91-0572-426e-ba5a-2be9887a30cb"
+          },
+          {
+            "exit_uuid": "9ac7836e-2294-4560-8904-1f46fafa5f41",
+            "name": "False",
+            "uuid": "eeb593a2-4ea8-4338-b196-d6c5081004d7"
+          },
+          {
+            "exit_uuid": "17ca9de1-6e29-4b6b-99df-4b7cea437270",
+            "name": "Other",
+            "uuid": "76782f4a-4968-4264-98bc-b70e21daa2fa"
+          }
+        ],
+        "default_category_uuid": "76782f4a-4968-4264-98bc-b70e21daa2fa",
+        "operand": "@fields.parent_young_child",
+        "type": "switch"
+      },
+      "uuid": "f4168ce2-b26c-4417-a36b-186e465706bc"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "446f85ed-e473-4ac8-bee1-781c5117fc99",
+          "uuid": "70f7cdd4-060a-4acf-b771-8fcd133d091e"
+        },
+        {
+          "destination_uuid": "b73dacd0-6baa-4f2e-8412-9fbb917f4ba7",
+          "uuid": "80e4af4e-8520-413b-8c11-29655d21e28a"
+        },
+        {
+          "uuid": "0665e989-4eae-40ef-8d1a-687d3c9d8acf"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "true"
+            ],
+            "category_uuid": "7b9b0fdc-4a83-4d8e-a61f-2f28d252c117",
+            "type": "has_any_word",
+            "uuid": "4a3aa36e-4d89-4b9f-a766-49252dfeab8a"
+          },
+          {
+            "arguments": [
+              "false"
+            ],
+            "category_uuid": "eca1706e-4b91-4b34-a6b3-946543513d6e",
+            "type": "has_any_word",
+            "uuid": "6562b685-e0cd-4605-9feb-d78e3b1359f8"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "70f7cdd4-060a-4acf-b771-8fcd133d091e",
+            "name": "True",
+            "uuid": "7b9b0fdc-4a83-4d8e-a61f-2f28d252c117"
+          },
+          {
+            "exit_uuid": "80e4af4e-8520-413b-8c11-29655d21e28a",
+            "name": "False",
+            "uuid": "eca1706e-4b91-4b34-a6b3-946543513d6e"
+          },
+          {
+            "exit_uuid": "0665e989-4eae-40ef-8d1a-687d3c9d8acf",
+            "name": "Other",
+            "uuid": "c4b82caa-fd91-4918-8874-78e2a1c83d98"
+          }
+        ],
+        "default_category_uuid": "c4b82caa-fd91-4918-8874-78e2a1c83d98",
+        "operand": "@fields.parent_teenager",
+        "type": "switch"
+      },
+      "uuid": "09818245-719e-4f73-885e-409b30686dc1"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "46838972-d0f7-4f65-b364-a076d32c9f0c",
+          "uuid": "012a001d-a150-4ff5-86eb-2215faca904a"
+        },
+        {
+          "destination_uuid": "e1542b5f-3604-43e1-b31e-7c501ffa36f9",
+          "uuid": "a7c8cc90-7a11-454e-ba2b-8b1b1168b51d"
+        },
+        {
+          "uuid": "6cb9ebbf-4c00-411d-808e-d21bba3f5617"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "true"
+            ],
+            "category_uuid": "7d99b12e-ce5a-46f4-aa21-2717e4ef882c",
+            "type": "has_any_word",
+            "uuid": "1abe22f4-1611-4b03-b1bd-dbabbcf88367"
+          },
+          {
+            "arguments": [
+              "false"
+            ],
+            "category_uuid": "57494597-9632-453e-8a87-7bcc9de25eb4",
+            "type": "has_any_word",
+            "uuid": "77d127d8-e89d-4cfa-89b3-2bfe558d2e91"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "012a001d-a150-4ff5-86eb-2215faca904a",
+            "name": "True",
+            "uuid": "7d99b12e-ce5a-46f4-aa21-2717e4ef882c"
+          },
+          {
+            "exit_uuid": "a7c8cc90-7a11-454e-ba2b-8b1b1168b51d",
+            "name": "False",
+            "uuid": "57494597-9632-453e-8a87-7bcc9de25eb4"
+          },
+          {
+            "exit_uuid": "6cb9ebbf-4c00-411d-808e-d21bba3f5617",
+            "name": "Other",
+            "uuid": "a8008c24-5c4b-416a-a890-69d52f44ec03"
+          }
+        ],
+        "default_category_uuid": "a8008c24-5c4b-416a-a890-69d52f44ec03",
+        "operand": "@fields.parent_teenager",
+        "type": "switch"
+      },
+      "uuid": "51a98b3c-019b-4cf9-82dd-17f58e40c201"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "7614656e-a69b-4687-a79f-a637546e3bae",
+          "uuid": "b43ace59-adf2-47e3-9e0a-1088a59bbc63"
+        },
+        {
+          "destination_uuid": "b61753b6-7ac8-4865-b7cc-5b5dd1931a05",
+          "uuid": "8e6e3cb5-8042-44a7-a865-ab8293671aa1"
+        },
+        {
+          "uuid": "4fdab850-115f-44ab-b2b0-4e0480bb6ed7"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "true"
+            ],
+            "category_uuid": "05684cb3-9dbb-47f6-a9cd-9fb4fc7b42ad",
+            "type": "has_any_word",
+            "uuid": "d5fdb723-748f-441d-9ec9-7f168bd58fe5"
+          },
+          {
+            "arguments": [
+              "false"
+            ],
+            "category_uuid": "3f32c197-7043-4e73-b020-7339ed47eed3",
+            "type": "has_any_word",
+            "uuid": "9101fe2e-7c9a-4ab0-82f6-da2ff87f6a43"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "b43ace59-adf2-47e3-9e0a-1088a59bbc63",
+            "name": "True",
+            "uuid": "05684cb3-9dbb-47f6-a9cd-9fb4fc7b42ad"
+          },
+          {
+            "exit_uuid": "8e6e3cb5-8042-44a7-a865-ab8293671aa1",
+            "name": "False",
+            "uuid": "3f32c197-7043-4e73-b020-7339ed47eed3"
+          },
+          {
+            "exit_uuid": "4fdab850-115f-44ab-b2b0-4e0480bb6ed7",
+            "name": "Other",
+            "uuid": "34da4c06-6a49-428b-8bfd-d6f483474617"
+          }
+        ],
+        "default_category_uuid": "34da4c06-6a49-428b-8bfd-d6f483474617",
+        "operand": "@fields.parent_teenager",
+        "type": "switch"
+      },
+      "uuid": "b0abc9c0-32ce-4bfc-8b44-ad90fb396d26"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "know_children_age_groups",
+            "name": "know children age groups"
+          },
+          "type": "set_contact_field",
+          "uuid": "af81dabd-6e21-4729-896d-e656ea4e6d09",
+          "value": "false"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "d470bb14-89a5-49f0-a8e1-81919e7b2db9"
+        }
+      ],
+      "uuid": "b73dacd0-6baa-4f2e-8412-9fbb917f4ba7"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "0f63abf1-ce96-477c-848a-510d3baa5b91",
+          "uuid": "e20c23b3-10c3-42be-9a17-2eb4ba17957c"
+        },
+        {
+          "destination_uuid": "29dc9258-7e3d-4a5a-9333-b8523c863183",
+          "uuid": "0fafdb23-2e88-4897-88c3-f2d11d551c93"
+        },
+        {
+          "uuid": "a3d01f7a-0f8a-4309-ab1b-dcc90249634e"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "true"
+            ],
+            "category_uuid": "ef9848f9-ab68-40ad-8028-6d17ba40bffb",
+            "type": "has_any_word",
+            "uuid": "a5be94c1-59e7-419c-8271-70387bd62201"
+          },
+          {
+            "arguments": [
+              "false"
+            ],
+            "category_uuid": "820c286a-c9cf-4e91-b94e-3bad8ee98ca3",
+            "type": "has_any_word",
+            "uuid": "1dd6f4d0-2542-401b-b46c-014b681e7364"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "e20c23b3-10c3-42be-9a17-2eb4ba17957c",
+            "name": "True",
+            "uuid": "ef9848f9-ab68-40ad-8028-6d17ba40bffb"
+          },
+          {
+            "exit_uuid": "0fafdb23-2e88-4897-88c3-f2d11d551c93",
+            "name": "False",
+            "uuid": "820c286a-c9cf-4e91-b94e-3bad8ee98ca3"
+          },
+          {
+            "exit_uuid": "a3d01f7a-0f8a-4309-ab1b-dcc90249634e",
+            "name": "Other",
+            "uuid": "8a851b77-4728-4c91-96f0-0e0eb682a7bb"
+          }
+        ],
+        "default_category_uuid": "8a851b77-4728-4c91-96f0-0e0eb682a7bb",
+        "operand": "@fields.parent_teenager",
+        "type": "switch"
+      },
+      "uuid": "a872b99f-a05c-46fe-9065-497e76d8a5f2"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You told us that you are a parent/caregiver of a baby (0 to 23 months old).",
+          "type": "send_msg",
+          "uuid": "35b98790-8648-4f16-bb0f-23141a946fd4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "5ef458c7-b749-4152-bc30-3edaafeb618e"
+        }
+      ],
+      "uuid": "b61753b6-7ac8-4865-b7cc-5b5dd1931a05"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You told us that you are a parent/caregiver of a baby (0 to 23 months old) and teenager (10 to 17 years).",
+          "type": "send_msg",
+          "uuid": "0f024baa-ef01-4c2f-a550-648844508449"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "01f5ce9f-f847-4adc-8be4-59612731a917"
+        }
+      ],
+      "uuid": "7614656e-a69b-4687-a79f-a637546e3bae"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You told us that you are a parent/caregiver of a teenager (10 to 17 years).",
+          "type": "send_msg",
+          "uuid": "cc7166d4-57f1-4399-821d-59eb33b764f7"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "1baf4721-bdc0-4605-95d5-7cae03ad7b1a"
+        }
+      ],
+      "uuid": "446f85ed-e473-4ac8-bee1-781c5117fc99"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You told us that you are a parent/caregiver of a young child (2 to 9 years).",
+          "type": "send_msg",
+          "uuid": "940cd6e7-3039-484d-a112-4323cb863e8e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "85069cff-a76a-4feb-948d-3995e50dac3e"
+        }
+      ],
+      "uuid": "29dc9258-7e3d-4a5a-9333-b8523c863183"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You told us that you are a parent/caregiver of a young child (2 to 9 years) and teenager (10 to 17 years).",
+          "type": "send_msg",
+          "uuid": "ded6d3e0-ac2f-4e3b-8fe3-1536a3e77811"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "8f914544-1c76-43cc-b6dc-ae0f8ababd61"
+        }
+      ],
+      "uuid": "0f63abf1-ce96-477c-848a-510d3baa5b91"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You told us that you are a parent/caregiver of baby (0 to 23 months old) and young child (2 to 9 years).",
+          "type": "send_msg",
+          "uuid": "7efd45d7-4a0e-4e03-83f8-7bdce50e367c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "ffbc444c-0e4d-416a-ae4b-5c8baa215600"
+        }
+      ],
+      "uuid": "e1542b5f-3604-43e1-b31e-7c501ffa36f9"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You told us that you are a parent/caregiver of a baby (0 to 23 months old), young child (2 to 9 years) and teenager (10 to 17 years).",
+          "type": "send_msg",
+          "uuid": "4ee5ae12-9eac-4c2f-bc3f-506d3d72ea0f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "4b8193a9-4adf-46fe-b64c-7b28a2482ac8"
+        }
+      ],
+      "uuid": "46838972-d0f7-4f65-b364-a076d32c9f0c"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "c40281da-6698-43f0-bcda-21cff60028f3",
+  "revision": 1
+}

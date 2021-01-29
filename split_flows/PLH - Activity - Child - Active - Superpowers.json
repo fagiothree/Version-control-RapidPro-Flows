@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "2444073b-41e6-4471-990f-394d79e37771": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "50589a20-4a8b-431f-acfb-51781490d783": {
+        "config": {},
+        "position": {
+          "left": 280,
+          "top": 580
+        },
+        "type": "split_by_subflow"
+      },
+      "b72e3f71-7529-46a9-bad1-9da32aab2dec": {
+        "position": {
+          "left": 0,
+          "top": 440
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Active - Superpowers",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Superpowers\n•\tThink of a superpower. For example, going anywhere instantly, travelling in time, reading minds. \n•\tAsk your child “If you had the superpower to […] how would you use it?\n•\tEncourage them to give themselves a superhero name and act it out. \n•\tNow let them choose a super power for you!\n•\tMake sure you act it out too! ",
+          "type": "send_msg",
+          "uuid": "d5c0aba0-c85f-4f51-84eb-3b6b398570a2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "3b7fa995-a8b1-46dc-b6e1-3b2d8091f8d9"
+        }
+      ],
+      "uuid": "2444073b-41e6-4471-990f-394d79e37771"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "607798df-4e29-40c3-98cb-acef57897658",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "6e62267d-3908-488d-ba17-23e2a334c04c",
+          "value": "Child6"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "50589a20-4a8b-431f-acfb-51781490d783",
+          "uuid": "a88a1684-373f-4a38-946c-0f05a7d698fe"
+        }
+      ],
+      "uuid": "b72e3f71-7529-46a9-bad1-9da32aab2dec"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "eed1c448-bef6-41f2-b2af-cab984c27908"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e90c5ffd-cb14-4e7f-b9b3-ba75174a5120"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "fbdb11c1-cdfa-4cb8-82af-3e8faf25004b"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "3f41b161-e81d-4c49-aeff-cc6d7f51f79c",
+            "type": "has_only_text",
+            "uuid": "90ba77ba-b3bf-4476-bd27-9f924b6ec4f4"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "e483527c-651b-4cca-a346-1383786cbc20",
+            "type": "has_only_text",
+            "uuid": "9974b992-fcb2-4fda-a200-aa4c55e0b57c"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "e90c5ffd-cb14-4e7f-b9b3-ba75174a5120",
+            "name": "Complete",
+            "uuid": "3f41b161-e81d-4c49-aeff-cc6d7f51f79c"
+          },
+          {
+            "exit_uuid": "fbdb11c1-cdfa-4cb8-82af-3e8faf25004b",
+            "name": "Expired",
+            "uuid": "e483527c-651b-4cca-a346-1383786cbc20"
+          }
+        ],
+        "default_category_uuid": "e483527c-651b-4cca-a346-1383786cbc20",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "50589a20-4a8b-431f-acfb-51781490d783"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "d12d1dd4-42b9-4084-a9e7-a43940bd5105",
+  "revision": 1
+}

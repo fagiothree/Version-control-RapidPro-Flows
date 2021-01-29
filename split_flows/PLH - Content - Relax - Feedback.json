@@ -1,0 +1,148 @@
+{
+  "_ui": {
+    "nodes": {
+      "61255dd5-cb95-43f2-9176-c51b3d6462c6": {
+        "config": {},
+        "position": {
+          "left": 500,
+          "top": 280
+        },
+        "type": "split_by_subflow"
+      },
+      "9abb3b46-b64b-4bb5-8485-364175ba8526": {
+        "position": {
+          "left": 500,
+          "top": 480
+        },
+        "type": "execute_actions"
+      },
+      "fbcf82fe-9461-41c1-ade7-c169a089f022": {
+        "position": {
+          "left": 480,
+          "top": 100
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Content - Relax - Feedback",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "9b06f0da-01a7-4691-bf33-de807137f2cd",
+          "value": "relaxation"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "a68e567f-e3b9-49a6-98c8-cc20074cb4ef",
+          "value": "relaxation activities in general"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "61255dd5-cb95-43f2-9176-c51b3d6462c6",
+          "uuid": "3416497f-b9cd-433f-a6e1-ef80feb749d1"
+        }
+      ],
+      "uuid": "fbcf82fe-9461-41c1-ade7-c169a089f022"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Feedback - Feedback for content",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "c3dc623a-e709-4be1-aaf5-c01e73bb75eb"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "9abb3b46-b64b-4bb5-8485-364175ba8526",
+          "uuid": "6f4292ef-d24c-4128-95bd-f3f5ac9b1f24"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "0130369c-9973-4d90-9646-05af5f37b283"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "f75865c7-807e-4660-9d63-b453ea3aeb13",
+            "type": "has_only_text",
+            "uuid": "6590be7d-c1c8-4101-8cd7-74feed9b465f"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "15e7a20e-3e63-4de2-a4df-2f9c775d9f73",
+            "type": "has_only_text",
+            "uuid": "7da3f1b7-4a48-4125-9ea4-dfc33976f1e5"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "6f4292ef-d24c-4128-95bd-f3f5ac9b1f24",
+            "name": "Complete",
+            "uuid": "f75865c7-807e-4660-9d63-b453ea3aeb13"
+          },
+          {
+            "exit_uuid": "0130369c-9973-4d90-9646-05af5f37b283",
+            "name": "Expired",
+            "uuid": "15e7a20e-3e63-4de2-a4df-2f9c775d9f73"
+          }
+        ],
+        "default_category_uuid": "15e7a20e-3e63-4de2-a4df-2f9c775d9f73",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "61255dd5-cb95-43f2-9176-c51b3d6462c6"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You can always type \"Help\" at anytime if you need an activity to help you relax or reduce stress. Chat to you later!",
+          "type": "send_msg",
+          "uuid": "72e70122-26f0-4e6b-9156-ddb8dbbef997"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "3eba0204-d012-41ab-bd3d-66e50c681230"
+        }
+      ],
+      "uuid": "9abb3b46-b64b-4bb5-8485-364175ba8526"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "55d8e7f0-4fa8-4e43-9189-23b1bdf59a91",
+  "revision": 1
+}

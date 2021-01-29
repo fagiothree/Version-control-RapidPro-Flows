@@ -1,0 +1,148 @@
+{
+  "_ui": {
+    "nodes": {
+      "96a2eff1-95a9-4cb5-9d9f-de416c788b1a": {
+        "position": {
+          "left": 380,
+          "top": 440
+        },
+        "type": "execute_actions"
+      },
+      "bb7b797d-b81d-483f-ba94-8ac30766ae10": {
+        "config": {},
+        "position": {
+          "left": 380,
+          "top": 640
+        },
+        "type": "split_by_subflow"
+      },
+      "f1f925ae-46b1-4adc-a767-6e2ff58f89a4": {
+        "position": {
+          "left": 380,
+          "top": 60
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Baby - Active - Peek a boo",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Peek-a-Boo! \n• Cover your face with your hands. \n• Quickly show your face and say \"Peek-a-Boo!\" or \"Hello!\" Babies love it!",
+          "type": "send_msg",
+          "uuid": "51ce6fe2-b92d-4e98-9118-a8f64a5c4f30"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "d1fcaa84-eb29-4e5c-b929-90ed0e620292"
+        }
+      ],
+      "uuid": "f1f925ae-46b1-4adc-a767-6e2ff58f89a4"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "5da27237-d196-4b6c-b49d-968fd6681dab",
+          "value": "baby2"
+        },
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "524d1bff-f80a-4c6a-802b-98d6867f92bd",
+          "value": "activity"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "bb7b797d-b81d-483f-ba94-8ac30766ae10",
+          "uuid": "db4110a9-ce0a-44d0-9cca-88288a6d4e4f"
+        }
+      ],
+      "uuid": "96a2eff1-95a9-4cb5-9d9f-de416c788b1a"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow (activity or tip)",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "05027fd2-f892-46ba-974a-6aef7c0f8dcd"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "af5902f5-13be-416f-a23e-d8b8e83744bf"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "16d99eb6-cfb4-4e9d-92de-bdb51a1181d5"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "6a06f1c6-58e5-45c2-952c-45626c3dde69",
+            "type": "has_only_text",
+            "uuid": "252b904b-8143-46fb-8b57-b71447835a31"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "ca6296ea-5578-449e-b80d-5783bcc3e294",
+            "type": "has_only_text",
+            "uuid": "a1c96f47-bd07-4cc1-a405-083e96dff302"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "af5902f5-13be-416f-a23e-d8b8e83744bf",
+            "name": "Complete",
+            "uuid": "6a06f1c6-58e5-45c2-952c-45626c3dde69"
+          },
+          {
+            "exit_uuid": "16d99eb6-cfb4-4e9d-92de-bdb51a1181d5",
+            "name": "Expired",
+            "uuid": "ca6296ea-5578-449e-b80d-5783bcc3e294"
+          }
+        ],
+        "default_category_uuid": "ca6296ea-5578-449e-b80d-5783bcc3e294",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "bb7b797d-b81d-483f-ba94-8ac30766ae10"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "fbb59a49-1140-4f07-b589-91c9e246051e",
+  "revision": 1
+}

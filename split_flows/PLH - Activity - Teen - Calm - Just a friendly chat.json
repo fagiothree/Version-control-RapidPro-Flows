@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "0b84bf1e-04ec-46aa-b019-8e36149e6517": {
+        "position": {
+          "left": 0,
+          "top": 300
+        },
+        "type": "execute_actions"
+      },
+      "f7521ec8-bbf5-4eb4-8af2-b148c3683f71": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "f7de0cee-7696-4b2b-b6d5-5d3d188606bf": {
+        "config": {},
+        "position": {
+          "left": 380,
+          "top": 400
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Calm - Just a friendly chat",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Just a friendly chat\n•\tHave a conversation with your teen about something they like.\n•\tIt can be about anything they choose to talk about: sports, friends, music, celebrities…\n•\tTry to listen to your teen and give them space to talk.\n•\tWhat new thing did you learn about your teen from your chat?",
+          "type": "send_msg",
+          "uuid": "3c904ade-f413-4b27-a35c-769df8c44bb9"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "45d86817-2a02-4210-9918-6f2a6aefae38"
+        }
+      ],
+      "uuid": "f7521ec8-bbf5-4eb4-8af2-b148c3683f71"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "dec615d5-c088-4462-a13c-ed0df7dff1f2",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "a35ce254-039d-4265-bf1f-223b24c09ccc",
+          "value": "Teen19"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f7de0cee-7696-4b2b-b6d5-5d3d188606bf",
+          "uuid": "047f9c19-7801-4838-9277-ff17601c5971"
+        }
+      ],
+      "uuid": "0b84bf1e-04ec-46aa-b019-8e36149e6517"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "da603fce-d177-4c0e-8fe7-32eb224b4a65"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "5329149f-c8b2-4d76-b987-f5a2d2997555"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "afbfcb5f-72ff-4720-a2ef-4f59a37ee8be"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "54bb68ee-05b7-4da1-9620-58b9cd028896",
+            "type": "has_only_text",
+            "uuid": "1e9f18db-1d75-4da0-beb9-9e46d34b3171"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "d721a874-fb30-4da3-ac87-b489b4f92445",
+            "type": "has_only_text",
+            "uuid": "6a5f178a-b2c0-476d-a062-233aca2e520d"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "5329149f-c8b2-4d76-b987-f5a2d2997555",
+            "name": "Complete",
+            "uuid": "54bb68ee-05b7-4da1-9620-58b9cd028896"
+          },
+          {
+            "exit_uuid": "afbfcb5f-72ff-4720-a2ef-4f59a37ee8be",
+            "name": "Expired",
+            "uuid": "d721a874-fb30-4da3-ac87-b489b4f92445"
+          }
+        ],
+        "default_category_uuid": "d721a874-fb30-4da3-ac87-b489b4f92445",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "f7de0cee-7696-4b2b-b6d5-5d3d188606bf"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "43e6f558-82c4-4f23-92d8-fcf9d9a38d25",
+  "revision": 1
+}

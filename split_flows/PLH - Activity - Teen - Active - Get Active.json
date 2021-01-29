@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "21f97ea8-f0fd-437d-b1c5-c72ca52cd750": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "87fa6ff4-fb00-4f24-9508-f57ce3831696": {
+        "config": {},
+        "position": {
+          "left": 280,
+          "top": 660
+        },
+        "type": "split_by_subflow"
+      },
+      "b51bc1e3-1016-47d8-b07d-bc11585ce49e": {
+        "position": {
+          "left": 20,
+          "top": 480
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Active - Get Active",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Get active!\n•\tCome up with three types of exercise together. For example, walking, jogging, soccer or dancing\n•\tPick one together and try it out. \n•\tIf you both like it, decide how often you are going to do it. Once or twice a week? Every morning?\n•\tTogether think of ways to make it even more fun. Can you jog to a certain point? Take turns in being the coach? Motivate each other with a small free reward? ",
+          "type": "send_msg",
+          "uuid": "9542f83a-e8c5-4324-af59-eb7fd7a9f196"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "80803dab-47cd-43a2-a08b-75e07879cba9"
+        }
+      ],
+      "uuid": "21f97ea8-f0fd-437d-b1c5-c72ca52cd750"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "e2a8c837-1075-473e-9d8c-5fa741e8dba6",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "b5a79995-17dc-4766-bcc6-56d2fb1f98e5",
+          "value": "Teen8"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "87fa6ff4-fb00-4f24-9508-f57ce3831696",
+          "uuid": "a966b4b0-8556-441e-8790-983dcad8799a"
+        }
+      ],
+      "uuid": "b51bc1e3-1016-47d8-b07d-bc11585ce49e"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "04ca7fde-d5c7-47c8-85cd-b674ae340b03"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e11c27d2-bdbb-4294-abce-5cda8f24623b"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "6e2fca02-b33e-456b-9d83-6189fde6bf5c"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "fe5723eb-ffdb-486b-ace8-d1afe6d282c1",
+            "type": "has_only_text",
+            "uuid": "a9bdb3b9-9160-4d6b-9396-8813ae3f6ff4"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "86fd91f4-02cd-497c-b0b9-436efbe88fe8",
+            "type": "has_only_text",
+            "uuid": "07391b9a-d1cc-4bb3-8270-b45459a00e23"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "e11c27d2-bdbb-4294-abce-5cda8f24623b",
+            "name": "Complete",
+            "uuid": "fe5723eb-ffdb-486b-ace8-d1afe6d282c1"
+          },
+          {
+            "exit_uuid": "6e2fca02-b33e-456b-9d83-6189fde6bf5c",
+            "name": "Expired",
+            "uuid": "86fd91f4-02cd-497c-b0b9-436efbe88fe8"
+          }
+        ],
+        "default_category_uuid": "86fd91f4-02cd-497c-b0b9-436efbe88fe8",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "87fa6ff4-fb00-4f24-9508-f57ce3831696"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "444d242f-9ee7-444a-b579-4c3046feb9d4",
+  "revision": 1
+}

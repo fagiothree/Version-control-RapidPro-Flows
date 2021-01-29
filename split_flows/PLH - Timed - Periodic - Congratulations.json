@@ -1,0 +1,223 @@
+{
+  "_ui": {
+    "nodes": {
+      "0d62e82d-df9b-4ea7-b1f0-4ba52f407312": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "current_day_in_program",
+            "name": "current day in program",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 600,
+          "top": 20
+        },
+        "type": "split_by_contact_field"
+      },
+      "32b499ef-258d-450b-8228-918603e53532": {
+        "position": {
+          "left": 420,
+          "top": 300
+        },
+        "type": "execute_actions"
+      },
+      "a66beec7-f501-40b3-a927-94ef9c91ce86": {
+        "position": {
+          "left": 420,
+          "top": 180
+        },
+        "type": "execute_actions"
+      },
+      "aa8de43b-2dae-4a7a-9966-45b238e8747f": {
+        "config": {},
+        "position": {
+          "left": 420,
+          "top": 520
+        },
+        "type": "split_by_subflow"
+      },
+      "bcbc0474-ae2f-4a5b-a647-2ecdbd6c5d8a": {
+        "position": {
+          "left": 420,
+          "top": 420
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 15
+  },
+  "name": "PLH - Timed - Periodic - Congratulations",
+  "nodes": [
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "a66beec7-f501-40b3-a927-94ef9c91ce86",
+          "uuid": "eecbce9d-d3db-49c6-91eb-d958979ce31d"
+        },
+        {
+          "uuid": "e8b9db3c-cd56-4783-967b-a0d121ee554d"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "@fields.next_congrats_day"
+            ],
+            "category_uuid": "1c06b2f9-6fa3-4b11-8dd3-740defc25d3b",
+            "type": "has_number_gte",
+            "uuid": "3dd32e71-3606-4674-81e3-a6c5ff36d627"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "eecbce9d-d3db-49c6-91eb-d958979ce31d",
+            "name": "congr time",
+            "uuid": "1c06b2f9-6fa3-4b11-8dd3-740defc25d3b"
+          },
+          {
+            "exit_uuid": "e8b9db3c-cd56-4783-967b-a0d121ee554d",
+            "name": "Other",
+            "uuid": "b5ff3588-e818-402e-ac69-9c5aa3ca0e61"
+          }
+        ],
+        "default_category_uuid": "b5ff3588-e818-402e-ac69-9c5aa3ca0e61",
+        "operand": "@fields.current_day_in_program",
+        "type": "switch"
+      },
+      "uuid": "0d62e82d-df9b-4ea7-b1f0-4ba52f407312"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "next_congrats_day",
+            "name": "next congrats day"
+          },
+          "type": "set_contact_field",
+          "uuid": "24c27f6d-7f5e-42c9-9b90-0504d3c9221f",
+          "value": "@(fields.current_day_in_program + fields.periodic_congrats_days_to_add)"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "32b499ef-258d-450b-8228-918603e53532",
+          "uuid": "868ea0d4-ff21-4241-9c5f-f6c02f4b287f"
+        }
+      ],
+      "uuid": "a66beec7-f501-40b3-a927-94ef9c91ce86"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_week_in_program",
+            "name": "current week in program"
+          },
+          "type": "set_contact_field",
+          "uuid": "d14eaed9-8756-4e35-9eb0-5ae50bb90c90",
+          "value": "@(fields.current_week_in_program+1)"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "bcbc0474-ae2f-4a5b-a647-2ecdbd6c5d8a",
+          "uuid": "f605f3f1-454a-4b40-bd89-5b49b5b5de33"
+        }
+      ],
+      "uuid": "32b499ef-258d-450b-8228-918603e53532"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "survey_parentingbehave_count",
+            "name": "survey parentingbehave count"
+          },
+          "type": "set_contact_field",
+          "uuid": "3829fa67-de4f-417f-b2af-5628a630d58d",
+          "value": "1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "aa8de43b-2dae-4a7a-9966-45b238e8747f",
+          "uuid": "56899d86-97ee-4649-af26-2ced2e4c4df0"
+        }
+      ],
+      "uuid": "bcbc0474-ae2f-4a5b-a647-2ecdbd6c5d8a"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Supportive - Weekly congratulations",
+            "uuid": "ecefe7d2-9535-4104-af2a-70ac6143208f"
+          },
+          "type": "enter_flow",
+          "uuid": "9afb307e-06ba-4fe4-a690-f714dd0aa933"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e2300377-ebfd-4c78-9182-6c2fffbee106"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "902d6471-bd9a-47e1-a835-cbfc3f5b4b84"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "bcdac1fa-d78c-4c59-890c-a20bf38c3d02",
+            "type": "has_only_text",
+            "uuid": "80105ce2-ecc8-49c6-978b-86e01651c34d"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "c53e679c-9f04-4036-966a-4a8d2100d8b3",
+            "type": "has_only_text",
+            "uuid": "5428ef29-dc1d-4f6a-9de5-9818ad7106ba"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "e2300377-ebfd-4c78-9182-6c2fffbee106",
+            "name": "Complete",
+            "uuid": "bcdac1fa-d78c-4c59-890c-a20bf38c3d02"
+          },
+          {
+            "exit_uuid": "902d6471-bd9a-47e1-a835-cbfc3f5b4b84",
+            "name": "Expired",
+            "uuid": "c53e679c-9f04-4036-966a-4a8d2100d8b3"
+          }
+        ],
+        "default_category_uuid": "c53e679c-9f04-4036-966a-4a8d2100d8b3",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "aa8de43b-2dae-4a7a-9966-45b238e8747f"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "869ee57d-00f8-437f-a3e5-65034bbd760a",
+  "revision": 1
+}

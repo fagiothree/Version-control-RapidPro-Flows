@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "180e81d9-458e-425e-abce-21405555feab": {
+        "position": {
+          "left": 40,
+          "top": 400
+        },
+        "type": "execute_actions"
+      },
+      "c6183f76-86d1-44eb-9169-334db38cb8d9": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "e4754b48-e011-4ed1-b66c-b6a44a91a1e9": {
+        "config": {},
+        "position": {
+          "left": 220,
+          "top": 620
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Calm - Dream travel",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Dream Travel\n•\tYou can’t travel but you can dream! Ask your teen these questions.\n•\tWhere do you want to travel? How long will you be away? What will you pack? What will you do? What will you see?\n•\tLook at a map together if you have one.\n•\tChoose a country that they’ve never heard of and look it up together online.",
+          "type": "send_msg",
+          "uuid": "12a72f3c-84c1-4da9-9c25-bd51eb792213"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b1fc4cb1-c7e0-4f85-a297-4c4113706691"
+        }
+      ],
+      "uuid": "c6183f76-86d1-44eb-9169-334db38cb8d9"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "bb8d3f86-dfb9-4c50-b025-1857b3070850",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "4632ade6-712c-41e1-8555-084a38d8cf97",
+          "value": "Teen7"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e4754b48-e011-4ed1-b66c-b6a44a91a1e9",
+          "uuid": "eaed8b23-b3b4-49b6-b1a8-86a3e58e26f9"
+        }
+      ],
+      "uuid": "180e81d9-458e-425e-abce-21405555feab"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "a20ba59d-abf2-4bff-8ebc-e077decbda3d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "ac40f2cd-d0fc-4510-a713-364f48c92e67"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "cc714bc3-fa8c-4f0e-89d4-9494ff644033"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "66cfca29-5a77-498a-aa81-4591f425eb17",
+            "type": "has_only_text",
+            "uuid": "4b5617cf-2216-414b-8d33-fe98d8043500"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "056ac311-e1b3-496c-ba72-b4a62a652264",
+            "type": "has_only_text",
+            "uuid": "93cb3167-a42b-4ec7-be0c-e41708e38b31"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "ac40f2cd-d0fc-4510-a713-364f48c92e67",
+            "name": "Complete",
+            "uuid": "66cfca29-5a77-498a-aa81-4591f425eb17"
+          },
+          {
+            "exit_uuid": "cc714bc3-fa8c-4f0e-89d4-9494ff644033",
+            "name": "Expired",
+            "uuid": "056ac311-e1b3-496c-ba72-b4a62a652264"
+          }
+        ],
+        "default_category_uuid": "056ac311-e1b3-496c-ba72-b4a62a652264",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "e4754b48-e011-4ed1-b66c-b6a44a91a1e9"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "a405c2d3-e738-46fb-aed9-90fd69b26e7d",
+  "revision": 1
+}

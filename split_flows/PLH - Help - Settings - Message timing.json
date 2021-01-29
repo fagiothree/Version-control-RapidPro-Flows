@@ -1,0 +1,542 @@
+{
+  "_ui": {
+    "nodes": {
+      "58883ded-500f-4d40-a0de-884141fd2728": {
+        "position": {
+          "left": 540,
+          "top": 20
+        },
+        "type": "execute_actions"
+      },
+      "c358c470-9adf-4da3-a7c8-b61df0e35bb6": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "frequency",
+            "name": "frequency",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 580,
+          "top": 240
+        },
+        "type": "split_by_contact_field"
+      },
+      "ce6d1cb1-6ff1-4a04-b1a3-4ac452c86ae2": {
+        "position": {
+          "left": 280,
+          "top": 300
+        },
+        "type": "execute_actions"
+      },
+      "72bcf300-9640-4806-861b-e850439fe260": {
+        "position": {
+          "left": 720,
+          "top": 420
+        },
+        "type": "execute_actions"
+      },
+      "2a6e28ac-0901-48db-af67-ab498aa408fc": {
+        "position": {
+          "left": 280,
+          "top": 520
+        },
+        "type": "execute_actions"
+      },
+      "7a8c53f6-9c0a-4c34-af24-9a45f72d98d8": {
+        "position": {
+          "left": 720,
+          "top": 640
+        },
+        "type": "execute_actions"
+      },
+      "5e244e0b-cea2-474b-9605-ba10eadc953c": {
+        "position": {
+          "left": 400,
+          "top": 780
+        },
+        "type": "execute_actions"
+      },
+      "33d95c8f-9b59-471e-8ea5-b4d94b83ca29": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 100,
+          "top": 800
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "b8d3f643-51c3-40a8-8c09-710ac5e74412": {
+        "position": {
+          "left": 1060,
+          "top": 860
+        },
+        "type": "execute_actions"
+      },
+      "0b4ea06d-ca59-4444-b21d-b163ac04f630": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 700,
+          "top": 920
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "42c3d9fd-86b3-4a33-90c1-70e0efa7eacf": {
+        "position": {
+          "left": 140,
+          "top": 1020
+        },
+        "type": "execute_actions"
+      },
+      "b5a17ea7-1631-4b6c-a83b-1c79efe0e42a": {
+        "position": {
+          "left": 720,
+          "top": 1100
+        },
+        "type": "execute_actions"
+      },
+      "e6b275f7-61bd-4018-86cf-e8094f390f62": {
+        "position": {
+          "left": 400,
+          "top": 1160
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {
+      "b68c0b09-35aa-4c4c-9da8-c561cd55e08c": {
+        "body": "morning = time?\nafternoon = time?\nevening = time?",
+        "color": "yellow",
+        "position": {
+          "left": 40,
+          "top": 20
+        },
+        "title": "New Note"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Help - Settings - Message timing",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You are currently receiving messages every day at @fields.morning_time_of_day, @fields.main_time_of_day and @fields.evening_time_of_day.",
+          "type": "send_msg",
+          "uuid": "ed74b1d7-186f-4c4b-b761-c1fdf1bb5a26"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "c358c470-9adf-4da3-a7c8-b61df0e35bb6",
+          "uuid": "d26608f9-ec56-4b71-aed1-b02b3cd7d645"
+        }
+      ],
+      "uuid": "58883ded-500f-4d40-a0de-884141fd2728"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "ce6d1cb1-6ff1-4a04-b1a3-4ac452c86ae2",
+          "uuid": "5d77d9fc-1817-4885-95f2-4f46b6d785b6"
+        },
+        {
+          "destination_uuid": "72bcf300-9640-4806-861b-e850439fe260",
+          "uuid": "798c795a-d921-4c36-a3f5-295713cffc94"
+        },
+        {
+          "uuid": "ad6ccbaa-e498-4de5-9cb4-992c6f61046c"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "1"
+            ],
+            "category_uuid": "9eb5e857-6f31-4e18-8437-fdb3dae2acc4",
+            "type": "has_number_eq",
+            "uuid": "445d4e20-9dcc-471b-b7e7-6442009624ff"
+          },
+          {
+            "arguments": [
+              "2"
+            ],
+            "category_uuid": "c64eb0ce-adc6-42dd-8634-3338f9256db2",
+            "type": "has_number_eq",
+            "uuid": "c7a65093-21a7-4b38-84e7-fa52906fe628"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "5d77d9fc-1817-4885-95f2-4f46b6d785b6",
+            "name": "1",
+            "uuid": "9eb5e857-6f31-4e18-8437-fdb3dae2acc4"
+          },
+          {
+            "exit_uuid": "798c795a-d921-4c36-a3f5-295713cffc94",
+            "name": "2",
+            "uuid": "c64eb0ce-adc6-42dd-8634-3338f9256db2"
+          },
+          {
+            "exit_uuid": "ad6ccbaa-e498-4de5-9cb4-992c6f61046c",
+            "name": "Other",
+            "uuid": "32a04e76-1550-42df-a174-50efa378c1da"
+          }
+        ],
+        "default_category_uuid": "32a04e76-1550-42df-a174-50efa378c1da",
+        "operand": "@fields.frequency",
+        "type": "switch"
+      },
+      "uuid": "c358c470-9adf-4da3-a7c8-b61df0e35bb6"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You receive new parenting tips every day at @fields.main_time_of_day.",
+          "type": "send_msg",
+          "uuid": "0f668f30-58f5-4470-a0f6-0b1bd7e55fc4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "2a6e28ac-0901-48db-af67-ab498aa408fc",
+          "uuid": "b6fe05ed-7209-4ea9-969a-20f5cd4f6f52"
+        }
+      ],
+      "uuid": "ce6d1cb1-6ff1-4a04-b1a3-4ac452c86ae2"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You receive new parenting tips every other day at @fields.main_time_of_day.",
+          "type": "send_msg",
+          "uuid": "943a832c-8120-42a0-ab7a-071b12f2bd4d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7a8c53f6-9c0a-4c34-af24-9a45f72d98d8",
+          "uuid": "f933b986-6fda-4761-b29f-df3aecaf54da"
+        }
+      ],
+      "uuid": "72bcf300-9640-4806-861b-e850439fe260"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [
+            "Change the time of the day",
+            "Receive tips more often",
+            "Go back to the previous options"
+          ],
+          "text": "What would you like to do?",
+          "type": "send_msg",
+          "uuid": "5385594e-b36f-4eaa-bc51-389dc3302a86"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "33d95c8f-9b59-471e-8ea5-b4d94b83ca29",
+          "uuid": "d5d8343e-52db-45b1-8f48-f7aaebaadac1"
+        }
+      ],
+      "uuid": "2a6e28ac-0901-48db-af67-ab498aa408fc"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Change the time of the day",
+            "Receive tips less often (every other day)",
+            "Go back to the previous options"
+          ],
+          "text": "What would you like to do?",
+          "type": "send_msg",
+          "uuid": "dfdd81d0-713d-4398-8453-08b66adc308f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0b4ea06d-ca59-4444-b21d-b163ac04f630",
+          "uuid": "eea75071-359e-4753-a054-b39f60c0e517"
+        }
+      ],
+      "uuid": "7a8c53f6-9c0a-4c34-af24-9a45f72d98d8"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "019de04c-13c3-4aad-8cef-0d095b1db4cc"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "2a6e28ac-0901-48db-af67-ab498aa408fc",
+          "uuid": "cedc2fd9-74e7-4386-89e7-a8b521cc9b9b"
+        }
+      ],
+      "uuid": "5e244e0b-cea2-474b-9605-ba10eadc953c"
+    },
+    {
+      "uuid": "33d95c8f-9b59-471e-8ea5-b4d94b83ca29",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "77ce2b7d-a1f3-4265-99a8-837164a37bca",
+        "cases": [
+          {
+            "arguments": [
+              "time"
+            ],
+            "type": "has_any_word",
+            "uuid": "06adfee3-7b2c-4a7c-82d7-36b72a8d0051",
+            "category_uuid": "ce500698-30db-47a0-b39f-02b0f44be18a"
+          },
+          {
+            "arguments": [
+              "often more"
+            ],
+            "type": "has_any_word",
+            "uuid": "bbf79c2c-da56-4844-94d9-1f72a6adb0bf",
+            "category_uuid": "861e366b-6703-4efe-ae6f-876231e1bd9c"
+          },
+          {
+            "arguments": [
+              "back"
+            ],
+            "type": "has_any_word",
+            "uuid": "fe33b349-515e-4fee-b569-0b78aec6981e",
+            "category_uuid": "255d18b9-adab-407c-8945-8cc5d0185e93"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "2a5ba6ea-60e4-4bf9-9ade-221dd033c38f",
+            "name": "Time",
+            "uuid": "ce500698-30db-47a0-b39f-02b0f44be18a"
+          },
+          {
+            "exit_uuid": "f35a0e92-9dfe-4932-a53e-4ef5dece9aa9",
+            "name": "Often",
+            "uuid": "861e366b-6703-4efe-ae6f-876231e1bd9c"
+          },
+          {
+            "exit_uuid": "3bd51a7f-8da1-40ea-b53a-83916ea75d47",
+            "name": "Back",
+            "uuid": "255d18b9-adab-407c-8945-8cc5d0185e93"
+          },
+          {
+            "exit_uuid": "2a298c0d-4007-4ada-9097-c164cacc5db7",
+            "name": "Other",
+            "uuid": "77ce2b7d-a1f3-4265-99a8-837164a37bca"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg"
+        },
+        "result_name": "Result 6"
+      },
+      "exits": [
+        {
+          "destination_uuid": "e6b275f7-61bd-4018-86cf-e8094f390f62",
+          "uuid": "2a5ba6ea-60e4-4bf9-9ade-221dd033c38f"
+        },
+        {
+          "destination_uuid": "42c3d9fd-86b3-4a33-90c1-70e0efa7eacf",
+          "uuid": "f35a0e92-9dfe-4932-a53e-4ef5dece9aa9"
+        },
+        {
+          "uuid": "3bd51a7f-8da1-40ea-b53a-83916ea75d47"
+        },
+        {
+          "destination_uuid": "5e244e0b-cea2-474b-9605-ba10eadc953c",
+          "uuid": "2a298c0d-4007-4ada-9097-c164cacc5db7"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "e2727ad1-10f4-4100-ac0b-952f71bc90b9"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7a8c53f6-9c0a-4c34-af24-9a45f72d98d8",
+          "uuid": "cd57b63d-4915-4a35-9efa-f6b5f8425928"
+        }
+      ],
+      "uuid": "b8d3f643-51c3-40a8-8c09-710ac5e74412"
+    },
+    {
+      "uuid": "0b4ea06d-ca59-4444-b21d-b163ac04f630",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "f8eb2ba5-841b-478d-a763-34f6b3e386b4",
+        "cases": [
+          {
+            "arguments": [
+              "time"
+            ],
+            "type": "has_any_word",
+            "uuid": "191c4343-10c4-46d8-b311-2bd87eb2a253",
+            "category_uuid": "a419b8e7-30dc-484d-be6c-3a8a16209de9"
+          },
+          {
+            "arguments": [
+              "less often "
+            ],
+            "type": "has_any_word",
+            "uuid": "307f5ad6-1570-4707-a68a-be7d39a91a7a",
+            "category_uuid": "c4b9faec-5e61-435a-8d1f-177d019e4a8a"
+          },
+          {
+            "arguments": [
+              "back"
+            ],
+            "type": "has_any_word",
+            "uuid": "5a7ae019-d60f-45b4-9309-89249cc76491",
+            "category_uuid": "688813d4-33f0-4085-91c9-8352d9ccf953"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "035638c0-06a7-403f-a37d-aa7152e2c224",
+            "name": "Time",
+            "uuid": "a419b8e7-30dc-484d-be6c-3a8a16209de9"
+          },
+          {
+            "exit_uuid": "d8fd5f67-336a-4846-8fca-46b1d027d1d0",
+            "name": "Frequency",
+            "uuid": "c4b9faec-5e61-435a-8d1f-177d019e4a8a"
+          },
+          {
+            "exit_uuid": "e9542d39-0142-46bb-a4f2-762fa8011a82",
+            "name": "Back",
+            "uuid": "688813d4-33f0-4085-91c9-8352d9ccf953"
+          },
+          {
+            "exit_uuid": "14a0b8a0-9615-473a-91dd-47b13c2300d7",
+            "name": "Other",
+            "uuid": "f8eb2ba5-841b-478d-a763-34f6b3e386b4"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg"
+        },
+        "result_name": "Result 5"
+      },
+      "exits": [
+        {
+          "destination_uuid": "e6b275f7-61bd-4018-86cf-e8094f390f62",
+          "uuid": "035638c0-06a7-403f-a37d-aa7152e2c224"
+        },
+        {
+          "destination_uuid": "b5a17ea7-1631-4b6c-a83b-1c79efe0e42a",
+          "uuid": "d8fd5f67-336a-4846-8fca-46b1d027d1d0"
+        },
+        {
+          "uuid": "e9542d39-0142-46bb-a4f2-762fa8011a82"
+        },
+        {
+          "destination_uuid": "b8d3f643-51c3-40a8-8c09-710ac5e74412",
+          "uuid": "14a0b8a0-9615-473a-91dd-47b13c2300d7"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "frequency",
+            "name": "frequency"
+          },
+          "type": "set_contact_field",
+          "uuid": "667504cc-e39a-4d8e-a8d3-d08e0cd9125e",
+          "value": "1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "67eb1658-b08c-4058-99b8-0d5936fd549b"
+        }
+      ],
+      "uuid": "42c3d9fd-86b3-4a33-90c1-70e0efa7eacf"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "frequency",
+            "name": "frequency"
+          },
+          "type": "set_contact_field",
+          "uuid": "17b02ad2-c4b5-42ca-be3a-cf887d934b6c",
+          "value": "2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "2ffbd7ec-15e3-4a1b-aee2-989524a1d22d"
+        }
+      ],
+      "uuid": "b5a17ea7-1631-4b6c-a83b-1c79efe0e42a"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "*missing*",
+          "type": "send_msg",
+          "uuid": "a2c1157a-b5c3-4be0-b0e3-6f6c3b4cffd9"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "f226a925-6ffa-40aa-a28d-20473fe56a21"
+        }
+      ],
+      "uuid": "e6b275f7-61bd-4018-86cf-e8094f390f62"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "c7f19c4f-2451-46e9-a0a9-6d6f00da7140",
+  "revision": 3
+}

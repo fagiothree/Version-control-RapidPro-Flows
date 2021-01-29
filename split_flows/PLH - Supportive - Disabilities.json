@@ -1,0 +1,330 @@
+{
+  "_ui": {
+    "nodes": {
+      "330cbdd0-abbd-4e6e-af17-26852cf89762": {
+        "position": {
+          "left": 180,
+          "top": 280
+        },
+        "type": "execute_actions"
+      },
+      "3d185fcd-ce4e-4e83-95d8-7a47f6a329cd": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 580,
+          "top": 260
+        },
+        "type": "wait_for_response"
+      },
+      "6d7f7b7d-82bc-4e42-9b89-b8ea5004bdc9": {
+        "position": {
+          "left": 580,
+          "top": 20
+        },
+        "type": "execute_actions"
+      },
+      "8dc5667b-9142-4415-baa7-23acc03e5697": {
+        "position": {
+          "left": 940,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "d3a4fc1a-89c2-4fdb-b3e7-fd198afd06fa": {
+        "position": {
+          "left": 960,
+          "top": 340
+        },
+        "type": "execute_actions"
+      },
+      "e2ef2075-1082-4b69-a0d3-5859eca5f2f4": {
+        "config": {},
+        "position": {
+          "left": 180,
+          "top": 380
+        },
+        "type": "split_by_subflow"
+      },
+      "e2ff65c6-3672-4b73-a350-33f2c0fd6338": {
+        "position": {
+          "left": 580,
+          "top": 600
+        },
+        "type": "execute_actions"
+      },
+      "f164f58c-d603-4284-b2f1-fade0bdfe38c": {
+        "position": {
+          "left": 600,
+          "top": 460
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 10
+  },
+  "name": "PLH - Supportive - Disabilities",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Give me more information",
+            "I am not interested"
+          ],
+          "text": "Hi! Would you like to learn more about how you could support children with disabilities?",
+          "type": "send_msg",
+          "uuid": "ec4f1012-e219-49ef-bce4-85e3d50e43e1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "3d185fcd-ce4e-4e83-95d8-7a47f6a329cd",
+          "uuid": "4b169857-dbcf-48d7-903b-547f9fb3569d"
+        }
+      ],
+      "uuid": "6d7f7b7d-82bc-4e42-9b89-b8ea5004bdc9"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "330cbdd0-abbd-4e6e-af17-26852cf89762",
+          "uuid": "adc480e0-83c1-4d40-8c07-612918c99fca"
+        },
+        {
+          "destination_uuid": "f164f58c-d603-4284-b2f1-fade0bdfe38c",
+          "uuid": "c63074e9-2017-4f76-9cec-c4140e93ff49"
+        },
+        {
+          "destination_uuid": "d3a4fc1a-89c2-4fdb-b3e7-fd198afd06fa",
+          "uuid": "fbf557a7-e0e8-4f6f-82d2-0f102327b78a"
+        },
+        {
+          "destination_uuid": "f164f58c-d603-4284-b2f1-fade0bdfe38c",
+          "uuid": "9de6b69c-14ee-4dfa-9071-8e65aa380ba2"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "more information"
+            ],
+            "category_uuid": "574bcdba-9e09-4b2b-a595-0cada52f0dbc",
+            "type": "has_any_word",
+            "uuid": "8ba20d6e-f9d0-4d57-aa97-6871b0e5c936"
+          },
+          {
+            "arguments": [
+              "not no interested"
+            ],
+            "category_uuid": "48f0e2d0-1365-4d95-b3b1-1e89bcd05780",
+            "type": "has_any_word",
+            "uuid": "7f8d41d7-58f6-496d-b12e-fbacf48243f0"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "adc480e0-83c1-4d40-8c07-612918c99fca",
+            "name": "More",
+            "uuid": "574bcdba-9e09-4b2b-a595-0cada52f0dbc"
+          },
+          {
+            "exit_uuid": "c63074e9-2017-4f76-9cec-c4140e93ff49",
+            "name": "Not",
+            "uuid": "48f0e2d0-1365-4d95-b3b1-1e89bcd05780"
+          },
+          {
+            "exit_uuid": "fbf557a7-e0e8-4f6f-82d2-0f102327b78a",
+            "name": "Other",
+            "uuid": "f80d62c5-8a9f-48b2-9ba0-04e1c2517ac0"
+          },
+          {
+            "exit_uuid": "9de6b69c-14ee-4dfa-9071-8e65aa380ba2",
+            "name": "No Response",
+            "uuid": "81c6af42-2e5a-4d4c-b0cb-4f4f2f24ceef"
+          }
+        ],
+        "default_category_uuid": "f80d62c5-8a9f-48b2-9ba0-04e1c2517ac0",
+        "operand": "@input.text",
+        "result_name": "Result 1",
+        "type": "switch",
+        "wait": {
+          "timeout": {
+            "category_uuid": "81c6af42-2e5a-4d4c-b0cb-4f4f2f24ceef",
+            "seconds": 3600
+          },
+          "type": "msg"
+        }
+      },
+      "uuid": "3d185fcd-ce4e-4e83-95d8-7a47f6a329cd"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "5adf7cc3-4ec2-4b09-a3ec-1bbd39f356b4",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e2ef2075-1082-4b69-a0d3-5859eca5f2f4",
+          "uuid": "bc67bcd5-1ec1-4bf2-b777-7bd2c866eb4d"
+        }
+      ],
+      "uuid": "330cbdd0-abbd-4e6e-af17-26852cf89762"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "a24117ec-6195-47a6-b420-54fcc8af0fe0"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "8dc5667b-9142-4415-baa7-23acc03e5697",
+          "uuid": "00705d60-a59e-484c-9c77-e5a3255686d4"
+        }
+      ],
+      "uuid": "d3a4fc1a-89c2-4fdb-b3e7-fd198afd06fa"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Content - Extra - Disability",
+            "uuid": "371d6c4f-d82e-4257-8544-6076c4909037"
+          },
+          "type": "enter_flow",
+          "uuid": "9581b0df-d67f-42a5-9730-f78655084d18"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "14d583dd-0587-4eee-8a7b-e0eda66ae62c"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "f5e9283f-268f-4b64-a893-f6a0ae9d50aa"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "f9e8b2df-f2f2-4070-b6c3-adcdcda90133",
+            "type": "has_only_text",
+            "uuid": "4faa5b10-a9dd-4724-a7f3-7fe761c76b60"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "c4f4d25d-ce38-4e9c-ba11-1c7d7d82b30a",
+            "type": "has_only_text",
+            "uuid": "9e245830-b42a-4ddd-bf0f-fcb7a48790bd"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "14d583dd-0587-4eee-8a7b-e0eda66ae62c",
+            "name": "Complete",
+            "uuid": "f9e8b2df-f2f2-4070-b6c3-adcdcda90133"
+          },
+          {
+            "exit_uuid": "f5e9283f-268f-4b64-a893-f6a0ae9d50aa",
+            "name": "Expired",
+            "uuid": "c4f4d25d-ce38-4e9c-ba11-1c7d7d82b30a"
+          }
+        ],
+        "default_category_uuid": "c4f4d25d-ce38-4e9c-ba11-1c7d7d82b30a",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "e2ef2075-1082-4b69-a0d3-5859eca5f2f4"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always get more information by typing \"Help\". Chat later!",
+          "type": "send_msg",
+          "uuid": "eb7aad23-5c75-4842-ac7d-e41d76f9251a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e2ff65c6-3672-4b73-a350-33f2c0fd6338",
+          "uuid": "81c5db4f-d19e-49a9-9e68-30215ce90a50"
+        }
+      ],
+      "uuid": "f164f58c-d603-4284-b2f1-fade0bdfe38c"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "e26320e7-6482-46da-8857-5aa881b61aaf",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "6d7f7b7d-82bc-4e42-9b89-b8ea5004bdc9",
+          "uuid": "71f0c524-9ff3-42a8-84b6-ffa823b0352f"
+        }
+      ],
+      "uuid": "8dc5667b-9142-4415-baa7-23acc03e5697"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "2cb6afa2-e51b-4827-ba17-90ae9745c70a",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "22be899d-c3c0-4161-ad80-06385916dc24"
+        }
+      ],
+      "uuid": "e2ff65c6-3672-4b73-a350-33f2c0fd6338"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "67e7e791-88ab-43e2-ba0e-45e34fa99382",
+  "revision": 1
+}

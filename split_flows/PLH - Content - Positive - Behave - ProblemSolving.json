@@ -1,0 +1,1015 @@
+{
+  "_ui": {
+    "nodes": {
+      "3bdcf433-9afb-43c9-bfc4-6f66f68da1bc": {
+        "position": {
+          "left": 280,
+          "top": 20
+        },
+        "type": "execute_actions"
+      },
+      "2e89d22c-81cb-4dda-b0e5-6ff8ffda9777": {
+        "config": {},
+        "position": {
+          "left": 260,
+          "top": 140
+        },
+        "type": "split_by_subflow"
+      },
+      "d2d9eebd-9cad-44c2-99cd-0711618a147b": {
+        "position": {
+          "left": 560,
+          "top": 240
+        },
+        "type": "execute_actions"
+      },
+      "22f44405-ac19-461d-9f13-3b53dd0fab05": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "from_theme",
+            "name": "from theme",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 200,
+          "top": 280
+        },
+        "type": "split_by_contact_field"
+      },
+      "cd34b28f-f71f-4995-bed5-13f120e0be91": {
+        "position": {
+          "left": 540,
+          "top": 440
+        },
+        "type": "execute_actions"
+      },
+      "97171ab0-0a28-4b42-aa6c-bcb1b01731ab": {
+        "position": {
+          "left": 820,
+          "top": 440
+        },
+        "type": "execute_actions"
+      },
+      "8c88d2ef-14c0-44ff-b7a5-4d5aa8d4c08b": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 540,
+          "top": 600
+        },
+        "type": "wait_for_response"
+      },
+      "9d63a9c2-7213-4e25-9ea9-84b08d3ea935": {
+        "type": "split_by_contact_field",
+        "position": {
+          "left": 200,
+          "top": 800
+        },
+        "config": {
+          "operand": {
+            "id": "type_of_media",
+            "type": "field",
+            "name": "type of media"
+          },
+          "cases": {}
+        }
+      },
+      "37f86c12-50eb-49ec-a232-da3f2702b28c": {
+        "position": {
+          "left": 840,
+          "top": 800
+        },
+        "type": "execute_actions"
+      },
+      "e8e8aae7-5063-4e34-91ab-51512ec6e653": {
+        "position": {
+          "left": 40,
+          "top": 940
+        },
+        "type": "execute_actions"
+      },
+      "d30e182f-90cc-4f0f-902c-c5ebb8e65ba5": {
+        "position": {
+          "left": 700,
+          "top": 1100
+        },
+        "type": "execute_actions"
+      },
+      "a49273c8-d4fa-43b2-b6ff-34ec4d163d25": {
+        "position": {
+          "left": 820,
+          "top": 1260
+        },
+        "type": "execute_actions"
+      },
+      "957c64a1-7208-47fe-8dc5-cb38ab376cbd": {
+        "position": {
+          "left": 480,
+          "top": 1520
+        },
+        "type": "execute_actions"
+      },
+      "bb181d63-f563-4860-b08d-3e30290ac1d2": {
+        "position": {
+          "left": 140,
+          "top": 1560
+        },
+        "type": "execute_actions"
+      },
+      "b676eb39-2f74-4010-8166-750a677b30f2": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 180,
+          "top": 1680
+        },
+        "type": "wait_for_response"
+      },
+      "61e183f7-1610-49e3-9d91-118e5fe78261": {
+        "position": {
+          "left": 660,
+          "top": 1720
+        },
+        "type": "execute_actions"
+      },
+      "e06453c6-3589-4893-8d81-ef0c4f686bd8": {
+        "position": {
+          "left": 660,
+          "top": 1880
+        },
+        "type": "execute_actions"
+      },
+      "6792ef76-3c70-4707-9077-0e16d34924d5": {
+        "position": {
+          "left": 680,
+          "top": 2160
+        },
+        "type": "execute_actions"
+      },
+      "02bf1ae4-1971-48a3-bae5-60746c3ee4b0": {
+        "position": {
+          "left": 640,
+          "top": 2500
+        },
+        "type": "execute_actions"
+      },
+      "92de31c1-b83e-4c85-bc8b-b0740df2b4c4": {
+        "config": {},
+        "position": {
+          "left": 660,
+          "top": 2860
+        },
+        "type": "split_by_subflow"
+      },
+      "062c1fb6-05d9-4a0a-8a45-90ebc4fa684c": {
+        "position": {
+          "left": 660,
+          "top": 3200
+        },
+        "type": "execute_actions"
+      },
+      "0c427c40-f53a-48de-a929-314a023accd4": {
+        "config": {},
+        "position": {
+          "left": 660,
+          "top": 3420
+        },
+        "type": "split_by_subflow"
+      },
+      "f0d2fa58-714e-419d-8fe5-1e21a0c089c4": {
+        "position": {
+          "left": 660,
+          "top": 3560
+        },
+        "type": "execute_actions"
+      },
+      "c6872199-28ed-4667-923f-84f09c9cc217": {
+        "position": {
+          "left": 260,
+          "top": 960
+        },
+        "type": "execute_actions"
+      },
+      "c73f1fdc-cdef-4a95-9012-93ee62bd4cd3": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 100,
+          "top": 1140
+        },
+        "config": {
+          "cases": {}
+        }
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Content - Positive - Behave - ProblemSolving",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "category": "",
+          "name": "skill",
+          "type": "set_run_result",
+          "uuid": "56f36298-2b33-48b2-b2e6-f0dd3f258592",
+          "value": "Solving problems with your teen"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "2e89d22c-81cb-4dda-b0e5-6ff8ffda9777",
+          "uuid": "671cfd26-edca-41da-8c78-22ac30432fff"
+        }
+      ],
+      "uuid": "3bdcf433-9afb-43c9-bfc4-6f66f68da1bc"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Update incomplete toolkits",
+            "uuid": "a682c361-8bea-420a-8bbc-fc84a202fbcb"
+          },
+          "type": "enter_flow",
+          "uuid": "baf16ee2-4562-468e-92b7-17c53dda38fa"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "22f44405-ac19-461d-9f13-3b53dd0fab05",
+          "uuid": "360209f5-e6e9-4de0-b5fe-77256ce47bb2"
+        },
+        {
+          "destination_uuid": "22f44405-ac19-461d-9f13-3b53dd0fab05",
+          "uuid": "da4a4800-dbc3-43f7-a6f8-5922b4d5a840"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "60292069-394e-407d-87b4-a2b82f54b0f7",
+            "type": "has_only_text",
+            "uuid": "56696c12-4620-4689-a1af-3b006c740e7c"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "ad6ecdcd-5476-4002-9d0b-f6a32737c825",
+            "type": "has_only_text",
+            "uuid": "c53680a7-0387-491a-b659-a26d6b4f14ec"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "360209f5-e6e9-4de0-b5fe-77256ce47bb2",
+            "name": "Complete",
+            "uuid": "60292069-394e-407d-87b4-a2b82f54b0f7"
+          },
+          {
+            "exit_uuid": "da4a4800-dbc3-43f7-a6f8-5922b4d5a840",
+            "name": "Expired",
+            "uuid": "ad6ecdcd-5476-4002-9d0b-f6a32737c825"
+          }
+        ],
+        "default_category_uuid": "ad6ecdcd-5476-4002-9d0b-f6a32737c825",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "2e89d22c-81cb-4dda-b0e5-6ff8ffda9777"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Help your child/teen learn how to solve problems. As children get older, they become more independent and sometimes push the boundaries that we create to keep them safe. ",
+          "type": "send_msg",
+          "uuid": "aab6701b-82a0-43af-bde4-77a99ef19246"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "cd34b28f-f71f-4995-bed5-13f120e0be91",
+          "uuid": "01bb7b5e-83cc-4304-99ab-a2bd4925321e"
+        }
+      ],
+      "uuid": "d2d9eebd-9cad-44c2-99cd-0711618a147b"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "9d63a9c2-7213-4e25-9ea9-84b08d3ea935",
+          "uuid": "1441ecf7-b832-497b-ac99-6197f57dfe7c"
+        },
+        {
+          "destination_uuid": "d2d9eebd-9cad-44c2-99cd-0711618a147b",
+          "uuid": "3d552311-a427-4234-8fb9-6431514c94a0"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes"
+            ],
+            "category_uuid": "72bbee73-85da-4c72-ba67-25fb3e2aaeff",
+            "type": "has_any_word",
+            "uuid": "f2098e82-c222-4a9e-bb06-58418d1c9275"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "1441ecf7-b832-497b-ac99-6197f57dfe7c",
+            "name": "Yes",
+            "uuid": "72bbee73-85da-4c72-ba67-25fb3e2aaeff"
+          },
+          {
+            "exit_uuid": "3d552311-a427-4234-8fb9-6431514c94a0",
+            "name": "Other",
+            "uuid": "d528a361-1fea-4a63-bd53-dd4f6ae8f4f6"
+          }
+        ],
+        "default_category_uuid": "d528a361-1fea-4a63-bd53-dd4f6ae8f4f6",
+        "operand": "@fields.from_theme",
+        "type": "switch"
+      },
+      "uuid": "22f44405-ac19-461d-9f13-3b53dd0fab05"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "Would you like to learn more about this tip?",
+          "type": "send_msg",
+          "uuid": "49ba8bfa-e7e1-46d2-8c85-f1075d258bca"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "8c88d2ef-14c0-44ff-b7a5-4d5aa8d4c08b",
+          "uuid": "d64616f8-0369-4d08-976e-4352b3ebbf18"
+        }
+      ],
+      "uuid": "cd34b28f-f71f-4995-bed5-13f120e0be91"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "6ed85b8e-c0a0-4432-8d1f-b798f257bce9"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "cd34b28f-f71f-4995-bed5-13f120e0be91",
+          "uuid": "dd2a7021-54db-450a-9854-1cb740b4467f"
+        }
+      ],
+      "uuid": "97171ab0-0a28-4b42-aa6c-bcb1b01731ab"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "9d63a9c2-7213-4e25-9ea9-84b08d3ea935",
+          "uuid": "86194031-5136-4c04-9bec-73706ff7b315"
+        },
+        {
+          "destination_uuid": "37f86c12-50eb-49ec-a232-da3f2702b28c",
+          "uuid": "4849d94e-fff4-4404-848e-cd26f37b4719"
+        },
+        {
+          "destination_uuid": "97171ab0-0a28-4b42-aa6c-bcb1b01731ab",
+          "uuid": "f58fd99d-c5fe-4d3e-a198-0ce651f84e60"
+        },
+        {
+          "destination_uuid": "37f86c12-50eb-49ec-a232-da3f2702b28c",
+          "uuid": "78949cf9-c5d6-4ac3-a55b-cfa17845fded"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "y yes"
+            ],
+            "category_uuid": "b20fa3d7-b658-44b3-93d9-f606aae54f12",
+            "type": "has_any_word",
+            "uuid": "ad86afb3-9431-4566-8503-f34dd814c061"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "46e520a2-8e7d-4326-a55b-639484e7d3f0",
+            "type": "has_any_word",
+            "uuid": "61301a5d-8ebc-42fd-a688-7221a9679b64"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "86194031-5136-4c04-9bec-73706ff7b315",
+            "name": "Y",
+            "uuid": "b20fa3d7-b658-44b3-93d9-f606aae54f12"
+          },
+          {
+            "exit_uuid": "4849d94e-fff4-4404-848e-cd26f37b4719",
+            "name": "No",
+            "uuid": "46e520a2-8e7d-4326-a55b-639484e7d3f0"
+          },
+          {
+            "exit_uuid": "f58fd99d-c5fe-4d3e-a198-0ce651f84e60",
+            "name": "Other",
+            "uuid": "745549aa-30e7-43dd-a4fd-b4f7e56f74ec"
+          },
+          {
+            "exit_uuid": "78949cf9-c5d6-4ac3-a55b-cfa17845fded",
+            "name": "No Response",
+            "uuid": "d195d148-b3be-4923-bc12-c938efbdd9d5"
+          }
+        ],
+        "default_category_uuid": "745549aa-30e7-43dd-a4fd-b4f7e56f74ec",
+        "operand": "@input.text",
+        "result_name": "Result 6",
+        "type": "switch",
+        "wait": {
+          "timeout": {
+            "category_uuid": "d195d148-b3be-4923-bc12-c938efbdd9d5",
+            "seconds": 3600
+          },
+          "type": "msg"
+        }
+      },
+      "uuid": "8c88d2ef-14c0-44ff-b7a5-4d5aa8d4c08b"
+    },
+    {
+      "uuid": "9d63a9c2-7213-4e25-9ea9-84b08d3ea935",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "3ce37f6d-dcaf-482d-a6b3-d4a7ffa80203",
+        "cases": [
+          {
+            "arguments": [
+              "high"
+            ],
+            "type": "has_any_word",
+            "uuid": "14e1fdb7-765a-4b48-b582-c330d248167c",
+            "category_uuid": "ad3cf03e-6011-48a6-921e-9c9a23edf0f4"
+          },
+          {
+            "arguments": [
+              "medium"
+            ],
+            "type": "has_any_word",
+            "uuid": "90953d5f-931f-4bef-891c-8fb56c465419",
+            "category_uuid": "b2f73dd8-3573-4abb-a0d7-5a9192fff7e3"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "7eefabdc-f60b-4b4f-9b0f-8450cca520ed",
+            "name": "High",
+            "uuid": "ad3cf03e-6011-48a6-921e-9c9a23edf0f4"
+          },
+          {
+            "uuid": "b2f73dd8-3573-4abb-a0d7-5a9192fff7e3",
+            "name": "Medium",
+            "exit_uuid": "9ec887e4-8fb4-465c-8d0d-b74f10e49762"
+          },
+          {
+            "exit_uuid": "dd242b50-020e-4dc0-a366-6ac3d4e60758",
+            "name": "Other",
+            "uuid": "3ce37f6d-dcaf-482d-a6b3-d4a7ffa80203"
+          }
+        ],
+        "operand": "@fields.type_of_media"
+      },
+      "exits": [
+        {
+          "destination_uuid": "e8e8aae7-5063-4e34-91ab-51512ec6e653",
+          "uuid": "7eefabdc-f60b-4b4f-9b0f-8450cca520ed"
+        },
+        {
+          "uuid": "9ec887e4-8fb4-465c-8d0d-b74f10e49762",
+          "destination_uuid": "c6872199-28ed-4667-923f-84f09c9cc217"
+        },
+        {
+          "destination_uuid": "d30e182f-90cc-4f0f-902c-c5ebb8e65ba5",
+          "uuid": "dd242b50-020e-4dc0-a366-6ac3d4e60758"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always type \"Help\" if you want to receive more tips about how to manage your child's behaviour.",
+          "type": "send_msg",
+          "uuid": "614235a9-41fc-4f36-b417-46fab8f31b68"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "5c51b8d2-c64c-4339-8916-d7dfec81c698"
+        }
+      ],
+      "uuid": "37f86c12-50eb-49ec-a232-da3f2702b28c"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "video:@(fields.voiceover_video_path & \"Problem_Solving.m4v\")"
+          ],
+          "text": "Here's a video to help you teach your child problem-solving skills! ",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "c817666b-f65b-4198-89fa-82cbfde6a89c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "c73f1fdc-cdef-4a95-9012-93ee62bd4cd3",
+          "uuid": "611e84e7-7363-41dd-af53-ac460e225dd8"
+        }
+      ],
+      "uuid": "e8e8aae7-5063-4e34-91ab-51512ec6e653"
+    },
+    {
+      "uuid": "c6872199-28ed-4667-923f-84f09c9cc217",
+      "actions": [
+        {
+          "attachments": [
+            "audio:@(fields.voiceover_audio_path & \"Problem_Solving.mp3\")"
+          ],
+          "text": "Here's an audio message to help you teach your child problem-solving skills! ",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "e3f89c05-ddb9-4126-88ba-4529c68ad541"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "44d80d08-c6d9-4699-9977-827651ea1862",
+          "destination_uuid": "c73f1fdc-cdef-4a95-9012-93ee62bd4cd3"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Challenges are stressful. But problem-solving can really help. There are 6 basic steps for problem solving:",
+          "type": "send_msg",
+          "uuid": "fce22207-6714-4c43-a1bd-c4eb19f389eb"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "a49273c8-d4fa-43b2-b6ff-34ec4d163d25",
+          "uuid": "e02dd0a8-2666-4104-b018-528aff0bd9be"
+        }
+      ],
+      "uuid": "d30e182f-90cc-4f0f-902c-c5ebb8e65ba5"
+    },
+    {
+      "uuid": "c73f1fdc-cdef-4a95-9012-93ee62bd4cd3",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "412f93c9-f6cc-413b-ade7-aa9fe982c19e",
+        "cases": [],
+        "categories": [
+          {
+            "uuid": "412f93c9-f6cc-413b-ade7-aa9fe982c19e",
+            "name": "All Responses",
+            "exit_uuid": "644520e7-0b40-4534-836f-e03d95eebace"
+          },
+          {
+            "uuid": "ada7c122-f7c3-4f0a-a984-8564861c8ac7",
+            "name": "No Response",
+            "exit_uuid": "85b9eb9a-5b15-4dfb-81d6-dae01a80f587"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg",
+          "timeout": {
+            "seconds": 120,
+            "category_uuid": "ada7c122-f7c3-4f0a-a984-8564861c8ac7"
+          }
+        },
+        "result_name": "Result 4"
+      },
+      "exits": [
+        {
+          "uuid": "644520e7-0b40-4534-836f-e03d95eebace",
+          "destination_uuid": "d30e182f-90cc-4f0f-902c-c5ebb8e65ba5"
+        },
+        {
+          "uuid": "85b9eb9a-5b15-4dfb-81d6-dae01a80f587",
+          "destination_uuid": "d30e182f-90cc-4f0f-902c-c5ebb8e65ba5"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "1. Identify the problem\n2. Think of possible solutions\n3. Figure out what the results of each solution would be\n4. Choose one solution \n5. Try it out!\n6. Did it work? Great! If it did not work, then try another solution",
+          "type": "send_msg",
+          "uuid": "f1d19009-948d-4ed3-b983-98b4838bbe64"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "bb181d63-f563-4860-b08d-3e30290ac1d2",
+          "uuid": "c651764c-6a70-45ea-8ae3-70ed71570127"
+        }
+      ],
+      "uuid": "a49273c8-d4fa-43b2-b6ff-34ec4d163d25"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "aa8d8923-d664-44ee-9d7c-3d6a4fe250b2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "bb181d63-f563-4860-b08d-3e30290ac1d2",
+          "uuid": "fc2d7647-1df4-4353-b7de-375465a450ab"
+        }
+      ],
+      "uuid": "957c64a1-7208-47fe-8dc5-cb38ab376cbd"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "Would you like to learn more?",
+          "type": "send_msg",
+          "uuid": "c5414b32-6da5-4317-81a6-16e366784969"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "b676eb39-2f74-4010-8166-750a677b30f2",
+          "uuid": "6e7b9e73-3989-4719-a0e8-76429797e576"
+        }
+      ],
+      "uuid": "bb181d63-f563-4860-b08d-3e30290ac1d2"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "61e183f7-1610-49e3-9d91-118e5fe78261",
+          "uuid": "9dedffc6-736b-41f7-80f8-d6f26131bcc3"
+        },
+        {
+          "destination_uuid": "02bf1ae4-1971-48a3-bae5-60746c3ee4b0",
+          "uuid": "c5281faf-8aa2-49d0-94fe-9bc3c14f379b"
+        },
+        {
+          "destination_uuid": "957c64a1-7208-47fe-8dc5-cb38ab376cbd",
+          "uuid": "bc4ea91b-c625-4a5f-ad05-16009e5324fd"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "YES Y"
+            ],
+            "category_uuid": "1bcf1c61-c79c-4c4d-8b31-81540d19201a",
+            "type": "has_any_word",
+            "uuid": "8bf715ff-1173-49ff-be12-c406c78c6547"
+          },
+          {
+            "arguments": [
+              "NO N"
+            ],
+            "category_uuid": "cfbfac38-ac2d-400c-a753-cfebc068062a",
+            "type": "has_any_word",
+            "uuid": "cf0d82e2-23c8-4b2f-96a6-0a1c851892ec"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "9dedffc6-736b-41f7-80f8-d6f26131bcc3",
+            "name": "Yes",
+            "uuid": "1bcf1c61-c79c-4c4d-8b31-81540d19201a"
+          },
+          {
+            "exit_uuid": "c5281faf-8aa2-49d0-94fe-9bc3c14f379b",
+            "name": "No",
+            "uuid": "cfbfac38-ac2d-400c-a753-cfebc068062a"
+          },
+          {
+            "exit_uuid": "bc4ea91b-c625-4a5f-ad05-16009e5324fd",
+            "name": "Other",
+            "uuid": "c58209f6-bf30-4693-a494-9edf5eb53b9a"
+          }
+        ],
+        "default_category_uuid": "c58209f6-bf30-4693-a494-9edf5eb53b9a",
+        "operand": "@input.text",
+        "result_name": "Result 2",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "b676eb39-2f74-4010-8166-750a677b30f2"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "We can also teach our children the same steps.",
+          "type": "send_msg",
+          "uuid": "3e57341f-ed30-4c34-8a44-d74a91e3098d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e06453c6-3589-4893-8d81-ef0c4f686bd8",
+          "uuid": "a2d1ec6b-3348-4659-b965-0e15dbafd82c"
+        }
+      ],
+      "uuid": "61e183f7-1610-49e3-9d91-118e5fe78261"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "When something bad happens, we often get upset and blame our children. But what they really need is someone to help them work through their problems. \nTake a Pause! Become aware of anger and stress. Take a deep breath or count to 10 before you react. Then respond in a calmer way.",
+          "type": "send_msg",
+          "uuid": "d981c6f9-6a26-4696-a79d-38f196e5912a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "6792ef76-3c70-4707-9077-0e16d34924d5",
+          "uuid": "242a460f-f22a-4c9d-8996-c80644d12956"
+        }
+      ],
+      "uuid": "e06453c6-3589-4893-8d81-ef0c4f686bd8"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Try to find solutions together:\n• Allow your teen to express how they feel and accept their feelings. \n• Try to listen to your teen and see things from their perspective. \n• Thank your teen for being open and trusting you",
+          "type": "send_msg",
+          "uuid": "916f35ed-653f-4b91-81c4-fdc0701292e1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "02bf1ae4-1971-48a3-bae5-60746c3ee4b0",
+          "uuid": "4a095e66-e09f-4d20-a67e-ea93ba1b2244"
+        }
+      ],
+      "uuid": "6792ef76-3c70-4707-9077-0e16d34924d5"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Well done! You have added another skill to your Parenting Toolkit. Helping your teen learn how to solve problems will be something they will take with them the rest of their lives. What a gift!",
+          "type": "send_msg",
+          "uuid": "bede9b02-8e40-436f-9453-8e7688c4b39b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "92de31c1-b83e-4c85-bc8b-b0740df2b4c4",
+          "uuid": "6b286934-c04d-4dd7-8015-e8d529d33233"
+        }
+      ],
+      "uuid": "02bf1ae4-1971-48a3-bae5-60746c3ee4b0"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Update toolkits",
+            "uuid": "074bc4c5-8c69-4e5b-9176-79b44bfa40da"
+          },
+          "type": "enter_flow",
+          "uuid": "8cd414cf-3b82-456d-b890-f428499d2bcf"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "062c1fb6-05d9-4a0a-8a45-90ebc4fa684c",
+          "uuid": "1569d974-9946-444e-ad76-88a541d64402"
+        },
+        {
+          "destination_uuid": "062c1fb6-05d9-4a0a-8a45-90ebc4fa684c",
+          "uuid": "a1937407-6e66-4a46-af2f-4aa6c750712a"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "58877ff7-df4d-4a7d-a922-b0237f6e2257",
+            "type": "has_only_text",
+            "uuid": "3ed46beb-405f-4aae-835b-67f56a75954a"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "1d4c28f7-f25e-4752-81dd-a13498f10c64",
+            "type": "has_only_text",
+            "uuid": "a73bc54f-ba37-4bf3-acd5-88fa83b3f754"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "1569d974-9946-444e-ad76-88a541d64402",
+            "name": "Complete",
+            "uuid": "58877ff7-df4d-4a7d-a922-b0237f6e2257"
+          },
+          {
+            "exit_uuid": "a1937407-6e66-4a46-af2f-4aa6c750712a",
+            "name": "Expired",
+            "uuid": "1d4c28f7-f25e-4752-81dd-a13498f10c64"
+          }
+        ],
+        "default_category_uuid": "1d4c28f7-f25e-4752-81dd-a13498f10c64",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "92de31c1-b83e-4c85-bc8b-b0740df2b4c4"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "aa0b7361-5752-4b09-ae6b-e9aa6ad6762d",
+          "value": "tip"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "c086fe58-9c03-4af5-b1da-5071da10d6ed",
+          "value": "problem solving"
+        },
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "63dd8c00-f40c-4720-9b2b-3d2894a7b0ea",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0c427c40-f53a-48de-a929-314a023accd4",
+          "uuid": "6a70eb47-67eb-41fd-9612-5cfbe4232287"
+        }
+      ],
+      "uuid": "062c1fb6-05d9-4a0a-8a45-90ebc4fa684c"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Feedback - Feedback for content",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "41f549c6-0c57-4255-973b-37e2a5c6b116"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f0d2fa58-714e-419d-8fe5-1e21a0c089c4",
+          "uuid": "ffaf841f-b574-4dc6-b665-6b9477705941"
+        },
+        {
+          "destination_uuid": "f0d2fa58-714e-419d-8fe5-1e21a0c089c4",
+          "uuid": "d5d382f5-e541-4a21-b14f-5f3e3f2edde7"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "9e7646e7-96fb-4945-b75c-1029d94445e4",
+            "type": "has_only_text",
+            "uuid": "2a83cb0a-d753-4ef6-b544-4140ba8cc441"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "1c95779e-62e4-4b54-8c44-163c4c4c5366",
+            "type": "has_only_text",
+            "uuid": "380a71aa-f7dd-43af-abf3-43ea1440c2f9"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "ffaf841f-b574-4dc6-b665-6b9477705941",
+            "name": "Complete",
+            "uuid": "9e7646e7-96fb-4945-b75c-1029d94445e4"
+          },
+          {
+            "exit_uuid": "d5d382f5-e541-4a21-b14f-5f3e3f2edde7",
+            "name": "Expired",
+            "uuid": "1c95779e-62e4-4b54-8c44-163c4c4c5366"
+          }
+        ],
+        "default_category_uuid": "1c95779e-62e4-4b54-8c44-163c4c4c5366",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "0c427c40-f53a-48de-a929-314a023accd4"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Remember you can always type \"Help\" if you ever want more parenting tips or support. ",
+          "type": "send_msg",
+          "uuid": "9d0e991e-eccf-4b46-bd63-1ab30aecfd4b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "c3428e59-155e-461e-9173-1a32fb91446c"
+        }
+      ],
+      "uuid": "f0d2fa58-714e-419d-8fe5-1e21a0c089c4"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "1e8ccb3c-c697-4e76-9dc1-9a644828be48",
+  "revision": 13
+}

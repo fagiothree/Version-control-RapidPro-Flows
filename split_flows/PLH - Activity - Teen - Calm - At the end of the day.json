@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "1b6fb383-f4ea-4cd5-812d-94a5b04966aa": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "d3c3cca4-86cb-4b76-a241-2908e9cbabf9": {
+        "config": {},
+        "position": {
+          "left": 340,
+          "top": 420
+        },
+        "type": "split_by_subflow"
+      },
+      "dc74e77e-9783-4d8d-bf32-38bba978baa0": {
+        "position": {
+          "left": 0,
+          "top": 360
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Calm - At the end of the day",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "At the End of the Day\n•\tAt the end of each day, take a minute to think about the day.  \n•\tTalk to your teen about one positive or fun thing they did.\n•\tPraise yourself for one thing you did well today.\n•\tThink of one thing that you are grateful for.  \n•\tYou are a star!",
+          "type": "send_msg",
+          "uuid": "f2f82519-508b-414c-97a7-94c987b9d904"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "105f22ca-02bb-481f-ad81-463638ebfc48"
+        }
+      ],
+      "uuid": "1b6fb383-f4ea-4cd5-812d-94a5b04966aa"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "be231973-9cff-49c8-825c-5f4d68c742eb",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "1841f23b-84b8-4a82-863c-5924a1be078f",
+          "value": "Teen21"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "d3c3cca4-86cb-4b76-a241-2908e9cbabf9",
+          "uuid": "d00be446-3b97-4032-9fb8-6caa22a39306"
+        }
+      ],
+      "uuid": "dc74e77e-9783-4d8d-bf32-38bba978baa0"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "ddb8802c-7b91-4c7a-b1e6-c569cba6d0f2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b972d066-c824-4abf-9932-296e83adb0da"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "829b6bcd-85d7-4947-9949-a08303d7968a"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "ebff4e62-5d44-4a5d-8d57-ff5284307d8f",
+            "type": "has_only_text",
+            "uuid": "ad31f770-7174-430b-9873-63203a17d9a9"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "7a08cfcf-7798-4bda-a9ac-b4ba4cfd37da",
+            "type": "has_only_text",
+            "uuid": "84070e6f-18dc-47de-86d8-d4caaa298ef5"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "b972d066-c824-4abf-9932-296e83adb0da",
+            "name": "Complete",
+            "uuid": "ebff4e62-5d44-4a5d-8d57-ff5284307d8f"
+          },
+          {
+            "exit_uuid": "829b6bcd-85d7-4947-9949-a08303d7968a",
+            "name": "Expired",
+            "uuid": "7a08cfcf-7798-4bda-a9ac-b4ba4cfd37da"
+          }
+        ],
+        "default_category_uuid": "7a08cfcf-7798-4bda-a9ac-b4ba4cfd37da",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "d3c3cca4-86cb-4b76-a241-2908e9cbabf9"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "c434ebf4-ffbf-4113-aeac-dfbd2ff15b07",
+  "revision": 1
+}

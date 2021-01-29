@@ -1,0 +1,113 @@
+{
+  "_ui": {
+    "nodes": {
+      "5b2a88d1-e438-45b7-9475-31087699bd0e": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 600,
+          "top": 60
+        },
+        "type": "split_by_scheme"
+      },
+      "7e4c2923-6ef2-4630-9df7-2ec6b671226d": {
+        "position": {
+          "left": 600,
+          "top": 240
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 10080,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Timed - 24h timeout alert",
+  "nodes": [
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "7e4c2923-6ef2-4630-9df7-2ec6b671226d",
+          "uuid": "e3ddb33e-a929-4e6a-bb52-42628130f600"
+        },
+        {
+          "destination_uuid": "7e4c2923-6ef2-4630-9df7-2ec6b671226d",
+          "uuid": "67c97f2c-d7cf-430c-b686-2e9655af5e2e"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "2904027b-b53c-4e0a-85e7-8f9e4daefff3"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "whatsapp"
+            ],
+            "category_uuid": "06ebad13-f963-4a8d-a524-f763be31acaf",
+            "type": "has_only_phrase",
+            "uuid": "af4c9398-4db4-436c-8117-7973dd85a48a"
+          },
+          {
+            "arguments": [
+              "facebook"
+            ],
+            "category_uuid": "097d887b-1f36-4baa-b789-305f52d89d3b",
+            "type": "has_only_phrase",
+            "uuid": "a67120fd-aa98-4d29-a5e6-abf2575f864d"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "e3ddb33e-a929-4e6a-bb52-42628130f600",
+            "name": "WhatsApp",
+            "uuid": "06ebad13-f963-4a8d-a524-f763be31acaf"
+          },
+          {
+            "exit_uuid": "67c97f2c-d7cf-430c-b686-2e9655af5e2e",
+            "name": "Facebook",
+            "uuid": "097d887b-1f36-4baa-b789-305f52d89d3b"
+          },
+          {
+            "exit_uuid": "2904027b-b53c-4e0a-85e7-8f9e4daefff3",
+            "name": "Other",
+            "uuid": "f8243748-9425-48fa-9663-d20005caeee0"
+          }
+        ],
+        "default_category_uuid": "f8243748-9425-48fa-9663-d20005caeee0",
+        "operand": "@(urn_parts(contact.urn).scheme)",
+        "result_name": "",
+        "type": "switch"
+      },
+      "uuid": "5b2a88d1-e438-45b7-9475-31087699bd0e"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Hi! I hope you are finding these messages useful. Please type “MoreTips” when you want to receive your next message.",
+          "type": "send_msg",
+          "uuid": "6320f752-cc1a-42da-b160-2a41ba89c2b5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "648a1820-a5f3-4668-bfef-045c119667b6"
+        }
+      ],
+      "uuid": "7e4c2923-6ef2-4630-9df7-2ec6b671226d"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "4a041982-afda-4a38-ac9f-6fcc01e3a2a6",
+  "revision": 1
+}

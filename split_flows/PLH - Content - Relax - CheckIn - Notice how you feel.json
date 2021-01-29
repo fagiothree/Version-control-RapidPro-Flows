@@ -1,0 +1,99 @@
+{
+  "_ui": {
+    "nodes": {
+      "ce09fcd2-a1bc-4896-80ba-0c04cff00b92": {
+        "position": {
+          "left": 380,
+          "top": 60
+        },
+        "type": "execute_actions"
+      },
+      "806faf60-ffa8-4430-a39b-40014c33bb6e": {
+        "position": {
+          "left": 400,
+          "top": 220
+        },
+        "type": "execute_actions"
+      },
+      "26ca7bf5-6113-4ac5-b463-4229f3fc093b": {
+        "position": {
+          "left": 420,
+          "top": 400
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 6
+  },
+  "name": "PLH - Content - Relax - CheckIn - Notice how you feel",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Hello! How are you feeling right now? Happy, sad, angry, excited, worried?",
+          "type": "send_msg",
+          "uuid": "ce9e2a2e-2596-45e2-ab72-237c52c6d83c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "806faf60-ffa8-4430-a39b-40014c33bb6e",
+          "uuid": "641407c8-cf76-4f1a-abb8-f36a5e41a807"
+        }
+      ],
+      "uuid": "ce09fcd2-a1bc-4896-80ba-0c04cff00b92"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Notice where you feel it in your body. Notice what thoughts are connected to that feeling. Take a deep breath.",
+          "type": "send_msg",
+          "uuid": "631565d4-5b9d-497a-8166-096a8f2d7f60"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "26ca7bf5-6113-4ac5-b463-4229f3fc093b",
+          "uuid": "d2befb21-dabf-40b3-9725-24b5211340d2"
+        }
+      ],
+      "uuid": "806faf60-ffa8-4430-a39b-40014c33bb6e"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image:@(fields.image_path & \"calm_adult.jpg\")"
+          ],
+          "text": "Thank yourself for taking the time to check in with your feelings and thoughts! Remember, you can always type \"Help\" at anytime if you need an activity to help you relax or reduce stress. Chat later!",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [],
+          "uuid": "9316516f-e57b-49ef-8d00-7b1efd28921a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "bf4a40a0-baf0-4e6c-a67a-72151ff9336e"
+        }
+      ],
+      "uuid": "26ca7bf5-6113-4ac5-b463-4229f3fc093b"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "4f6b79e3-c686-4d8a-9a09-f898778ce160",
+  "revision": 7
+}

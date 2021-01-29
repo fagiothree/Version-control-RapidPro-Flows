@@ -1,0 +1,2373 @@
+{
+  "_ui": {
+    "nodes": {
+      "359f0ce5-db73-4bd6-baec-531f700d866c": {
+        "position": {
+          "left": 540,
+          "top": 140
+        },
+        "type": "execute_actions"
+      },
+      "e4d1fbf2-bf50-48b1-9e84-7bc0615ecc40": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 520,
+          "top": 460
+        },
+        "type": "wait_for_response"
+      },
+      "2bab6688-3684-4e82-ab7c-9c6b2ae9e17e": {
+        "position": {
+          "left": 1000,
+          "top": 620
+        },
+        "type": "execute_actions"
+      },
+      "ecc610d0-796f-48f8-b71e-293b9a0f898c": {
+        "position": {
+          "left": 260,
+          "top": 640
+        },
+        "type": "execute_actions"
+      },
+      "d4332d65-a0db-456f-bb31-fd1b7c68ce11": {
+        "position": {
+          "left": 1100,
+          "top": 720
+        },
+        "type": "execute_actions"
+      },
+      "7f290106-9238-48c9-98c3-32499fcc72e5": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "gender",
+            "name": "gender",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 260,
+          "top": 740
+        },
+        "type": "split_by_contact_field"
+      },
+      "f66b4ef9-795b-413c-a766-c939ff63f10f": {
+        "config": null,
+        "position": {
+          "left": 60,
+          "top": 920
+        },
+        "type": "split_by_random"
+      },
+      "f320aa5f-f1a2-448d-9aed-26c55dc6c69b": {
+        "config": null,
+        "position": {
+          "left": 880,
+          "top": 1080
+        },
+        "type": "split_by_random"
+      },
+      "7f720ae0-dbb3-4a54-9823-90503af7e61c": {
+        "config": null,
+        "position": {
+          "left": 20,
+          "top": 1100
+        },
+        "type": "split_by_random"
+      },
+      "1b2f40e4-1e90-4958-98fd-4b400ca4c1f5": {
+        "position": {
+          "left": 0,
+          "top": 1200
+        },
+        "type": "execute_actions"
+      },
+      "be967892-a617-4fb7-a79c-d28ea2baa8d1": {
+        "config": null,
+        "position": {
+          "left": 780,
+          "top": 1200
+        },
+        "type": "split_by_random"
+      },
+      "eaac2f8c-c6c3-458e-a309-162cc11b96f2": {
+        "position": {
+          "left": 220,
+          "top": 1220
+        },
+        "type": "execute_actions"
+      },
+      "fa2f948c-51d1-452b-8e6e-db2a42e8e187": {
+        "position": {
+          "left": 480,
+          "top": 1240
+        },
+        "type": "execute_actions"
+      },
+      "f45e7d2d-4f8d-4d90-b999-aaf607445333": {
+        "position": {
+          "left": 700,
+          "top": 1300
+        },
+        "type": "execute_actions"
+      },
+      "f830ef5c-085d-4bfb-bd78-3e24079c8b8f": {
+        "position": {
+          "left": 1140,
+          "top": 1320
+        },
+        "type": "execute_actions"
+      },
+      "61d07d28-b4a1-48f3-ac4a-836b4532f305": {
+        "position": {
+          "left": 920,
+          "top": 1340
+        },
+        "type": "execute_actions"
+      },
+      "4365fca3-5788-45d5-b507-c300ee20e6b2": {
+        "position": {
+          "left": 20,
+          "top": 1380
+        },
+        "type": "execute_actions"
+      },
+      "37663c01-a4dc-4c1a-91e1-76da98110b2a": {
+        "position": {
+          "left": 240,
+          "top": 1380
+        },
+        "type": "execute_actions"
+      },
+      "2089d08d-b9ad-4580-baeb-dea041ba0a63": {
+        "config": null,
+        "position": {
+          "left": 460,
+          "top": 1480
+        },
+        "type": "split_by_random"
+      },
+      "8e1f42af-f521-4aad-ad67-6f754b974ba4": {
+        "position": {
+          "left": 240,
+          "top": 1600
+        },
+        "type": "execute_actions"
+      },
+      "a0a7dfc9-0d74-4974-9ac8-c4ba6283a58c": {
+        "position": {
+          "left": 460,
+          "top": 1600
+        },
+        "type": "execute_actions"
+      },
+      "9b602c6a-3779-4fca-974d-8007e2aab16e": {
+        "position": {
+          "left": 680,
+          "top": 1620
+        },
+        "type": "execute_actions"
+      },
+      "efa1caa7-3e61-4e1b-b355-e9ff09013a13": {
+        "position": {
+          "left": 900,
+          "top": 1620
+        },
+        "type": "execute_actions"
+      },
+      "3e8ce42b-b27b-4c1f-ac84-f3b9c9119dd8": {
+        "position": {
+          "left": 260,
+          "top": 1780
+        },
+        "type": "execute_actions"
+      },
+      "3ae6708c-06c0-4d13-9e4b-bbce820e13e5": {
+        "position": {
+          "left": 500,
+          "top": 1780
+        },
+        "type": "execute_actions"
+      },
+      "e358c16b-b56e-4a02-9b1c-d3ecc05f7ac4": {
+        "position": {
+          "left": 740,
+          "top": 1780
+        },
+        "type": "execute_actions"
+      },
+      "e4d40474-3882-4863-8ab0-aec070c79d94": {
+        "position": {
+          "left": 980,
+          "top": 1800
+        },
+        "type": "execute_actions"
+      },
+      "0250e6c5-a487-4942-bd2e-68aace1ac783": {
+        "position": {
+          "left": 620,
+          "top": 2180
+        },
+        "type": "execute_actions"
+      },
+      "cdc5f27e-d519-4352-a2ce-7cb3077d1693": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "time_of_day",
+            "name": "time of day",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 600,
+          "top": 2320
+        },
+        "type": "split_by_contact_field"
+      },
+      "c8bb8313-9aeb-4252-9199-2ca3c70ddb2c": {
+        "config": null,
+        "position": {
+          "left": 80,
+          "top": 2440
+        },
+        "type": "split_by_random"
+      },
+      "70dbce3b-280c-4de7-98d9-0eecc9babd2f": {
+        "config": null,
+        "position": {
+          "left": 680,
+          "top": 2500
+        },
+        "type": "split_by_random"
+      },
+      "c37adf86-a2e5-4272-9bc4-75a1864dfafe": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "gender",
+            "name": "gender",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 360,
+          "top": 2560
+        },
+        "type": "split_by_contact_field"
+      },
+      "1b6b5e7d-8506-40b1-bbc7-2a6f42559e8d": {
+        "position": {
+          "left": 620,
+          "top": 2600
+        },
+        "type": "execute_actions"
+      },
+      "b3adbcc0-955c-465e-b0ce-04857b5cb8d7": {
+        "position": {
+          "left": 1040,
+          "top": 2600
+        },
+        "type": "execute_actions"
+      },
+      "82f998f5-4c73-4596-8209-7ae955a99307": {
+        "position": {
+          "left": 180,
+          "top": 2660
+        },
+        "type": "execute_actions"
+      },
+      "276868c5-16d8-410d-aa24-720c69628b24": {
+        "position": {
+          "left": 420,
+          "top": 2740
+        },
+        "type": "execute_actions"
+      },
+      "a76b7ae5-8139-4224-a442-df10bcc323ac": {
+        "position": {
+          "left": 1200,
+          "top": 2740
+        },
+        "type": "execute_actions"
+      },
+      "fa9d9f5d-5afe-4ae9-9cc3-509d36e096d3": {
+        "position": {
+          "left": 700,
+          "top": 2760
+        },
+        "type": "execute_actions"
+      },
+      "8f4f5eb4-0172-4fc7-a4b1-33b13b0c5732": {
+        "position": {
+          "left": 1000,
+          "top": 2900
+        },
+        "type": "execute_actions"
+      },
+      "93f34cc1-3310-4401-b8f7-43f3e60cbbae": {
+        "position": {
+          "left": 780,
+          "top": 2980
+        },
+        "type": "execute_actions"
+      },
+      "70d12edb-a735-48e3-b7a6-5221a34154d9": {
+        "position": {
+          "left": 1160,
+          "top": 3060
+        },
+        "type": "execute_actions"
+      },
+      "c7fdd3b1-b7cd-49be-9f82-20e46bb4ca10": {
+        "position": {
+          "left": 80,
+          "top": 3120
+        },
+        "type": "execute_actions"
+      },
+      "0523708d-927d-486a-aedc-810cd39b2784": {
+        "position": {
+          "left": 360,
+          "top": 3120
+        },
+        "type": "execute_actions"
+      },
+      "d8a3043d-4040-4d22-8cb3-2e89cd48aa30": {
+        "position": {
+          "left": 280,
+          "top": 3280
+        },
+        "type": "execute_actions"
+      },
+      "34a70705-1533-4581-8948-b83c2e18962e": {
+        "position": {
+          "left": 500,
+          "top": 3280
+        },
+        "type": "execute_actions"
+      },
+      "c2f40254-1834-4b30-aab4-e5c011547862": {
+        "position": {
+          "left": 960,
+          "top": 3280
+        },
+        "type": "execute_actions"
+      },
+      "7ab7802b-c57d-4b24-8329-4160d91698b8": {
+        "position": {
+          "left": 60,
+          "top": 3400
+        },
+        "type": "execute_actions"
+      },
+      "36be48b0-9f20-42cf-b9c3-869dd6a4253e": {
+        "position": {
+          "left": 1020,
+          "top": 3440
+        },
+        "type": "execute_actions"
+      },
+      "998a4ff3-594e-4671-acb5-8cd0d47e854a": {
+        "position": {
+          "left": 1040,
+          "top": 3720
+        },
+        "type": "execute_actions"
+      },
+      "b2adbbaa-501a-472f-85a0-ac3bfc1d97f6": {
+        "position": {
+          "left": 600,
+          "top": 3880
+        },
+        "type": "execute_actions"
+      },
+      "03626b3f-a053-4534-9152-41f274c8091f": {
+        "config": null,
+        "position": {
+          "left": 600,
+          "top": 4020
+        },
+        "type": "split_by_random"
+      },
+      "eba12a72-b7cd-405d-8aa4-df3e144502e7": {
+        "config": null,
+        "position": {
+          "left": 180,
+          "top": 4120
+        },
+        "type": "split_by_random"
+      },
+      "f3fb462e-18e4-4013-9864-2075b60a4822": {
+        "config": null,
+        "position": {
+          "left": 780,
+          "top": 4120
+        },
+        "type": "split_by_random"
+      },
+      "81d25f5e-79c7-4c44-abd6-6cf5a5b61b16": {
+        "position": {
+          "left": 40,
+          "top": 4260
+        },
+        "type": "execute_actions"
+      },
+      "ddb588ee-c8ed-4009-a3ce-4e8726036ecf": {
+        "position": {
+          "left": 260,
+          "top": 4260
+        },
+        "type": "execute_actions"
+      },
+      "30c9c22d-ca4e-4642-9bce-c01ce551b0d3": {
+        "position": {
+          "left": 500,
+          "top": 4260
+        },
+        "type": "execute_actions"
+      },
+      "691a5581-b002-425f-a598-a039eeac94e0": {
+        "position": {
+          "left": 740,
+          "top": 4280
+        },
+        "type": "execute_actions"
+      },
+      "f3e6884f-871f-4526-8feb-d23d4907c8ff": {
+        "position": {
+          "left": 960,
+          "top": 4280
+        },
+        "type": "execute_actions"
+      },
+      "a4caa3f8-8b2b-4436-8ccf-8574e33a7f2f": {
+        "position": {
+          "left": 1180,
+          "top": 4280
+        },
+        "type": "execute_actions"
+      },
+      "f9b6906f-fa28-46a8-a8ba-e0972abf3fd3": {
+        "position": {
+          "left": 260,
+          "top": 4460
+        },
+        "type": "execute_actions"
+      },
+      "6a18df7d-d454-410e-91fa-b31129bb1d82": {
+        "position": {
+          "left": 500,
+          "top": 4460
+        },
+        "type": "execute_actions"
+      },
+      "1aec44a3-02ea-4c8d-b408-c7a87c5533e6": {
+        "position": {
+          "left": 40,
+          "top": 4480
+        },
+        "type": "execute_actions"
+      },
+      "129a4ef4-d8b0-4e09-b74a-a9d654313be7": {
+        "position": {
+          "left": 960,
+          "top": 4500
+        },
+        "type": "execute_actions"
+      },
+      "5991f61c-3cb2-463a-ae4e-7db75b8f238d": {
+        "position": {
+          "left": 740,
+          "top": 4520
+        },
+        "type": "execute_actions"
+      },
+      "4efb2e79-7f63-46c2-bd36-1da1bef20020": {
+        "position": {
+          "left": 1180,
+          "top": 4520
+        },
+        "type": "execute_actions"
+      },
+      "09e560b2-547a-4611-9927-4f07844454ba": {
+        "position": {
+          "left": 220,
+          "top": 4720
+        },
+        "type": "execute_actions"
+      },
+      "1f8a665c-fbb9-4405-8c3d-6a893c0f2674": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "time_of_day",
+            "name": "time of day",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 620,
+          "top": 4760
+        },
+        "type": "split_by_contact_field"
+      },
+      "5fa62517-bb38-4c2e-935f-4e4508578d29": {
+        "position": {
+          "left": 580,
+          "top": 4900
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {
+      "73545d79-aad8-44cd-9a80-7f71655b499b": {
+        "body": "current time of day",
+        "color": "yellow",
+        "position": {
+          "left": 20,
+          "top": 0
+        },
+        "title": "New Note"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Supportive - Praise",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Great",
+            "Okay",
+            "Bad"
+          ],
+          "text": "Hi! How is your parenting going today? ",
+          "type": "send_msg",
+          "uuid": "dafd6ad5-be42-4018-90d2-05a7d059ee44"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e4d1fbf2-bf50-48b1-9e84-7bc0615ecc40",
+          "uuid": "ec12266f-3e4e-4eb6-b769-b2c82dedeee9"
+        }
+      ],
+      "uuid": "359f0ce5-db73-4bd6-baec-531f700d866c"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "ecc610d0-796f-48f8-b71e-293b9a0f898c",
+          "uuid": "d2976694-751e-4bee-9199-9a6a5a25b77a"
+        },
+        {
+          "destination_uuid": "0250e6c5-a487-4942-bd2e-68aace1ac783",
+          "uuid": "ac9d5975-b5b8-4ede-bea1-6fcee905a085"
+        },
+        {
+          "destination_uuid": "b2adbbaa-501a-472f-85a0-ac3bfc1d97f6",
+          "uuid": "f005cb21-0c4d-408c-a5c8-527f06797527"
+        },
+        {
+          "destination_uuid": "2bab6688-3684-4e82-ab7c-9c6b2ae9e17e",
+          "uuid": "b33fd57f-5b5a-4f0d-a827-12d05c0aec26"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "great"
+            ],
+            "category_uuid": "320e98fc-bcd2-4398-a1dd-e088be882e10",
+            "type": "has_any_word",
+            "uuid": "e591fbfa-a5aa-447b-9bca-294035a26cc2"
+          },
+          {
+            "arguments": [
+              "okay"
+            ],
+            "category_uuid": "2f869548-9383-4123-add3-eb8d65330df6",
+            "type": "has_any_word",
+            "uuid": "54595f04-a937-4036-a360-39a84d41aae6"
+          },
+          {
+            "arguments": [
+              "bad"
+            ],
+            "category_uuid": "297a8523-576b-47ab-8b12-c0618a47a2db",
+            "type": "has_any_word",
+            "uuid": "ba13f1ed-2ece-4e7a-bbe7-00234a9b58b1"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "d2976694-751e-4bee-9199-9a6a5a25b77a",
+            "name": "Great",
+            "uuid": "320e98fc-bcd2-4398-a1dd-e088be882e10"
+          },
+          {
+            "exit_uuid": "ac9d5975-b5b8-4ede-bea1-6fcee905a085",
+            "name": "Okay",
+            "uuid": "2f869548-9383-4123-add3-eb8d65330df6"
+          },
+          {
+            "exit_uuid": "f005cb21-0c4d-408c-a5c8-527f06797527",
+            "name": "Bad",
+            "uuid": "297a8523-576b-47ab-8b12-c0618a47a2db"
+          },
+          {
+            "exit_uuid": "b33fd57f-5b5a-4f0d-a827-12d05c0aec26",
+            "name": "Other",
+            "uuid": "b9594849-622b-4124-bd37-a91e7b8f20dc"
+          }
+        ],
+        "default_category_uuid": "b9594849-622b-4124-bd37-a91e7b8f20dc",
+        "operand": "@input.text",
+        "result_name": "Result 1",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "e4d1fbf2-bf50-48b1-9e84-7bc0615ecc40"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "062206d6-1e75-4769-b03c-0af66b1633ba",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "d4332d65-a0db-456f-bb31-fd1b7c68ce11",
+          "uuid": "c3c7d9f6-c70f-43ce-a9e2-ddd31805bda2"
+        }
+      ],
+      "uuid": "2bab6688-3684-4e82-ab7c-9c6b2ae9e17e"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "24907b2c-51b7-4beb-be49-025354720147",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7f290106-9238-48c9-98c3-32499fcc72e5",
+          "uuid": "1020b6b7-1f17-480a-9633-6832f498ad5e"
+        }
+      ],
+      "uuid": "ecc610d0-796f-48f8-b71e-293b9a0f898c"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "9f464cbc-28f9-4b20-aea8-c4f0b44fd89a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "359f0ce5-db73-4bd6-baec-531f700d866c",
+          "uuid": "a0ce372e-23b5-4fbe-8b32-7861a9f722af"
+        }
+      ],
+      "uuid": "d4332d65-a0db-456f-bb31-fd1b7c68ce11"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "f66b4ef9-795b-413c-a766-c939ff63f10f",
+          "uuid": "48e1c094-5ccb-4be0-99b3-63634adfb249"
+        },
+        {
+          "destination_uuid": "f320aa5f-f1a2-448d-9aed-26c55dc6c69b",
+          "uuid": "95121103-723d-4e03-87c5-96c73c8fd797"
+        },
+        {
+          "destination_uuid": "2089d08d-b9ad-4580-baeb-dea041ba0a63",
+          "uuid": "c6a5ae32-e1a8-45f6-9d52-e1354901fc4b"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "male"
+            ],
+            "category_uuid": "cfc38176-b5a4-4c86-919b-97e46a90dcf8",
+            "type": "has_any_word",
+            "uuid": "c561ae94-b0a1-4fab-ab8f-a0f39a301788"
+          },
+          {
+            "arguments": [
+              "female"
+            ],
+            "category_uuid": "62f415d7-62fe-4003-b67c-e8b647e61d95",
+            "type": "has_any_word",
+            "uuid": "b6a15d4a-35b5-48f0-afa4-f6e156ea31d4"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "48e1c094-5ccb-4be0-99b3-63634adfb249",
+            "name": "Male",
+            "uuid": "cfc38176-b5a4-4c86-919b-97e46a90dcf8"
+          },
+          {
+            "exit_uuid": "95121103-723d-4e03-87c5-96c73c8fd797",
+            "name": "Female",
+            "uuid": "62f415d7-62fe-4003-b67c-e8b647e61d95"
+          },
+          {
+            "exit_uuid": "c6a5ae32-e1a8-45f6-9d52-e1354901fc4b",
+            "name": "Other",
+            "uuid": "ad0071ce-e2b7-4ab4-8d26-f6aa26e95229"
+          }
+        ],
+        "default_category_uuid": "ad0071ce-e2b7-4ab4-8d26-f6aa26e95229",
+        "operand": "@fields.gender",
+        "type": "switch"
+      },
+      "uuid": "7f290106-9238-48c9-98c3-32499fcc72e5"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "7f720ae0-dbb3-4a54-9823-90503af7e61c",
+          "uuid": "af5918a0-1d55-4719-b045-b940a8e2ed7c"
+        },
+        {
+          "destination_uuid": "2089d08d-b9ad-4580-baeb-dea041ba0a63",
+          "uuid": "19cde30e-daf2-447b-88e4-82afda8c52c5"
+        }
+      ],
+      "router": {
+        "categories": [
+          {
+            "exit_uuid": "af5918a0-1d55-4719-b045-b940a8e2ed7c",
+            "name": "Bucket 1",
+            "uuid": "450e4f24-4550-45dc-b37d-acdb75169473"
+          },
+          {
+            "exit_uuid": "19cde30e-daf2-447b-88e4-82afda8c52c5",
+            "name": "Bucket 2",
+            "uuid": "ab283dae-c92e-4951-947e-4b3975a00b63"
+          }
+        ],
+        "type": "random"
+      },
+      "uuid": "f66b4ef9-795b-413c-a766-c939ff63f10f"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "be967892-a617-4fb7-a79c-d28ea2baa8d1",
+          "uuid": "d41ab9f4-9fa1-4123-8951-e805adc0a964"
+        },
+        {
+          "destination_uuid": "2089d08d-b9ad-4580-baeb-dea041ba0a63",
+          "uuid": "28cf37ad-e346-4aaa-92e6-f7eec9cd6c0a"
+        }
+      ],
+      "router": {
+        "categories": [
+          {
+            "exit_uuid": "d41ab9f4-9fa1-4123-8951-e805adc0a964",
+            "name": "Bucket 1",
+            "uuid": "c2943552-1493-4a2d-932c-cbc04ab60642"
+          },
+          {
+            "exit_uuid": "28cf37ad-e346-4aaa-92e6-f7eec9cd6c0a",
+            "name": "Bucket 2",
+            "uuid": "a3da1443-a6e9-45c7-852a-427e7082707d"
+          }
+        ],
+        "type": "random"
+      },
+      "uuid": "f320aa5f-f1a2-448d-9aed-26c55dc6c69b"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "1b2f40e4-1e90-4958-98fd-4b400ca4c1f5",
+          "uuid": "3eb6b978-d6f6-4166-b703-6ddeba7dce22"
+        },
+        {
+          "destination_uuid": "eaac2f8c-c6c3-458e-a309-162cc11b96f2",
+          "uuid": "543ba955-ba7c-4dd3-bc25-d7a0d49cf5d8"
+        },
+        {
+          "destination_uuid": "fa2f948c-51d1-452b-8e6e-db2a42e8e187",
+          "uuid": "45a676fd-59bc-4fa1-867a-67efb538a4c5"
+        },
+        {
+          "destination_uuid": "4365fca3-5788-45d5-b507-c300ee20e6b2",
+          "uuid": "04e5365b-8381-493a-b1df-925079d60a88"
+        },
+        {
+          "destination_uuid": "37663c01-a4dc-4c1a-91e1-76da98110b2a",
+          "uuid": "96958870-1f8b-4c91-b853-5a1cb4f350b6"
+        }
+      ],
+      "router": {
+        "categories": [
+          {
+            "exit_uuid": "3eb6b978-d6f6-4166-b703-6ddeba7dce22",
+            "name": "Bucket 1",
+            "uuid": "40ecde05-e087-4c83-a027-fc6aea7ced7c"
+          },
+          {
+            "exit_uuid": "543ba955-ba7c-4dd3-bc25-d7a0d49cf5d8",
+            "name": "Bucket 2",
+            "uuid": "b7df6a85-a686-4b5d-ab4e-99e51a4946f7"
+          },
+          {
+            "exit_uuid": "45a676fd-59bc-4fa1-867a-67efb538a4c5",
+            "name": "Bucket 3",
+            "uuid": "a0750000-17eb-47fe-9ce6-ef1633e92e1a"
+          },
+          {
+            "exit_uuid": "04e5365b-8381-493a-b1df-925079d60a88",
+            "name": "Bucket 4",
+            "uuid": "9d3e58e9-397e-4ab0-a72c-76a56215971f"
+          },
+          {
+            "exit_uuid": "96958870-1f8b-4c91-b853-5a1cb4f350b6",
+            "name": "Bucket 5",
+            "uuid": "13b9f18d-0531-4e34-9bea-fe99d1828f39"
+          }
+        ],
+        "type": "random"
+      },
+      "uuid": "7f720ae0-dbb3-4a54-9823-90503af7e61c"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Thank you for being a superman and being there for your family today! Keep it up!",
+          "type": "send_msg",
+          "uuid": "dd4c7216-b83c-4e94-8440-24a7e51038bd"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "f343a7be-b355-4234-bfff-b6b58b5e0b41"
+        }
+      ],
+      "uuid": "1b2f40e4-1e90-4958-98fd-4b400ca4c1f5"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "f45e7d2d-4f8d-4d90-b999-aaf607445333",
+          "uuid": "ef87a81f-3636-4aee-a800-32851553f1c7"
+        },
+        {
+          "destination_uuid": "61d07d28-b4a1-48f3-ac4a-836b4532f305",
+          "uuid": "b29ab4cc-3dc5-490a-a84e-41f4c0a37aad"
+        },
+        {
+          "destination_uuid": "f830ef5c-085d-4bfb-bd78-3e24079c8b8f",
+          "uuid": "8e288fb9-9c2c-472d-a619-a51fd07dbdd5"
+        }
+      ],
+      "router": {
+        "categories": [
+          {
+            "exit_uuid": "ef87a81f-3636-4aee-a800-32851553f1c7",
+            "name": "Bucket 1",
+            "uuid": "ade04012-d9e7-45dd-a385-6446bbc75896"
+          },
+          {
+            "exit_uuid": "b29ab4cc-3dc5-490a-a84e-41f4c0a37aad",
+            "name": "Bucket 2",
+            "uuid": "3b7cff6e-eba6-4b86-8fd0-6afd70b374d5"
+          },
+          {
+            "exit_uuid": "8e288fb9-9c2c-472d-a619-a51fd07dbdd5",
+            "name": "Bucket 3",
+            "uuid": "e9c762d1-c227-47a6-855b-df2b41d64a65"
+          }
+        ],
+        "type": "random"
+      },
+      "uuid": "be967892-a617-4fb7-a79c-d28ea2baa8d1"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Well done for being a man who supports their family. You are a real hero.",
+          "type": "send_msg",
+          "uuid": "498b2cec-6a83-4718-a379-a3ebc4b74830"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e1507989-f3e5-4606-92c4-dc0dbf90975d"
+        }
+      ],
+      "uuid": "eaac2f8c-c6c3-458e-a309-162cc11b96f2"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You’re a man who puts a lot of thought into everything you do. We see it and appreciate it.",
+          "type": "send_msg",
+          "uuid": "28cc1508-99ee-4d1e-9564-173e586f1872"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b061040e-a7d1-413f-95f3-0992ff3bb999"
+        }
+      ],
+      "uuid": "fa2f948c-51d1-452b-8e6e-db2a42e8e187"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Hooray! Other women around the world are cheering for you right now!",
+          "type": "send_msg",
+          "uuid": "eb5341c8-1c31-4d4a-b1a5-bd75a0e557d5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "7511c280-fb48-4e84-ab48-c5a43de8e0dd"
+        }
+      ],
+      "uuid": "f45e7d2d-4f8d-4d90-b999-aaf607445333"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Thank you for your dedication! The world needs more women like you.",
+          "type": "send_msg",
+          "uuid": "3657dd55-07b2-447e-b24a-c317953ce9e2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "d8e11502-1229-4c03-aaef-123f8e0a478b"
+        }
+      ],
+      "uuid": "f830ef5c-085d-4bfb-bd78-3e24079c8b8f"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Thank you for being an inspiration to other women. Keep shining that light of yours! ",
+          "type": "send_msg",
+          "uuid": "dc2a3a4b-7bf8-47c8-8482-adfb46c15db5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "038fd413-27fa-44ce-bf6f-b86323562cad"
+        }
+      ],
+      "uuid": "61d07d28-b4a1-48f3-ac4a-836b4532f305"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Thank you for your dedication! The world needs more men like you.",
+          "type": "send_msg",
+          "uuid": "a1b12f3e-a00e-4000-8e9c-0db6f7b437f1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "7d0e2f6d-f1ab-401c-8cf4-7a0b647edb2c"
+        }
+      ],
+      "uuid": "4365fca3-5788-45d5-b507-c300ee20e6b2"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You are such a great example for all men! Keep up the good work.",
+          "type": "send_msg",
+          "uuid": "ffe0907a-4bf3-464b-a0c9-7af4be1d1e9d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "de2c60ed-38fd-445c-a448-372f02015ab1"
+        }
+      ],
+      "uuid": "37663c01-a4dc-4c1a-91e1-76da98110b2a"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "8e1f42af-f521-4aad-ad67-6f754b974ba4",
+          "uuid": "b9e32006-8b9d-4d47-b0f7-51e8d0462a62"
+        },
+        {
+          "destination_uuid": "a0a7dfc9-0d74-4974-9ac8-c4ba6283a58c",
+          "uuid": "f55a1a8f-7ab2-49a1-aaea-97125063a057"
+        },
+        {
+          "destination_uuid": "9b602c6a-3779-4fca-974d-8007e2aab16e",
+          "uuid": "61301b4b-f9ef-4d66-91a3-0d131a860688"
+        },
+        {
+          "destination_uuid": "efa1caa7-3e61-4e1b-b355-e9ff09013a13",
+          "uuid": "9d1fb81d-cb68-492a-9aa1-4ed376095a99"
+        },
+        {
+          "destination_uuid": "3e8ce42b-b27b-4c1f-ac84-f3b9c9119dd8",
+          "uuid": "fa26c79d-ce13-4857-8803-0d826099e7fd"
+        },
+        {
+          "destination_uuid": "3ae6708c-06c0-4d13-9e4b-bbce820e13e5",
+          "uuid": "3c901a96-858c-42ce-909d-f934e63c80d0"
+        },
+        {
+          "destination_uuid": "e358c16b-b56e-4a02-9b1c-d3ecc05f7ac4",
+          "uuid": "27b98c3c-5e0c-4c89-af7f-c66465075e51"
+        },
+        {
+          "destination_uuid": "e4d40474-3882-4863-8ab0-aec070c79d94",
+          "uuid": "862f498f-c28e-42e1-ba0e-c57e1278ae5d"
+        }
+      ],
+      "router": {
+        "categories": [
+          {
+            "exit_uuid": "b9e32006-8b9d-4d47-b0f7-51e8d0462a62",
+            "name": "Bucket 1",
+            "uuid": "2f1d0001-30c4-4dbf-840c-d91e6b8dd1a2"
+          },
+          {
+            "exit_uuid": "f55a1a8f-7ab2-49a1-aaea-97125063a057",
+            "name": "Bucket 2",
+            "uuid": "438def46-60f4-498e-913c-0b5c73c896cc"
+          },
+          {
+            "exit_uuid": "61301b4b-f9ef-4d66-91a3-0d131a860688",
+            "name": "Bucket 3",
+            "uuid": "4ec596ae-37a8-4dc4-b724-31a464883569"
+          },
+          {
+            "exit_uuid": "9d1fb81d-cb68-492a-9aa1-4ed376095a99",
+            "name": "Bucket 4",
+            "uuid": "1c2e25fb-258d-484e-be50-4ae3972eaeef"
+          },
+          {
+            "exit_uuid": "fa26c79d-ce13-4857-8803-0d826099e7fd",
+            "name": "Bucket 5",
+            "uuid": "36d6de0a-524b-4ed3-83d8-2b538553888d"
+          },
+          {
+            "exit_uuid": "3c901a96-858c-42ce-909d-f934e63c80d0",
+            "name": "Bucket 6",
+            "uuid": "558afd89-7e34-42bb-9ade-81d4ec32b1cb"
+          },
+          {
+            "exit_uuid": "27b98c3c-5e0c-4c89-af7f-c66465075e51",
+            "name": "Bucket 7",
+            "uuid": "d7d66c5d-8c20-40db-8199-ac5ac52a0732"
+          },
+          {
+            "exit_uuid": "862f498f-c28e-42e1-ba0e-c57e1278ae5d",
+            "name": "Bucket 8",
+            "uuid": "24f99911-528f-4860-859a-f4ecbd4d1409"
+          }
+        ],
+        "type": "random"
+      },
+      "uuid": "2089d08d-b9ad-4580-baeb-dea041ba0a63"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "So good to hear that you are doing well. What a wonderful feeling!",
+          "type": "send_msg",
+          "uuid": "b5116659-f158-40e1-a140-8e1cbcc5c75b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "9e37c2c3-10a1-40cf-9075-f2d07ed219ad"
+        }
+      ],
+      "uuid": "8e1f42af-f521-4aad-ad67-6f754b974ba4"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Hooray! Trust that your hard work is bearing sweet fruits, even if you can’t taste them yet!",
+          "type": "send_msg",
+          "uuid": "7911fb88-a46a-4041-83d3-25a01580b9d1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "d134ccb7-4bba-4a3f-8960-f0ef6623e00e"
+        }
+      ],
+      "uuid": "a0a7dfc9-0d74-4974-9ac8-c4ba6283a58c"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Thank you for bringing the sunshine of positive attention into your family. Keep shining!",
+          "type": "send_msg",
+          "uuid": "77a9ad79-88b3-48b4-8ebd-5640d2b20d72"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "49605d15-23f6-49e8-8ed8-d95dfec9dc72"
+        }
+      ],
+      "uuid": "9b602c6a-3779-4fca-974d-8007e2aab16e"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Ten points for you today! Together we can overcome any challenge.",
+          "type": "send_msg",
+          "uuid": "daef5522-6d60-448b-b9df-ecaf30b8c934"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "d74b0568-7de3-46e0-88c5-01df933f056b"
+        }
+      ],
+      "uuid": "efa1caa7-3e61-4e1b-b355-e9ff09013a13"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Has anyone told you how incredible you are for being there for your children during a global pandemic? There’s no guidebook for these challenging times but you’re doing it! That makes you amazing.",
+          "type": "send_msg",
+          "uuid": "3fe1009e-edcf-40bb-9318-d8de5ef1c044"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "467901bf-2911-4d1d-8ff8-31d1ecb705d4"
+        }
+      ],
+      "uuid": "3e8ce42b-b27b-4c1f-ac84-f3b9c9119dd8"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Thank you for your kindness and patience today! Even when it’s tough, your words of praise, your smile and your attention are like sunshine for your children.",
+          "type": "send_msg",
+          "uuid": "0043847f-c199-4851-9e2d-b3983aa11b7a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "45a8a95f-99f2-464e-9c40-ea074a7b9e87"
+        }
+      ],
+      "uuid": "3ae6708c-06c0-4d13-9e4b-bbce820e13e5"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Your curiosity and creativity are paying off! Give yourself a hug!",
+          "type": "send_msg",
+          "uuid": "06550caa-143b-466f-9323-ddc6407b2ab8"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "c8edea84-8f39-407f-9ec7-14d60f921ec1"
+        }
+      ],
+      "uuid": "e358c16b-b56e-4a02-9b1c-d3ecc05f7ac4"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Every time you take a pause is an act of kindness. Be kind to yourself and your family today!",
+          "type": "send_msg",
+          "uuid": "027b08b4-4fcd-4251-9f0d-c7228c438da2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "3f16072b-9463-46a9-a870-18f07aab5422"
+        }
+      ],
+      "uuid": "e4d40474-3882-4863-8ab0-aec070c79d94"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "3e5c9de9-e8ac-486b-a03d-11c14bed8fca",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "cdc5f27e-d519-4352-a2ce-7cb3077d1693",
+          "uuid": "f7abedf0-dcd3-4ac5-80d6-e2b46bd91d8d"
+        }
+      ],
+      "uuid": "0250e6c5-a487-4942-bd2e-68aace1ac783"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "c8bb8313-9aeb-4252-9199-2ca3c70ddb2c",
+          "uuid": "b94becf4-7d3e-4002-9d46-357ca64c5632"
+        },
+        {
+          "destination_uuid": "70dbce3b-280c-4de7-98d9-0eecc9babd2f",
+          "uuid": "b66c2bf4-fb0d-4cd8-9164-30e4b278c73f"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "evening"
+            ],
+            "category_uuid": "70317298-a760-461c-bcce-d6edeb955323",
+            "type": "has_any_word",
+            "uuid": "8bd4d193-ab1b-4804-ae60-38ecb99dd3b4"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "b94becf4-7d3e-4002-9d46-357ca64c5632",
+            "name": "Evening",
+            "uuid": "70317298-a760-461c-bcce-d6edeb955323"
+          },
+          {
+            "exit_uuid": "b66c2bf4-fb0d-4cd8-9164-30e4b278c73f",
+            "name": "Other",
+            "uuid": "b25bb2e4-4fb9-467b-835b-da4229f28882"
+          }
+        ],
+        "default_category_uuid": "b25bb2e4-4fb9-467b-835b-da4229f28882",
+        "operand": "@fields.time_of_day",
+        "type": "switch"
+      },
+      "uuid": "cdc5f27e-d519-4352-a2ce-7cb3077d1693"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "c7fdd3b1-b7cd-49be-9f82-20e46bb4ca10",
+          "uuid": "7350b3e7-dee4-4ab9-a0a7-c5c0529c7eba"
+        },
+        {
+          "destination_uuid": "d8a3043d-4040-4d22-8cb3-2e89cd48aa30",
+          "uuid": "4c79c3ef-9820-47e0-8af2-22de7fa1f632"
+        },
+        {
+          "destination_uuid": "0523708d-927d-486a-aedc-810cd39b2784",
+          "uuid": "fbcde300-72cf-4c9a-8471-5f806d680d90"
+        },
+        {
+          "destination_uuid": "34a70705-1533-4581-8948-b83c2e18962e",
+          "uuid": "e2b8c8d2-350f-47c8-a4e3-ab1619a5b453"
+        },
+        {
+          "destination_uuid": "7ab7802b-c57d-4b24-8329-4160d91698b8",
+          "uuid": "3669b068-67e7-40e8-9838-9aba53b366e6"
+        },
+        {
+          "destination_uuid": "c37adf86-a2e5-4272-9bc4-75a1864dfafe",
+          "uuid": "3870e5a3-e9e8-48ba-8b32-03726a8966b4"
+        }
+      ],
+      "router": {
+        "categories": [
+          {
+            "exit_uuid": "7350b3e7-dee4-4ab9-a0a7-c5c0529c7eba",
+            "name": "Bucket 1",
+            "uuid": "d279a830-7beb-459d-9441-24c885ae3fd1"
+          },
+          {
+            "exit_uuid": "4c79c3ef-9820-47e0-8af2-22de7fa1f632",
+            "name": "Bucket 2",
+            "uuid": "bc5d8cb4-92d5-4bc6-aa4f-689a1d4c17bb"
+          },
+          {
+            "exit_uuid": "fbcde300-72cf-4c9a-8471-5f806d680d90",
+            "name": "Bucket 3",
+            "uuid": "a9f87284-0708-4d0d-ba0d-3e97fa21f485"
+          },
+          {
+            "exit_uuid": "e2b8c8d2-350f-47c8-a4e3-ab1619a5b453",
+            "name": "Bucket 4",
+            "uuid": "87cee40e-988c-4988-b51b-d8e3986d86cb"
+          },
+          {
+            "exit_uuid": "3669b068-67e7-40e8-9838-9aba53b366e6",
+            "name": "Bucket 5",
+            "uuid": "d489eb39-4a6f-4398-93dc-7700234048bc"
+          },
+          {
+            "exit_uuid": "3870e5a3-e9e8-48ba-8b32-03726a8966b4",
+            "name": "Bucket 6",
+            "uuid": "93e35ecf-3065-42b6-a5fd-e5b349747164"
+          }
+        ],
+        "type": "random"
+      },
+      "uuid": "c8bb8313-9aeb-4252-9199-2ca3c70ddb2c"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "1b6b5e7d-8506-40b1-bbc7-2a6f42559e8d",
+          "uuid": "2cf5a7fb-3aa2-4f97-9dce-c0746659a4f4"
+        },
+        {
+          "destination_uuid": "fa9d9f5d-5afe-4ae9-9cc3-509d36e096d3",
+          "uuid": "d746b394-3ec3-40da-87b6-ddca12b393a0"
+        },
+        {
+          "destination_uuid": "998a4ff3-594e-4671-acb5-8cd0d47e854a",
+          "uuid": "865b6321-66dc-4b98-bf9e-44640437bd7b"
+        },
+        {
+          "destination_uuid": "36be48b0-9f20-42cf-b9c3-869dd6a4253e",
+          "uuid": "9f20acc6-d2f4-4a4c-9553-20279b7f407a"
+        },
+        {
+          "destination_uuid": "c2f40254-1834-4b30-aab4-e5c011547862",
+          "uuid": "6502c311-e5da-4c29-8720-15c47e8afc66"
+        },
+        {
+          "destination_uuid": "8f4f5eb4-0172-4fc7-a4b1-33b13b0c5732",
+          "uuid": "103f7b79-2ec0-4174-bbf2-1b2516342f62"
+        },
+        {
+          "destination_uuid": "b3adbcc0-955c-465e-b0ce-04857b5cb8d7",
+          "uuid": "547f98a3-4c4e-4b13-abe8-0a54695598e4"
+        },
+        {
+          "destination_uuid": "70d12edb-a735-48e3-b7a6-5221a34154d9",
+          "uuid": "35876a58-0662-46b1-a16b-1eb86ac43717"
+        },
+        {
+          "destination_uuid": "a76b7ae5-8139-4224-a442-df10bcc323ac",
+          "uuid": "a0e36bfc-f2d2-4e34-8833-1cc72cfc5b02"
+        },
+        {
+          "destination_uuid": "93f34cc1-3310-4401-b8f7-43f3e60cbbae",
+          "uuid": "fa908d9a-887d-468b-8f0e-ac797e749947"
+        }
+      ],
+      "router": {
+        "categories": [
+          {
+            "exit_uuid": "2cf5a7fb-3aa2-4f97-9dce-c0746659a4f4",
+            "name": "Bucket 1",
+            "uuid": "47d3c042-a775-4dc7-b171-54f47c1f334d"
+          },
+          {
+            "exit_uuid": "d746b394-3ec3-40da-87b6-ddca12b393a0",
+            "name": "Bucket 2",
+            "uuid": "fec0fe84-5d21-4ed8-85e2-8b3cdc342a6b"
+          },
+          {
+            "exit_uuid": "865b6321-66dc-4b98-bf9e-44640437bd7b",
+            "name": "Bucket 3",
+            "uuid": "ffd9b64e-371e-4550-859b-64d7c40aa256"
+          },
+          {
+            "exit_uuid": "9f20acc6-d2f4-4a4c-9553-20279b7f407a",
+            "name": "Bucket 4",
+            "uuid": "da03ce38-6542-4b5f-919c-dda643a79822"
+          },
+          {
+            "exit_uuid": "6502c311-e5da-4c29-8720-15c47e8afc66",
+            "name": "Bucket 5",
+            "uuid": "57f77608-2373-42f7-bd78-f9c9f0fe117e"
+          },
+          {
+            "exit_uuid": "103f7b79-2ec0-4174-bbf2-1b2516342f62",
+            "name": "Bucket 6",
+            "uuid": "0551b4f2-e58a-40a0-aebb-083e908edf8a"
+          },
+          {
+            "exit_uuid": "547f98a3-4c4e-4b13-abe8-0a54695598e4",
+            "name": "Bucket 7",
+            "uuid": "6bd151c6-dc39-4e52-af36-50f2cf67aac4"
+          },
+          {
+            "exit_uuid": "35876a58-0662-46b1-a16b-1eb86ac43717",
+            "name": "Bucket 8",
+            "uuid": "ceb6445d-d180-4ef5-a292-dae4333784d0"
+          },
+          {
+            "exit_uuid": "a0e36bfc-f2d2-4e34-8833-1cc72cfc5b02",
+            "name": "Bucket 9",
+            "uuid": "f0dafb7b-d2a0-48b7-963d-3aab45c62957"
+          },
+          {
+            "exit_uuid": "fa908d9a-887d-468b-8f0e-ac797e749947",
+            "name": "Bucket 10",
+            "uuid": "a474f319-006d-4040-95f7-f60f13019334"
+          }
+        ],
+        "type": "random"
+      },
+      "uuid": "70dbce3b-280c-4de7-98d9-0eecc9babd2f"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "82f998f5-4c73-4596-8209-7ae955a99307",
+          "uuid": "dca70128-af5f-4856-bfaf-04c94dd7f471"
+        },
+        {
+          "destination_uuid": "276868c5-16d8-410d-aa24-720c69628b24",
+          "uuid": "df543794-eba9-48b9-87ca-f42be7bf35ee"
+        },
+        {
+          "destination_uuid": "70dbce3b-280c-4de7-98d9-0eecc9babd2f",
+          "uuid": "b442c6c7-6f3c-4e7d-9b50-86b585403d14"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "male"
+            ],
+            "category_uuid": "87209eed-af45-4c97-9a1f-68f1cf2cde34",
+            "type": "has_any_word",
+            "uuid": "7b89e599-4128-461f-adf4-8c8c29dd16ad"
+          },
+          {
+            "arguments": [
+              "female"
+            ],
+            "category_uuid": "87817cfd-8132-4ea4-8136-beef9e102291",
+            "type": "has_any_word",
+            "uuid": "bbd802a8-df83-4d0a-8c3b-976742f2038c"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "dca70128-af5f-4856-bfaf-04c94dd7f471",
+            "name": "Male",
+            "uuid": "87209eed-af45-4c97-9a1f-68f1cf2cde34"
+          },
+          {
+            "exit_uuid": "df543794-eba9-48b9-87ca-f42be7bf35ee",
+            "name": "Female",
+            "uuid": "87817cfd-8132-4ea4-8136-beef9e102291"
+          },
+          {
+            "exit_uuid": "b442c6c7-6f3c-4e7d-9b50-86b585403d14",
+            "name": "Other",
+            "uuid": "63f11a5c-ed92-4aea-b0ec-ed3e5535a8a3"
+          }
+        ],
+        "default_category_uuid": "63f11a5c-ed92-4aea-b0ec-ed3e5535a8a3",
+        "operand": "@fields.gender",
+        "type": "switch"
+      },
+      "uuid": "c37adf86-a2e5-4272-9bc4-75a1864dfafe"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Every time you take a pause is an act of kindness. Be kind to yourself and your family today!",
+          "type": "send_msg",
+          "uuid": "bf62dcda-7318-4a74-9ad8-8618db2a448a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "7d2a4073-1fd9-4bc4-ab68-a3218cc76e2c"
+        }
+      ],
+      "uuid": "1b6b5e7d-8506-40b1-bbc7-2a6f42559e8d"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Top marks for effort! It’s not easy but you tried your best. That’s all you can ever do!",
+          "type": "send_msg",
+          "uuid": "2dd7da59-f3cf-454a-8259-4301b4dff13f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "ecb72a20-e969-4e77-b5cf-c018c5428d64"
+        }
+      ],
+      "uuid": "b3adbcc0-955c-465e-b0ce-04857b5cb8d7"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Well done for being a man who supports their family. You are a real hero.",
+          "type": "send_msg",
+          "uuid": "f6096dac-3f87-4f90-a74b-b61aaac5d918"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "1e3fde48-4efc-407e-ad24-513b6267f777"
+        }
+      ],
+      "uuid": "82f998f5-4c73-4596-8209-7ae955a99307"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "It’s not always easy to be a woman in this world. But you are leading the way!",
+          "type": "send_msg",
+          "uuid": "ff89d190-34e7-46b4-93b4-5fec95ba8234"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b13b2645-b10b-4faa-90b4-b34d6722c104"
+        }
+      ],
+      "uuid": "276868c5-16d8-410d-aa24-720c69628b24"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Your commitment is an inspiration. Keep calm and carry on! ",
+          "type": "send_msg",
+          "uuid": "51b3b1ee-7082-4bdb-a98e-32f0ebaa35ac"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "190b20d9-53d7-4d79-a536-164785b79746"
+        }
+      ],
+      "uuid": "a76b7ae5-8139-4224-a442-df10bcc323ac"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Thank you for making so much effort to be a better parent. You are loved and appreciated!",
+          "type": "send_msg",
+          "uuid": "de26d3e4-9cad-48a2-bc90-8efa16ca11ff"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "34f2d20a-6297-46bf-80c2-9d3cbf253a21"
+        }
+      ],
+      "uuid": "fa9d9f5d-5afe-4ae9-9cc3-509d36e096d3"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Thank you for being patient with yourself and your family. Every little bit helps! ",
+          "type": "send_msg",
+          "uuid": "34ce4dbb-ffee-409f-b9a0-ee93783d62ff"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "a17a5f21-7575-4d5c-a8dd-8eae106b9dcb"
+        }
+      ],
+      "uuid": "8f4f5eb4-0172-4fc7-a4b1-33b13b0c5732"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Thank you for getting up every morning and trying again. Even when you are tired. That is real courage and dedication! ",
+          "type": "send_msg",
+          "uuid": "1540bbc9-cee6-4769-8b7e-031494b1d55b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "15726aea-12e1-44d5-ad3d-e67f9b43bbe5"
+        }
+      ],
+      "uuid": "93f34cc1-3310-4401-b8f7-43f3e60cbbae"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sometimes we're up. Sometimes we're down. And sometimes we are neither up nor down...and that's totally okay!",
+          "type": "send_msg",
+          "uuid": "eeda0c71-9a81-4183-870e-f78bd9519b6e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "3212426b-8ad3-48c0-8b83-8c312aa79819"
+        }
+      ],
+      "uuid": "70d12edb-a735-48e3-b7a6-5221a34154d9"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "You made it to the end of the day! Now it’s me-time for you. You deserve a break!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "f85a83fb-c8bc-417f-84aa-a3ff30c69573"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "a1ee7064-23a3-4ccd-ad8f-b36c5de72f18"
+        }
+      ],
+      "uuid": "c7fdd3b1-b7cd-49be-9f82-20e46bb4ca10"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You made a difference today just by showing up. Your down time starts now!",
+          "type": "send_msg",
+          "uuid": "acd17f90-19df-4bae-9131-9932511007cb"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "48df6b85-9121-4bfa-92e4-b5e80a33ef0b"
+        }
+      ],
+      "uuid": "0523708d-927d-486a-aedc-810cd39b2784"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Well done for getting to the end of the day! Sometimes that’s all we can do. Get some rest and try again tomorrow!",
+          "type": "send_msg",
+          "uuid": "000e5605-6e8c-4068-870e-6eacbe9cedfa"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "86a0c3f4-485e-4676-8487-762c02bebc83"
+        }
+      ],
+      "uuid": "d8a3043d-4040-4d22-8cb3-2e89cd48aa30"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Happy, sad, angry, excited, worried? Well done for recognizing how you and others felt today! And remember, tomorrow is a brand new day.",
+          "type": "send_msg",
+          "uuid": "7fd7f7ef-e570-4222-8591-d2c62e3063e5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "433b7ae0-da06-44e1-95d0-66d0c64ff03c"
+        }
+      ],
+      "uuid": "34a70705-1533-4581-8948-b83c2e18962e"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Taking care of yourself is taking care of your kids! Keep it up!",
+          "type": "send_msg",
+          "uuid": "06a7a9aa-cefd-4931-8099-450f6e4b4118"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "73de4490-014c-4f66-865b-4917aa6fe88c"
+        }
+      ],
+      "uuid": "c2f40254-1834-4b30-aab4-e5c011547862"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Thank you for your kindness and patience today! Even when it’s tough, your words of praise, your smile and your attention are like sunshine for your children.",
+          "type": "send_msg",
+          "uuid": "204635a0-3b7c-4e19-83fa-b3c448592dec"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "799bc837-c1dc-4b8b-95ec-9c05d3bae79a"
+        }
+      ],
+      "uuid": "7ab7802b-c57d-4b24-8329-4160d91698b8"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Well done for trying to figure everything out. Nobody has all the answers but you really do your best!",
+          "type": "send_msg",
+          "uuid": "7b3830cf-893e-47e5-917e-72b9c42b0ce2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "f4e66dda-1fa2-4b45-a572-a0480111f59a"
+        }
+      ],
+      "uuid": "36be48b0-9f20-42cf-b9c3-869dd6a4253e"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Thank you for showing up for your family today and try your best! Your effort is appreciated!",
+          "type": "send_msg",
+          "uuid": "493ebb31-eba8-43df-aec7-b0acfd684a5b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b54a40d3-251c-42a3-b439-3784b4be7ae1"
+        }
+      ],
+      "uuid": "998a4ff3-594e-4671-acb5-8cd0d47e854a"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "5f1a3c50-d7cf-4015-ac7b-e53b755731c2",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "03626b3f-a053-4534-9152-41f274c8091f",
+          "uuid": "9dd1a1f8-3c1b-4f40-a9f1-86d5bc5dd8ae"
+        }
+      ],
+      "uuid": "b2adbbaa-501a-472f-85a0-ac3bfc1d97f6"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "eba12a72-b7cd-405d-8aa4-df3e144502e7",
+          "uuid": "aa3ce600-97d3-45c5-9daf-d937dd98e343"
+        },
+        {
+          "destination_uuid": "f3fb462e-18e4-4013-9864-2075b60a4822",
+          "uuid": "afd34a9e-62f5-4eb4-a9ec-7df6e6e5f1b3"
+        }
+      ],
+      "router": {
+        "categories": [
+          {
+            "exit_uuid": "aa3ce600-97d3-45c5-9daf-d937dd98e343",
+            "name": "Bucket 1",
+            "uuid": "c41b869a-d4c4-45c9-a76b-ca1f12d86496"
+          },
+          {
+            "exit_uuid": "afd34a9e-62f5-4eb4-a9ec-7df6e6e5f1b3",
+            "name": "Bucket 2",
+            "uuid": "31924653-cc07-44d2-8c13-a0f270f7674c"
+          }
+        ],
+        "type": "random"
+      },
+      "uuid": "03626b3f-a053-4534-9152-41f274c8091f"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "81d25f5e-79c7-4c44-abd6-6cf5a5b61b16",
+          "uuid": "7af738a6-4a11-4c4e-aa18-fff810560f19"
+        },
+        {
+          "destination_uuid": "ddb588ee-c8ed-4009-a3ce-4e8726036ecf",
+          "uuid": "0c6fd27d-7abe-4295-bed3-2c1de9161d75"
+        },
+        {
+          "destination_uuid": "30c9c22d-ca4e-4642-9bce-c01ce551b0d3",
+          "uuid": "5564bea1-2e22-41ae-bc7d-6a387becc6b5"
+        },
+        {
+          "destination_uuid": "1aec44a3-02ea-4c8d-b408-c7a87c5533e6",
+          "uuid": "a77c711b-097e-4292-9ecd-a8ea40d49194"
+        },
+        {
+          "destination_uuid": "f9b6906f-fa28-46a8-a8ba-e0972abf3fd3",
+          "uuid": "a4d76f84-ec01-4c81-9c07-f83caf047456"
+        },
+        {
+          "destination_uuid": "6a18df7d-d454-410e-91fa-b31129bb1d82",
+          "uuid": "01407557-2fe4-4753-b46a-2b46846075da"
+        },
+        {
+          "destination_uuid": "09e560b2-547a-4611-9927-4f07844454ba",
+          "uuid": "7b5ff94f-c091-4991-bd29-0cc35bbbcb66"
+        }
+      ],
+      "router": {
+        "categories": [
+          {
+            "exit_uuid": "7af738a6-4a11-4c4e-aa18-fff810560f19",
+            "name": "Bucket 1",
+            "uuid": "a5175347-7621-4f60-ad59-6d6e96b06be6"
+          },
+          {
+            "exit_uuid": "0c6fd27d-7abe-4295-bed3-2c1de9161d75",
+            "name": "Bucket 2",
+            "uuid": "80f4d744-4334-400a-8a6d-f5de96c0a487"
+          },
+          {
+            "exit_uuid": "5564bea1-2e22-41ae-bc7d-6a387becc6b5",
+            "name": "Bucket 3",
+            "uuid": "7201edfd-5f35-4103-8386-c95bca214bcd"
+          },
+          {
+            "exit_uuid": "a77c711b-097e-4292-9ecd-a8ea40d49194",
+            "name": "Bucket 4",
+            "uuid": "4379b3d6-c8a0-48b4-8174-52138c7ea529"
+          },
+          {
+            "exit_uuid": "a4d76f84-ec01-4c81-9c07-f83caf047456",
+            "name": "Bucket 5",
+            "uuid": "d07b564e-656a-4a74-ab8b-cda4f65a40f6"
+          },
+          {
+            "exit_uuid": "01407557-2fe4-4753-b46a-2b46846075da",
+            "name": "Bucket 6",
+            "uuid": "cf60a58a-30f9-43c7-a073-ebaf29eeb100"
+          },
+          {
+            "exit_uuid": "7b5ff94f-c091-4991-bd29-0cc35bbbcb66",
+            "name": "Bucket 7",
+            "uuid": "6da30a53-0536-4788-9e72-f91c35977b7d"
+          }
+        ],
+        "type": "random"
+      },
+      "uuid": "eba12a72-b7cd-405d-8aa4-df3e144502e7"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "691a5581-b002-425f-a598-a039eeac94e0",
+          "uuid": "c277957e-69bc-4857-a26c-971c76288550"
+        },
+        {
+          "destination_uuid": "f3e6884f-871f-4526-8feb-d23d4907c8ff",
+          "uuid": "29a4c01d-8434-4d23-9714-c713d3f16837"
+        },
+        {
+          "destination_uuid": "a4caa3f8-8b2b-4436-8ccf-8574e33a7f2f",
+          "uuid": "3bbf69d1-05af-4cc4-9223-3ca4419fee92"
+        },
+        {
+          "destination_uuid": "5991f61c-3cb2-463a-ae4e-7db75b8f238d",
+          "uuid": "6e8204f5-4238-4306-a04e-ba44a540f9e2"
+        },
+        {
+          "destination_uuid": "129a4ef4-d8b0-4e09-b74a-a9d654313be7",
+          "uuid": "92796c51-f220-4dc3-b713-a750f2b73062"
+        },
+        {
+          "destination_uuid": "4efb2e79-7f63-46c2-bd36-1da1bef20020",
+          "uuid": "61b84b9e-1e0f-4346-a0c1-6169b6e02f2f"
+        },
+        {
+          "destination_uuid": "1f8a665c-fbb9-4405-8c3d-6a893c0f2674",
+          "uuid": "cd2418a9-87d9-43b0-b916-191beb80024f"
+        }
+      ],
+      "router": {
+        "categories": [
+          {
+            "exit_uuid": "c277957e-69bc-4857-a26c-971c76288550",
+            "name": "Bucket 1",
+            "uuid": "fbd19749-7ef6-4920-bea8-f4626cb7ac71"
+          },
+          {
+            "exit_uuid": "29a4c01d-8434-4d23-9714-c713d3f16837",
+            "name": "Bucket 2",
+            "uuid": "0df026e5-05d4-4f0c-90fd-952c56925fc0"
+          },
+          {
+            "exit_uuid": "3bbf69d1-05af-4cc4-9223-3ca4419fee92",
+            "name": "Bucket 3",
+            "uuid": "4ea4391b-7128-4caf-84d2-77ecb7d5f661"
+          },
+          {
+            "exit_uuid": "6e8204f5-4238-4306-a04e-ba44a540f9e2",
+            "name": "Bucket 4",
+            "uuid": "b5b5cef5-3fdc-4e3d-b9a0-0461e6128fdd"
+          },
+          {
+            "exit_uuid": "92796c51-f220-4dc3-b713-a750f2b73062",
+            "name": "Bucket 5",
+            "uuid": "567ad5c9-2a70-40ae-a0a9-e0ee40db3d8c"
+          },
+          {
+            "exit_uuid": "61b84b9e-1e0f-4346-a0c1-6169b6e02f2f",
+            "name": "Bucket 6",
+            "uuid": "a5dcafbb-51cf-40d5-b675-2e8cdc988939"
+          },
+          {
+            "exit_uuid": "cd2418a9-87d9-43b0-b916-191beb80024f",
+            "name": "Bucket 7",
+            "uuid": "23cd99ac-5620-454b-bf83-4b63ab02f12d"
+          }
+        ],
+        "type": "random"
+      },
+      "uuid": "f3fb462e-18e4-4013-9864-2075b60a4822"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that you are struggling. It is perfectly normal to have difficult days, especially during these stressful times. Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "786b43bf-7dcb-4e0f-8cbb-d2a8aeb45c52"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "cfe0f606-05b9-425a-a385-2392e3c6544c"
+        }
+      ],
+      "uuid": "81d25f5e-79c7-4c44-abd6-6cf5a5b61b16"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that things are difficult between you and your children. I know it can be really tough. Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "e0996992-ea6a-4b62-b033-9c938ddb1b9a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e46a9cce-5b0c-4047-aacd-0add4ff5901b"
+        }
+      ],
+      "uuid": "ddb588ee-c8ed-4009-a3ce-4e8726036ecf"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that things are difficult between you and your children. You deserve a star just for trying. Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "ec2fec51-c51f-4de5-b9c4-161fb4b63418"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "32620a20-3fc9-4126-a6a6-f189de5f1367"
+        }
+      ],
+      "uuid": "30c9c22d-ca4e-4642-9bce-c01ce551b0d3"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that you are going through a tough time. You are not alone. Reach out to a friend or someone you can talk to for support. Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "8a5c1fa7-b227-4887-b2ed-e778051e04b3"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "3d5df513-ee69-4ddc-a122-52ae327a1c6d"
+        }
+      ],
+      "uuid": "691a5581-b002-425f-a598-a039eeac94e0"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that you are struggling. Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "9623039d-cb46-4573-9f4e-59bd42b8fa79"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "77441961-87c4-492f-b043-be2c33f0ea27"
+        }
+      ],
+      "uuid": "f3e6884f-871f-4526-8feb-d23d4907c8ff"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that you are struggling. Take a moment to reflect on one thing that went well for you today. Even the smallest things can help. Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "b418dcab-4b8f-42b3-a813-8036499b3013"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "412edc05-2fba-4f1d-b75a-4795697cc56c"
+        }
+      ],
+      "uuid": "a4caa3f8-8b2b-4436-8ccf-8574e33a7f2f"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that you are having a tough time with your child. These things take time and patience to change. Be kind to yourself and know that you are not alone. Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "78092abe-8888-4f0b-ae27-0a464f0d0472"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b81bec22-f724-4580-987b-8eadb0c00e30"
+        }
+      ],
+      "uuid": "f9b6906f-fa28-46a8-a8ba-e0972abf3fd3"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear you are struggling. Give yourself a big hug for trying. Tomorrow is another day. Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "27f77256-2365-4cde-9310-b77bba275b67"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "de45ee9c-5ee2-4917-a314-c1cff71a543e"
+        }
+      ],
+      "uuid": "6a18df7d-d454-410e-91fa-b31129bb1d82"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that things are difficult between you and your children. It’s not always easy to be a parent during these difficult times. Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "a11a25ae-0d02-40b6-9120-8aadbf0cb172"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "402fdb10-47ab-4b92-a4b6-b5ecc33dc4cc"
+        }
+      ],
+      "uuid": "1aec44a3-02ea-4c8d-b408-c7a87c5533e6"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that things are difficult between you and your children. There’s no such thing as a perfect parent or the perfect child. We are all just trying our best! Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "46375b63-4641-452b-92bd-7638193242c3"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "cd47ca64-187c-4249-9645-b4f38b9317d1"
+        }
+      ],
+      "uuid": "129a4ef4-d8b0-4e09-b74a-a9d654313be7"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that you are struggling. Parenting can be very difficult at times. Take a pause and remind yourself that you are trying your best. Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "1bb9fd60-7374-4e57-8072-14633593a563"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "efde956e-f5b5-4a4c-bf13-97c1d43ebb47"
+        }
+      ],
+      "uuid": "5991f61c-3cb2-463a-ae4e-7db75b8f238d"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that things are difficult between you and your children. Sometimes it’s easy, sometimes it’s not. Let go of the mistakes and celebrate the wins, however small! Remember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "7f789ece-a559-4d30-868d-29c1b3b9d0ce"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e54a4097-1cdb-4d38-9073-40e9ee4602c7"
+        }
+      ],
+      "uuid": "4efb2e79-7f63-46c2-bd36-1da1bef20020"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Be gentle with yourself. Just because something didn’t go well today, or you lost your temper, this doesn’t define who you are as a parent. Remind yourself of the things you did well today, even if they may seem small.",
+          "type": "send_msg",
+          "uuid": "7b887d18-6df5-468c-800a-12233395a756"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "5a48a9b7-4a04-4cd7-af77-bf510885237d"
+        }
+      ],
+      "uuid": "09e560b2-547a-4611-9927-4f07844454ba"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "5fa62517-bb38-4c2e-935f-4e4508578d29",
+          "uuid": "869e0918-a751-46b1-890e-f0dcb246c2e8"
+        },
+        {
+          "destination_uuid": "eba12a72-b7cd-405d-8aa4-df3e144502e7",
+          "uuid": "3f45ef40-5aaa-432d-a2b2-5cad050608a5"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "evening"
+            ],
+            "category_uuid": "7bb3fdf7-42d3-45dc-8e9a-b51f6c6b43cb",
+            "type": "has_any_word",
+            "uuid": "d00cecdd-8553-4ba7-bcd8-0a2cb7989113"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "869e0918-a751-46b1-890e-f0dcb246c2e8",
+            "name": "Evening",
+            "uuid": "7bb3fdf7-42d3-45dc-8e9a-b51f6c6b43cb"
+          },
+          {
+            "exit_uuid": "3f45ef40-5aaa-432d-a2b2-5cad050608a5",
+            "name": "Other",
+            "uuid": "ff8f7141-6cb9-4b22-a6ef-6d32f7298240"
+          }
+        ],
+        "default_category_uuid": "ff8f7141-6cb9-4b22-a6ef-6d32f7298240",
+        "operand": "@fields.time_of_day",
+        "type": "switch"
+      },
+      "uuid": "1f8a665c-fbb9-4405-8c3d-6a893c0f2674"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry to hear that things are difficult. Whatever you feel you did ‘wrong’ today, let it go and try again tomorrow. It’s ok! \n\nRemember you can always get extra support by typing \"Help\".",
+          "type": "send_msg",
+          "uuid": "7205430c-e80a-4433-860a-8728a5e6ade9"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "df7f4423-85d9-417f-b6f8-97297e7ed86a"
+        }
+      ],
+      "uuid": "5fa62517-bb38-4c2e-935f-4e4508578d29"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "da48efa4-597f-4595-ab65-254e2d36e6d0",
+  "revision": 2
+}

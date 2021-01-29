@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "27291636-9891-452f-a7c8-94cbdef99074": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "6166c247-8d4c-4a40-8637-ce5ad0d99ba2": {
+        "config": {},
+        "position": {
+          "left": 200,
+          "top": 620
+        },
+        "type": "split_by_subflow"
+      },
+      "e3c1cb9d-6e54-498f-9d6b-09bf00a2ec36": {
+        "position": {
+          "left": 0,
+          "top": 380
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Calm - Three options",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Three options\n•\tThink of three different situations. For example, driving a car, sailing a boat, or flying a plane.\n•\tSay them to your teen and ask, “Which would you prefer?”\n•\tAsk them why?\n•\tNow think of three more situations or ask your teen to do it for you. ",
+          "type": "send_msg",
+          "uuid": "7edaea7b-7b95-4f83-ab01-22bb983619f6"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "c85bd3b4-bf49-4a27-9002-72820e5c239b"
+        }
+      ],
+      "uuid": "27291636-9891-452f-a7c8-94cbdef99074"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "303d75e6-2241-4d09-9f54-5ccb8514fdb4",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "decf1085-9979-4611-8475-21db098e340e",
+          "value": "Teen2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "6166c247-8d4c-4a40-8637-ce5ad0d99ba2",
+          "uuid": "7198b702-ec45-4025-b86b-54eb13c5a586"
+        }
+      ],
+      "uuid": "e3c1cb9d-6e54-498f-9d6b-09bf00a2ec36"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "e409d74c-9f62-4791-b775-3b5759252217"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "2a1233f3-f34d-49f5-a4f6-b845cbfd0ab6"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "7324e6b9-c509-4a3f-8e5a-5b390250cbbe"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "30bafea0-9f9e-43cf-94a3-59ffab3cb9ba",
+            "type": "has_only_text",
+            "uuid": "0017a6de-f1ea-44c4-8bbe-8bb0dd5b9954"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "9d12fe5c-ad0f-411b-b01c-359b688b4c6f",
+            "type": "has_only_text",
+            "uuid": "e3a26400-c87b-406e-9c79-229176649388"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "2a1233f3-f34d-49f5-a4f6-b845cbfd0ab6",
+            "name": "Complete",
+            "uuid": "30bafea0-9f9e-43cf-94a3-59ffab3cb9ba"
+          },
+          {
+            "exit_uuid": "7324e6b9-c509-4a3f-8e5a-5b390250cbbe",
+            "name": "Expired",
+            "uuid": "9d12fe5c-ad0f-411b-b01c-359b688b4c6f"
+          }
+        ],
+        "default_category_uuid": "9d12fe5c-ad0f-411b-b01c-359b688b4c6f",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "6166c247-8d4c-4a40-8637-ce5ad0d99ba2"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "948b8657-65de-4771-b363-efbf32f198c2",
+  "revision": 1
+}

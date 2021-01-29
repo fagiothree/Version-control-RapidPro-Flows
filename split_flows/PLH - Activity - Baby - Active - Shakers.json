@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "96c69432-9eee-4c6c-ae7a-bb75e77bd917": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "eeda7c3a-8fec-4ba3-b540-b5abe9733d66": {
+        "position": {
+          "left": 0,
+          "top": 480
+        },
+        "type": "execute_actions"
+      },
+      "aa95b618-5b15-43da-b178-c36ad386b98a": {
+        "config": {},
+        "position": {
+          "left": 320,
+          "top": 560
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Baby - Active - Shakers",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Shakers\n•\tFind an empty, clean plastic bottle or pot with a lid that closes tight.\n•\tFill it with sand, stones, uncooked rice, beans or any small objects that make an interesting sound. \n•\tMove your body as you shake it in front of your baby.\n•\tIf it is safe, give it to your baby to shake!\n•\tGet creative! Can you find something colourful or try it with water? \n•\tWhat sounds does your baby like?",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "9f7307ea-2c4d-49f2-83af-294a0412ef41"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b9b348ef-5043-4857-b896-0e26670a830d"
+        }
+      ],
+      "uuid": "96c69432-9eee-4c6c-ae7a-bb75e77bd917"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "b9e2d5ab-1a30-44c4-a8e7-c36603e24bf9",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "df057a1e-c1a0-4e5b-843d-6507a9d5f65d",
+          "value": "Baby5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "aa95b618-5b15-43da-b178-c36ad386b98a",
+          "uuid": "bdcff0c7-b03c-4509-ba0e-3f5c3f7ce6e0"
+        }
+      ],
+      "uuid": "eeda7c3a-8fec-4ba3-b540-b5abe9733d66"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Feedback - Feedback for content",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "9ea024b6-d6c7-4150-a558-edcd3f1a36c7"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "3b1b2c65-c640-4a9e-b459-210afe291cfd"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "b05a9f71-1969-47d8-ada5-4ce32dd13d78"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "ec18aaa9-e05c-4be9-af96-d3da72acd466",
+            "type": "has_only_text",
+            "uuid": "922ba779-d2ab-420b-9035-b8de3a879bca"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "e7ace803-85c1-4ce1-993d-c7167dac359e",
+            "type": "has_only_text",
+            "uuid": "13aa962b-7009-4fe5-9064-6b4a5d8f9d09"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "3b1b2c65-c640-4a9e-b459-210afe291cfd",
+            "name": "Complete",
+            "uuid": "ec18aaa9-e05c-4be9-af96-d3da72acd466"
+          },
+          {
+            "exit_uuid": "b05a9f71-1969-47d8-ada5-4ce32dd13d78",
+            "name": "Expired",
+            "uuid": "e7ace803-85c1-4ce1-993d-c7167dac359e"
+          }
+        ],
+        "default_category_uuid": "e7ace803-85c1-4ce1-993d-c7167dac359e",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "aa95b618-5b15-43da-b178-c36ad386b98a"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "5df0eb07-7d7a-45a9-a7e7-2724b3a8f8c0",
+  "revision": 2
+}

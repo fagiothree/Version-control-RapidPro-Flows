@@ -1,0 +1,158 @@
+{
+  "_ui": {
+    "nodes": {
+      "7d2ff5ce-3ff4-4c0e-ab37-1a5bfb102008": {
+        "config": {},
+        "position": {
+          "left": 180,
+          "top": 720
+        },
+        "type": "split_by_subflow"
+      },
+      "7fec6280-04f6-4a15-8594-089a8017a90c": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "fdde7137-0945-4fdf-b7c3-6b733fa6a5a4": {
+        "position": {
+          "left": 0,
+          "top": 500
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {
+      "8ba3cd51-7906-4795-b2be-c6cdb6b2eae5": {
+        "body": "...",
+        "color": "yellow",
+        "position": {
+          "left": 840,
+          "top": 740
+        },
+        "title": "New Note"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Active - What are you doing",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "What Are You Doing? \n•\tThis game is best when more than 2 people play\n•\tOne person pretends to be doing something – for example, combing hair or making dinner  \n•\tAnother person asks, “What are you doing?”\n•\tThe first person needs to say something that has nothing to do with combing hair, for example, “Tying my shoes.”  \n•\tThe second person then starts pretending to tie their shoes until a new person asks, “What are you doing?” \n•\tThe answer must always be something different than what you are actually doing!",
+          "type": "send_msg",
+          "uuid": "2aaca575-ec1e-40b1-b4a7-a94ca714dd79"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e4d8baaa-74c1-41fe-b180-8d5fe4491766"
+        }
+      ],
+      "uuid": "7fec6280-04f6-4a15-8594-089a8017a90c"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "2a0bbedc-9ea1-4109-9c40-0f6173dd66d6",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "b7e1a37c-ffba-4c7c-ab38-0443e72f3974",
+          "value": "Child22"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7d2ff5ce-3ff4-4c0e-ab37-1a5bfb102008",
+          "uuid": "aaffe56e-9f33-47d8-8d10-c619f780d8d8"
+        }
+      ],
+      "uuid": "fdde7137-0945-4fdf-b7c3-6b733fa6a5a4"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "469b9467-2f31-4550-8598-186bd3032b6c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "6963f3c6-21fb-484c-989d-527b335ce66a"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "262bad56-46b0-48a6-8ead-92060384d157"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "5712c250-1377-4ab0-9a6c-ff1c92b675ca",
+            "type": "has_only_text",
+            "uuid": "732aa11f-005a-4219-99d9-44db755793a7"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "80180a00-a44f-4a0c-8bb4-b2ab075431b2",
+            "type": "has_only_text",
+            "uuid": "4bb84b2c-3c26-4a45-9d1f-fc381bebaf28"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "6963f3c6-21fb-484c-989d-527b335ce66a",
+            "name": "Complete",
+            "uuid": "5712c250-1377-4ab0-9a6c-ff1c92b675ca"
+          },
+          {
+            "exit_uuid": "262bad56-46b0-48a6-8ead-92060384d157",
+            "name": "Expired",
+            "uuid": "80180a00-a44f-4a0c-8bb4-b2ab075431b2"
+          }
+        ],
+        "default_category_uuid": "80180a00-a44f-4a0c-8bb4-b2ab075431b2",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "7d2ff5ce-3ff4-4c0e-ab37-1a5bfb102008"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "1832c2d6-ac6b-471d-867e-96fec1c5a2dd",
+  "revision": 1
+}

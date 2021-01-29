@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "01f8314d-eff4-4743-856a-c8a60a3e3298": {
+        "position": {
+          "left": 120,
+          "top": 640
+        },
+        "type": "execute_actions"
+      },
+      "3a01047d-2387-4b03-92ab-59472b35fec4": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "de1fa8c8-01cc-459f-a7a4-666688ee7c97": {
+        "config": {},
+        "position": {
+          "left": 120,
+          "top": 840
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Adult - Calm - Give yourself a hug",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Give Yourself A Hug\n•\tBella mama, bella mama hey. \n•\tHey there! How are you feeling today? Do you feel great?!\n•\tMaybe not. Maybe you shouted again at your children today? Maybe you got angry and said something you don't feel proud of? It’s ok. It’s super stressful right now. \n•\tTake a deep breath and think of one thing you did today that you do feel proud of. It doesn't have to be big. And wrap your arms around your body and give yourself a hug. And now think of one thing you did today that you don't feel proud of. What can you do differently tomorrow? And wrap your arms around your body and give yourself a hug. \n•\tBella mama, bella mama, bella mama, bella mama, bella mama, bella mama hey”.",
+          "type": "send_msg",
+          "uuid": "cdaeca55-2465-4e2b-9b6a-3eacf4849958"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "98131255-ff65-4a9a-99a5-659ba7708ea5"
+        }
+      ],
+      "uuid": "3a01047d-2387-4b03-92ab-59472b35fec4"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "dfe0d8f0-a9c7-4300-ab5c-868c88a4c608",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "1f88411f-0d4a-4493-bbbd-0b9b9b3c7b0b",
+          "value": "Adult 11"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "de1fa8c8-01cc-459f-a7a4-666688ee7c97",
+          "uuid": "2e6c5234-2e81-410f-8df7-4ac035d250e9"
+        }
+      ],
+      "uuid": "01f8314d-eff4-4743-856a-c8a60a3e3298"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "d09ae805-b1f9-4bc0-a686-065784c75b94"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e595b68d-a68b-485d-9c43-987ae9eca7e1"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "27f575bf-0fc9-4346-9ae7-c276b9c1dbf2"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "a25bbb8c-7482-42ec-9847-5a4bd63eb848",
+            "type": "has_only_text",
+            "uuid": "d34ea775-0cf7-491d-bb74-16a270e0af0e"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "e3c34e15-bf0a-4e3e-a2e2-da52e1d0a9ec",
+            "type": "has_only_text",
+            "uuid": "e1e4060a-5df4-4884-91e9-1b35c0ce0881"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "e595b68d-a68b-485d-9c43-987ae9eca7e1",
+            "name": "Complete",
+            "uuid": "a25bbb8c-7482-42ec-9847-5a4bd63eb848"
+          },
+          {
+            "exit_uuid": "27f575bf-0fc9-4346-9ae7-c276b9c1dbf2",
+            "name": "Expired",
+            "uuid": "e3c34e15-bf0a-4e3e-a2e2-da52e1d0a9ec"
+          }
+        ],
+        "default_category_uuid": "e3c34e15-bf0a-4e3e-a2e2-da52e1d0a9ec",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "de1fa8c8-01cc-459f-a7a4-666688ee7c97"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "39cae48e-d578-4c49-a1ab-8d36bd9b10a1",
+  "revision": 1
+}

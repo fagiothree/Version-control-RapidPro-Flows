@@ -1,0 +1,149 @@
+{
+  "_ui": {
+    "nodes": {
+      "198a2a67-53ee-4892-bfd3-4f06da2041e7": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "15aa983f-a6fc-4170-95bc-b55b9cafa894": {
+        "position": {
+          "left": 0,
+          "top": 300
+        },
+        "type": "execute_actions"
+      },
+      "9ccb6a84-8fb1-4e7a-b710-a25b89874451": {
+        "config": {},
+        "position": {
+          "left": 300,
+          "top": 480
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 2
+  },
+  "name": "PLH - Activity - Child - Active - Dance choreography",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image:@(fields.image_path & \"family_dancing_and_playing_instruments.jpg\")"
+          ],
+          "text": "Dance choreography\n•\tCreate a dance choreography to your children’s favorite songs.\n•\tFirst person does a dance move and everyone else copies. \n•\tEveryone takes turns being the leader.\n•\tPerform it for the household!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "e8c1dc6d-77ca-4f64-bbc1-1726b5879241"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "a0f7c9e1-47cc-4712-9864-0d20bfa20984"
+        }
+      ],
+      "uuid": "198a2a67-53ee-4892-bfd3-4f06da2041e7"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "2e530821-9b41-4a54-9027-da00f12f6fcb",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "29da6c85-658e-4d6b-b178-48b9bbc3cbc5",
+          "value": "Child15"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "9ccb6a84-8fb1-4e7a-b710-a25b89874451",
+          "uuid": "a589bed4-308e-46e8-8e26-82579ce8835a"
+        }
+      ],
+      "uuid": "15aa983f-a6fc-4170-95bc-b55b9cafa894"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "dcd8b84e-e493-49e2-98e4-91e962615d3c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "81c3df54-57b6-4af7-b929-4b3db112bc50"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "9bda3b6b-b4c8-4d3b-a874-70ec025e8b8d"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "3226066c-604f-4b31-aff3-8610f52feaae",
+            "type": "has_only_text",
+            "uuid": "89a968c8-3f87-4fab-a2dd-9817e84810dd"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "17859c81-1a68-42e9-a3e5-b89a5ffb93f9",
+            "type": "has_only_text",
+            "uuid": "4fdbf497-13af-4fac-b7d1-698262fdc476"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "81c3df54-57b6-4af7-b929-4b3db112bc50",
+            "name": "Complete",
+            "uuid": "3226066c-604f-4b31-aff3-8610f52feaae"
+          },
+          {
+            "exit_uuid": "9bda3b6b-b4c8-4d3b-a874-70ec025e8b8d",
+            "name": "Expired",
+            "uuid": "17859c81-1a68-42e9-a3e5-b89a5ffb93f9"
+          }
+        ],
+        "default_category_uuid": "17859c81-1a68-42e9-a3e5-b89a5ffb93f9",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "9ccb6a84-8fb1-4e7a-b710-a25b89874451"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "37764bda-2189-4ea5-9cd1-b11a81f5ec4e",
+  "revision": 3
+}

@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "1f05e704-0916-4409-b977-8c176c6156a8": {
+        "position": {
+          "left": 0,
+          "top": 680
+        },
+        "type": "execute_actions"
+      },
+      "28e10671-8067-4f98-b96b-f191e609fee3": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "8a799fb0-585f-4639-85ff-8aa26349be13": {
+        "config": {},
+        "position": {
+          "left": 260,
+          "top": 860
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Active - Pass the snap",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Pass the Snap  \n•\tThis game is best with at least 3 people.\n•\tStart in a circle and pass one snap around the circle (or clap if you cannot snap).\n•\tYou snap once to throw the snap.\n•\tYou can bounce the snap, throw it in the air, and catch it a few times before passing it. \n•\tThe direction (up, down, straight, curved, rolling the ground) and force (hard, soft, medium) that you throw the snap should affect how the person catches it.  \n•\tLook at the person you are throwing the snap to.  \n•\tThe person who will catch it has to snap once to catch it.\n•\tWhen everyone gets good at this, you can start moving around the room, still passing around the snap.  \n•\tCan you throw under the leg?  Behind the back?  Through your head?  Intercept a pass? Have fun with the snap!  ",
+          "type": "send_msg",
+          "uuid": "1332668b-42c7-4262-8042-3f07e323b019"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "07762115-3921-4896-9dec-aa85f248751d"
+        }
+      ],
+      "uuid": "28e10671-8067-4f98-b96b-f191e609fee3"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "8c171925-ec07-49e8-9ee0-3aadefd999a6",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "017ac25a-cbdf-4c61-ae32-d5fda975d485",
+          "value": "Teen18"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "8a799fb0-585f-4639-85ff-8aa26349be13",
+          "uuid": "ba665c52-c770-4d1d-b80b-967b51e7b848"
+        }
+      ],
+      "uuid": "1f05e704-0916-4409-b977-8c176c6156a8"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "3ff33655-f0f0-4d5c-a07c-93bbe0b8005b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "931ae009-f7c8-499b-ac4c-7ce76a43ef6c"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "9a78e66c-9051-402c-919b-e2c5874035fe"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "cbd5ab56-6487-4f95-8db8-ef2947067b00",
+            "type": "has_only_text",
+            "uuid": "d7610eb5-0bfd-4901-8283-d7d72865e02b"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "0a4d8517-c4d3-4618-b96c-7ace513aed1a",
+            "type": "has_only_text",
+            "uuid": "41d506de-6ff8-4528-a344-5461e9f1f027"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "931ae009-f7c8-499b-ac4c-7ce76a43ef6c",
+            "name": "Complete",
+            "uuid": "cbd5ab56-6487-4f95-8db8-ef2947067b00"
+          },
+          {
+            "exit_uuid": "9a78e66c-9051-402c-919b-e2c5874035fe",
+            "name": "Expired",
+            "uuid": "0a4d8517-c4d3-4618-b96c-7ace513aed1a"
+          }
+        ],
+        "default_category_uuid": "0a4d8517-c4d3-4618-b96c-7ace513aed1a",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "8a799fb0-585f-4639-85ff-8aa26349be13"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "674d2d24-51ac-48f2-955e-af2885e8c350",
+  "revision": 1
+}

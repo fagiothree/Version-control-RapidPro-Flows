@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "4dc50234-bd18-4f2f-abfb-8d1a8581aa37": {
+        "position": {
+          "left": 0,
+          "top": 440
+        },
+        "type": "execute_actions"
+      },
+      "c27ecbe7-8fa2-4bcf-8b7d-56caddb207c2": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "fb045c30-29c7-4183-8af8-afe090dde51d": {
+        "config": {},
+        "position": {
+          "left": 260,
+          "top": 580
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Calm - Listening to sounds",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Listening to Sounds\n•\tSit down and close your eyes\n•\tHow many sounds can you hear? Listen to the sounds inside and outside the room. Count them on your fingers\n•\tAfter ten seconds, how many fingers do you have up? What sounds did you hear?\n•\tTry again for another ten seconds. \n•\tCan you hear any new sounds? Can you hear any sounds inside your own body?\n•\tNotice how you feel and ask your child how they are feeling.",
+          "type": "send_msg",
+          "uuid": "faf8c2d2-8a54-4e04-8352-2061ab7ba33f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "811bf560-f9e7-47d3-865e-cdbcfcb980ba"
+        }
+      ],
+      "uuid": "c27ecbe7-8fa2-4bcf-8b7d-56caddb207c2"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "55e03f0e-d331-4112-96d0-e22588b1a556",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "8f4270e2-0464-43dc-80f1-1f3e6798f1b3",
+          "value": "Child3"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "fb045c30-29c7-4183-8af8-afe090dde51d",
+          "uuid": "db0d5740-c124-4e2f-8f70-95c477a19cb9"
+        }
+      ],
+      "uuid": "4dc50234-bd18-4f2f-abfb-8d1a8581aa37"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow (activity or tip)",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "dade61f0-d885-4155-8660-98e6ef0582b5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "cfacfd63-5f05-4dac-9b2e-d76dfae6400b"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "ef38ad75-060f-413d-83cc-14c4b1276fa4"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "46ed17af-ffa9-4945-a762-c6353b8e602b",
+            "type": "has_only_text",
+            "uuid": "ad305ba4-6f84-48d7-b591-ca96479b35e4"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "3562414f-4989-4e12-a14a-c6e795df5a8f",
+            "type": "has_only_text",
+            "uuid": "109d1ee2-9f41-4177-959f-3ede3aba1981"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "cfacfd63-5f05-4dac-9b2e-d76dfae6400b",
+            "name": "Complete",
+            "uuid": "46ed17af-ffa9-4945-a762-c6353b8e602b"
+          },
+          {
+            "exit_uuid": "ef38ad75-060f-413d-83cc-14c4b1276fa4",
+            "name": "Expired",
+            "uuid": "3562414f-4989-4e12-a14a-c6e795df5a8f"
+          }
+        ],
+        "default_category_uuid": "3562414f-4989-4e12-a14a-c6e795df5a8f",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "fb045c30-29c7-4183-8af8-afe090dde51d"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "a1d162dc-6e65-484a-81ef-b2d05da5ff0d",
+  "revision": 1
+}

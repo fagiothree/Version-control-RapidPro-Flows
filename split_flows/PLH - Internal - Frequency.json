@@ -1,0 +1,310 @@
+{
+  "_ui": {
+    "nodes": {
+      "353bed15-a86a-4ba4-87d8-227c0af2e34c": {
+        "position": {
+          "left": 840,
+          "top": 1040
+        },
+        "type": "execute_actions"
+      },
+      "61418292-a0bc-4ccb-b10d-432fe1deb1e1": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 500,
+          "top": 1260
+        },
+        "type": "wait_for_response"
+      },
+      "6d8c0a65-e8aa-4803-8bb0-d64afcaf4db9": {
+        "position": {
+          "left": 140,
+          "top": 1360
+        },
+        "type": "execute_actions"
+      },
+      "81f64145-dc2b-4cd9-861d-caf1f87c366f": {
+        "position": {
+          "left": 520,
+          "top": 660
+        },
+        "type": "execute_actions"
+      },
+      "92c13e04-91b8-4858-afd3-869a3d84e96a": {
+        "position": {
+          "left": 480,
+          "top": 120
+        },
+        "type": "execute_actions"
+      },
+      "d6e3dd32-985d-42af-9c6f-04bfbd38c1e0": {
+        "position": {
+          "left": 500,
+          "top": 1460
+        },
+        "type": "execute_actions"
+      },
+      "d842f2a3-fa9b-492d-bada-72232dff347a": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "frequency",
+            "name": "frequency",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 480,
+          "top": 380
+        },
+        "type": "split_by_contact_field"
+      },
+      "feb535dd-689d-4c4f-975f-cc54b6fff6a2": {
+        "position": {
+          "left": 840,
+          "top": 1200
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 29
+  },
+  "name": "PLH - Internal - Frequency",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "frequency",
+            "name": "frequency"
+          },
+          "type": "set_contact_field",
+          "uuid": "42200425-238c-4640-b6b5-b1ff0ecf86dc",
+          "value": "2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "967106c6-a086-4dec-9d91-955e90b8d36c"
+        }
+      ],
+      "uuid": "92c13e04-91b8-4858-afd3-869a3d84e96a"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "81f64145-dc2b-4cd9-861d-caf1f87c366f",
+          "uuid": "9f23b4b9-c478-4831-8f5b-1c578d03555b"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "a2543e29-d856-4a5b-9df8-ace4b117d87a"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "1"
+            ],
+            "category_uuid": "f5e4ca20-3887-4d03-b7b6-36cc08f6d93d",
+            "type": "has_number_eq",
+            "uuid": "5c107081-6410-43f8-a5f0-7b83a2aa0061"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "9f23b4b9-c478-4831-8f5b-1c578d03555b",
+            "name": "1",
+            "uuid": "f5e4ca20-3887-4d03-b7b6-36cc08f6d93d"
+          },
+          {
+            "exit_uuid": "a2543e29-d856-4a5b-9df8-ace4b117d87a",
+            "name": "Other",
+            "uuid": "db376489-fed3-46c9-8304-80e85d5eeb1f"
+          }
+        ],
+        "default_category_uuid": "db376489-fed3-46c9-8304-80e85d5eeb1f",
+        "operand": "@fields.frequency",
+        "type": "switch"
+      },
+      "uuid": "d842f2a3-fa9b-492d-bada-72232dff347a"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [
+            "Same frequency",
+            "A little less often"
+          ],
+          "text": "Would you like to continue receiving these tips at the same frequency or less often? You can also change the time of day that you receive messages.\n\nChange these settings by typing \"Help\" and then selecting \"Technical Support.\"",
+          "type": "send_msg",
+          "uuid": "3b8b2e9c-49e4-4098-9dc1-dc87ca3f8491"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "61418292-a0bc-4ccb-b10d-432fe1deb1e1",
+          "uuid": "39eea60a-4cd7-47c4-9e06-d2b3b6052d89"
+        }
+      ],
+      "uuid": "81f64145-dc2b-4cd9-861d-caf1f87c366f"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "1864609d-4c19-4c3d-bdfb-d7a227e04d37",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "feb535dd-689d-4c4f-975f-cc54b6fff6a2",
+          "uuid": "08f1b0b5-4513-4886-aef9-86cedbef6109"
+        }
+      ],
+      "uuid": "353bed15-a86a-4ba4-87d8-227c0af2e34c"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "60427c16-842f-4e8e-a10d-68ab752ce89a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "81f64145-dc2b-4cd9-861d-caf1f87c366f",
+          "uuid": "6d2a4cda-1023-46d9-9023-514a16ff9ef3"
+        }
+      ],
+      "uuid": "feb535dd-689d-4c4f-975f-cc54b6fff6a2"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "6d8c0a65-e8aa-4803-8bb0-d64afcaf4db9",
+          "uuid": "63683604-7ce4-4ead-9d52-0f8456e65987"
+        },
+        {
+          "destination_uuid": "d6e3dd32-985d-42af-9c6f-04bfbd38c1e0",
+          "uuid": "92148a6f-c5fb-4cc4-9efe-707ea55b5f43"
+        },
+        {
+          "destination_uuid": "353bed15-a86a-4ba4-87d8-227c0af2e34c",
+          "uuid": "4569c5c8-680b-4bf3-8bb9-0934a9236674"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "same "
+            ],
+            "category_uuid": "810f1ab5-002f-4762-800c-ce2fbe78dd8a",
+            "type": "has_any_word",
+            "uuid": "7943d68d-cfa6-4c36-b7d7-776c1b218f70"
+          },
+          {
+            "arguments": [
+              "less often"
+            ],
+            "category_uuid": "8e2330ad-6b93-41be-85cc-3de0cafb6ff3",
+            "type": "has_any_word",
+            "uuid": "25f132e5-aa27-4389-9291-75e934d6e994"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "63683604-7ce4-4ead-9d52-0f8456e65987",
+            "name": "same",
+            "uuid": "810f1ab5-002f-4762-800c-ce2fbe78dd8a"
+          },
+          {
+            "exit_uuid": "92148a6f-c5fb-4cc4-9efe-707ea55b5f43",
+            "name": "less",
+            "uuid": "8e2330ad-6b93-41be-85cc-3de0cafb6ff3"
+          },
+          {
+            "exit_uuid": "4569c5c8-680b-4bf3-8bb9-0934a9236674",
+            "name": "Other",
+            "uuid": "159ddfa8-fd60-4068-98cd-4884a053cd2d"
+          }
+        ],
+        "default_category_uuid": "159ddfa8-fd60-4068-98cd-4884a053cd2d",
+        "operand": "@input.text",
+        "result_name": "frequency",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "61418292-a0bc-4ccb-b10d-432fe1deb1e1"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "b49be570-9a60-4e94-add9-3115b2763e7a",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "a5b968db-e846-4c86-bff2-0a2692816922"
+        }
+      ],
+      "uuid": "6d8c0a65-e8aa-4803-8bb0-d64afcaf4db9"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "frequency",
+            "name": "frequency"
+          },
+          "type": "set_contact_field",
+          "uuid": "8af2a948-776d-42e9-a708-c9f3eb54c9a1",
+          "value": "2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "6d8c0a65-e8aa-4803-8bb0-d64afcaf4db9",
+          "uuid": "a0342f4c-c22c-45d2-8eb2-0eecdb826ef1"
+        }
+      ],
+      "uuid": "d6e3dd32-985d-42af-9c6f-04bfbd38c1e0"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "3124951d-6664-4b29-845c-848ff8055805",
+  "revision": 1
+}

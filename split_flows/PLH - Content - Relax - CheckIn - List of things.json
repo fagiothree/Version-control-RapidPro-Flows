@@ -1,0 +1,293 @@
+{
+  "_ui": {
+    "nodes": {
+      "3df76906-d4f6-4d5a-ba30-1b5932da2122": {
+        "position": {
+          "left": 460,
+          "top": 20
+        },
+        "type": "execute_actions"
+      },
+      "0f9f1a86-49a7-41ca-bd83-2b5bd435aff4": {
+        "position": {
+          "left": 840,
+          "top": 120
+        },
+        "type": "execute_actions"
+      },
+      "a8038c46-bc93-4cc5-83d1-43953804ed0f": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 440,
+          "top": 160
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "e98aa9d6-8e89-45cc-9932-4de83cc279ec": {
+        "position": {
+          "left": 140,
+          "top": 320
+        },
+        "type": "execute_actions"
+      },
+      "cada5bf7-1ab7-43a1-8262-8b842c1f15a9": {
+        "position": {
+          "left": 400,
+          "top": 320
+        },
+        "type": "execute_actions"
+      },
+      "e474dc38-2509-447e-ac3c-6c76ed2862cb": {
+        "position": {
+          "left": 660,
+          "top": 320
+        },
+        "type": "execute_actions"
+      },
+      "80da2f6c-fc1d-4bb6-8d86-09293dcf366a": {
+        "position": {
+          "left": 420,
+          "top": 680
+        },
+        "type": "execute_actions"
+      },
+      "68290935-ab88-4976-9b85-aeda88bc18ff": {
+        "position": {
+          "left": 420,
+          "top": 1160
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 22
+  },
+  "name": "PLH - Content - Relax - CheckIn - List of things",
+  "nodes": [
+    {
+      "uuid": "3df76906-d4f6-4d5a-ba30-1b5932da2122",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Hi! How are you feeling?",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [
+            "Great",
+            "Okay",
+            "Bad"
+          ],
+          "uuid": "613dd95f-aa06-4f6b-80fd-838007d5df39"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "709f3456-af07-40e1-b1a9-b580c7256b8e",
+          "destination_uuid": "a8038c46-bc93-4cc5-83d1-43953804ed0f"
+        }
+      ]
+    },
+    {
+      "uuid": "0f9f1a86-49a7-41ca-bd83-2b5bd435aff4",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "7f483ea0-6016-4983-983f-7179921e3a57"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "a393e2ad-8c6b-4f0d-97dc-910d90c29ab1",
+          "destination_uuid": "3df76906-d4f6-4d5a-ba30-1b5932da2122"
+        }
+      ]
+    },
+    {
+      "uuid": "a8038c46-bc93-4cc5-83d1-43953804ed0f",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "7b82dacd-fd4b-4f91-8bd6-c387b4e81844",
+        "cases": [
+          {
+            "arguments": [
+              "great"
+            ],
+            "type": "has_any_word",
+            "uuid": "ff65505a-1c94-4e3f-9f51-7784292616cc",
+            "category_uuid": "18db49a6-6b4c-4784-bcab-6f8228a6bc57"
+          },
+          {
+            "arguments": [
+              "ok okay"
+            ],
+            "type": "has_any_word",
+            "uuid": "8ef4fd9b-bb24-4c02-90d8-6eb9e3e5eccf",
+            "category_uuid": "41f6f4f1-1fd3-45da-a0f4-800e5fbcb70c"
+          },
+          {
+            "arguments": [
+              "bad"
+            ],
+            "type": "has_any_word",
+            "uuid": "73a580a8-5aed-49e2-98f6-7e2c297e7da4",
+            "category_uuid": "27ceb3ca-9ce2-455b-8939-ff7af27d07b3"
+          }
+        ],
+        "categories": [
+          {
+            "uuid": "18db49a6-6b4c-4784-bcab-6f8228a6bc57",
+            "name": "Great",
+            "exit_uuid": "707c4f72-43d1-4a91-ac77-62c463e45129"
+          },
+          {
+            "uuid": "41f6f4f1-1fd3-45da-a0f4-800e5fbcb70c",
+            "name": "Ok",
+            "exit_uuid": "716cb0c6-efbe-4ff1-8893-aa0beda26781"
+          },
+          {
+            "uuid": "27ceb3ca-9ce2-455b-8939-ff7af27d07b3",
+            "name": "Bad",
+            "exit_uuid": "3b1a7943-23e1-4c60-99f3-361f60eda231"
+          },
+          {
+            "uuid": "7b82dacd-fd4b-4f91-8bd6-c387b4e81844",
+            "name": "Other",
+            "exit_uuid": "ecb0658e-6693-45d0-a12e-5d7fdd9d52ae"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg"
+        },
+        "result_name": "Result 1"
+      },
+      "exits": [
+        {
+          "uuid": "707c4f72-43d1-4a91-ac77-62c463e45129",
+          "destination_uuid": "e98aa9d6-8e89-45cc-9932-4de83cc279ec"
+        },
+        {
+          "uuid": "716cb0c6-efbe-4ff1-8893-aa0beda26781",
+          "destination_uuid": "cada5bf7-1ab7-43a1-8262-8b842c1f15a9"
+        },
+        {
+          "uuid": "3b1a7943-23e1-4c60-99f3-361f60eda231",
+          "destination_uuid": "e474dc38-2509-447e-ac3c-6c76ed2862cb"
+        },
+        {
+          "uuid": "ecb0658e-6693-45d0-a12e-5d7fdd9d52ae",
+          "destination_uuid": "0f9f1a86-49a7-41ca-bd83-2b5bd435aff4"
+        }
+      ]
+    },
+    {
+      "uuid": "e98aa9d6-8e89-45cc-9932-4de83cc279ec",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "So good to hear that you are doing well. What a wonderful feeling!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "95f9598b-8177-4627-a06f-90270aa165c2"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "74347de6-9883-4650-bab5-4b30b368e63e",
+          "destination_uuid": "80da2f6c-fc1d-4bb6-8d86-09293dcf366a"
+        }
+      ]
+    },
+    {
+      "uuid": "cada5bf7-1ab7-43a1-8262-8b842c1f15a9",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sometimes we're up. Sometimes we're down. And sometimes we are neither up nor down...and that's totally okay!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "f37fdfb9-c098-416b-84bf-bd92af3230b5"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "3177f162-6be6-4fad-998a-3f6cbe1308cf",
+          "destination_uuid": "80da2f6c-fc1d-4bb6-8d86-09293dcf366a"
+        }
+      ]
+    },
+    {
+      "uuid": "e474dc38-2509-447e-ac3c-6c76ed2862cb",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sorry to hear that you are not having a good day. It is completely normal to be going through a difficult time now. Remember that you are not alone. Here is an activity that might also help...",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "90951fea-c2a3-4ba9-aeec-64321003eb6a"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "1b97bb83-958b-4fd4-95cc-79ce33e76c39",
+          "destination_uuid": "80da2f6c-fc1d-4bb6-8d86-09293dcf366a"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image:@(fields.image_path & \"adults_talking_on_stools.jpg\")"
+          ],
+          "text": "Make a list of healthy activities that you like to do. Here are some suggestions:\n• Listening to your favourite music\n• Going for a walk (if allowed)\n• Doing some exercise\n• Drinking a cup of tea by yourself\n• Calling up a friend\n• Singing, dancing, praying, or reading\n• Sitting in the sun with your eyes closed\n• Watching your favourite T.V. show\nPick one and do it today!",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [],
+          "uuid": "5c5cd743-d4a1-4ff4-8fe4-46ce3c240d85"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "68290935-ab88-4976-9b85-aeda88bc18ff",
+          "uuid": "d799a3d9-7da0-4795-a70b-00146b985219"
+        }
+      ],
+      "uuid": "80da2f6c-fc1d-4bb6-8d86-09293dcf366a"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "We hope that was helpful! Remember you can always type \"Help\" at anytime if you need an activity to help you relax or reduce stress. Chat to you later!",
+          "type": "send_msg",
+          "uuid": "d7dd060d-1ba9-4428-a78f-77811fc24286"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "a5491838-c030-476e-9047-210253427f87"
+        }
+      ],
+      "uuid": "68290935-ab88-4976-9b85-aeda88bc18ff"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "c53e03ef-e11c-45e1-bd79-1f8fd6489fcf",
+  "revision": 23
+}

@@ -1,0 +1,240 @@
+{
+  "_ui": {
+    "nodes": {
+      "35695470-870d-40f3-9515-18807d5aec9a": {
+        "position": {
+          "left": 520,
+          "top": 600
+        },
+        "type": "execute_actions"
+      },
+      "38248181-68b6-4258-8f08-ae737fb3e79c": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "week_toolkit",
+            "name": "week toolkit",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 500,
+          "top": 300
+        },
+        "type": "split_by_contact_field"
+      },
+      "4760c76f-3c2c-46df-92eb-7beee9ac0a43": {
+        "position": {
+          "left": 620,
+          "top": 160
+        },
+        "type": "execute_actions"
+      },
+      "b6cabcdc-d458-4a1b-8d9b-ae9e43a31167": {
+        "position": {
+          "left": 600,
+          "top": 440
+        },
+        "type": "execute_actions"
+      },
+      "c2239968-c5fc-4f48-9850-a4320ce5b5ca": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "toolkit",
+            "name": "toolkit",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 480,
+          "top": 40
+        },
+        "type": "split_by_contact_field"
+      },
+      "fb153187-6d45-44f0-80ab-e785e7f36e42": {
+        "position": {
+          "left": 520,
+          "top": 700
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Internal - Update toolkits",
+  "nodes": [
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "38248181-68b6-4258-8f08-ae737fb3e79c",
+          "uuid": "f272b50f-78b6-48bf-aec5-b5790bb17a1f"
+        },
+        {
+          "destination_uuid": "4760c76f-3c2c-46df-92eb-7beee9ac0a43",
+          "uuid": "c212e2fc-9b60-4b73-8ecc-4492673c6468"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "@parent.results.skill"
+            ],
+            "category_uuid": "11af7b63-7448-4bb3-b827-d4cd95474729",
+            "type": "has_phrase",
+            "uuid": "7a6f3abc-486b-4ebe-bff1-e77878a388d6"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "f272b50f-78b6-48bf-aec5-b5790bb17a1f",
+            "name": "has skill",
+            "uuid": "11af7b63-7448-4bb3-b827-d4cd95474729"
+          },
+          {
+            "exit_uuid": "c212e2fc-9b60-4b73-8ecc-4492673c6468",
+            "name": "Other",
+            "uuid": "d2724768-2ab2-4a19-a667-f36cc15424d5"
+          }
+        ],
+        "default_category_uuid": "d2724768-2ab2-4a19-a667-f36cc15424d5",
+        "operand": "@fields.toolkit",
+        "type": "switch"
+      },
+      "uuid": "c2239968-c5fc-4f48-9850-a4320ce5b5ca"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "toolkit",
+            "name": "toolkit"
+          },
+          "type": "set_contact_field",
+          "uuid": "1b547abd-8cf2-4a9d-8582-a715122426d5",
+          "value": "@(fields.toolkit & parent.results.skill & \",\")"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "38248181-68b6-4258-8f08-ae737fb3e79c",
+          "uuid": "5e09b8c5-89f3-46d7-8411-9167673c7e64"
+        }
+      ],
+      "uuid": "4760c76f-3c2c-46df-92eb-7beee9ac0a43"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "35695470-870d-40f3-9515-18807d5aec9a",
+          "uuid": "20e1370f-4365-42e0-b8a5-c94c0acf0c0b"
+        },
+        {
+          "destination_uuid": "b6cabcdc-d458-4a1b-8d9b-ae9e43a31167",
+          "uuid": "bae4a718-26ec-4d5a-affa-f14370270861"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "@parent.results.skill"
+            ],
+            "category_uuid": "725a52bd-3c5d-4986-847d-1a8658ed832e",
+            "type": "has_phrase",
+            "uuid": "719cc0b3-befa-45fc-9af8-8caa3b423e01"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "20e1370f-4365-42e0-b8a5-c94c0acf0c0b",
+            "name": "has skill",
+            "uuid": "725a52bd-3c5d-4986-847d-1a8658ed832e"
+          },
+          {
+            "exit_uuid": "bae4a718-26ec-4d5a-affa-f14370270861",
+            "name": "Other",
+            "uuid": "406fb52b-d500-4ea3-9a00-f79f7d5063aa"
+          }
+        ],
+        "default_category_uuid": "406fb52b-d500-4ea3-9a00-f79f7d5063aa",
+        "operand": "@fields.week_toolkit",
+        "type": "switch"
+      },
+      "uuid": "38248181-68b6-4258-8f08-ae737fb3e79c"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "week_toolkit",
+            "name": "week toolkit"
+          },
+          "type": "set_contact_field",
+          "uuid": "41f2af6a-567b-42ae-b252-4f203db39807",
+          "value": "@(fields.week_toolkit & parent.results.skill & \",\")"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "35695470-870d-40f3-9515-18807d5aec9a",
+          "uuid": "1debc000-f3ad-43b8-8694-78fff7233523"
+        }
+      ],
+      "uuid": "b6cabcdc-d458-4a1b-8d9b-ae9e43a31167"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "week_toolkit_incompletes",
+            "name": "week toolkit incompletes"
+          },
+          "type": "set_contact_field",
+          "uuid": "a6bfd06c-28e5-43d1-b2a7-0ec707ceea0e",
+          "value": "@(replace(fields.week_toolkit_incompletes, parent.results.skill & \",\",\"\"))"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "fb153187-6d45-44f0-80ab-e785e7f36e42",
+          "uuid": "faec58fe-64eb-485a-93a9-c412f18e0098"
+        }
+      ],
+      "uuid": "35695470-870d-40f3-9515-18807d5aec9a"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "incomplete_toolkit",
+            "name": "incomplete toolkit"
+          },
+          "type": "set_contact_field",
+          "uuid": "f1106ca4-b82b-4270-9a4f-583881b35f70",
+          "value": "@(replace(fields.incomplete_toolkit, parent.results.skill & \",\",\"\"))"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "a555b744-e047-4a1d-ab97-d7cd9873ca04"
+        }
+      ],
+      "uuid": "fb153187-6d45-44f0-80ab-e785e7f36e42"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "074bc4c5-8c69-4e5b-9176-79b44bfa40da",
+  "revision": 1
+}

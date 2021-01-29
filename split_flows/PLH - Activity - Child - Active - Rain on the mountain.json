@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "e59e33cc-5cdb-4313-9f90-8fc86f826246": {
+        "position": {
+          "left": 140,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "3e960bec-3ba3-4102-b655-27809ce7ac5a": {
+        "position": {
+          "left": 140,
+          "top": 400
+        },
+        "type": "execute_actions"
+      },
+      "99a4380f-9ccc-466c-95e9-9410d7c72e5f": {
+        "config": {},
+        "position": {
+          "left": 360,
+          "top": 600
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Active - Rain on the mountain",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Rain on the Mountain\n•\tCall out, “There’s rain on the mountain”.\n•\tEveryone else replies “Run, run, run” while running around the space. \n•\tCall out different instructions. For example, touch something red or hop like a frog.\n•\tKeep playing and change the instructions each time. \n•\tYou can use this as a fun way to learn colours or even tidy up! ",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "47a3c46b-c8c0-478b-b4b5-b922a1d415ac"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "0c36033a-a59a-4848-b219-55232391b598"
+        }
+      ],
+      "uuid": "e59e33cc-5cdb-4313-9f90-8fc86f826246"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "919308d2-cad6-40ae-bfe3-f7e646ffc148",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "8682357f-04d1-4971-a1b8-1eba56303137",
+          "value": "Child1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "99a4380f-9ccc-466c-95e9-9410d7c72e5f",
+          "uuid": "ba3605e9-f192-4a63-986e-ef8bdfcf1d94"
+        }
+      ],
+      "uuid": "3e960bec-3ba3-4102-b655-27809ce7ac5a"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow (activity or tip)",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "2d349b44-5094-4975-b2aa-881a631c5c9f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "ffecb983-8faa-4f6e-a29f-4eca70800f64"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "997d5662-2ce4-4a37-8aad-b0b8901ae597"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "aea59878-5ae7-455f-b54e-c02587455251",
+            "type": "has_only_text",
+            "uuid": "4232a4e5-82b6-4c6f-b9ef-e0003528a0f3"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "93d17858-433d-4199-863f-f07a49d916ba",
+            "type": "has_only_text",
+            "uuid": "93c8c9b6-46d0-4dd6-a5d2-f0de82fd0d56"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "ffecb983-8faa-4f6e-a29f-4eca70800f64",
+            "name": "Complete",
+            "uuid": "aea59878-5ae7-455f-b54e-c02587455251"
+          },
+          {
+            "exit_uuid": "997d5662-2ce4-4a37-8aad-b0b8901ae597",
+            "name": "Expired",
+            "uuid": "93d17858-433d-4199-863f-f07a49d916ba"
+          }
+        ],
+        "default_category_uuid": "93d17858-433d-4199-863f-f07a49d916ba",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "99a4380f-9ccc-466c-95e9-9410d7c72e5f"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "cfaea614-d431-4629-b743-7d0f5f52f434",
+  "revision": 2
+}

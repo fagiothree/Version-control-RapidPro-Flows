@@ -1,0 +1,745 @@
+{
+  "_ui": {
+    "nodes": {
+      "4517e848-6cd9-4faf-abd8-eac9e8ec05f3": {
+        "position": {
+          "left": 640,
+          "top": 60
+        },
+        "type": "execute_actions"
+      },
+      "21f7cda6-1d0d-4ad8-9bfd-5e4b1fdea1df": {
+        "config": {},
+        "position": {
+          "left": 720,
+          "top": 140
+        },
+        "type": "split_by_subflow"
+      },
+      "487e69f7-74d1-4747-8fc7-895aef3499ed": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "from_theme",
+            "name": "from theme",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 900,
+          "top": 280
+        },
+        "type": "split_by_contact_field"
+      },
+      "97f31d83-3e86-4fda-ab38-dbad4aac0cf7": {
+        "position": {
+          "left": 500,
+          "top": 340
+        },
+        "type": "execute_actions"
+      },
+      "785e8eda-2952-4ead-9783-6cdda726b658": {
+        "position": {
+          "left": 940,
+          "top": 440
+        },
+        "type": "execute_actions"
+      },
+      "c1072ed4-67e0-4828-9b20-eb6fe7be90df": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 240,
+          "top": 460
+        },
+        "type": "wait_for_response"
+      },
+      "e631a123-c15a-40c1-9ba9-ab2faff1c093": {
+        "position": {
+          "left": 520,
+          "top": 560
+        },
+        "type": "execute_actions"
+      },
+      "0a154b63-3112-4e8f-88f1-bcb822ed8b57": {
+        "position": {
+          "left": 100,
+          "top": 660
+        },
+        "type": "execute_actions"
+      },
+      "42ac4675-b35d-4078-92ab-8675573d24a7": {
+        "position": {
+          "left": 320,
+          "top": 680
+        },
+        "type": "execute_actions"
+      },
+      "2595458a-9dea-4fd7-a29b-7f64c43ef204": {
+        "position": {
+          "left": 420,
+          "top": 860
+        },
+        "type": "execute_actions"
+      },
+      "fe26035e-a140-452f-9677-7db73c0a14b8": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "type_of_media",
+            "name": "type of media",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 200,
+          "top": 1020
+        },
+        "type": "split_by_contact_field"
+      },
+      "5653663a-7a96-4ed6-bd66-ac81eda1cf0e": {
+        "position": {
+          "left": 540,
+          "top": 1080
+        },
+        "type": "execute_actions"
+      },
+      "b07f32fe-5b99-4f1e-9d2e-853b959e37b6": {
+        "position": {
+          "left": 40,
+          "top": 1180
+        },
+        "type": "execute_actions"
+      },
+      "a826cbd8-04ca-4553-a987-42183417854a": {
+        "position": {
+          "left": 260,
+          "top": 1200
+        },
+        "type": "execute_actions"
+      },
+      "661dc73a-cda5-44ca-a4dd-209a99c3924d": {
+        "position": {
+          "left": 540,
+          "top": 1240
+        },
+        "type": "execute_actions"
+      },
+      "39cac433-c7cd-49b9-baa4-bab3a2a80c96": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 100,
+          "top": 1420
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "2847a947-f21d-47bb-9b0f-cb1a7127d6eb": {
+        "position": {
+          "left": 540,
+          "top": 1520
+        },
+        "type": "execute_actions"
+      },
+      "283224b0-3906-4c44-a579-9e8b141ba833": {
+        "position": {
+          "left": 60,
+          "top": 1660
+        },
+        "type": "execute_actions"
+      },
+      "ed679c83-d252-4738-b217-b685ed808e0a": {
+        "config": {},
+        "position": {
+          "left": 60,
+          "top": 1860
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 37
+  },
+  "name": "PLH - Content - Relax - Anger management",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "category": "",
+          "name": "skill",
+          "type": "set_run_result",
+          "uuid": "d499bb15-61da-4b33-8e73-b0c9b5789617",
+          "value": "Managing anger"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "21f7cda6-1d0d-4ad8-9bfd-5e4b1fdea1df",
+          "uuid": "f4807a8f-d7de-4902-a14f-5dd0fb2e8650"
+        }
+      ],
+      "uuid": "4517e848-6cd9-4faf-abd8-eac9e8ec05f3"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Update incomplete toolkits",
+            "uuid": "a682c361-8bea-420a-8bbc-fc84a202fbcb"
+          },
+          "type": "enter_flow",
+          "uuid": "451a82fd-be4d-4769-a79d-db4a3046f539"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "487e69f7-74d1-4747-8fc7-895aef3499ed",
+          "uuid": "99742605-2779-4733-b4e6-18d09b2fc48e"
+        },
+        {
+          "destination_uuid": "487e69f7-74d1-4747-8fc7-895aef3499ed",
+          "uuid": "845af316-95f3-4bbe-be95-cd56354362f3"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "e613dadb-e69d-46e7-b5b3-05f9b59b4256",
+            "type": "has_only_text",
+            "uuid": "26239829-6699-4e49-a41e-a1ad735adf7b"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "f1549875-5159-483f-a75b-d46e59dac5f1",
+            "type": "has_only_text",
+            "uuid": "11dbbedd-de56-4b7d-8e9f-80fb7a256ec2"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "99742605-2779-4733-b4e6-18d09b2fc48e",
+            "name": "Complete",
+            "uuid": "e613dadb-e69d-46e7-b5b3-05f9b59b4256"
+          },
+          {
+            "exit_uuid": "845af316-95f3-4bbe-be95-cd56354362f3",
+            "name": "Expired",
+            "uuid": "f1549875-5159-483f-a75b-d46e59dac5f1"
+          }
+        ],
+        "default_category_uuid": "f1549875-5159-483f-a75b-d46e59dac5f1",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "21f7cda6-1d0d-4ad8-9bfd-5e4b1fdea1df"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "785e8eda-2952-4ead-9783-6cdda726b658",
+          "uuid": "0ee20978-a830-41d0-9722-e6fc25e4fbfc"
+        },
+        {
+          "destination_uuid": "785e8eda-2952-4ead-9783-6cdda726b658",
+          "uuid": "f527a923-3479-4f59-9574-dc37eb843785"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes"
+            ],
+            "category_uuid": "917b63ca-52db-48ed-8f60-bf94b0c5f688",
+            "type": "has_any_word",
+            "uuid": "e58c00c4-809a-4ecb-9d93-472bd77ff295"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "0ee20978-a830-41d0-9722-e6fc25e4fbfc",
+            "name": "Yes",
+            "uuid": "917b63ca-52db-48ed-8f60-bf94b0c5f688"
+          },
+          {
+            "exit_uuid": "f527a923-3479-4f59-9574-dc37eb843785",
+            "name": "Other",
+            "uuid": "468cd870-0ae4-470f-aec5-855a8e655441"
+          }
+        ],
+        "default_category_uuid": "468cd870-0ae4-470f-aec5-855a8e655441",
+        "operand": "@fields.from_theme",
+        "type": "switch"
+      },
+      "uuid": "487e69f7-74d1-4747-8fc7-895aef3499ed"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image:@(fields.image_path & \"misbehaving_children.jpg\")"
+          ],
+          "text": "Would you like to learn more about this tip?",
+          "type": "send_msg",
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "uuid": "b568bbf9-39b6-4980-912c-59e6c8afb6a0"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "c1072ed4-67e0-4828-9b20-eb6fe7be90df",
+          "uuid": "7054ea8a-047d-42aa-b2d4-9164f87d7025"
+        }
+      ],
+      "uuid": "97f31d83-3e86-4fda-ab38-dbad4aac0cf7"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Hello! We love our children and teenagers, but stress from caregiving and money can make us angry. Here is how we can maintain control and keep calm.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "41181ff4-3425-4ee2-b72f-efd427ee18ca"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "97f31d83-3e86-4fda-ab38-dbad4aac0cf7",
+          "uuid": "910aaa6e-1afd-4d50-8850-05ef1016efe1"
+        }
+      ],
+      "uuid": "785e8eda-2952-4ead-9783-6cdda726b658"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "0a154b63-3112-4e8f-88f1-bcb822ed8b57",
+          "uuid": "67a0f993-71a4-4613-9ea6-b7cb8ade5d39"
+        },
+        {
+          "destination_uuid": "42ac4675-b35d-4078-92ab-8675573d24a7",
+          "uuid": "4afa3ae9-2df2-4e00-ac38-a8f0c0fd72bb"
+        },
+        {
+          "destination_uuid": "e631a123-c15a-40c1-9ba9-ab2faff1c093",
+          "uuid": "b2fc5417-1af5-49d0-94ce-6cd44c903e5a"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes y"
+            ],
+            "category_uuid": "fdbe0c4b-804e-434c-8bc1-1680daff4143",
+            "type": "has_any_word",
+            "uuid": "b1bd28b0-d78f-4198-be71-62ba1f149787"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "47f69b8f-ae5a-41d7-82cb-e90085d16724",
+            "type": "has_any_word",
+            "uuid": "d26ec548-c3f4-4a3d-b0e0-e44c011488c5"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "67a0f993-71a4-4613-9ea6-b7cb8ade5d39",
+            "name": "Yes",
+            "uuid": "fdbe0c4b-804e-434c-8bc1-1680daff4143"
+          },
+          {
+            "exit_uuid": "4afa3ae9-2df2-4e00-ac38-a8f0c0fd72bb",
+            "name": "No",
+            "uuid": "47f69b8f-ae5a-41d7-82cb-e90085d16724"
+          },
+          {
+            "exit_uuid": "b2fc5417-1af5-49d0-94ce-6cd44c903e5a",
+            "name": "Other",
+            "uuid": "f61fd6ed-11f2-4bb2-9740-893c0d22d8cc"
+          }
+        ],
+        "default_category_uuid": "f61fd6ed-11f2-4bb2-9740-893c0d22d8cc",
+        "operand": "@input.text",
+        "result_name": "Result 4",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "c1072ed4-67e0-4828-9b20-eb6fe7be90df"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "b6296bbc-b412-4f74-ae33-d334a82f6cda"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "97f31d83-3e86-4fda-ab38-dbad4aac0cf7",
+          "uuid": "b58c0311-fbaa-496a-992a-1fe3f5a8fe7c"
+        }
+      ],
+      "uuid": "e631a123-c15a-40c1-9ba9-ab2faff1c093"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "2f876c21-af28-44bd-a487-bced61c79a25",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "fe26035e-a140-452f-9677-7db73c0a14b8",
+          "uuid": "5edf0001-0f2b-48d2-8896-32422dd34c33"
+        }
+      ],
+      "uuid": "0a154b63-3112-4e8f-88f1-bcb822ed8b57"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always type \"Help\" at anytime if you need an activity to help you relax or reduce stress. Chat to you later!",
+          "type": "send_msg",
+          "uuid": "2c2ca75c-befc-49f6-a37d-1026325bdf1a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "2595458a-9dea-4fd7-a29b-7f64c43ef204",
+          "uuid": "594a42d0-bfb4-45a2-95d2-ba8bdcc76f4b"
+        }
+      ],
+      "uuid": "42ac4675-b35d-4078-92ab-8675573d24a7"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "70b47800-e8b2-471b-a59f-e091fb0e7059",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "84ef897c-4552-4a6f-acc6-c45cd6604bd4"
+        }
+      ],
+      "uuid": "2595458a-9dea-4fd7-a29b-7f64c43ef204"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "b07f32fe-5b99-4f1e-9d2e-853b959e37b6",
+          "uuid": "67bfba2e-9ed0-4350-b855-2d037d0037ff"
+        },
+        {
+          "destination_uuid": "a826cbd8-04ca-4553-a987-42183417854a",
+          "uuid": "050ef5b1-dca4-4773-895c-7970ee04ad56"
+        },
+        {
+          "destination_uuid": "5653663a-7a96-4ed6-bd66-ac81eda1cf0e",
+          "uuid": "1ae9bf53-69d9-497a-b2a9-ba7bb89e2828"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "high"
+            ],
+            "category_uuid": "56340197-dbc5-4828-8f34-6831a7f5273e",
+            "type": "has_any_word",
+            "uuid": "1ad2f8e5-e2d9-4152-950e-a259aa8a0449"
+          },
+          {
+            "arguments": [
+              "medium"
+            ],
+            "category_uuid": "b896a9c3-70d5-4963-9762-a04c8b93f49a",
+            "type": "has_any_word",
+            "uuid": "c19ffda7-3435-4cab-a839-6115c202c6d6"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "67bfba2e-9ed0-4350-b855-2d037d0037ff",
+            "name": "High",
+            "uuid": "56340197-dbc5-4828-8f34-6831a7f5273e"
+          },
+          {
+            "exit_uuid": "050ef5b1-dca4-4773-895c-7970ee04ad56",
+            "name": "medium",
+            "uuid": "b896a9c3-70d5-4963-9762-a04c8b93f49a"
+          },
+          {
+            "exit_uuid": "1ae9bf53-69d9-497a-b2a9-ba7bb89e2828",
+            "name": "Other",
+            "uuid": "a624a186-06ac-4ccf-843a-24c0941e75c4"
+          }
+        ],
+        "default_category_uuid": "a624a186-06ac-4ccf-843a-24c0941e75c4",
+        "operand": "@fields.type_of_media",
+        "type": "switch"
+      },
+      "uuid": "fe26035e-a140-452f-9677-7db73c0a14b8"
+    },
+    {
+      "uuid": "5653663a-7a96-4ed6-bd66-ac81eda1cf0e",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Stress from caregiving can make us angry. Here is how we can maintain control and keep calm.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "f4ef2f8b-3e33-4378-b269-732c293ebbbc"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "aa930b9c-0578-48fa-96fe-198bc82fc8dd",
+          "destination_uuid": "661dc73a-cda5-44ca-a4dd-209a99c3924d"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "video:@(fields.voiceover_video_path & \"When_we_are_angry.m4v\")"
+          ],
+          "text": "Here's a video to help you maintain control and keep calm when you get angry.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "73238a32-5f64-4b60-81ee-3b58ab91a5d7"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "39cac433-c7cd-49b9-baa4-bab3a2a80c96",
+          "uuid": "33918ff5-e5a0-4d10-826f-4a852a5d73e6"
+        }
+      ],
+      "uuid": "b07f32fe-5b99-4f1e-9d2e-853b959e37b6"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "audio:@(fields.voiceover_audio_path & \"When_we_are_angry.mp3\")"
+          ],
+          "text": "Here's an audio message to help you maintain control and keep calm when you get angry.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "4e909036-42d0-497b-b903-d5cdcb40a934"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "39cac433-c7cd-49b9-baa4-bab3a2a80c96",
+          "uuid": "ad5f0728-089a-4680-a276-b585f5092f2f"
+        }
+      ],
+      "uuid": "a826cbd8-04ca-4553-a987-42183417854a"
+    },
+    {
+      "uuid": "661dc73a-cda5-44ca-a4dd-209a99c3924d",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Think about what makes you angry? When does it happen? How do you normally react?\n\nPrevent anger from starting in the first place. Get some sleep or rest when you are tired. Try to eat something when you are hungry. Ask someone for support when you are feeling alone.",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [],
+          "uuid": "9b1b93b4-9528-428f-af23-174f0a700813"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "f558cf6f-18de-42fc-b61b-43995f162390",
+          "destination_uuid": "2847a947-f21d-47bb-9b0f-cb1a7127d6eb"
+        }
+      ]
+    },
+    {
+      "uuid": "39cac433-c7cd-49b9-baa4-bab3a2a80c96",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "c9ae8f2f-cc68-48f1-a9f6-f40aea41608a",
+        "cases": [],
+        "categories": [
+          {
+            "uuid": "c9ae8f2f-cc68-48f1-a9f6-f40aea41608a",
+            "name": "All Responses",
+            "exit_uuid": "0054fb1a-cfca-46c7-b965-1001f8298cb3"
+          },
+          {
+            "uuid": "7ee7b683-f18f-40c1-a221-fa0293b57f6e",
+            "name": "No Response",
+            "exit_uuid": "a7a88d5d-4999-4021-9cca-e591f9fe5fd5"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg",
+          "timeout": {
+            "seconds": 120,
+            "category_uuid": "7ee7b683-f18f-40c1-a221-fa0293b57f6e"
+          }
+        },
+        "result_name": "Result 3"
+      },
+      "exits": [
+        {
+          "uuid": "0054fb1a-cfca-46c7-b965-1001f8298cb3",
+          "destination_uuid": "5653663a-7a96-4ed6-bd66-ac81eda1cf0e"
+        },
+        {
+          "uuid": "a7a88d5d-4999-4021-9cca-e591f9fe5fd5",
+          "destination_uuid": "5653663a-7a96-4ed6-bd66-ac81eda1cf0e"
+        }
+      ]
+    },
+    {
+      "uuid": "2847a947-f21d-47bb-9b0f-cb1a7127d6eb",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Here are some things that can prevent bad things from happening when you are angry: \n\n1. Cut back on drinking alcohol or don’t drink, especially when the kids are awake.\n2. Do you have weapons or things that can be used to hurt others? Lock them up, hide them or take them out of the home.\n3. It’s ok to have your children stay somewhere safe or take them to a place where they can get help.",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [],
+          "uuid": "dc2c9f2b-a05a-4244-a2cb-975d7c09d955"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "3be9a97b-8f44-4ee9-9fb9-edb36b4eae18",
+          "destination_uuid": "283224b0-3906-4c44-a579-9e8b141ba833"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Well done! You have added another skill to your Parenting Toolkit. Learning how to manage your anger can help you  avoid some difficult situations. ",
+          "type": "send_msg",
+          "uuid": "6041aa91-14ab-40dc-be98-804fc036a3bf"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "ed679c83-d252-4738-b217-b685ed808e0a",
+          "uuid": "7676bb88-f9b1-40dd-9238-f577f8499dfb"
+        }
+      ],
+      "uuid": "283224b0-3906-4c44-a579-9e8b141ba833"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Update toolkits",
+            "uuid": "074bc4c5-8c69-4e5b-9176-79b44bfa40da"
+          },
+          "type": "enter_flow",
+          "uuid": "1ff503ae-7357-4206-abe1-35ae458c8cef"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "415b2aae-600e-4c41-b4bb-12015c9ed101"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "8448aaf3-9ccc-4e74-a20f-9967a12f38e9"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "76a20ed7-d72f-4f83-8ec3-e56dad44126d",
+            "type": "has_only_text",
+            "uuid": "aff65cb8-29b9-4345-ad63-95dcfa5931b6"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "9eecb232-e1f2-49a1-8241-bd1479b5d824",
+            "type": "has_only_text",
+            "uuid": "0fe4b835-cca3-4d76-9642-ef6792fb3eed"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "415b2aae-600e-4c41-b4bb-12015c9ed101",
+            "name": "Complete",
+            "uuid": "76a20ed7-d72f-4f83-8ec3-e56dad44126d"
+          },
+          {
+            "exit_uuid": "8448aaf3-9ccc-4e74-a20f-9967a12f38e9",
+            "name": "Expired",
+            "uuid": "9eecb232-e1f2-49a1-8241-bd1479b5d824"
+          }
+        ],
+        "default_category_uuid": "9eecb232-e1f2-49a1-8241-bd1479b5d824",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "ed679c83-d252-4738-b217-b685ed808e0a"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "ee81469a-cb44-4708-a016-47c60093dd21",
+  "revision": 38
+}

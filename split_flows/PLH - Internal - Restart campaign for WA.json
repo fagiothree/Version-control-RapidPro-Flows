@@ -1,0 +1,112 @@
+{
+  "_ui": {
+    "nodes": {
+      "776840ac-1f5d-4e4b-bf43-cdbb521a88e5": {
+        "position": {
+          "left": 460,
+          "top": 60
+        },
+        "type": "execute_actions"
+      },
+      "fd2ce22f-977b-414c-b38c-ea9f8f5fcfd8": {
+        "config": {},
+        "position": {
+          "left": 440,
+          "top": 200
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Internal - Restart campaign for WA",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "d27e9c9e-988f-4418-b7d8-5cd73e0e4a59",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "fd2ce22f-977b-414c-b38c-ea9f8f5fcfd8",
+          "uuid": "3d6a6ed2-f975-4921-9269-7adc5c63ee41"
+        }
+      ],
+      "uuid": "776840ac-1f5d-4e4b-bf43-cdbb521a88e5"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Timed - Campaign",
+            "uuid": "455cacef-8fa3-4db8-8c95-c7189f747462"
+          },
+          "type": "enter_flow",
+          "uuid": "2d6f1bd8-e527-4ea4-838e-e0846da627bb"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "d8f07a2f-ad06-44c5-9d2c-fa99060566a0"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "df073c16-a31b-47ba-9c3e-aa1522c7c4a5"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "b476ad91-bde3-423c-bd26-5f6edd81ef6b",
+            "type": "has_only_text",
+            "uuid": "f7f4a126-4265-4d6d-bada-145dd6a14d09"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "a1411f4c-c0d1-4ff9-9afd-ef302623024d",
+            "type": "has_only_text",
+            "uuid": "3349529a-25c9-474b-98dd-2c5839bf8cf9"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "d8f07a2f-ad06-44c5-9d2c-fa99060566a0",
+            "name": "Complete",
+            "uuid": "b476ad91-bde3-423c-bd26-5f6edd81ef6b"
+          },
+          {
+            "exit_uuid": "df073c16-a31b-47ba-9c3e-aa1522c7c4a5",
+            "name": "Expired",
+            "uuid": "a1411f4c-c0d1-4ff9-9afd-ef302623024d"
+          }
+        ],
+        "default_category_uuid": "a1411f4c-c0d1-4ff9-9afd-ef302623024d",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "fd2ce22f-977b-414c-b38c-ea9f8f5fcfd8"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "0ef66b91-60ab-4894-8669-7fe2ceb344dd",
+  "revision": 1
+}

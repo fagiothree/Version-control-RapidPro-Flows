@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "3ed1e91f-5297-4a70-9f8e-4b69c521018d": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "6a332ff0-6f2c-4708-b611-b76f0e1f8390": {
+        "position": {
+          "left": 0,
+          "top": 480
+        },
+        "type": "execute_actions"
+      },
+      "6d87f01a-3a48-4901-a040-e21abdaa89f2": {
+        "config": {},
+        "position": {
+          "left": 140,
+          "top": 680
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Active - Mirror",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Mirror\n•\tThis game can be played in pairs or even as a group.\n•\tStand facing each other or in a circle.  \n•\tOne person leads first while everyone else must copy, trying to move exactly at the same time as the leader.\n•\tMake sure the leader moves slowly enough for everyone to follow! Explore moving different body parts and in different levels.\n•\tAfter a while, switch who is leading. Give everyone a chance to lead.\n•\tTry it with no leaders!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "9ecce2a7-a0ef-4883-a60c-e0e942bebb95"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b7349c30-d0a4-4eb8-846c-5e9e02c61ae8"
+        }
+      ],
+      "uuid": "3ed1e91f-5297-4a70-9f8e-4b69c521018d"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "79ae55c6-3b15-483f-8a14-5cf2dda33cb6",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "fb22421a-d57d-4f71-8a42-f9957336dcd5",
+          "value": "Child16"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "6d87f01a-3a48-4901-a040-e21abdaa89f2",
+          "uuid": "cbad6014-cc35-4962-b7c7-56eafcac7c89"
+        }
+      ],
+      "uuid": "6a332ff0-6f2c-4708-b611-b76f0e1f8390"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "9e566f22-ad05-4076-b483-a2b56adde3eb"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "1416bc8b-7a99-4d2c-82e7-fb138c0d2bbd"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "854aa849-f2e9-4f5b-b594-59055c335f65"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "3b03845e-2a29-4f2e-9999-f257eaeff30e",
+            "type": "has_only_text",
+            "uuid": "2c278c61-77b0-4954-b0ff-9b02b5b8e48d"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "0b8862ed-6e61-41d9-9f6b-e01bcfc39f3e",
+            "type": "has_only_text",
+            "uuid": "490a32b1-fb44-4cb4-ab4d-f88a3f5bb1c2"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "1416bc8b-7a99-4d2c-82e7-fb138c0d2bbd",
+            "name": "Complete",
+            "uuid": "3b03845e-2a29-4f2e-9999-f257eaeff30e"
+          },
+          {
+            "exit_uuid": "854aa849-f2e9-4f5b-b594-59055c335f65",
+            "name": "Expired",
+            "uuid": "0b8862ed-6e61-41d9-9f6b-e01bcfc39f3e"
+          }
+        ],
+        "default_category_uuid": "0b8862ed-6e61-41d9-9f6b-e01bcfc39f3e",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "6d87f01a-3a48-4901-a040-e21abdaa89f2"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "6e16ee26-759f-4dc9-ab17-da29c1525f81",
+  "revision": 2
+}

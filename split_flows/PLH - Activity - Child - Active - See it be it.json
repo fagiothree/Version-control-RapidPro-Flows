@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "157d819c-6cc0-4c12-bd68-781d0b9cdcd0": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "5771d24e-0dfc-4454-92a8-ee9c9ca4d150": {
+        "config": {},
+        "position": {
+          "left": 360,
+          "top": 640
+        },
+        "type": "split_by_subflow"
+      },
+      "c4bd4aab-8acd-4dfc-81ba-e030fab2ffa3": {
+        "position": {
+          "left": 0,
+          "top": 500
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Active - See it be it",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "See It Be It\n•\tLook around you and name something that you can see. For example, a tree or a cup.\n•\tSay to your child “I see a tree, let’s be it!”\n•\tCountdown from 5 and make the shape of a tree with your bodies. Be as big and silly as possible.\n•\tNow let your child have a turn. What can they see?\n•\tIf you can, go outside and be in nature. If you can’t, play it inside. \n•\tWhen you’ve done it a few times, add moves and sounds!",
+          "type": "send_msg",
+          "uuid": "8e931b71-8e0a-4050-827a-70d2a7f7c58f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "12b21ece-c748-4af1-954d-8a407b2e6bb3"
+        }
+      ],
+      "uuid": "157d819c-6cc0-4c12-bd68-781d0b9cdcd0"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "e247a2d0-a1e7-4cc8-bd6a-57b5081fbb9d",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "2a428dca-81e8-4ab6-81c3-b59c62a63809",
+          "value": "Child4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "5771d24e-0dfc-4454-92a8-ee9c9ca4d150",
+          "uuid": "999cb84f-e4fe-4948-a089-347bc82c05e7"
+        }
+      ],
+      "uuid": "c4bd4aab-8acd-4dfc-81ba-e030fab2ffa3"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "fb49d661-de4b-4514-8abf-8ef1216efb88"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "c0f30a52-6dfa-4052-9398-b4f7ec3bcbd8"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "cc4cc340-3fb8-4b31-a89e-3b61b072064b"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "a2d6b481-1f62-4ce0-96b1-df2a335351db",
+            "type": "has_only_text",
+            "uuid": "57147ec9-e963-4b0e-b6fe-bf739c21fa86"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "2324b8c6-0144-4caf-b08e-511c286cb36d",
+            "type": "has_only_text",
+            "uuid": "24b8a641-d8a8-486d-8e76-ef4914604770"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "c0f30a52-6dfa-4052-9398-b4f7ec3bcbd8",
+            "name": "Complete",
+            "uuid": "a2d6b481-1f62-4ce0-96b1-df2a335351db"
+          },
+          {
+            "exit_uuid": "cc4cc340-3fb8-4b31-a89e-3b61b072064b",
+            "name": "Expired",
+            "uuid": "2324b8c6-0144-4caf-b08e-511c286cb36d"
+          }
+        ],
+        "default_category_uuid": "2324b8c6-0144-4caf-b08e-511c286cb36d",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "5771d24e-0dfc-4454-92a8-ee9c9ca4d150"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "939df44b-5cec-4986-add4-c852f37a156d",
+  "revision": 1
+}

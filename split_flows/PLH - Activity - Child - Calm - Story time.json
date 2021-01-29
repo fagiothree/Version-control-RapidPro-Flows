@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "817e6ea4-e14b-4087-a62b-d28a8c21feca": {
+        "position": {
+          "left": 0,
+          "top": 400
+        },
+        "type": "execute_actions"
+      },
+      "9e2117f5-54ea-4ead-b53c-10806ee0a14a": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "a4801815-274d-40ac-9432-30587dfd465f": {
+        "config": {},
+        "position": {
+          "left": 280,
+          "top": 560
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Calm - Story time",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Story time\n•\tStart the story with “Once upon a time there was a…”\n•\tLet your child make up the next sentence\n•\tThen you make up a sentence\n•\tTake turns until you have a wonderful new story\n•\tMake sure to end the story on a positive note.\n•\tAsk your child what was their favourite part of the story!",
+          "type": "send_msg",
+          "uuid": "8ee025b0-d312-4f39-84a3-e6534d5cfaa5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "6a572dc2-979d-4375-8d74-0b626fc6bfab"
+        }
+      ],
+      "uuid": "9e2117f5-54ea-4ead-b53c-10806ee0a14a"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "96c47318-e36f-4b0d-8d7d-a7d3a9c884fc",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "549903af-48b8-406c-b900-dcbdfa923fde",
+          "value": "Child5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "a4801815-274d-40ac-9432-30587dfd465f",
+          "uuid": "e63e5758-06ac-49a8-865d-fd714b03cf4f"
+        }
+      ],
+      "uuid": "817e6ea4-e14b-4087-a62b-d28a8c21feca"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "30affaea-c28f-426e-9fb9-2a9e9c77567d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "6fe8597f-089a-4a0a-a958-843c17146b12"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "4706bcee-820d-46a7-8a57-4ed072ec6f84"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "92e6ef3d-f0ac-4caa-9a79-0af8ed072930",
+            "type": "has_only_text",
+            "uuid": "3e9ad60d-f990-437c-89b5-1200a4b7c412"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "910ee071-04c8-4770-a3a0-edc3d9bdf2a7",
+            "type": "has_only_text",
+            "uuid": "2546a5e2-a92b-4e67-ab83-25a2bb031e80"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "6fe8597f-089a-4a0a-a958-843c17146b12",
+            "name": "Complete",
+            "uuid": "92e6ef3d-f0ac-4caa-9a79-0af8ed072930"
+          },
+          {
+            "exit_uuid": "4706bcee-820d-46a7-8a57-4ed072ec6f84",
+            "name": "Expired",
+            "uuid": "910ee071-04c8-4770-a3a0-edc3d9bdf2a7"
+          }
+        ],
+        "default_category_uuid": "910ee071-04c8-4770-a3a0-edc3d9bdf2a7",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "a4801815-274d-40ac-9432-30587dfd465f"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "849990a5-e1f3-4d74-95bd-b0dd15049992",
+  "revision": 1
+}

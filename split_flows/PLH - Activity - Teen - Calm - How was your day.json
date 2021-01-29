@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "8a442eaa-7972-4a4f-a636-f691c269f710": {
+        "config": {},
+        "position": {
+          "left": 260,
+          "top": 540
+        },
+        "type": "split_by_subflow"
+      },
+      "aed75f4f-2af4-4f3b-a8a9-dc06f57c3f72": {
+        "position": {
+          "left": 0,
+          "top": 360
+        },
+        "type": "execute_actions"
+      },
+      "b9cff88b-2e7d-4f68-b896-0b68fbe6f8f8": {
+        "position": {
+          "left": 20,
+          "top": 20
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Calm - How was your day",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "How was your day?\n•\tAsk each other, “What made you happy today?”\n•\tAsk each other, “What was difficult today?”\n•\tAsk each other, “How can we help you?”\n•\tTry to do this together every day, when you are eating together or before bed",
+          "type": "send_msg",
+          "uuid": "e4d1032b-8181-4295-bf0f-f4b22191db9f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "5daf5e62-5d1b-4af2-8230-67e2c8094072"
+        }
+      ],
+      "uuid": "b9cff88b-2e7d-4f68-b896-0b68fbe6f8f8"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "241899f2-577c-464a-a61d-9cecd92f75f8",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "5d2fbce1-0eb2-46b2-abab-9d1a4bb65d53",
+          "value": "Teen6"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "8a442eaa-7972-4a4f-a636-f691c269f710",
+          "uuid": "d62b3452-a24e-4dde-8181-8916685d7eea"
+        }
+      ],
+      "uuid": "aed75f4f-2af4-4f3b-a8a9-dc06f57c3f72"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "231319d6-833c-4945-bfec-fc78074a17df"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "bf90f35f-8f2c-435c-954a-3e4d2bc3fc78"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "1654b7c1-8188-4e23-8ba7-1288d9f83010"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "32ba5bda-2451-4253-8589-d944923e3dde",
+            "type": "has_only_text",
+            "uuid": "da77ef6c-fadd-4e2b-8be0-811ad3a6e881"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "623716ae-749d-44fc-bb34-30c674ca564e",
+            "type": "has_only_text",
+            "uuid": "0aa0f980-a4c2-427b-9f43-995842a13bb0"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "bf90f35f-8f2c-435c-954a-3e4d2bc3fc78",
+            "name": "Complete",
+            "uuid": "32ba5bda-2451-4253-8589-d944923e3dde"
+          },
+          {
+            "exit_uuid": "1654b7c1-8188-4e23-8ba7-1288d9f83010",
+            "name": "Expired",
+            "uuid": "623716ae-749d-44fc-bb34-30c674ca564e"
+          }
+        ],
+        "default_category_uuid": "623716ae-749d-44fc-bb34-30c674ca564e",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "8a442eaa-7972-4a4f-a636-f691c269f710"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "37280ea1-d752-402d-aa52-9336c892207e",
+  "revision": 1
+}

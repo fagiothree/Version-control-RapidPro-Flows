@@ -1,0 +1,631 @@
+{
+  "_ui": {
+    "nodes": {
+      "63fb1014-341a-4ca2-8e85-19a32c32d886": {
+        "position": {
+          "left": 480,
+          "top": 80
+        },
+        "type": "execute_actions"
+      },
+      "aec79d03-a3b8-4286-a766-754fce23c522": {
+        "position": {
+          "left": 920,
+          "top": 140
+        },
+        "type": "execute_actions"
+      },
+      "121301d3-725b-4e3e-b50d-84fde61ce040": {
+        "position": {
+          "left": 920,
+          "top": 280
+        },
+        "type": "execute_actions"
+      },
+      "0e8617a2-8667-4225-ad6e-53863bbfcd34": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 460,
+          "top": 320
+        },
+        "type": "wait_for_response"
+      },
+      "cab10f0b-e7e7-4574-845a-448f18cc4148": {
+        "position": {
+          "left": 200,
+          "top": 420
+        },
+        "type": "execute_actions"
+      },
+      "4bd69152-633d-480d-b3d7-d64e4aed0dea": {
+        "position": {
+          "left": 480,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "f77b9f30-31f4-4ff5-8332-ba38a76b68e2": {
+        "position": {
+          "left": 480,
+          "top": 560
+        },
+        "type": "execute_actions"
+      },
+      "c4796532-6926-4ee0-b0d3-a7dd6e15ab00": {
+        "position": {
+          "left": 180,
+          "top": 640
+        },
+        "type": "execute_actions"
+      },
+      "0c316671-4774-4288-85ed-ee130cbecb05": {
+        "position": {
+          "left": 500,
+          "top": 700
+        },
+        "type": "execute_actions"
+      },
+      "a967cdf3-4045-4191-b632-859892680c72": {
+        "position": {
+          "left": 980,
+          "top": 720
+        },
+        "type": "execute_actions"
+      },
+      "e1ecf475-2151-4cb8-804d-73c1df15523b": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 480,
+          "top": 1000
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "97621f86-6a3d-409e-ab70-64302b2963a8": {
+        "position": {
+          "left": 240,
+          "top": 1120
+        },
+        "type": "execute_actions"
+      },
+      "7b640b23-e18f-4566-ad2c-467d82ad6c1b": {
+        "position": {
+          "left": 1020,
+          "top": 1220
+        },
+        "type": "execute_actions"
+      },
+      "6c9d1545-5fcf-460b-8db0-91e6977297c8": {
+        "position": {
+          "left": 640,
+          "top": 1240
+        },
+        "type": "execute_actions"
+      },
+      "70e39f54-9e29-49af-8139-3bfef4244dfd": {
+        "position": {
+          "left": 440,
+          "top": 1480
+        },
+        "type": "execute_actions"
+      },
+      "f50d32d3-503e-4ceb-ac76-1ce93a65c2ca": {
+        "position": {
+          "left": 1220,
+          "top": 1600
+        },
+        "type": "execute_actions"
+      },
+      "1957f8ec-ed9b-4e58-b8c4-a44a509a2ee4": {
+        "config": {},
+        "position": {
+          "left": 1320,
+          "top": 1700
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 23
+  },
+  "name": "PLH - Content - Positive - CheckIn - IPV 6",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Hi! How are you doing with spending quality time with your partner? ",
+          "type": "send_msg",
+          "quick_replies": [
+            "Great",
+            "Neutral",
+            "Bad"
+          ],
+          "uuid": "3847947e-df2d-45f4-ba7a-c93cc85e345f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0e8617a2-8667-4225-ad6e-53863bbfcd34",
+          "uuid": "9ceeb656-eceb-424f-b16f-5b8a8258769a"
+        }
+      ],
+      "uuid": "63fb1014-341a-4ca2-8e85-19a32c32d886"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "bfeaa24a-4c54-43dc-98c8-e96a9cd6674b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "121301d3-725b-4e3e-b50d-84fde61ce040",
+          "uuid": "7c58db98-d841-4b99-9f6e-026ee8632ca0"
+        }
+      ],
+      "uuid": "aec79d03-a3b8-4286-a766-754fce23c522"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "d280d186-1c23-4fa4-b63f-d295eac1adac",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "63fb1014-341a-4ca2-8e85-19a32c32d886",
+          "uuid": "8588212f-2d6b-40bb-bbab-c5df361727c3"
+        }
+      ],
+      "uuid": "121301d3-725b-4e3e-b50d-84fde61ce040"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "cab10f0b-e7e7-4574-845a-448f18cc4148",
+          "uuid": "52b3c9f2-220f-44a9-9147-64a975b8592b"
+        },
+        {
+          "destination_uuid": "4bd69152-633d-480d-b3d7-d64e4aed0dea",
+          "uuid": "effb5038-418c-4010-b408-915c2ef80e32"
+        },
+        {
+          "destination_uuid": "aec79d03-a3b8-4286-a766-754fce23c522",
+          "uuid": "56bb9a7b-5c61-4841-b090-0ab681b9836b"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "great"
+            ],
+            "category_uuid": "2514721e-f012-4803-9327-8d632f564660",
+            "type": "has_any_word",
+            "uuid": "0d5fde25-9f68-48d5-b15b-619910faeb40"
+          },
+          {
+            "arguments": [
+              "neutral bad"
+            ],
+            "category_uuid": "77f2bd07-22dc-4e42-a600-551117d5f0fb",
+            "type": "has_any_word",
+            "uuid": "35915584-5c60-4a24-a7b2-b29dac0404ab"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "52b3c9f2-220f-44a9-9147-64a975b8592b",
+            "name": "Great",
+            "uuid": "2514721e-f012-4803-9327-8d632f564660"
+          },
+          {
+            "exit_uuid": "effb5038-418c-4010-b408-915c2ef80e32",
+            "name": "Neutral bad",
+            "uuid": "77f2bd07-22dc-4e42-a600-551117d5f0fb"
+          },
+          {
+            "exit_uuid": "56bb9a7b-5c61-4841-b090-0ab681b9836b",
+            "name": "Other",
+            "uuid": "fc266664-13f4-4a6a-9050-898056b34e81"
+          }
+        ],
+        "default_category_uuid": "fc266664-13f4-4a6a-9050-898056b34e81",
+        "operand": "@input.text",
+        "result_name": "Result 2",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "0e8617a2-8667-4225-ad6e-53863bbfcd34"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Good for you! Investing in time together can help build a strong positive relationship with our partners.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "498944b8-3480-4979-b101-3563f1fd2832"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "c4796532-6926-4ee0-b0d3-a7dd6e15ab00",
+          "uuid": "ca18760b-e9ae-4363-8f46-594f43c31dd4"
+        }
+      ],
+      "uuid": "cab10f0b-e7e7-4574-845a-448f18cc4148"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "59051a4b-1cef-4e44-96cf-6309a9e83bd1",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f77b9f30-31f4-4ff5-8332-ba38a76b68e2",
+          "uuid": "be01652c-96d9-4db4-8032-d78041e0f60a"
+        }
+      ],
+      "uuid": "4bd69152-633d-480d-b3d7-d64e4aed0dea"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sorry to hear it was challenging for you. Well done for trying!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "d6e26ed7-c812-472f-bde5-082f604da8fa"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0c316671-4774-4288-85ed-ee130cbecb05",
+          "uuid": "a777bfed-358e-447b-94e2-ebca2e1590b4"
+        }
+      ],
+      "uuid": "f77b9f30-31f4-4ff5-8332-ba38a76b68e2"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "b36edc38-1e12-456f-8274-2d2e30f81c98",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "6dba8390-a469-4a63-adf6-3bfee7d92bc9"
+        }
+      ],
+      "uuid": "c4796532-6926-4ee0-b0d3-a7dd6e15ab00"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "What was difficult for you about spending quality time with your partner?",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [
+            "I didn't have the time",
+            "My partner didn't have the time",
+            "I felt too busy or stressed",
+            "My partner felt too busy or stressed"
+          ],
+          "uuid": "909c0ea4-1c9f-4e05-b052-ea5552e76fe4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e1ecf475-2151-4cb8-804d-73c1df15523b",
+          "uuid": "186586c9-367a-4673-a564-5a743acee153"
+        }
+      ],
+      "uuid": "0c316671-4774-4288-85ed-ee130cbecb05"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "ce29c483-58e4-4868-add9-b088db46ab5c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0c316671-4774-4288-85ed-ee130cbecb05",
+          "uuid": "c9c50237-ef1d-411f-93e5-65c8ed5ce8bb"
+        }
+      ],
+      "uuid": "a967cdf3-4045-4191-b632-859892680c72"
+    },
+    {
+      "uuid": "e1ecf475-2151-4cb8-804d-73c1df15523b",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "7101ef24-a822-46da-b210-2ff1fb0162bb",
+        "cases": [
+          {
+            "arguments": [
+              "I didn't have the time"
+            ],
+            "type": "has_phrase",
+            "uuid": "6845ac7d-6f5a-4417-9fa0-a4a1fe87537b",
+            "category_uuid": "f084932d-28cf-4375-be1e-a9d72c179a7a"
+          },
+          {
+            "arguments": [
+              "My partner didn't have the time"
+            ],
+            "type": "has_phrase",
+            "uuid": "eba92b33-36cf-4b52-9890-155e7b3a89a2",
+            "category_uuid": "3f70e143-8938-4890-8bea-25eb2a5ea091"
+          },
+          {
+            "arguments": [
+              "I felt too busy or stressed"
+            ],
+            "type": "has_phrase",
+            "uuid": "7659d09b-b78f-47a4-af65-71b254abefa9",
+            "category_uuid": "49239582-65bc-457b-b27a-dbd5d16de781"
+          },
+          {
+            "arguments": [
+              "My partner felt too busy or stressed"
+            ],
+            "type": "has_phrase",
+            "uuid": "f541445b-dca1-4607-8229-bb0497eb43d8",
+            "category_uuid": "ba5b8fae-dcd9-4a65-903f-5dc0550dd8f2"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "97be12fc-0e45-462d-905b-9b7663fc25c2",
+            "name": "1",
+            "uuid": "f084932d-28cf-4375-be1e-a9d72c179a7a"
+          },
+          {
+            "exit_uuid": "de2564b8-9248-4caf-a1d5-d8209d229977",
+            "name": "2",
+            "uuid": "3f70e143-8938-4890-8bea-25eb2a5ea091"
+          },
+          {
+            "exit_uuid": "cca789c6-31b1-4273-8c6e-9576f60a4c43",
+            "name": "3",
+            "uuid": "49239582-65bc-457b-b27a-dbd5d16de781"
+          },
+          {
+            "exit_uuid": "5b73defe-afd4-45f9-acff-01cad83bd611",
+            "name": "4",
+            "uuid": "ba5b8fae-dcd9-4a65-903f-5dc0550dd8f2"
+          },
+          {
+            "exit_uuid": "5831ea41-c873-4edc-9d00-60b9404df7bf",
+            "name": "Other",
+            "uuid": "7101ef24-a822-46da-b210-2ff1fb0162bb"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg"
+        },
+        "result_name": "Result 3"
+      },
+      "exits": [
+        {
+          "destination_uuid": "97621f86-6a3d-409e-ab70-64302b2963a8",
+          "uuid": "97be12fc-0e45-462d-905b-9b7663fc25c2"
+        },
+        {
+          "destination_uuid": "70e39f54-9e29-49af-8139-3bfef4244dfd",
+          "uuid": "de2564b8-9248-4caf-a1d5-d8209d229977"
+        },
+        {
+          "destination_uuid": "6c9d1545-5fcf-460b-8db0-91e6977297c8",
+          "uuid": "cca789c6-31b1-4273-8c6e-9576f60a4c43"
+        },
+        {
+          "destination_uuid": "7b640b23-e18f-4566-ad2c-467d82ad6c1b",
+          "uuid": "5b73defe-afd4-45f9-acff-01cad83bd611"
+        },
+        {
+          "destination_uuid": "a967cdf3-4045-4191-b632-859892680c72",
+          "uuid": "5831ea41-c873-4edc-9d00-60b9404df7bf"
+        }
+      ]
+    },
+    {
+      "uuid": "97621f86-6a3d-409e-ab70-64302b2963a8",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sometimes it’s hard to find time to spend together and we have to think creatively! For example, can you think of an activity like a household task that you can do together rather than alone?",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "331a3185-fb37-4187-852e-a1c932b29723"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "5f873646-4d00-4989-bda2-f960823f9102",
+          "destination_uuid": null
+        }
+      ]
+    },
+    {
+      "uuid": "7b640b23-e18f-4566-ad2c-467d82ad6c1b",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "If your partner is feeling stressed, try suggesting a calming activity to do together. Type \"Help\" if you want an activity that can help you and others relax or reduce stress.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "06ff0032-d1e3-4194-a20c-3974c239ff06"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "9a25b997-0ccf-44b4-b209-8b395a8a90f0",
+          "destination_uuid": null
+        }
+      ]
+    },
+    {
+      "uuid": "6c9d1545-5fcf-460b-8db0-91e6977297c8",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sometimes we might feel very stressed. Try sharing how you’re feeling and try thinking of a calming activity to do together. Type \"Help\" if you need an activity to help you relax or reduce stress. You can even try doing this activity together with others!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "efee5ca9-a275-4e34-9781-8d85c3a73912"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "72d0866b-8e96-4e94-9d6e-13d5693a11ea",
+          "destination_uuid": null
+        }
+      ]
+    },
+    {
+      "uuid": "70e39f54-9e29-49af-8139-3bfef4244dfd",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "It can be difficult to find time during the day! Can you think of a time during the day that is less busy, like early in the morning or later in the evening? Even a few minutes of quality time can make a difference!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "63e52891-8abe-4d2d-849b-cdc348d9f6c1"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "8c903d09-2dcc-4fee-8380-8427818898af",
+          "destination_uuid": null
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "want_feedback_checkin",
+            "name": "want feedback checkin"
+          },
+          "type": "set_contact_field",
+          "uuid": "26f6ce4e-61fe-4600-b4cd-0a135632b8f8",
+          "value": "yes"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "1957f8ec-ed9b-4e58-b8c4-a44a509a2ee4",
+          "uuid": "f922d133-81f7-4a03-8808-ced920c62ea3"
+        }
+      ],
+      "uuid": "f50d32d3-503e-4ceb-ac76-1ce93a65c2ca"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Feedback - Feedback for checkIn",
+            "uuid": "9c6ec05a-102d-457d-abe4-3056979c5d3d"
+          },
+          "type": "enter_flow",
+          "uuid": "395dfe58-124e-4ca1-910d-d1ef6bb98620"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "ba4bad98-b62b-4a5f-a008-141ebf8c3da8"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "643c1a79-37ee-42ce-85a6-992eeaf1dc1e"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "1c6c140b-30bf-44da-95a8-76d9ed116353",
+            "type": "has_only_text",
+            "uuid": "f7e73307-cd54-47c6-a30f-e92f7090846a"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "f6eb7c4b-ddb6-4edd-8c02-82590000f82e",
+            "type": "has_only_text",
+            "uuid": "09a38d87-3d0f-4da8-8933-090e5a4647ed"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "ba4bad98-b62b-4a5f-a008-141ebf8c3da8",
+            "name": "Complete",
+            "uuid": "1c6c140b-30bf-44da-95a8-76d9ed116353"
+          },
+          {
+            "exit_uuid": "643c1a79-37ee-42ce-85a6-992eeaf1dc1e",
+            "name": "Expired",
+            "uuid": "f6eb7c4b-ddb6-4edd-8c02-82590000f82e"
+          }
+        ],
+        "default_category_uuid": "f6eb7c4b-ddb6-4edd-8c02-82590000f82e",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "1957f8ec-ed9b-4e58-b8c4-a44a509a2ee4"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "98363c26-a0b1-4c49-88d1-15d17e3b3685",
+  "revision": 31
+}

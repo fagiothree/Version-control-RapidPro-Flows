@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "651ab0e2-aaca-46eb-a119-83bb24518d48": {
+        "position": {
+          "left": 0,
+          "top": 580
+        },
+        "type": "execute_actions"
+      },
+      "b1915d45-b70b-4f3f-b808-809fb5f7f950": {
+        "config": {},
+        "position": {
+          "left": 280,
+          "top": 780
+        },
+        "type": "split_by_subflow"
+      },
+      "ca0a691d-ba77-4470-846f-ff6ebe35b469": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Baby - Active - The sun is coming",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "The Sun is Coming! \n•\tLie your baby on their back after washing them or changing their diaper.\n•\tTell them the sun is coming! Wiggle your fingers like sun rays above their head and make your face a big smiling sun.\n•\tTell them the wind is coming! Blow softly over their body.\n•\tTell them the rain is coming! Use your fingers to gently pat over their whole body like light raindrops.\n•\tTell them the clouds are coming! Wrap the towel or cloth around them like a blanket and cuddle them. \n•\tPlay with different weathers. Which one does your baby like best?\n•\tAdd sound effects or make it into a little song. Use the tune of another song you know! ",
+          "type": "send_msg",
+          "uuid": "3f46bace-439f-4a88-adc4-1427d760a634"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "42a06f27-fc01-4e64-9c8a-bf8a31dc606d"
+        }
+      ],
+      "uuid": "ca0a691d-ba77-4470-846f-ff6ebe35b469"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "49662614-365f-43b5-a37d-1331427cc59b",
+          "value": "actvity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "d4c74f03-87d1-4eda-a283-73cd95c6d306",
+          "value": "Baby4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "b1915d45-b70b-4f3f-b808-809fb5f7f950",
+          "uuid": "7ca8f942-8c16-4c14-a4f1-6f721c2deab4"
+        }
+      ],
+      "uuid": "651ab0e2-aaca-46eb-a119-83bb24518d48"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow (activity or tip)",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "d6cefbad-d878-4c05-ac2f-bfd3b33d9c39"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "f6fb01af-fea4-44cc-960d-eb6332c1ce50"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "31b9bd0d-bbd1-4a51-a90d-2e9a8c962ecd"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "d92aaf27-a6c6-4aba-a256-99776ca05232",
+            "type": "has_only_text",
+            "uuid": "4f652e74-e61d-4919-9481-ac2fb64a42cf"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "b4196cf0-2941-4a1d-8dfe-f69d1ecb0412",
+            "type": "has_only_text",
+            "uuid": "694d08e3-1133-4c1b-816d-2c1ac260374d"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "f6fb01af-fea4-44cc-960d-eb6332c1ce50",
+            "name": "Complete",
+            "uuid": "d92aaf27-a6c6-4aba-a256-99776ca05232"
+          },
+          {
+            "exit_uuid": "31b9bd0d-bbd1-4a51-a90d-2e9a8c962ecd",
+            "name": "Expired",
+            "uuid": "b4196cf0-2941-4a1d-8dfe-f69d1ecb0412"
+          }
+        ],
+        "default_category_uuid": "b4196cf0-2941-4a1d-8dfe-f69d1ecb0412",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "b1915d45-b70b-4f3f-b808-809fb5f7f950"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "3fa2c146-420a-403d-a0f1-97a4d2fa4b3b",
+  "revision": 1
+}

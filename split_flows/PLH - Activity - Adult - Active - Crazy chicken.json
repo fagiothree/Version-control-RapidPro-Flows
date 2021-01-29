@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "94ab859d-950c-46d4-bd37-e062ed3978ad": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "1b625594-f43c-443f-8fc5-49860567b462": {
+        "position": {
+          "left": 0,
+          "top": 380
+        },
+        "type": "execute_actions"
+      },
+      "28982646-be5a-40bd-8f27-67ec73235da3": {
+        "config": {},
+        "position": {
+          "left": 180,
+          "top": 540
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Adult - Active - Crazy chicken",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Crazy Chicken\n•\tShake your hand in the air 8 times while counting to 8\n•\tDo it as fast and loud as you can\n•\tRepeat with your other hand and both feet\n•\tDo it 7 times, then 6 times until you get to 1.\n•\tCall out “Crazy chicken” as loud as you can!\n•\tHave you released all your stress? If not, do it again even faster and louder! ",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "74ef7ab9-4c12-48fd-bcc8-44c8657827be"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "5794e280-fd0d-422e-ac37-fc8d4164a8a5"
+        }
+      ],
+      "uuid": "94ab859d-950c-46d4-bd37-e062ed3978ad"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "382e9747-3af9-4d76-8edb-ca6d39b08393",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "2d5a3732-7176-44b6-9959-552a3dd4db80",
+          "value": "Adult4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "28982646-be5a-40bd-8f27-67ec73235da3",
+          "uuid": "4b4bd135-1b6a-4231-83e8-94f5836d18c0"
+        }
+      ],
+      "uuid": "1b625594-f43c-443f-8fc5-49860567b462"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "2cbdaef6-2019-4bcf-9bb4-1aebb90eff5e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "3dfd54ef-a9ce-421b-b0a8-4fd79a2ca32a"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "99f88db2-f9e8-4317-aaad-f8bb26816d37"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "db8a64ae-0add-49ea-89ce-7099cbdb3c29",
+            "type": "has_only_text",
+            "uuid": "1582509b-bb77-4ef2-9439-287081c53184"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "cce528a9-896c-46cb-9a40-16b5a9cd5c41",
+            "type": "has_only_text",
+            "uuid": "4d03e683-14db-4f89-bd9e-92d31ecf7bdc"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "3dfd54ef-a9ce-421b-b0a8-4fd79a2ca32a",
+            "name": "Complete",
+            "uuid": "db8a64ae-0add-49ea-89ce-7099cbdb3c29"
+          },
+          {
+            "exit_uuid": "99f88db2-f9e8-4317-aaad-f8bb26816d37",
+            "name": "Expired",
+            "uuid": "cce528a9-896c-46cb-9a40-16b5a9cd5c41"
+          }
+        ],
+        "default_category_uuid": "cce528a9-896c-46cb-9a40-16b5a9cd5c41",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "28982646-be5a-40bd-8f27-67ec73235da3"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "5e677aa1-0ea7-4972-9f6d-24c013ec18ad",
+  "revision": 2
+}

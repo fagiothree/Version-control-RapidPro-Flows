@@ -1,0 +1,255 @@
+{
+  "_ui": {
+    "nodes": {
+      "018dfc31-5c0b-44b2-bdef-eda9a97ea465": {
+        "position": {
+          "left": 960,
+          "top": 440
+        },
+        "type": "execute_actions"
+      },
+      "0f5c548b-de49-4c15-8e56-a21c44e0e3d8": {
+        "position": {
+          "left": 500,
+          "top": 20
+        },
+        "type": "execute_actions"
+      },
+      "b64d535e-5fe5-43cd-989f-9652b37385f1": {
+        "config": {},
+        "position": {
+          "left": 880,
+          "top": 220
+        },
+        "type": "split_by_subflow"
+      },
+      "c87b0093-ac13-466e-a1fa-4d11b54b4759": {
+        "position": {
+          "left": 960,
+          "top": 520
+        },
+        "type": "execute_actions"
+      },
+      "f45b89fd-f257-4c39-8832-5677ebb3fb43": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "age_group_for_tips",
+            "name": "age group for tips",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 480,
+          "top": 220
+        },
+        "type": "split_by_contact_field"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Introductory - First received tip",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Hello! How are you doing? We are so happy that you have signed up to receive these messages. It shows you care. ",
+          "type": "send_msg",
+          "uuid": "b20352cc-eab3-4f41-9d98-2afe8f076149"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f45b89fd-f257-4c39-8832-5677ebb3fb43",
+          "uuid": "beca11d4-7bee-4d1b-9519-f07eed61abe1"
+        }
+      ],
+      "uuid": "0f5c548b-de49-4c15-8e56-a21c44e0e3d8"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "6dd937ec-30e9-4021-8e63-bbab43b33331"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "a3bf883f-0365-45df-8286-95c6e73ebaf5"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "8ee3fa6b-324e-4def-8ab5-d4381b275d4f"
+        },
+        {
+          "destination_uuid": "b64d535e-5fe5-43cd-989f-9652b37385f1",
+          "uuid": "d9ea1bae-d20c-4e5a-a435-9449a949df13"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "baby"
+            ],
+            "category_uuid": "1febfc1e-fb1a-479f-ae58-d8d93a4374fd",
+            "type": "has_any_word",
+            "uuid": "ae7cacd2-b31d-424f-95bf-6b1dc134332f"
+          },
+          {
+            "arguments": [
+              "young child"
+            ],
+            "category_uuid": "29490818-b98d-4618-af98-5f60ab00ec41",
+            "type": "has_any_word",
+            "uuid": "cc069994-4255-499a-af6c-47eb084260b1"
+          },
+          {
+            "arguments": [
+              "teen"
+            ],
+            "category_uuid": "a7ad45f1-7d7a-4c7a-90c0-c68a8971d63c",
+            "type": "has_any_word",
+            "uuid": "ce4b0dc5-74a7-465c-9c90-244750e51f7f"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "6dd937ec-30e9-4021-8e63-bbab43b33331",
+            "name": "Baby",
+            "uuid": "1febfc1e-fb1a-479f-ae58-d8d93a4374fd"
+          },
+          {
+            "exit_uuid": "a3bf883f-0365-45df-8286-95c6e73ebaf5",
+            "name": "Young",
+            "uuid": "29490818-b98d-4618-af98-5f60ab00ec41"
+          },
+          {
+            "exit_uuid": "8ee3fa6b-324e-4def-8ab5-d4381b275d4f",
+            "name": "Teen",
+            "uuid": "a7ad45f1-7d7a-4c7a-90c0-c68a8971d63c"
+          },
+          {
+            "exit_uuid": "d9ea1bae-d20c-4e5a-a435-9449a949df13",
+            "name": "Other",
+            "uuid": "b3140949-933b-4f06-b2b2-ec9b085434e9"
+          }
+        ],
+        "default_category_uuid": "b3140949-933b-4f06-b2b2-ec9b085434e9",
+        "operand": "@fields.age_group_for_tips",
+        "type": "switch"
+      },
+      "uuid": "f45b89fd-f257-4c39-8832-5677ebb3fb43"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Welcome - Age group for tips",
+            "uuid": "0e264147-7056-4f9b-8b43-909c8962ef51"
+          },
+          "type": "enter_flow",
+          "uuid": "6286f07c-6a5d-4879-b8cb-3fada51ec1a4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f45b89fd-f257-4c39-8832-5677ebb3fb43",
+          "uuid": "14fcdf2d-d556-400e-b0ee-ad7278d22f88"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "703a0a80-b354-4d86-a41b-39401e6037ce"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "82560a1a-670f-448c-8d72-bc687e310a73",
+            "type": "has_only_text",
+            "uuid": "d3dd56bb-a0f0-47d5-a8f1-e531602b7dbd"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "5e614b07-b23e-421a-b12f-d8f76beb4336",
+            "type": "has_only_text",
+            "uuid": "8768e878-37e0-44f4-a3e7-4c2335570f9f"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "14fcdf2d-d556-400e-b0ee-ad7278d22f88",
+            "name": "Complete",
+            "uuid": "82560a1a-670f-448c-8d72-bc687e310a73"
+          },
+          {
+            "exit_uuid": "703a0a80-b354-4d86-a41b-39401e6037ce",
+            "name": "Expired",
+            "uuid": "5e614b07-b23e-421a-b12f-d8f76beb4336"
+          }
+        ],
+        "default_category_uuid": "5e614b07-b23e-421a-b12f-d8f76beb4336",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "b64d535e-5fe5-43cd-989f-9652b37385f1"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "has_expired",
+            "name": "has expired"
+          },
+          "type": "set_contact_field",
+          "uuid": "273de2cb-1c6e-47df-abcf-ffc2e684f230",
+          "value": "tip"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "c87b0093-ac13-466e-a1fa-4d11b54b4759",
+          "uuid": "ef71c487-e2d4-4e91-ba45-98a30b2aee1b"
+        }
+      ],
+      "uuid": "018dfc31-5c0b-44b2-bdef-eda9a97ea465"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "It looks like you are busy right now. You can always type \"GoBack\" to restart this parenting tip or \"Help\" for other support.",
+          "type": "send_msg",
+          "uuid": "a07274b0-f8eb-4c96-893f-3f76660c5ce5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e2c1190e-8cc7-48b7-92e0-5fc845f9264a"
+        }
+      ],
+      "uuid": "c87b0093-ac13-466e-a1fa-4d11b54b4759"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "666dff85-9772-4503-b232-dc33dc4d1c9a",
+  "revision": 1
+}

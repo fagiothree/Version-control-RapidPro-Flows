@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "57d4a546-8399-45e4-918c-f7598c940277": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "8d4e902b-f958-4d1e-accd-862bcdafc58a": {
+        "position": {
+          "left": 0,
+          "top": 500
+        },
+        "type": "execute_actions"
+      },
+      "ce0aa9d8-5f52-4912-9f8b-318e1afe609b": {
+        "config": {},
+        "position": {
+          "left": 260,
+          "top": 700
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Active - What are you doing",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "What Are You Doing? \n•\tThis game is best when more than 2 people play.\n•\tOne person pretends to be doing something – for example, combing hair. \n•\tA second person asks, “What are you doing?”\n•\tThe first person needs to say something that has nothing to do with combing hair, for example, “Tying my shoes.”  \n•\tThe second person then starts pretending to tie their shoes until a new person asks, “What are you doing?” \n•\tThe second person’s answer must always be something different from what they are actually doing!\nThe next person should act out the second person’s answer and when someone asks what they are doing, their answer must be different from what they are actually doing!",
+          "type": "send_msg",
+          "uuid": "9dc5c42c-fd09-43d9-9df2-12ebbc5202fb"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "d8c4eb2e-574a-4f77-baf0-3d8c58e36e4b"
+        }
+      ],
+      "uuid": "57d4a546-8399-45e4-918c-f7598c940277"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "23c1758f-9818-48f2-8672-3151ef77403e",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "c21f706c-afff-45ba-abb7-ee6a9186ff3a",
+          "value": "Teen13"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "ce0aa9d8-5f52-4912-9f8b-318e1afe609b",
+          "uuid": "3218bd7e-abf3-4ebf-aed7-0acd73a327db"
+        }
+      ],
+      "uuid": "8d4e902b-f958-4d1e-accd-862bcdafc58a"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "c126dfad-9cb8-47e5-bded-ba101000c199"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "d06319ed-89d1-427b-a5b6-ba9f87937378"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "ca98d935-405f-4c80-947a-367470b38b6e"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "93aad820-1d72-46db-8446-6224cbeb243a",
+            "type": "has_only_text",
+            "uuid": "e595348e-2496-495b-beb6-76c4be765c54"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "3777b87d-4c06-4c80-b128-7ebae7ea13cc",
+            "type": "has_only_text",
+            "uuid": "13662cfb-0644-4824-bf1c-4f574410eb00"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "d06319ed-89d1-427b-a5b6-ba9f87937378",
+            "name": "Complete",
+            "uuid": "93aad820-1d72-46db-8446-6224cbeb243a"
+          },
+          {
+            "exit_uuid": "ca98d935-405f-4c80-947a-367470b38b6e",
+            "name": "Expired",
+            "uuid": "3777b87d-4c06-4c80-b128-7ebae7ea13cc"
+          }
+        ],
+        "default_category_uuid": "3777b87d-4c06-4c80-b128-7ebae7ea13cc",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "ce0aa9d8-5f52-4912-9f8b-318e1afe609b"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "46774918-7d53-42a1-8e5f-3b4da5fb1dc1",
+  "revision": 1
+}

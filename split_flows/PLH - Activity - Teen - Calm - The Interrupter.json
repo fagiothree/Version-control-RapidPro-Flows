@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "943c37ee-dbe6-4d4e-8442-2aeb5abf2a0f": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "c4387375-8b5e-4dad-8fa4-90fe25a40e84": {
+        "position": {
+          "left": 0,
+          "top": 300
+        },
+        "type": "execute_actions"
+      },
+      "e71c223a-d6a4-4edb-b054-acde7fd8aabb": {
+        "config": {},
+        "position": {
+          "left": 180,
+          "top": 520
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Calm - The Interrupter",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "The Interrupter\n•\tChoose a storyteller to start making up a story.\n•\tStory listeners can interrupt with a word at any time.\n•\tThe storyteller needs to fit that word in their story.\n•\tTry with a different storyteller! ",
+          "type": "send_msg",
+          "uuid": "7be9266a-2c22-4622-9145-d80be6f702f0"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "9faf40b8-504b-4028-9351-14c908bf2c2c"
+        }
+      ],
+      "uuid": "943c37ee-dbe6-4d4e-8442-2aeb5abf2a0f"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "1e41c2ad-a892-4147-a020-be800e2835d8",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "e96d6dcc-926d-42b0-b12b-a281cf8fd64f",
+          "value": "Teen4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e71c223a-d6a4-4edb-b054-acde7fd8aabb",
+          "uuid": "eea0726e-5185-4a74-b771-d30e0dbe4103"
+        }
+      ],
+      "uuid": "c4387375-8b5e-4dad-8fa4-90fe25a40e84"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "b498aa20-8897-49aa-a0d9-d001b57b3af3"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "45a36db9-fd3b-402d-83b5-6d13875ee8ba"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "990f81fc-16d9-41c2-90b2-f0b9b527946d"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "2bd78e9f-8bb9-4ded-8232-cbbda2763c57",
+            "type": "has_only_text",
+            "uuid": "0bc81336-72df-4e06-ae6e-558d8907de58"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "9add00a6-897e-4e97-aa28-6ece17c6023f",
+            "type": "has_only_text",
+            "uuid": "5e98b510-5c25-486d-958b-4c8f155ca1d2"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "45a36db9-fd3b-402d-83b5-6d13875ee8ba",
+            "name": "Complete",
+            "uuid": "2bd78e9f-8bb9-4ded-8232-cbbda2763c57"
+          },
+          {
+            "exit_uuid": "990f81fc-16d9-41c2-90b2-f0b9b527946d",
+            "name": "Expired",
+            "uuid": "9add00a6-897e-4e97-aa28-6ece17c6023f"
+          }
+        ],
+        "default_category_uuid": "9add00a6-897e-4e97-aa28-6ece17c6023f",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "e71c223a-d6a4-4edb-b054-acde7fd8aabb"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "8d77bacb-18b0-4b90-9a73-8662450c6744",
+  "revision": 1
+}

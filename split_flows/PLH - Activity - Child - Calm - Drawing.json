@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "13d20793-c9e9-4a70-94a6-59065a5a01e2": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "a7365097-2ff7-4c23-9b93-e246579004cd": {
+        "config": {},
+        "position": {
+          "left": 360,
+          "top": 680
+        },
+        "type": "split_by_subflow"
+      },
+      "faf54be0-712f-4a86-8451-334bf60459fc": {
+        "position": {
+          "left": 0,
+          "top": 540
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Calm - Drawing",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Drawing\n•\tChildren love to draw! It helps build creativity.\n•\tGet some pens or crayons and a piece of paper or cardboard.\n•\tLet your children freely draw whatever they want.\n•\tWhile your child is drawing, use words to describe what they are doing: “I see you are drawing a person” or “I see you are making lines with the red crayon.”\n•\tYou can also have fun drawing next to them.\n•\tPut their drawings up on the wall, refrigerator, or outside to decorate the house – it will make your children feel appreciated!",
+          "type": "send_msg",
+          "uuid": "cb715027-ccb5-41ee-b5d6-b8a2b29d5a6c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "47a2a37f-4def-4b2d-ba7a-5ff7a2e9f738"
+        }
+      ],
+      "uuid": "13d20793-c9e9-4a70-94a6-59065a5a01e2"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "fe8b60a0-327c-4639-9734-41a715d4535d",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "a6c35284-bf77-4ded-971e-4462d245c53d",
+          "value": "Child10"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "a7365097-2ff7-4c23-9b93-e246579004cd",
+          "uuid": "797c3344-93c3-4daf-88f7-d1eb21779678"
+        }
+      ],
+      "uuid": "faf54be0-712f-4a86-8451-334bf60459fc"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "d99d05eb-a51d-4949-ab5b-ffe8064836f4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "c2c0b0a0-b592-4c98-8c4d-e686b9cc40f2"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "19fe5b51-e480-40e7-81f7-d372fe3f1aa7"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "b98028cc-4157-45db-9d9a-6d226b3f7fad",
+            "type": "has_only_text",
+            "uuid": "cd378167-dad2-4bbc-ba71-001803a1575b"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "cc06a4ae-f3dc-46cf-bd4d-4b412865c701",
+            "type": "has_only_text",
+            "uuid": "95142a07-3cae-4ad8-9f69-db6e9a4a509c"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "c2c0b0a0-b592-4c98-8c4d-e686b9cc40f2",
+            "name": "Complete",
+            "uuid": "b98028cc-4157-45db-9d9a-6d226b3f7fad"
+          },
+          {
+            "exit_uuid": "19fe5b51-e480-40e7-81f7-d372fe3f1aa7",
+            "name": "Expired",
+            "uuid": "cc06a4ae-f3dc-46cf-bd4d-4b412865c701"
+          }
+        ],
+        "default_category_uuid": "cc06a4ae-f3dc-46cf-bd4d-4b412865c701",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "a7365097-2ff7-4c23-9b93-e246579004cd"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "8f3fb4cb-df0f-4fb3-885b-777d4f7066f2",
+  "revision": 1
+}

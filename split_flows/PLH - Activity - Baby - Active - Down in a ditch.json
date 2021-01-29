@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "80b6bd17-5e01-4df4-9a96-bd45270ede09": {
+        "config": {},
+        "position": {
+          "left": 380,
+          "top": 580
+        },
+        "type": "split_by_subflow"
+      },
+      "e440d6b5-2bc8-46ba-9afb-f4551f74ae06": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "fb4f9e4a-e8a7-46a6-b7fe-d661dabead42": {
+        "position": {
+          "left": 0,
+          "top": 540
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Baby - Active - Down in a ditch",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Down in a ditch!\n•\tSit on a chair and put your toddler on your lap facing you. Hold them firmly under the arms.\n•\tGently bounce your legs and say in a soft voice “Baby horse, baby horse, baby horse, baby horse”\n•\tBounce your legs a bit more and say a bit louder “Little horse, little horse, little horse, little horse”\n•\tBounce your legs more and say louder “Big horse, big horse, big horse, big horse”\n•\tWhen you call out “Down in a ditch!” open your knees and let your child drop down between them. Make sure you hold them so they don’t fall far! ",
+          "type": "send_msg",
+          "uuid": "f581bb5b-2b7e-4309-8c79-69d686b3b41f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "1e5cb7c5-e62c-4085-9521-e77993f9338d"
+        }
+      ],
+      "uuid": "e440d6b5-2bc8-46ba-9afb-f4551f74ae06"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "af9b8bfb-6bbd-4be9-887b-df957206d8ce",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "32147866-39c0-422d-8ec8-ab98c7e5c344",
+          "value": "Baby7"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "80b6bd17-5e01-4df4-9a96-bd45270ede09",
+          "uuid": "1828f9fa-ae8a-4aa6-9aba-b507d6a6a2a5"
+        }
+      ],
+      "uuid": "fb4f9e4a-e8a7-46a6-b7fe-d661dabead42"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow (activity or tip)",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "f8796d96-0062-4084-97ce-09b131bec28b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "9d7ac6ff-5f36-4889-aa07-70dea64afa00"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "5e181797-1364-43fe-b149-b800cef5eed7"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "699b921a-1112-4573-9427-a8839b45c41c",
+            "type": "has_only_text",
+            "uuid": "990caf57-5692-432b-ba2e-e56f6d416fb5"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "b5569e4c-2915-4b7c-a83d-38feeab6ca9e",
+            "type": "has_only_text",
+            "uuid": "9f3957c2-67c7-40f6-baab-2165b9ce15da"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "9d7ac6ff-5f36-4889-aa07-70dea64afa00",
+            "name": "Complete",
+            "uuid": "699b921a-1112-4573-9427-a8839b45c41c"
+          },
+          {
+            "exit_uuid": "5e181797-1364-43fe-b149-b800cef5eed7",
+            "name": "Expired",
+            "uuid": "b5569e4c-2915-4b7c-a83d-38feeab6ca9e"
+          }
+        ],
+        "default_category_uuid": "b5569e4c-2915-4b7c-a83d-38feeab6ca9e",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "80b6bd17-5e01-4df4-9a96-bd45270ede09"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "bdc97820-4c8d-4925-b6b1-653857c227e0",
+  "revision": 1
+}

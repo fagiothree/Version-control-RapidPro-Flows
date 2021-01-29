@@ -1,0 +1,631 @@
+{
+  "_ui": {
+    "nodes": {
+      "60465c64-60c5-4792-8002-ae5c490a22c4": {
+        "position": {
+          "left": 480,
+          "top": 80
+        },
+        "type": "execute_actions"
+      },
+      "4f3c0c7c-15d8-4bd3-8e05-9c9ddead7043": {
+        "position": {
+          "left": 920,
+          "top": 140
+        },
+        "type": "execute_actions"
+      },
+      "7fc56e80-3b51-457c-b11e-68606492720c": {
+        "position": {
+          "left": 920,
+          "top": 280
+        },
+        "type": "execute_actions"
+      },
+      "4ab8b523-849b-431b-9bf8-365bebe11ccd": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 460,
+          "top": 320
+        },
+        "type": "wait_for_response"
+      },
+      "a40c713c-f93c-4a73-a0bf-f4ca296a5cb0": {
+        "position": {
+          "left": 200,
+          "top": 420
+        },
+        "type": "execute_actions"
+      },
+      "0d15bd92-426c-4e97-9325-20ccf6ec1fe8": {
+        "position": {
+          "left": 480,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "f8829891-62f7-499c-88a9-b0539aa1902b": {
+        "position": {
+          "left": 480,
+          "top": 560
+        },
+        "type": "execute_actions"
+      },
+      "f7ce0099-2700-4974-b72a-9bdfb42d74b2": {
+        "position": {
+          "left": 180,
+          "top": 640
+        },
+        "type": "execute_actions"
+      },
+      "2e09a222-b397-42ed-9450-21396d798049": {
+        "position": {
+          "left": 500,
+          "top": 700
+        },
+        "type": "execute_actions"
+      },
+      "8ae504e4-726b-48f2-916e-d90fd4b5cdd3": {
+        "position": {
+          "left": 980,
+          "top": 720
+        },
+        "type": "execute_actions"
+      },
+      "10d8ae8f-9aff-4a19-9ba4-67655edff6be": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 480,
+          "top": 1000
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "8ffa4e48-f17e-48c4-bd44-e008c016b1b7": {
+        "position": {
+          "left": 200,
+          "top": 1080
+        },
+        "type": "execute_actions"
+      },
+      "b36f8ba0-4083-45f8-a255-23c5c6fea3f5": {
+        "position": {
+          "left": 420,
+          "top": 1140
+        },
+        "type": "execute_actions"
+      },
+      "b4067f74-e178-4b76-8439-ac0f0c50f96b": {
+        "position": {
+          "left": 920,
+          "top": 1160
+        },
+        "type": "execute_actions"
+      },
+      "bdc8170f-9c13-482f-8167-d2e321b83a56": {
+        "position": {
+          "left": 640,
+          "top": 1180
+        },
+        "type": "execute_actions"
+      },
+      "e8dc3c24-b2c9-4e71-9959-c4b2652c829e": {
+        "position": {
+          "left": 1220,
+          "top": 1600
+        },
+        "type": "execute_actions"
+      },
+      "344fc0d0-a680-4949-808a-ce1d4d97e6ac": {
+        "config": {},
+        "position": {
+          "left": 1320,
+          "top": 1700
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 25
+  },
+  "name": "PLH - Content - Positive - CheckIn - IPV 4",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "How are you doing with trying to resolve conflict in a calm way even when you feel frustrated?",
+          "type": "send_msg",
+          "quick_replies": [
+            "Great",
+            "Neutral",
+            "Bad"
+          ],
+          "uuid": "c3e0ec57-5781-41e8-a789-e4bf08e9d398"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "4ab8b523-849b-431b-9bf8-365bebe11ccd",
+          "uuid": "04ea088b-ddf9-4c2b-b535-4a0696e25e25"
+        }
+      ],
+      "uuid": "60465c64-60c5-4792-8002-ae5c490a22c4"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "a78a6458-d59d-4d53-a8e9-3c75e667a8bc"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7fc56e80-3b51-457c-b11e-68606492720c",
+          "uuid": "2aaa878d-fa0f-4117-8c39-304b2698387d"
+        }
+      ],
+      "uuid": "4f3c0c7c-15d8-4bd3-8e05-9c9ddead7043"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "b60aee7c-6b3f-4d2f-8d8c-8740844b082b",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "60465c64-60c5-4792-8002-ae5c490a22c4",
+          "uuid": "fe368bcb-837f-49fb-b4e7-6da213f2427e"
+        }
+      ],
+      "uuid": "7fc56e80-3b51-457c-b11e-68606492720c"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "a40c713c-f93c-4a73-a0bf-f4ca296a5cb0",
+          "uuid": "d52d1fd4-cc95-45dc-b0bc-b5ef8ace2f89"
+        },
+        {
+          "destination_uuid": "0d15bd92-426c-4e97-9325-20ccf6ec1fe8",
+          "uuid": "b8ee4d29-f80f-44d9-8cff-13260335408e"
+        },
+        {
+          "destination_uuid": "4f3c0c7c-15d8-4bd3-8e05-9c9ddead7043",
+          "uuid": "645114e1-b53d-48bc-8903-fae6e004be24"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "great"
+            ],
+            "category_uuid": "a102a2c9-0648-4dec-a356-921ce58c060e",
+            "type": "has_any_word",
+            "uuid": "68d7c115-c643-409c-8390-4b85ff283df4"
+          },
+          {
+            "arguments": [
+              "neutral bad"
+            ],
+            "category_uuid": "a10c944e-58b1-4ec5-951c-55fe19b5e935",
+            "type": "has_any_word",
+            "uuid": "4fd4b7b7-4011-4093-baef-e8f516f3814e"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "d52d1fd4-cc95-45dc-b0bc-b5ef8ace2f89",
+            "name": "Great",
+            "uuid": "a102a2c9-0648-4dec-a356-921ce58c060e"
+          },
+          {
+            "exit_uuid": "b8ee4d29-f80f-44d9-8cff-13260335408e",
+            "name": "Neutral bad",
+            "uuid": "a10c944e-58b1-4ec5-951c-55fe19b5e935"
+          },
+          {
+            "exit_uuid": "645114e1-b53d-48bc-8903-fae6e004be24",
+            "name": "Other",
+            "uuid": "1fd004e3-bd53-433c-9a85-fe8e62d259a6"
+          }
+        ],
+        "default_category_uuid": "1fd004e3-bd53-433c-9a85-fe8e62d259a6",
+        "operand": "@input.text",
+        "result_name": "Result 2",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "4ab8b523-849b-431b-9bf8-365bebe11ccd"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Good job! Resolving conflicts isn’t always easy. Great to hear it went well!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "51f86276-2045-4397-8fa3-e0e2c7745392"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f7ce0099-2700-4974-b72a-9bdfb42d74b2",
+          "uuid": "ab12a0d2-8d4d-48c3-b0f1-13ae158aa549"
+        }
+      ],
+      "uuid": "a40c713c-f93c-4a73-a0bf-f4ca296a5cb0"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "b456c979-ca5a-48df-941d-cc2dad3b56c8",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f8829891-62f7-499c-88a9-b0539aa1902b",
+          "uuid": "3653036b-4406-4c7d-9c22-22f5a40effc8"
+        }
+      ],
+      "uuid": "0d15bd92-426c-4e97-9325-20ccf6ec1fe8"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sorry to hear it was challenging. Well done for trying!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "5b4e5e84-f4a9-43cc-bfdc-574688ddd7a0"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "2e09a222-b397-42ed-9450-21396d798049",
+          "uuid": "8e1b6b03-a4f7-4057-9cd3-cfafe399c1a9"
+        }
+      ],
+      "uuid": "f8829891-62f7-499c-88a9-b0539aa1902b"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "1f506767-e1d3-48bb-881f-5b7c1ff1840b",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "3e2ae4a7-6405-43c0-a357-ad7ac7ea29d6"
+        }
+      ],
+      "uuid": "f7ce0099-2700-4974-b72a-9bdfb42d74b2"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "What was difficult for you about resolving conflict peacefully?",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [
+            "I didn’t stay calm during a disagreement",
+            "I got angry and yelled at my partner",
+            "My partner got angry and yelled at me",
+            "I forgot to take a pause when I started feeling angry"
+          ],
+          "uuid": "7d5c3876-75f1-488f-aba5-ee21a3074118"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "10d8ae8f-9aff-4a19-9ba4-67655edff6be",
+          "uuid": "d4f303fe-f2f3-4c06-aedf-b73914a85c4e"
+        }
+      ],
+      "uuid": "2e09a222-b397-42ed-9450-21396d798049"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "fbb7206c-17c4-412e-ab4b-e0cf7c253a64"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "2e09a222-b397-42ed-9450-21396d798049",
+          "uuid": "99b31f44-d9c4-4846-a156-6385feec77a0"
+        }
+      ],
+      "uuid": "8ae504e4-726b-48f2-916e-d90fd4b5cdd3"
+    },
+    {
+      "uuid": "10d8ae8f-9aff-4a19-9ba4-67655edff6be",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "5a1706ad-fea4-401a-bd0f-e70eda620adb",
+        "cases": [
+          {
+            "arguments": [
+              "I didn’t stay calm during a disagreement"
+            ],
+            "type": "has_phrase",
+            "uuid": "5eaf4d16-5f19-425d-ad6f-8502b0f00c00",
+            "category_uuid": "4dfb934b-195d-4b9f-9ac1-a38b7c86fd7e"
+          },
+          {
+            "arguments": [
+              "I got angry and yelled at my partner"
+            ],
+            "type": "has_phrase",
+            "uuid": "2d48fbb2-3901-473d-b664-ec26e386b2b6",
+            "category_uuid": "57d238fe-9edf-4f84-8c50-634e83526b14"
+          },
+          {
+            "arguments": [
+              "My partner got angry and yelled at me"
+            ],
+            "type": "has_phrase",
+            "uuid": "0bf1e357-e483-40f5-ba34-ad03ba0d2160",
+            "category_uuid": "47e1e0e3-1ec4-4f4b-899d-f549e73b5a03"
+          },
+          {
+            "arguments": [
+              "I forgot to take a pause when I started feeling angry"
+            ],
+            "type": "has_phrase",
+            "uuid": "f13b0f4c-efd7-4a57-a7ad-de34f35570a1",
+            "category_uuid": "27a3df63-efb8-4a9a-b4b3-91ebcee21f07"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "6789938d-e975-4633-8847-44c9fdd2be9f",
+            "name": "1",
+            "uuid": "4dfb934b-195d-4b9f-9ac1-a38b7c86fd7e"
+          },
+          {
+            "exit_uuid": "522c6312-3310-4161-a1fa-a9be1becb1cf",
+            "name": "2",
+            "uuid": "57d238fe-9edf-4f84-8c50-634e83526b14"
+          },
+          {
+            "exit_uuid": "1aa9da83-3786-4866-87df-f482586acc6f",
+            "name": "3",
+            "uuid": "47e1e0e3-1ec4-4f4b-899d-f549e73b5a03"
+          },
+          {
+            "exit_uuid": "442c2849-8e4f-49ce-a2e4-7283230aed37",
+            "name": "4",
+            "uuid": "27a3df63-efb8-4a9a-b4b3-91ebcee21f07"
+          },
+          {
+            "exit_uuid": "041707c8-d7c3-4ee4-b0ed-88cd958fe451",
+            "name": "Other",
+            "uuid": "5a1706ad-fea4-401a-bd0f-e70eda620adb"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg"
+        },
+        "result_name": "Result 3"
+      },
+      "exits": [
+        {
+          "destination_uuid": "8ffa4e48-f17e-48c4-bd44-e008c016b1b7",
+          "uuid": "6789938d-e975-4633-8847-44c9fdd2be9f"
+        },
+        {
+          "destination_uuid": "b36f8ba0-4083-45f8-a255-23c5c6fea3f5",
+          "uuid": "522c6312-3310-4161-a1fa-a9be1becb1cf"
+        },
+        {
+          "destination_uuid": "bdc8170f-9c13-482f-8167-d2e321b83a56",
+          "uuid": "1aa9da83-3786-4866-87df-f482586acc6f"
+        },
+        {
+          "destination_uuid": "b4067f74-e178-4b76-8439-ac0f0c50f96b",
+          "uuid": "442c2849-8e4f-49ce-a2e4-7283230aed37"
+        },
+        {
+          "destination_uuid": "8ae504e4-726b-48f2-916e-d90fd4b5cdd3",
+          "uuid": "041707c8-d7c3-4ee4-b0ed-88cd958fe451"
+        }
+      ]
+    },
+    {
+      "uuid": "8ffa4e48-f17e-48c4-bd44-e008c016b1b7",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "It can be really hard to stay calm when we’re having a disagreement with others. Try to think of something that you can do that might help like taking a couple deep breaths.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "0e6b9a3d-8c6b-4778-9e16-e25254defcd6"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "a0adba45-4a7d-4808-83d0-9396b6f83c91",
+          "destination_uuid": null
+        }
+      ]
+    },
+    {
+      "uuid": "b36f8ba0-4083-45f8-a255-23c5c6fea3f5",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "By taking a pause before responding, it can help us stay calm and respond better. When you feel yourself getting angry, try taking a pause. You can do this!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "cadb6169-8876-4c5d-938f-6f51e67d611b"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "1f5e5b5e-4732-4c5d-abd4-6c7dc3e9f5c8",
+          "destination_uuid": null
+        }
+      ]
+    },
+    {
+      "uuid": "b4067f74-e178-4b76-8439-ac0f0c50f96b",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "It can be easy to forget, but don’t give up! Next time when you start feeling angry, try taking a deep breath before responding. You can also try walking away for a bit if you start feeling frustrated.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "8501ffb8-a08f-47c4-965c-89bf55c2980d"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "2c134ad9-d693-4a84-827d-a98a87214a6f",
+          "destination_uuid": null
+        }
+      ]
+    },
+    {
+      "uuid": "bdc8170f-9c13-482f-8167-d2e321b83a56",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sometimes others respond to us negatively when we’re having a disagreement. In these situations, it is sometimes best to walk away for a bit until those involved have calmed down.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "c9a09ebe-f335-4e39-9147-7c8e3938e8d2"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "8c60c289-4345-49f1-9f42-3f6f47994c33",
+          "destination_uuid": null
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "want_feedback_checkin",
+            "name": "want feedback checkin"
+          },
+          "type": "set_contact_field",
+          "uuid": "6a58241e-2211-4f1c-8d3c-47941b4b4398",
+          "value": "yes"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "344fc0d0-a680-4949-808a-ce1d4d97e6ac",
+          "uuid": "dbdb918b-72ad-4650-aa5b-e16c23461841"
+        }
+      ],
+      "uuid": "e8dc3c24-b2c9-4e71-9959-c4b2652c829e"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Feedback - Feedback for checkIn",
+            "uuid": "9c6ec05a-102d-457d-abe4-3056979c5d3d"
+          },
+          "type": "enter_flow",
+          "uuid": "8831026d-835d-4965-a43c-b309c6a5c360"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "85cae23d-7812-447d-b1f6-ea2a4282e4de"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "68ecff46-41cc-4808-9235-c0a76c21ecca"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "defcba30-6af8-43c4-a360-f028d13f6e7c",
+            "type": "has_only_text",
+            "uuid": "0bda9afa-5b6e-4b42-b62b-926357928d91"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "63e60ea3-3bc0-44eb-8937-332e6d466529",
+            "type": "has_only_text",
+            "uuid": "be96f2bd-0fd9-4086-97e3-a9ca472332cf"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "85cae23d-7812-447d-b1f6-ea2a4282e4de",
+            "name": "Complete",
+            "uuid": "defcba30-6af8-43c4-a360-f028d13f6e7c"
+          },
+          {
+            "exit_uuid": "68ecff46-41cc-4808-9235-c0a76c21ecca",
+            "name": "Expired",
+            "uuid": "63e60ea3-3bc0-44eb-8937-332e6d466529"
+          }
+        ],
+        "default_category_uuid": "63e60ea3-3bc0-44eb-8937-332e6d466529",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "344fc0d0-a680-4949-808a-ce1d4d97e6ac"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "3a27aa2d-9371-4014-a75f-c5f1fc489df3",
+  "revision": 30
+}

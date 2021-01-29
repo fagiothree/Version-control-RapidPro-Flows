@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "0250013c-c19a-40cc-81e1-f9abfc7342df": {
+        "config": {},
+        "position": {
+          "left": 180,
+          "top": 760
+        },
+        "type": "split_by_subflow"
+      },
+      "442b7da0-412c-4c25-a8b4-5eac7df585bd": {
+        "position": {
+          "left": 0,
+          "top": 540
+        },
+        "type": "execute_actions"
+      },
+      "481d6bbd-7a3b-4904-9304-c3aa378fa01b": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Active - Make housework fun",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Make Housework Fun\n•\tHousehold chores aren’t fun… or are they? You can make them into a game, like this. \n•\tThere’s a fire on the mountain! Run, run, run!\n•\tThere’s a fire on the mountain! Run, run, run!\n•\tTouch something red. \n•\tThere’s a fire on the mountain! Run, run, run!\n•\tThere’s a fire on the mountain! Run, run, run!\n•\tJump up and down ten times.\n•\tThere’s a fire on the mountain! Run, run, run!\n•\tThere’s a fire on the mountain! Run, run, run!\n•\tPut the shoes in the shoe rack. ",
+          "type": "send_msg",
+          "uuid": "cbd5e6af-1c3f-4615-a777-9cd04f77351e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "87d43880-a1fe-42be-8419-9e3cc3b2185a"
+        }
+      ],
+      "uuid": "481d6bbd-7a3b-4904-9304-c3aa378fa01b"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "d84ba0dd-4930-4cea-b7f9-0c3a7d971681",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "18dbdbbf-f7bc-491e-b1e8-967826c16fa4",
+          "value": "Teen20"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0250013c-c19a-40cc-81e1-f9abfc7342df",
+          "uuid": "da7680b6-5c72-4c27-be1b-4db7e4dbbab7"
+        }
+      ],
+      "uuid": "442b7da0-412c-4c25-a8b4-5eac7df585bd"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "d3b4178d-b2bf-4bea-ab97-bf5a77fde0cf"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "06c79d43-c912-40d0-91ea-295502803866"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "0ed0da82-a0dc-43e0-80ed-1bc8fe81fb0c"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "0f13b3c7-cf7a-44fe-a0cb-cd206b7dc78a",
+            "type": "has_only_text",
+            "uuid": "ac9e6317-1050-4cd0-996f-c4919429d5a7"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "caefcf3b-84a1-47b9-aa3c-c5f0f8414188",
+            "type": "has_only_text",
+            "uuid": "d831ecf0-f7c6-4efb-80b4-22a8dfa701e1"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "06c79d43-c912-40d0-91ea-295502803866",
+            "name": "Complete",
+            "uuid": "0f13b3c7-cf7a-44fe-a0cb-cd206b7dc78a"
+          },
+          {
+            "exit_uuid": "0ed0da82-a0dc-43e0-80ed-1bc8fe81fb0c",
+            "name": "Expired",
+            "uuid": "caefcf3b-84a1-47b9-aa3c-c5f0f8414188"
+          }
+        ],
+        "default_category_uuid": "caefcf3b-84a1-47b9-aa3c-c5f0f8414188",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "0250013c-c19a-40cc-81e1-f9abfc7342df"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "61f68b1f-fe56-4a8c-a854-a84a16edaa09",
+  "revision": 1
+}

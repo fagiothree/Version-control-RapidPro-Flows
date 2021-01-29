@@ -1,0 +1,693 @@
+{
+  "_ui": {
+    "nodes": {
+      "56c8f30e-9ce7-479f-bdda-bac57ce0b9df": {
+        "position": {
+          "left": 100,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "f5cb531b-0487-482d-9ecc-10c8446563f4": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "type_of_media",
+            "name": "type of media",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 720,
+          "top": 100
+        },
+        "type": "split_by_contact_field"
+      },
+      "f23d99f9-8cae-49c8-91e0-f4e0126897b5": {
+        "config": {},
+        "position": {
+          "left": 80,
+          "top": 120
+        },
+        "type": "split_by_subflow"
+      },
+      "542eb9a2-9ad6-44c1-9c45-da01b38c1d0a": {
+        "position": {
+          "left": 1120,
+          "top": 160
+        },
+        "type": "execute_actions"
+      },
+      "b7fa5dc3-f301-4222-b715-b61f64aa0665": {
+        "position": {
+          "left": 620,
+          "top": 240
+        },
+        "type": "execute_actions"
+      },
+      "f29080b9-9e8c-4d4b-9a9d-b7f540e02cdb": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "from_theme",
+            "name": "from theme",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 100,
+          "top": 260
+        },
+        "type": "split_by_contact_field"
+      },
+      "4fde3d5c-be34-47b5-84a2-255d035cf2e1": {
+        "position": {
+          "left": 840,
+          "top": 260
+        },
+        "type": "execute_actions"
+      },
+      "893989b7-2c0d-4f76-9901-57df68cb82f3": {
+        "position": {
+          "left": 100,
+          "top": 400
+        },
+        "type": "execute_actions"
+      },
+      "d8871f99-64de-4f4f-9669-4d5862abbddc": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 640,
+          "top": 440
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "622b46bf-fd8e-4704-9fc2-494a585bdcb5": {
+        "position": {
+          "left": 100,
+          "top": 640
+        },
+        "type": "execute_actions"
+      },
+      "fba51c5b-6a8c-4ff3-a38a-48b75fe3a4e4": {
+        "position": {
+          "left": 820,
+          "top": 660
+        },
+        "type": "execute_actions"
+      },
+      "21163d50-5c6b-401f-b184-564f92a30e00": {
+        "position": {
+          "left": 780,
+          "top": 800
+        },
+        "type": "execute_actions"
+      },
+      "865e6a2e-8b20-49ec-84ca-84ba7a5cce2a": {
+        "position": {
+          "left": 300,
+          "top": 820
+        },
+        "type": "execute_actions"
+      },
+      "8ebb5c70-d79d-422e-9347-ba16fd348b1a": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 40,
+          "top": 860
+        },
+        "type": "wait_for_response"
+      },
+      "8cfd5436-a98c-4a0c-93c0-c9d472be5c14": {
+        "position": {
+          "left": 60,
+          "top": 1060
+        },
+        "type": "execute_actions"
+      },
+      "e02657bc-b659-4074-ae02-77c79249cade": {
+        "config": {},
+        "position": {
+          "left": 760,
+          "top": 1120
+        },
+        "type": "split_by_subflow"
+      },
+      "e2b94612-c0ae-4785-bff1-2b5448672b50": {
+        "position": {
+          "left": 160,
+          "top": 1240
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 18
+  },
+  "name": "PLH - Content - Relax - Take a pause",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "category": "",
+          "name": "skill",
+          "type": "set_run_result",
+          "uuid": "d448863b-48f4-4327-a97a-978f89cd3282",
+          "value": "Taking a Pause"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f23d99f9-8cae-49c8-91e0-f4e0126897b5",
+          "uuid": "835dca59-9dca-427d-abed-331fe209a675"
+        }
+      ],
+      "uuid": "56c8f30e-9ce7-479f-bdda-bac57ce0b9df"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "b7fa5dc3-f301-4222-b715-b61f64aa0665",
+          "uuid": "566c5824-99b5-4ccf-af14-5bf183b82b2b"
+        },
+        {
+          "destination_uuid": "4fde3d5c-be34-47b5-84a2-255d035cf2e1",
+          "uuid": "2d454725-354e-4702-af8a-f7faefb87ee7"
+        },
+        {
+          "destination_uuid": "542eb9a2-9ad6-44c1-9c45-da01b38c1d0a",
+          "uuid": "0a80a0db-8cb7-4842-9346-67c94f6c80ec"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "high"
+            ],
+            "category_uuid": "d6d54ce6-cb05-4c21-9f21-279cdebf7e8a",
+            "type": "has_any_word",
+            "uuid": "70fa630e-bcad-4bdd-b4d4-0e2222fbca50"
+          },
+          {
+            "arguments": [
+              "medium"
+            ],
+            "category_uuid": "81268e50-e84c-4a5d-8afe-90ae5301171a",
+            "type": "has_any_word",
+            "uuid": "d9eb19ea-1bc5-4084-9b41-6e23c7500b3a"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "566c5824-99b5-4ccf-af14-5bf183b82b2b",
+            "name": "High",
+            "uuid": "d6d54ce6-cb05-4c21-9f21-279cdebf7e8a"
+          },
+          {
+            "exit_uuid": "2d454725-354e-4702-af8a-f7faefb87ee7",
+            "name": "medium",
+            "uuid": "81268e50-e84c-4a5d-8afe-90ae5301171a"
+          },
+          {
+            "exit_uuid": "0a80a0db-8cb7-4842-9346-67c94f6c80ec",
+            "name": "Other",
+            "uuid": "fac47919-5b47-47d4-b98c-62c46608975a"
+          }
+        ],
+        "default_category_uuid": "fac47919-5b47-47d4-b98c-62c46608975a",
+        "operand": "@fields.type_of_media",
+        "type": "switch"
+      },
+      "uuid": "f5cb531b-0487-482d-9ecc-10c8446563f4"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Update incomplete toolkits",
+            "uuid": "a682c361-8bea-420a-8bbc-fc84a202fbcb"
+          },
+          "type": "enter_flow",
+          "uuid": "c8d4b90a-0744-4621-8ba3-9f9af90392b1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f29080b9-9e8c-4d4b-9a9d-b7f540e02cdb",
+          "uuid": "cfc72403-7d36-4454-97e8-55dd38c674e8"
+        },
+        {
+          "destination_uuid": "f29080b9-9e8c-4d4b-9a9d-b7f540e02cdb",
+          "uuid": "e4678231-f3c0-4d52-b8d1-64f7c81c99de"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "985cc635-f681-4570-8989-26d250b1527e",
+            "type": "has_only_text",
+            "uuid": "2e4f82c3-7a25-45e3-87a9-00e0c1741078"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "6b365d20-5442-4a69-a1ba-6141f500fc95",
+            "type": "has_only_text",
+            "uuid": "ec4be239-97f7-4e96-a0a7-7bc74cc134ca"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "cfc72403-7d36-4454-97e8-55dd38c674e8",
+            "name": "Complete",
+            "uuid": "985cc635-f681-4570-8989-26d250b1527e"
+          },
+          {
+            "exit_uuid": "e4678231-f3c0-4d52-b8d1-64f7c81c99de",
+            "name": "Expired",
+            "uuid": "6b365d20-5442-4a69-a1ba-6141f500fc95"
+          }
+        ],
+        "default_category_uuid": "6b365d20-5442-4a69-a1ba-6141f500fc95",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "f23d99f9-8cae-49c8-91e0-f4e0126897b5"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Let's take a pause together! Take a deep breath and ask yourself, \"What am I thinking?\"\n\nNotice if your thoughts are positive or negative. Notice if your emotions are pleasant or unpleasant. Whatever you are feeling, it is okay. Notice how your body feels. Notice anything that hurts or is tense. \nFocus on your breath as it goes in and out. Do this for about 10 breaths. \nNow, expand your awareness to your whole body. Listen to the sounds in the room. \nTake a moment to reflect on whether you feel any different. ",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "de6ec2d3-3ac3-4455-9c95-885181af321c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "fba51c5b-6a8c-4ff3-a38a-48b75fe3a4e4",
+          "uuid": "9360b5f9-bc46-4672-8b05-b443d2e78e96"
+        }
+      ],
+      "uuid": "542eb9a2-9ad6-44c1-9c45-da01b38c1d0a"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "video:@(fields.voiceover_video_path & \"Keep_Calm_And_Manage_Stress_Including_Take_A_Pause.m4v\")"
+          ],
+          "text": "Here's a video about how to keep calm and manage stress in our busy lives.",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [],
+          "uuid": "1cf4d46f-ef6a-4210-acc2-a87ec5c0bf99"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "d8871f99-64de-4f4f-9669-4d5862abbddc",
+          "uuid": "7137f5f4-90c7-4b7c-9bc2-c7a237801206"
+        }
+      ],
+      "uuid": "b7fa5dc3-f301-4222-b715-b61f64aa0665"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "893989b7-2c0d-4f76-9901-57df68cb82f3",
+          "uuid": "5adbbb69-4936-4c82-be71-f8559b46d1c1"
+        },
+        {
+          "destination_uuid": "893989b7-2c0d-4f76-9901-57df68cb82f3",
+          "uuid": "9d16caa8-0b63-47d7-9bc8-e8ccc16b31eb"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes"
+            ],
+            "category_uuid": "6d990b04-71bb-4669-9eb6-7cf34174f932",
+            "type": "has_any_word",
+            "uuid": "06a27224-37eb-4260-8429-b60744d2dd72"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "5adbbb69-4936-4c82-be71-f8559b46d1c1",
+            "name": "Yes",
+            "uuid": "6d990b04-71bb-4669-9eb6-7cf34174f932"
+          },
+          {
+            "exit_uuid": "9d16caa8-0b63-47d7-9bc8-e8ccc16b31eb",
+            "name": "Other",
+            "uuid": "b630a6ed-2ea6-48c6-9dd7-fe51edadedc7"
+          }
+        ],
+        "default_category_uuid": "b630a6ed-2ea6-48c6-9dd7-fe51edadedc7",
+        "operand": "@fields.from_theme",
+        "type": "switch"
+      },
+      "uuid": "f29080b9-9e8c-4d4b-9a9d-b7f540e02cdb"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "audio:@(fields.relaxation_path & \"take_a_pause.mp3\")"
+          ],
+          "text": "Here's an audio message to help you take a pause!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "3f7a62ce-317e-4240-9db2-de143b039685"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "d8871f99-64de-4f4f-9669-4d5862abbddc",
+          "uuid": "b09e9867-1645-49b0-be24-05da04b72138"
+        }
+      ],
+      "uuid": "4fde3d5c-be34-47b5-84a2-255d035cf2e1"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Taking a Pause is a simple relaxation activity that you can do whenever you are feeling stressed or worried. It can also be helpful when you find your child is irritating you or has done something wrong.",
+          "type": "send_msg",
+          "uuid": "153a6efd-c1ed-4b85-b52a-b9eeea6ab439"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "622b46bf-fd8e-4704-9fc2-494a585bdcb5",
+          "uuid": "793c58e1-d9aa-4a9d-bcb6-23c0a4eefbfd"
+        }
+      ],
+      "uuid": "893989b7-2c0d-4f76-9901-57df68cb82f3"
+    },
+    {
+      "uuid": "d8871f99-64de-4f4f-9669-4d5862abbddc",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "30334778-7ba0-4d7a-9db5-c3170c8d4978",
+        "cases": [],
+        "categories": [
+          {
+            "uuid": "30334778-7ba0-4d7a-9db5-c3170c8d4978",
+            "name": "All Responses",
+            "exit_uuid": "33916a3c-d0e3-472d-b6e6-d19b3c3858ce"
+          },
+          {
+            "uuid": "65917769-e126-4b84-bb0d-57a057aa068c",
+            "name": "No Response",
+            "exit_uuid": "781a35a4-bf33-4410-a834-e260271e6e65"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg",
+          "timeout": {
+            "seconds": 120,
+            "category_uuid": "65917769-e126-4b84-bb0d-57a057aa068c"
+          }
+        },
+        "result_name": "Result 3"
+      },
+      "exits": [
+        {
+          "uuid": "33916a3c-d0e3-472d-b6e6-d19b3c3858ce",
+          "destination_uuid": "542eb9a2-9ad6-44c1-9c45-da01b38c1d0a"
+        },
+        {
+          "uuid": "781a35a4-bf33-4410-a834-e260271e6e65",
+          "destination_uuid": "542eb9a2-9ad6-44c1-9c45-da01b38c1d0a"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "Would you like to learn more about this tip?",
+          "type": "send_msg",
+          "uuid": "ce714483-576a-4503-bb10-ba2547cfa617"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "8ebb5c70-d79d-422e-9347-ba16fd348b1a",
+          "uuid": "e271eb16-5876-4875-b529-9164b84b7fcb"
+        }
+      ],
+      "uuid": "622b46bf-fd8e-4704-9fc2-494a585bdcb5"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image:@(fields.comic_path & \"managing_stress_comic.jpg\")"
+          ],
+          "text": "Here is a comic to remind you of taking a pause!",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [],
+          "uuid": "f848f5b3-d6e3-40ef-b295-43f652a6daf8"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "21163d50-5c6b-401f-b184-564f92a30e00",
+          "uuid": "6319dcdb-1c4a-4891-9f49-ba101f68a5c0"
+        }
+      ],
+      "uuid": "fba51c5b-6a8c-4ff3-a38a-48b75fe3a4e4"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Well done for Taking a Pause. You have added another skill to your Parenting Toolkit! \n\nYou can do this anytime you are feeling stressed. It gives you a chance to be calmer. Even a few deep breaths or connecting with the ground beneath you can make a difference. You can also Take a Pause with your Children!",
+          "type": "send_msg",
+          "uuid": "b47e8461-4887-459c-85f7-0f975fa80bf8"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e02657bc-b659-4074-ae02-77c79249cade",
+          "uuid": "88f102b1-65c5-43ab-b911-3441810197e3"
+        }
+      ],
+      "uuid": "21163d50-5c6b-401f-b184-564f92a30e00"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "743f059c-b570-44d7-9d65-0fe1c69d4fa0"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "622b46bf-fd8e-4704-9fc2-494a585bdcb5",
+          "uuid": "35e25999-591e-44fd-bcbd-603e569a3eff"
+        }
+      ],
+      "uuid": "865e6a2e-8b20-49ec-84ca-84ba7a5cce2a"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "f5cb531b-0487-482d-9ecc-10c8446563f4",
+          "uuid": "b308a89e-9783-46af-a38c-793c8f7553f7"
+        },
+        {
+          "destination_uuid": "8cfd5436-a98c-4a0c-93c0-c9d472be5c14",
+          "uuid": "4f5aec24-e92e-4f59-9317-f5ca4d7ef735"
+        },
+        {
+          "destination_uuid": "865e6a2e-8b20-49ec-84ca-84ba7a5cce2a",
+          "uuid": "9f013c97-ab09-4ca4-a3a9-921fa22e16ca"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "YES Y"
+            ],
+            "category_uuid": "ec655b28-9304-4f44-9842-e0217621d1ef",
+            "type": "has_any_word",
+            "uuid": "20dcea4a-cdef-4d84-b125-d23092deb96d"
+          },
+          {
+            "arguments": [
+              "NO N"
+            ],
+            "category_uuid": "287d65ca-3767-44fc-b6d8-15f2347823e9",
+            "type": "has_any_word",
+            "uuid": "845d5893-c42a-49fc-9f5a-ec8d62751b07"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "b308a89e-9783-46af-a38c-793c8f7553f7",
+            "name": "Yes",
+            "uuid": "ec655b28-9304-4f44-9842-e0217621d1ef"
+          },
+          {
+            "exit_uuid": "4f5aec24-e92e-4f59-9317-f5ca4d7ef735",
+            "name": "No",
+            "uuid": "287d65ca-3767-44fc-b6d8-15f2347823e9"
+          },
+          {
+            "exit_uuid": "9f013c97-ab09-4ca4-a3a9-921fa22e16ca",
+            "name": "Other",
+            "uuid": "29430c36-96f5-44ee-b6ae-4fa1596c003e"
+          }
+        ],
+        "default_category_uuid": "29430c36-96f5-44ee-b6ae-4fa1596c003e",
+        "operand": "@input.text",
+        "result_name": "Result 1",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "8ebb5c70-d79d-422e-9347-ba16fd348b1a"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always type \"Help\" at anytime if you need an activity to help you relax or reduce stress. Chat to you later!",
+          "type": "send_msg",
+          "uuid": "8a7a5986-ae84-45de-adb2-1f8e69ec53ba"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e2b94612-c0ae-4785-bff1-2b5448672b50",
+          "uuid": "6028576c-2d0c-47cf-ae47-5e5013a59b29"
+        }
+      ],
+      "uuid": "8cfd5436-a98c-4a0c-93c0-c9d472be5c14"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Update toolkits",
+            "uuid": "074bc4c5-8c69-4e5b-9176-79b44bfa40da"
+          },
+          "type": "enter_flow",
+          "uuid": "25f84bc8-64d0-4ff6-b82c-4044b418047b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "c7299b8f-34e8-4e6a-9eea-697504fb9ba5"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "54be5bf6-fa20-47a8-a26f-c176edea04bf"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "91837258-d051-4b16-82a6-446c00c41f71",
+            "type": "has_only_text",
+            "uuid": "8f813551-ef95-44b0-96c3-8766e45e5c2c"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "6d3f2434-bceb-4962-8792-c01c75d6809d",
+            "type": "has_only_text",
+            "uuid": "b99227e8-ba21-41fc-af59-b391ddaa80ca"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "c7299b8f-34e8-4e6a-9eea-697504fb9ba5",
+            "name": "Complete",
+            "uuid": "91837258-d051-4b16-82a6-446c00c41f71"
+          },
+          {
+            "exit_uuid": "54be5bf6-fa20-47a8-a26f-c176edea04bf",
+            "name": "Expired",
+            "uuid": "6d3f2434-bceb-4962-8792-c01c75d6809d"
+          }
+        ],
+        "default_category_uuid": "6d3f2434-bceb-4962-8792-c01c75d6809d",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "e02657bc-b659-4074-ae02-77c79249cade"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "9579fc3b-7c5d-47da-8dc8-ecc2bcfc1e54",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "cf1a4382-2633-4aca-b02d-12e514b85b42"
+        }
+      ],
+      "uuid": "e2b94612-c0ae-4785-bff1-2b5448672b50"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "6445c8ce-01a8-4546-aa39-4dc4e39878af",
+  "revision": 19
+}

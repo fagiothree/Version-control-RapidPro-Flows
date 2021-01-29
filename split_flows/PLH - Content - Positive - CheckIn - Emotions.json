@@ -1,0 +1,674 @@
+{
+  "_ui": {
+    "nodes": {
+      "00ddf370-8040-4c09-b69f-fb98d15982e4": {
+        "position": {
+          "left": 540,
+          "top": 40
+        },
+        "type": "execute_actions"
+      },
+      "a0f35d99-07e7-455d-92a5-e4a99eac40b0": {
+        "position": {
+          "left": 920,
+          "top": 140
+        },
+        "type": "execute_actions"
+      },
+      "4269fc3d-1ab8-4ddf-9fad-ec20da9d658d": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 460,
+          "top": 240
+        },
+        "type": "wait_for_response"
+      },
+      "539f3c50-6dce-4a79-951d-592f85113f51": {
+        "position": {
+          "left": 920,
+          "top": 280
+        },
+        "type": "execute_actions"
+      },
+      "b58b1c27-8e8c-4ed0-b192-08200185f7b2": {
+        "position": {
+          "left": 480,
+          "top": 400
+        },
+        "type": "execute_actions"
+      },
+      "34667c41-6d42-447a-a229-1f3520286e8b": {
+        "position": {
+          "left": 200,
+          "top": 420
+        },
+        "type": "execute_actions"
+      },
+      "116725fd-1735-40a3-b74f-cdc878b83460": {
+        "position": {
+          "left": 480,
+          "top": 500
+        },
+        "type": "execute_actions"
+      },
+      "e28b3db2-5bea-4ef8-8374-02ba1abc96eb": {
+        "position": {
+          "left": 180,
+          "top": 580
+        },
+        "type": "execute_actions"
+      },
+      "5eaa9d01-da1c-45b6-9c49-eccf8e227a8d": {
+        "position": {
+          "left": 500,
+          "top": 680
+        },
+        "type": "execute_actions"
+      },
+      "c12314bf-88f1-431f-a5d8-99a58bff1e85": {
+        "position": {
+          "left": 980,
+          "top": 720
+        },
+        "type": "execute_actions"
+      },
+      "52dbc4b8-40bb-4cae-a15e-6b3cf8890980": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 440,
+          "top": 940
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "65858262-4283-42b7-b885-252e713320cc": {
+        "position": {
+          "left": 160,
+          "top": 1140
+        },
+        "type": "execute_actions"
+      },
+      "86c0f4ad-567a-4194-9a64-76bfac38f718": {
+        "position": {
+          "left": 580,
+          "top": 1140
+        },
+        "type": "execute_actions"
+      },
+      "f0ad5b92-ada0-4a3e-87db-9d3fc64a30eb": {
+        "position": {
+          "left": 820,
+          "top": 1180
+        },
+        "type": "execute_actions"
+      },
+      "285d78d9-9eb8-46e3-9d63-cd45728d4f34": {
+        "position": {
+          "left": 1160,
+          "top": 1220
+        },
+        "type": "execute_actions"
+      },
+      "5593b672-7c5d-4621-ade7-f258df8a4115": {
+        "position": {
+          "left": 420,
+          "top": 1400
+        },
+        "type": "execute_actions"
+      },
+      "5a2e8991-9ad9-4356-95f1-d7f4043a669c": {
+        "position": {
+          "left": 180,
+          "top": 1720
+        },
+        "type": "execute_actions"
+      },
+      "a3474e1c-1baf-4397-a0fe-831403d7acc5": {
+        "type": "split_by_subflow",
+        "position": {
+          "left": 180,
+          "top": 1920
+        },
+        "config": {}
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 26
+  },
+  "name": "PLH - Content - Positive - CheckIn - Emotions",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Have you noticed and shared emotions with your child or teen recently? How did it make you feel?",
+          "type": "send_msg",
+          "quick_replies": [
+            "Great",
+            "Neutral",
+            "Bad"
+          ],
+          "uuid": "3c37c3b3-a437-488a-b09a-334f94e64ba5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "4269fc3d-1ab8-4ddf-9fad-ec20da9d658d",
+          "uuid": "618a2065-f1dc-46b8-bb15-227f802b11b8"
+        }
+      ],
+      "uuid": "00ddf370-8040-4c09-b69f-fb98d15982e4"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "1f7cc019-f127-4b3e-916f-3a33a98a737d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "539f3c50-6dce-4a79-951d-592f85113f51",
+          "uuid": "80355ea5-a91d-4d28-9154-0d5f692f60ff"
+        }
+      ],
+      "uuid": "a0f35d99-07e7-455d-92a5-e4a99eac40b0"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "34667c41-6d42-447a-a229-1f3520286e8b",
+          "uuid": "dc80bc09-1006-4bc1-9bd2-37dcb8f14057"
+        },
+        {
+          "destination_uuid": "b58b1c27-8e8c-4ed0-b192-08200185f7b2",
+          "uuid": "cd871e54-eacc-441e-9027-ec092830cef1"
+        },
+        {
+          "destination_uuid": "a0f35d99-07e7-455d-92a5-e4a99eac40b0",
+          "uuid": "feae745d-c68d-4f26-9b49-8a940b4fe3a9"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "great"
+            ],
+            "category_uuid": "ca79268b-2a81-4d3f-bf99-b9a178bd77cd",
+            "type": "has_any_word",
+            "uuid": "273a4e1c-9412-4d82-9195-1e519f755844"
+          },
+          {
+            "arguments": [
+              "neutral bad"
+            ],
+            "category_uuid": "3123b6f0-a7cf-42cf-94ec-10908b1082de",
+            "type": "has_any_word",
+            "uuid": "80b5d58e-da44-4fab-b997-7166ee4ffec4"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "dc80bc09-1006-4bc1-9bd2-37dcb8f14057",
+            "name": "Great",
+            "uuid": "ca79268b-2a81-4d3f-bf99-b9a178bd77cd"
+          },
+          {
+            "exit_uuid": "cd871e54-eacc-441e-9027-ec092830cef1",
+            "name": "Neutral bad",
+            "uuid": "3123b6f0-a7cf-42cf-94ec-10908b1082de"
+          },
+          {
+            "exit_uuid": "feae745d-c68d-4f26-9b49-8a940b4fe3a9",
+            "name": "Other",
+            "uuid": "c1ad5eff-3989-4013-b2b6-5068b89671de"
+          }
+        ],
+        "default_category_uuid": "c1ad5eff-3989-4013-b2b6-5068b89671de",
+        "operand": "@input.text",
+        "result_name": "Result 2",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "4269fc3d-1ab8-4ddf-9fad-ec20da9d658d"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "05e1af2a-155d-4b3e-a729-b947b67944a9",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "00ddf370-8040-4c09-b69f-fb98d15982e4",
+          "uuid": "fdc1ad15-f9fe-4440-9d1f-bc4b451ad70c"
+        }
+      ],
+      "uuid": "539f3c50-6dce-4a79-951d-592f85113f51"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "ca8dc07c-b0d9-4220-b5f9-40ebf0a336a8",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "116725fd-1735-40a3-b74f-cdc878b83460",
+          "uuid": "258c8947-6cda-4a53-a55b-e3b0109e7cdb"
+        }
+      ],
+      "uuid": "b58b1c27-8e8c-4ed0-b192-08200185f7b2"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Amazing to hear it made you feel good, keep up the great work. Your child is learning so much from you!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "ac216687-c13c-40e9-a913-cadb9bfe8b22"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e28b3db2-5bea-4ef8-8374-02ba1abc96eb",
+          "uuid": "69ee1fb4-9869-42c4-a7c6-3b3a08db8b13"
+        }
+      ],
+      "uuid": "34667c41-6d42-447a-a229-1f3520286e8b"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Noticing and sharing emotions can be difficult at first, but you and your child or teen will get used to it. Keep trying and you will see the positive change!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "a43c5f21-9e61-4c2b-9858-3ac2cf8f08b2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "5eaa9d01-da1c-45b6-9c49-eccf8e227a8d",
+          "uuid": "8009f2d7-88e7-470f-8521-28d21ef9c0b5"
+        }
+      ],
+      "uuid": "116725fd-1735-40a3-b74f-cdc878b83460"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "4c25211f-d23d-46bf-a414-12de462de2b0",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "ddfd18ce-3836-4c56-b973-3aefee0c5529"
+        }
+      ],
+      "uuid": "e28b3db2-5bea-4ef8-8374-02ba1abc96eb"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "What was difficult for you about sharing emotions with your child or teen?",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [
+            "I am afraid my child or teen will think I am weak",
+            "I felt uncomfortable to name specific difficult emotions",
+            "My child or teen felt uncomfortable when I shared my emotions",
+            "My child or teen asked many questions when I shared my emotions, which made me uncomfortable",
+            "I was too stressed or angry to try sharing my emotions – I prefer to be alone when I feel like that"
+          ],
+          "uuid": "0f416c25-e1f7-4888-ab0c-178d5696c037"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "52dbc4b8-40bb-4cae-a15e-6b3cf8890980",
+          "uuid": "d98db83a-b7bc-47d0-9f7a-31733f23a4f8"
+        }
+      ],
+      "uuid": "5eaa9d01-da1c-45b6-9c49-eccf8e227a8d"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "2e88416f-5650-4e60-aa36-e4bdd886a7b4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "5eaa9d01-da1c-45b6-9c49-eccf8e227a8d",
+          "uuid": "8ad0eb5c-764e-468e-a6e4-f720fc3d6d58"
+        }
+      ],
+      "uuid": "c12314bf-88f1-431f-a5d8-99a58bff1e85"
+    },
+    {
+      "uuid": "52dbc4b8-40bb-4cae-a15e-6b3cf8890980",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "c393a6b2-2152-4de2-9fc6-4f124e8ce8e8",
+        "cases": [
+          {
+            "arguments": [
+              "I am afraid my child or teen will think I am weak"
+            ],
+            "type": "has_phrase",
+            "uuid": "93e46654-b3e7-40c7-8f67-1465ba4f938b",
+            "category_uuid": "354d7a27-6d79-45e0-971c-5ec39c18450f"
+          },
+          {
+            "arguments": [
+              "I felt uncomfortable to name specific difficult emotions"
+            ],
+            "type": "has_phrase",
+            "uuid": "673f3a53-ffdc-4ada-b600-2748fba5b852",
+            "category_uuid": "3549ac70-ae98-4020-babd-3805c6e8fcc9"
+          },
+          {
+            "arguments": [
+              "My child or teen felt uncomfortable when I shared my emotions"
+            ],
+            "type": "has_phrase",
+            "uuid": "654a9df6-af75-46aa-803b-c294b1c2aa5f",
+            "category_uuid": "8e7a439b-5fd3-4874-8a44-02b0cb2f76f1"
+          },
+          {
+            "arguments": [
+              "My child or teen asked many questions when I shared my emotions, which made me uncomfortable"
+            ],
+            "type": "has_phrase",
+            "uuid": "1c9a4e5b-a201-428b-bcc0-619bb95e4519",
+            "category_uuid": "3b28b685-72cb-49de-b6b6-a04470f97ce4"
+          },
+          {
+            "arguments": [
+              "I was too stressed or angry to try sharing my emotions – I prefer to be alone when I feel like that"
+            ],
+            "type": "has_phrase",
+            "uuid": "df726b86-bbc5-49f3-b35b-3a2c04e6799a",
+            "category_uuid": "44161fa1-d8f2-4286-b2df-6381815db34a"
+          }
+        ],
+        "categories": [
+          {
+            "uuid": "354d7a27-6d79-45e0-971c-5ec39c18450f",
+            "name": "1",
+            "exit_uuid": "b53154f1-dbd0-46ba-a908-6448d1f97b01"
+          },
+          {
+            "uuid": "3549ac70-ae98-4020-babd-3805c6e8fcc9",
+            "name": "2",
+            "exit_uuid": "d7a3be82-61d3-4659-97a4-13f694903a0b"
+          },
+          {
+            "uuid": "8e7a439b-5fd3-4874-8a44-02b0cb2f76f1",
+            "name": "3",
+            "exit_uuid": "f22d9923-bb7f-4e3c-9713-4b7883b87568"
+          },
+          {
+            "uuid": "3b28b685-72cb-49de-b6b6-a04470f97ce4",
+            "name": "4",
+            "exit_uuid": "4997d828-a79f-4b4c-a8b7-d52ae0af467f"
+          },
+          {
+            "uuid": "44161fa1-d8f2-4286-b2df-6381815db34a",
+            "name": "5",
+            "exit_uuid": "d78a34f7-a393-4943-9ca2-cf59dc12168a"
+          },
+          {
+            "exit_uuid": "05cab01f-7b10-4aac-be9f-f2667e1cf702",
+            "name": "Other",
+            "uuid": "c393a6b2-2152-4de2-9fc6-4f124e8ce8e8"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg"
+        },
+        "result_name": "Result 3"
+      },
+      "exits": [
+        {
+          "uuid": "b53154f1-dbd0-46ba-a908-6448d1f97b01",
+          "destination_uuid": "65858262-4283-42b7-b885-252e713320cc"
+        },
+        {
+          "uuid": "d7a3be82-61d3-4659-97a4-13f694903a0b",
+          "destination_uuid": "5593b672-7c5d-4621-ade7-f258df8a4115"
+        },
+        {
+          "uuid": "f22d9923-bb7f-4e3c-9713-4b7883b87568",
+          "destination_uuid": "86c0f4ad-567a-4194-9a64-76bfac38f718"
+        },
+        {
+          "uuid": "4997d828-a79f-4b4c-a8b7-d52ae0af467f",
+          "destination_uuid": "f0ad5b92-ada0-4a3e-87db-9d3fc64a30eb"
+        },
+        {
+          "uuid": "d78a34f7-a393-4943-9ca2-cf59dc12168a",
+          "destination_uuid": "285d78d9-9eb8-46e3-9d63-cd45728d4f34"
+        },
+        {
+          "destination_uuid": "c12314bf-88f1-431f-a5d8-99a58bff1e85",
+          "uuid": "05cab01f-7b10-4aac-be9f-f2667e1cf702"
+        }
+      ]
+    },
+    {
+      "uuid": "65858262-4283-42b7-b885-252e713320cc",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sharing emotions – especially the difficult ones – sets an important example for your child or teen! It actually makes everyone in the family stronger, because you can understand and support each other better. ",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "01f2b23f-312f-491a-806d-bc9cc5ebee8d"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "76c1d6a2-ae83-4b06-bbf0-e031b954d95e",
+          "destination_uuid": "5a2e8991-9ad9-4356-95f1-d7f4043a669c"
+        }
+      ]
+    },
+    {
+      "uuid": "86c0f4ad-567a-4194-9a64-76bfac38f718",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Starting a new thing is always difficult at first. Give yourselves some time to get used to it, and keep giving the good example by noticing and sharing emotions. Over time, your child or teen will learn to do the same – and they will feel even more loved and cared for.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "0b6ae371-b94f-4bfb-a270-067cb39058a2"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "4f1844c4-88ec-4a92-b870-d43eda07fb06",
+          "destination_uuid": "5a2e8991-9ad9-4356-95f1-d7f4043a669c"
+        }
+      ]
+    },
+    {
+      "uuid": "f0ad5b92-ada0-4a3e-87db-9d3fc64a30eb",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sharing emotions is about explaining how you are feeling so your child or teen is aware and learns to do the same. You can choose how much detail you want to share about the situation. It’s up to you! You can also choose to answer questions later: “I am feeling angry/stressed now, can you please give me some time? We can talk about this more tonight”.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "0eec2d18-b2c6-491d-9b3c-15fd09ea8ae7"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "fbc43da5-9a02-47f5-a5ba-9323955c319a",
+          "destination_uuid": "5a2e8991-9ad9-4356-95f1-d7f4043a669c"
+        }
+      ]
+    },
+    {
+      "uuid": "285d78d9-9eb8-46e3-9d63-cd45728d4f34",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "It’s okay to not want to share at that time. Find some time later on when you feel calmer to explain so that everyone can understand.  ",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "c1f31130-cebb-462d-b399-6606d0ce72ac"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "2605e0fe-eba6-4c9e-9995-06a1fccd1a8f",
+          "destination_uuid": "5a2e8991-9ad9-4356-95f1-d7f4043a669c"
+        }
+      ]
+    },
+    {
+      "uuid": "5593b672-7c5d-4621-ade7-f258df8a4115",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Being specific is not rude or insensitive, it really helps others understand you clearly and prevents confusion in the family. Emotions like anger and stress are part of our lives. All we need to do when we feel angry and stressed is know how to handle it by taking a few deep breaths before responding. ",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "974daae2-3f49-4689-9767-bf30298786cb"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "845f6f72-329a-459b-900c-55279523737e",
+          "destination_uuid": "5a2e8991-9ad9-4356-95f1-d7f4043a669c"
+        }
+      ]
+    },
+    {
+      "uuid": "5a2e8991-9ad9-4356-95f1-d7f4043a669c",
+      "actions": [
+        {
+          "uuid": "bf66835d-3cb7-4bcd-9d53-d8e916a7dab4",
+          "type": "set_contact_field",
+          "field": {
+            "key": "want_feedback_checkin",
+            "name": "want feedback checkin"
+          },
+          "value": "yes"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "b2c20c7c-7e1b-4c5d-925c-8029dba7d80b",
+          "destination_uuid": "a3474e1c-1baf-4397-a0fe-831403d7acc5"
+        }
+      ]
+    },
+    {
+      "uuid": "a3474e1c-1baf-4397-a0fe-831403d7acc5",
+      "actions": [
+        {
+          "uuid": "eaf1b29c-680c-490c-883e-2c0f8c5be5d6",
+          "type": "enter_flow",
+          "flow": {
+            "uuid": "9c6ec05a-102d-457d-abe4-3056979c5d3d",
+            "name": "PLH - Feedback - Feedback for checkIn"
+          }
+        }
+      ],
+      "router": {
+        "type": "switch",
+        "operand": "@child.run.status",
+        "cases": [
+          {
+            "uuid": "19b1c187-44fc-43bb-bb04-bfcc83afce95",
+            "type": "has_only_text",
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "5df29adc-60f3-420a-b6bd-eaeac77ba02c"
+          },
+          {
+            "uuid": "5f524676-5347-4fb1-b114-43ccd4749e91",
+            "arguments": [
+              "expired"
+            ],
+            "type": "has_only_text",
+            "category_uuid": "5a32b1e0-4470-4886-987d-ac09c961294b"
+          }
+        ],
+        "categories": [
+          {
+            "uuid": "5df29adc-60f3-420a-b6bd-eaeac77ba02c",
+            "name": "Complete",
+            "exit_uuid": "2cebd956-d753-47aa-ac1e-ed9dd5c9d8b5"
+          },
+          {
+            "uuid": "5a32b1e0-4470-4886-987d-ac09c961294b",
+            "name": "Expired",
+            "exit_uuid": "51dc1507-96c1-4d9e-9a40-6b302648f6b3"
+          }
+        ],
+        "default_category_uuid": "5a32b1e0-4470-4886-987d-ac09c961294b"
+      },
+      "exits": [
+        {
+          "uuid": "2cebd956-d753-47aa-ac1e-ed9dd5c9d8b5",
+          "destination_uuid": null
+        },
+        {
+          "uuid": "51dc1507-96c1-4d9e-9a40-6b302648f6b3",
+          "destination_uuid": null
+        }
+      ]
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "2d830f0f-93ad-4f1d-bf13-872df049356d",
+  "revision": 28
+}

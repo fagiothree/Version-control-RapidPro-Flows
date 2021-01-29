@@ -1,0 +1,343 @@
+{
+  "_ui": {
+    "nodes": {
+      "7b95fc5c-7965-4cbf-b0c6-b9c39931c514": {
+        "position": {
+          "left": 580,
+          "top": 240
+        },
+        "type": "execute_actions"
+      },
+      "2a3661c5-1b3a-4b0c-80bb-dee69c3df8ba": {
+        "position": {
+          "left": 140,
+          "top": 520
+        },
+        "type": "execute_actions"
+      },
+      "090a7905-8173-4dd5-8b2a-85e10194f6fd": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 580,
+          "top": 460
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "8d7ed5e6-e461-4036-aa10-da9bda84f974": {
+        "position": {
+          "left": 960,
+          "top": 340
+        },
+        "type": "execute_actions"
+      },
+      "6d5b80c7-08fe-4fe6-9431-5237ce365c62": {
+        "config": {},
+        "position": {
+          "left": 120,
+          "top": 660
+        },
+        "type": "split_by_subflow"
+      },
+      "afeac1fb-9522-43b8-9dc5-6680da6b2acc": {
+        "position": {
+          "left": 600,
+          "top": 620
+        },
+        "type": "execute_actions"
+      },
+      "39061e8d-5a68-4211-8b48-a478956e8713": {
+        "position": {
+          "left": 960,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "6060ceac-06f4-4d9d-ae96-194028116a34": {
+        "position": {
+          "left": 580,
+          "top": 760
+        },
+        "type": "execute_actions"
+      },
+      "4e6d7e3e-7bd7-429a-ad73-5c89cb8d4e9a": {
+        "position": {
+          "left": 560,
+          "top": 60
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Supportive - Children reminder",
+  "nodes": [
+    {
+      "uuid": "4e6d7e3e-7bd7-429a-ad73-5c89cb8d4e9a",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Hi! Could you be spending more time with your children and less time on your phone? Put it down and do something fun together!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "23b3c7ab-4c05-4714-8cdb-59d0f8c79d8a"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "2b86a589-daf3-4893-9c4f-8332c2ae3579",
+          "destination_uuid": "7b95fc5c-7965-4cbf-b0c6-b9c39931c514"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Would you like a suggestion for an activity to do with your children?",
+          "type": "send_msg",
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "uuid": "23676cb5-07d3-40a7-8635-62f40b4e76f1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "090a7905-8173-4dd5-8b2a-85e10194f6fd",
+          "uuid": "d7872155-a3ab-4945-9c98-20f6c56cfd8f"
+        }
+      ],
+      "uuid": "7b95fc5c-7965-4cbf-b0c6-b9c39931c514"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "0bdfa916-cd31-4d23-9fb6-e5d89ef210af"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "39061e8d-5a68-4211-8b48-a478956e8713",
+          "uuid": "8654e460-054f-4b4e-a065-9e31472b92ba"
+        }
+      ],
+      "uuid": "8d7ed5e6-e461-4036-aa10-da9bda84f974"
+    },
+    {
+      "uuid": "090a7905-8173-4dd5-8b2a-85e10194f6fd",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "0caae35c-af7d-4d4d-87e9-6389a15b89d8",
+        "cases": [
+          {
+            "arguments": [
+              "yes y"
+            ],
+            "type": "has_any_word",
+            "uuid": "33de3fd2-3179-4797-925e-17b6b053aa9d",
+            "category_uuid": "fca717e3-d330-4c4e-b12d-2a85df42f4c1"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "type": "has_any_word",
+            "uuid": "6873de08-a7d5-429b-8be0-df4d2dc96ba3",
+            "category_uuid": "f2851bfd-263f-45f4-8ed8-e37df8049b1f"
+          }
+        ],
+        "categories": [
+          {
+            "uuid": "fca717e3-d330-4c4e-b12d-2a85df42f4c1",
+            "name": "Yes",
+            "exit_uuid": "f1d952ad-185d-4262-b63e-0acd4c73d22f"
+          },
+          {
+            "uuid": "f2851bfd-263f-45f4-8ed8-e37df8049b1f",
+            "name": "No",
+            "exit_uuid": "60769d51-37fb-40f4-848b-d42a46c58ab1"
+          },
+          {
+            "exit_uuid": "78b89b0b-f0f5-4307-b69c-af2a663179f5",
+            "name": "Other",
+            "uuid": "0caae35c-af7d-4d4d-87e9-6389a15b89d8"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg"
+        },
+        "result_name": "Result 1"
+      },
+      "exits": [
+        {
+          "uuid": "f1d952ad-185d-4262-b63e-0acd4c73d22f",
+          "destination_uuid": "2a3661c5-1b3a-4b0c-80bb-dee69c3df8ba"
+        },
+        {
+          "uuid": "60769d51-37fb-40f4-848b-d42a46c58ab1",
+          "destination_uuid": "afeac1fb-9522-43b8-9dc5-6680da6b2acc"
+        },
+        {
+          "destination_uuid": "8d7ed5e6-e461-4036-aa10-da9bda84f974",
+          "uuid": "78b89b0b-f0f5-4307-b69c-af2a663179f5"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "071a82ab-2380-4e47-af12-fc803fa07ef4",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7b95fc5c-7965-4cbf-b0c6-b9c39931c514",
+          "uuid": "2598d068-17da-4280-876c-e41ad2702f1c"
+        }
+      ],
+      "uuid": "39061e8d-5a68-4211-8b48-a478956e8713"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "331900df-6fa5-480f-92dd-1aeed7ac4a55",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "6d5b80c7-08fe-4fe6-9431-5237ce365c62",
+          "uuid": "9e9ba47f-de9b-4964-9182-6f96eb7d1b57"
+        }
+      ],
+      "uuid": "2a3661c5-1b3a-4b0c-80bb-dee69c3df8ba"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always get suggestions for activities to do by typing \"Help\". Chat later!",
+          "type": "send_msg",
+          "uuid": "00082815-24cf-4640-9b9d-47bd6f049622"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "6060ceac-06f4-4d9d-ae96-194028116a34",
+          "uuid": "bc9cf1ae-337f-4454-a149-360442be69f7"
+        }
+      ],
+      "uuid": "afeac1fb-9522-43b8-9dc5-6680da6b2acc"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Handler - Activity",
+            "uuid": "4a51417a-8b9b-4103-a40e-e61db60861de"
+          },
+          "type": "enter_flow",
+          "uuid": "13c558ed-c80a-459b-a9e5-e74f5c9aae76"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "7d2b2b4f-5c90-4dae-b765-69ba7e9820b7"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "bcae549f-e28d-4125-9841-357ea781eb9e"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "b3c74c62-68ff-45af-8875-2b791fa89afe",
+            "type": "has_only_text",
+            "uuid": "7649903f-0b3b-4d3b-bd3a-f31a3d1afe86"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "0e2cb216-b305-49c5-83b6-17facb7c08d3",
+            "type": "has_only_text",
+            "uuid": "2c568c3b-b03b-4ff4-b626-c4cc6ea782fe"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "7d2b2b4f-5c90-4dae-b765-69ba7e9820b7",
+            "name": "Complete",
+            "uuid": "b3c74c62-68ff-45af-8875-2b791fa89afe"
+          },
+          {
+            "exit_uuid": "bcae549f-e28d-4125-9841-357ea781eb9e",
+            "name": "Expired",
+            "uuid": "0e2cb216-b305-49c5-83b6-17facb7c08d3"
+          }
+        ],
+        "default_category_uuid": "0e2cb216-b305-49c5-83b6-17facb7c08d3",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "6d5b80c7-08fe-4fe6-9431-5237ce365c62"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "dfc1a4d0-3fda-49df-8fd5-1e77e6dd1bd4",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "f49303a2-50ea-4c9e-9165-3a4cdaf15706"
+        }
+      ],
+      "uuid": "6060ceac-06f4-4d9d-ae96-194028116a34"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "34f8a4fb-f84e-4533-863e-ca66e67a93ad",
+  "revision": 18
+}

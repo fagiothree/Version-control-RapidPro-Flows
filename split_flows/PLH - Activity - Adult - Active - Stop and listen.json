@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "000f4b81-e9d1-40f7-855d-5920f5d62fc8": {
+        "config": {},
+        "position": {
+          "left": 60,
+          "top": 680
+        },
+        "type": "split_by_subflow"
+      },
+      "73a6f073-93c1-4bff-adcf-8097c5c4a450": {
+        "position": {
+          "left": 0,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "777f050c-4096-4384-a4f3-6721e3ae555d": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Adult - Active - Stop and listen",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Stop & Listen\n• Stop for a moment and close your eyes. \n• How many sounds can you hear? Listen to sounds inside and outside the room. Count them on your fingers. (Pause for 10 seconds)\n• How many fingers do you have up? What sounds did you hear? \n• Let’s try again. Can you hear any new sounds this time? Can you hear any sounds inside your own body? (Pause for 10 seconds)\n• Open your eyes. What new sounds did you hear?",
+          "type": "send_msg",
+          "uuid": "0873a183-c33a-448e-8efc-a18a82eb092b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "6c72227e-54f8-4589-8025-dca5388985e2"
+        }
+      ],
+      "uuid": "777f050c-4096-4384-a4f3-6721e3ae555d"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "5d543035-78cd-42ed-95ac-da692488d94f",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "28d60010-2f4a-4418-9011-ad01287c3798",
+          "value": "Adult 9"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "000f4b81-e9d1-40f7-855d-5920f5d62fc8",
+          "uuid": "2b6ce1ab-d4aa-4a0c-b0fd-6e2f7681d6b3"
+        }
+      ],
+      "uuid": "73a6f073-93c1-4bff-adcf-8097c5c4a450"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "2f75a6e9-4b09-4e82-a2fe-20a63a0eeda4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "8b246ebc-c617-42ca-8c24-16e8d1731e67"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "7156d127-5abd-4019-b05c-4dc7df37d351"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "873efb12-643a-482f-a0b4-67efa3fe46e6",
+            "type": "has_only_text",
+            "uuid": "4e42413d-e2e3-4c75-89c0-a8aa6c6b2072"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "fdde0b27-cbc4-4f17-b32e-1371d4f29d45",
+            "type": "has_only_text",
+            "uuid": "ccf761aa-dc67-4f32-a306-873126ca9546"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "8b246ebc-c617-42ca-8c24-16e8d1731e67",
+            "name": "Complete",
+            "uuid": "873efb12-643a-482f-a0b4-67efa3fe46e6"
+          },
+          {
+            "exit_uuid": "7156d127-5abd-4019-b05c-4dc7df37d351",
+            "name": "Expired",
+            "uuid": "fdde0b27-cbc4-4f17-b32e-1371d4f29d45"
+          }
+        ],
+        "default_category_uuid": "fdde0b27-cbc4-4f17-b32e-1371d4f29d45",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "000f4b81-e9d1-40f7-855d-5920f5d62fc8"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "693b004b-5a6c-4bf3-a78a-18935d10f4f2",
+  "revision": 1
+}

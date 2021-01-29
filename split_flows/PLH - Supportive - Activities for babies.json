@@ -1,0 +1,318 @@
+{
+  "_ui": {
+    "nodes": {
+      "019157c8-5aaf-4d2f-abde-84ba9ddc7835": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 580,
+          "top": 260
+        },
+        "type": "wait_for_response"
+      },
+      "1f8a6c95-09fa-4e6e-8622-8b2f97e8ef7b": {
+        "position": {
+          "left": 960,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "36a33637-e739-4f2c-a3a5-f21d3bab85a4": {
+        "position": {
+          "left": 600,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "5f63fbdc-3af8-4899-946d-a34ed41ef1c1": {
+        "position": {
+          "left": 160,
+          "top": 260
+        },
+        "type": "execute_actions"
+      },
+      "5fd17ab9-327a-4d0d-9de4-445a381672ef": {
+        "position": {
+          "left": 960,
+          "top": 340
+        },
+        "type": "execute_actions"
+      },
+      "9f5762ed-42a0-4cd3-abc1-7bd9c4d52b85": {
+        "position": {
+          "left": 580,
+          "top": 620
+        },
+        "type": "execute_actions"
+      },
+      "a769ef1f-d430-4860-8c59-f65a8f9dee97": {
+        "config": {},
+        "position": {
+          "left": 180,
+          "top": 360
+        },
+        "type": "split_by_subflow"
+      },
+      "dad69a33-3bd2-45c2-acf4-5facba0097a6": {
+        "position": {
+          "left": 580,
+          "top": 20
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Supportive - Activities for babies",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Give me more information",
+            "I am not interested"
+          ],
+          "text": "Hi! Would you like some suggestions for fun activities to help develop your baby's brain?",
+          "type": "send_msg",
+          "uuid": "1bbc644b-7cca-4c0b-bba5-971c69ee00e1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "019157c8-5aaf-4d2f-abde-84ba9ddc7835",
+          "uuid": "34c43a7c-2905-403c-8385-80710a537cad"
+        }
+      ],
+      "uuid": "dad69a33-3bd2-45c2-acf4-5facba0097a6"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "b0d086bb-c1a1-443d-8afe-2510b2dc647f",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "a769ef1f-d430-4860-8c59-f65a8f9dee97",
+          "uuid": "a833de4e-1a85-44e8-8e95-ccff62667ad3"
+        }
+      ],
+      "uuid": "5f63fbdc-3af8-4899-946d-a34ed41ef1c1"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "5f63fbdc-3af8-4899-946d-a34ed41ef1c1",
+          "uuid": "56658daa-2483-440b-bfee-965bda49a5b0"
+        },
+        {
+          "destination_uuid": "36a33637-e739-4f2c-a3a5-f21d3bab85a4",
+          "uuid": "99ef2312-2be8-4fa9-bed4-78c22873fc10"
+        },
+        {
+          "destination_uuid": "5fd17ab9-327a-4d0d-9de4-445a381672ef",
+          "uuid": "83a744f9-c5ba-48e9-b853-695bf053062f"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "more information"
+            ],
+            "category_uuid": "d8b5bc36-39cf-401f-8d41-65040082d323",
+            "type": "has_any_word",
+            "uuid": "14dc8e54-eb71-486d-96f6-dbe19b730ec3"
+          },
+          {
+            "arguments": [
+              "not no interested"
+            ],
+            "category_uuid": "0ca86134-d22a-4566-908d-18eec9cde845",
+            "type": "has_any_word",
+            "uuid": "25badb5d-8755-43d8-9dfa-b4f96f1d321d"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "56658daa-2483-440b-bfee-965bda49a5b0",
+            "name": "More",
+            "uuid": "d8b5bc36-39cf-401f-8d41-65040082d323"
+          },
+          {
+            "exit_uuid": "99ef2312-2be8-4fa9-bed4-78c22873fc10",
+            "name": "Not",
+            "uuid": "0ca86134-d22a-4566-908d-18eec9cde845"
+          },
+          {
+            "exit_uuid": "83a744f9-c5ba-48e9-b853-695bf053062f",
+            "name": "Other",
+            "uuid": "d087e2a2-c2bb-4bfa-8a98-ee4b1cfd97b0"
+          }
+        ],
+        "default_category_uuid": "d087e2a2-c2bb-4bfa-8a98-ee4b1cfd97b0",
+        "operand": "@input.text",
+        "result_name": "Result 1",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "019157c8-5aaf-4d2f-abde-84ba9ddc7835"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "28512922-39a4-4b1f-a8af-e7c5b9db3d5d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "1f8a6c95-09fa-4e6e-8622-8b2f97e8ef7b",
+          "uuid": "c106783d-0887-4124-8926-96c8a1fcddd3"
+        }
+      ],
+      "uuid": "5fd17ab9-327a-4d0d-9de4-445a381672ef"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Handler - Activity - Babies",
+            "uuid": "cbd5f78a-fb3c-4732-a853-8af2e02462fa"
+          },
+          "type": "enter_flow",
+          "uuid": "d7d3abd5-140e-48ef-b1ad-bc6f1caf707f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e10fbaca-54b6-4ca4-8327-ebb0b0c69f20"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "ebe39422-50df-4e4d-b8ce-675dae9434ec"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "ab4530fb-2dcd-4a9f-be40-3049ad9b6349",
+            "type": "has_only_text",
+            "uuid": "e8d85480-5c33-406f-b0c4-8fbf7614c329"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "c428ed2d-757f-460c-bf4a-237544ec07d7",
+            "type": "has_only_text",
+            "uuid": "da103017-287a-4144-8dfc-a8a8ded2ac2e"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "e10fbaca-54b6-4ca4-8327-ebb0b0c69f20",
+            "name": "Complete",
+            "uuid": "ab4530fb-2dcd-4a9f-be40-3049ad9b6349"
+          },
+          {
+            "exit_uuid": "ebe39422-50df-4e4d-b8ce-675dae9434ec",
+            "name": "Expired",
+            "uuid": "c428ed2d-757f-460c-bf4a-237544ec07d7"
+          }
+        ],
+        "default_category_uuid": "c428ed2d-757f-460c-bf4a-237544ec07d7",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "a769ef1f-d430-4860-8c59-f65a8f9dee97"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always get suggestions for activities to develop your baby's brain by typing \"Help\". Chat later!",
+          "type": "send_msg",
+          "uuid": "e1f0405d-affe-49db-b0a8-22da956cdb17"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "9f5762ed-42a0-4cd3-abc1-7bd9c4d52b85",
+          "uuid": "014ac2ee-db6b-420a-9415-40f074858618"
+        }
+      ],
+      "uuid": "36a33637-e739-4f2c-a3a5-f21d3bab85a4"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "ed5364e6-cd12-4852-bf93-543d4f0c84d7",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "dad69a33-3bd2-45c2-acf4-5facba0097a6",
+          "uuid": "83e04d1d-cf6d-4367-aacf-8e5b12462c3b"
+        }
+      ],
+      "uuid": "1f8a6c95-09fa-4e6e-8622-8b2f97e8ef7b"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "ea0dea89-41fa-4d31-8aac-b9cb28944995",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "6dd5e139-62e5-4e0d-a4ec-3ea870c73424"
+        }
+      ],
+      "uuid": "9f5762ed-42a0-4cd3-abc1-7bd9c4d52b85"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "da37dd57-a892-41c7-b76b-0baff4c06c31",
+  "revision": 1
+}

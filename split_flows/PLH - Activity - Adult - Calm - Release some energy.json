@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "1f38298e-9d00-4fdd-85d5-f2e94b334429": {
+        "config": {},
+        "position": {
+          "left": 180,
+          "top": 800
+        },
+        "type": "split_by_subflow"
+      },
+      "69b3f7a7-d769-4d0c-a55f-db8c3973983c": {
+        "position": {
+          "left": 200,
+          "top": 560
+        },
+        "type": "execute_actions"
+      },
+      "99ec5724-3901-4b4f-8bf4-bb9c04e46735": {
+        "position": {
+          "left": 220,
+          "top": 80
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Adult - Calm - Release some energy",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Release Some Energy\n•\tBaba da bi da ba da baaa! Pause Power! \n•\tWhat’s Pause Power I hear you say? It’s the ability to transform from a grumpy, angry person into a calm, clear one. \n•\tWhen I’m feeling frustrated I plant my feet firmly on the ground and I breathe in and out three times as slowly as I can. Sometimes I imagine I’m smelling a flower and blowing out a candle. \n•\tDa ta! Pause Power! My transformation from grumpy to calm is complete!",
+          "type": "send_msg",
+          "uuid": "96d3c181-b4c8-4d18-a2ef-6a4620fd56c5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "5449545f-3c8f-46d5-9855-0febd3e98637"
+        }
+      ],
+      "uuid": "99ec5724-3901-4b4f-8bf4-bb9c04e46735"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "17c9b3de-29a6-4c5f-842a-81b6d540c689",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "6979d1f5-9952-4369-8dba-47ec392dd977",
+          "value": "Adult 10"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "1f38298e-9d00-4fdd-85d5-f2e94b334429",
+          "uuid": "f2657182-720e-4969-b7d2-136a30e411d5"
+        }
+      ],
+      "uuid": "69b3f7a7-d769-4d0c-a55f-db8c3973983c"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "5ef7c12c-f1ea-400d-9c4b-1fc3b575ad89"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "df9e5323-bb15-47dd-adbc-c8e3aae2f3cb"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "dc1190c6-a87b-48c7-a043-7a5c7bce85d3"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "229b7d35-ff15-4330-a68e-70177097ab76",
+            "type": "has_only_text",
+            "uuid": "d308bb84-2612-4232-bf1b-7b84ad2834ec"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "d338fe70-709d-4101-bbde-0d415e49e986",
+            "type": "has_only_text",
+            "uuid": "acbfba4c-7fd3-4bdc-ae31-9d7ce21c4497"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "df9e5323-bb15-47dd-adbc-c8e3aae2f3cb",
+            "name": "Complete",
+            "uuid": "229b7d35-ff15-4330-a68e-70177097ab76"
+          },
+          {
+            "exit_uuid": "dc1190c6-a87b-48c7-a043-7a5c7bce85d3",
+            "name": "Expired",
+            "uuid": "d338fe70-709d-4101-bbde-0d415e49e986"
+          }
+        ],
+        "default_category_uuid": "d338fe70-709d-4101-bbde-0d415e49e986",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "1f38298e-9d00-4fdd-85d5-f2e94b334429"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "75290179-d548-4b8e-98bd-f3b33b16cdd6",
+  "revision": 1
+}

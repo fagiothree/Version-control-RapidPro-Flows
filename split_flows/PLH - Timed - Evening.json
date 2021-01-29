@@ -1,0 +1,623 @@
+{
+  "_ui": {
+    "nodes": {
+      "fb599f77-2c05-44d2-91eb-04ec9909f4ce": {
+        "position": {
+          "left": 520,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "144ac871-ccb7-4290-a863-5375c3e0615b": {
+        "position": {
+          "left": 520,
+          "top": 120
+        },
+        "type": "execute_actions"
+      },
+      "20596410-e314-491a-bfa1-a7dc4f48ab49": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "evening_frequency_counter",
+            "name": "evening frequency counter",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 540,
+          "top": 220
+        },
+        "type": "split_by_contact_field"
+      },
+      "6c0ab335-174c-409d-8e1a-3c89c30d5a0a": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "next_tip_evening",
+            "name": "next tip evening",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 120,
+          "top": 300
+        },
+        "type": "split_by_contact_field"
+      },
+      "18cd12e1-161a-4c24-87fa-2fa39f5c1152": {
+        "position": {
+          "left": 660,
+          "top": 440
+        },
+        "type": "execute_actions"
+      },
+      "400f42fe-7682-4538-b681-96df47775733": {
+        "position": {
+          "left": 120,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "d3c4fb9e-a474-4288-9d30-51a2fdaece1f": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "evening_supportive_counter",
+            "name": "evening supportive counter",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 660,
+          "top": 560
+        },
+        "type": "split_by_contact_field"
+      },
+      "f653cbee-6397-47d0-acb1-dc255e0a6d76": {
+        "config": {},
+        "position": {
+          "left": 140,
+          "top": 600
+        },
+        "type": "split_by_subflow"
+      },
+      "6e55b234-f4d4-4ed3-b84a-90cec755209f": {
+        "type": "split_by_subflow",
+        "position": {
+          "left": 580,
+          "top": 700
+        },
+        "config": {}
+      },
+      "2eb34d3c-3ed4-4d14-8078-7673ac8e2d3d": {
+        "config": {},
+        "position": {
+          "left": 860,
+          "top": 740
+        },
+        "type": "split_by_subflow"
+      },
+      "b4c93ecc-6984-456e-94e1-b168849c8174": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 120,
+          "top": 760
+        },
+        "type": "split_by_expression"
+      },
+      "21f2b41c-755b-4537-9382-5f8a13283791": {
+        "position": {
+          "left": 640,
+          "top": 880
+        },
+        "type": "execute_actions"
+      },
+      "5c2cfacb-5319-44f4-9a2e-f5ade48135ad": {
+        "position": {
+          "left": 920,
+          "top": 920
+        },
+        "type": "execute_actions"
+      },
+      "21f5a4b5-94e8-43ef-9b55-c1d39baaf22d": {
+        "position": {
+          "left": 700,
+          "top": 1060
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Timed - Evening",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "evening_frequency_counter",
+            "name": "evening frequency counter"
+          },
+          "type": "set_contact_field",
+          "uuid": "eba894d2-5ee2-49e5-837c-bbb31bed47ca",
+          "value": "@(mod(fields.evening_frequency_counter+1, fields.frequency))"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "144ac871-ccb7-4290-a863-5375c3e0615b",
+          "uuid": "152d30b3-6464-4089-8e9e-7d5611aaeffa"
+        }
+      ],
+      "uuid": "fb599f77-2c05-44d2-91eb-04ec9909f4ce"
+    },
+    {
+      "actions": [
+        {
+          "category": "",
+          "name": "time of day",
+          "type": "set_run_result",
+          "uuid": "23925df0-e85d-4441-95bc-9ebbf10827b4",
+          "value": "evening"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "20596410-e314-491a-bfa1-a7dc4f48ab49",
+          "uuid": "f17d4e4c-2275-407c-91db-f81d32979bdc"
+        }
+      ],
+      "uuid": "144ac871-ccb7-4290-a863-5375c3e0615b"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "6c0ab335-174c-409d-8e1a-3c89c30d5a0a",
+          "uuid": "39d02499-2357-4080-b224-5c7e10e0038d"
+        },
+        {
+          "destination_uuid": "18cd12e1-161a-4c24-87fa-2fa39f5c1152",
+          "uuid": "70459748-a7bd-424b-a3fc-20cd08c3f1c4"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "0"
+            ],
+            "category_uuid": "d5a90e7c-c67c-4b8c-901f-d81569e05b84",
+            "type": "has_number_eq",
+            "uuid": "40ca8596-c75e-4710-b069-c31764246402"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "39d02499-2357-4080-b224-5c7e10e0038d",
+            "name": "content",
+            "uuid": "d5a90e7c-c67c-4b8c-901f-d81569e05b84"
+          },
+          {
+            "exit_uuid": "70459748-a7bd-424b-a3fc-20cd08c3f1c4",
+            "name": "Other",
+            "uuid": "19b1b296-ca1c-4fa5-98c9-016a63ba472f"
+          }
+        ],
+        "default_category_uuid": "19b1b296-ca1c-4fa5-98c9-016a63ba472f",
+        "operand": "@fields.evening_frequency_counter",
+        "type": "switch"
+      },
+      "uuid": "20596410-e314-491a-bfa1-a7dc4f48ab49"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "18cd12e1-161a-4c24-87fa-2fa39f5c1152",
+          "uuid": "74f017c5-d463-4ce4-9053-bf49c7330dc1"
+        },
+        {
+          "destination_uuid": "400f42fe-7682-4538-b681-96df47775733",
+          "uuid": "5d88d93f-9f29-4a2a-9a33-731b731153a1"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "@fields.next_tip_main"
+            ],
+            "category_uuid": "452f56d9-e21a-4634-b2fb-2cc44af5ec9d",
+            "type": "has_number_gt",
+            "uuid": "8059f930-e760-4962-b933-6ab6694ee003"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "74f017c5-d463-4ce4-9053-bf49c7330dc1",
+            "name": ">Fields",
+            "uuid": "452f56d9-e21a-4634-b2fb-2cc44af5ec9d"
+          },
+          {
+            "exit_uuid": "5d88d93f-9f29-4a2a-9a33-731b731153a1",
+            "name": "Other",
+            "uuid": "df47e19f-dc93-4aa6-ae28-541369550557"
+          }
+        ],
+        "default_category_uuid": "df47e19f-dc93-4aa6-ae28-541369550557",
+        "operand": "@fields.next_tip_evening",
+        "type": "switch"
+      },
+      "uuid": "6c0ab335-174c-409d-8e1a-3c89c30d5a0a"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "evening_supportive_counter",
+            "name": "evening supportive counter"
+          },
+          "type": "set_contact_field",
+          "uuid": "a49c6be6-1788-4ba3-a4c1-7061da94f31a",
+          "value": "@(if(fields.evening_supportive_counter<1, fields.evening_supportive_counter+1,0))"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "d3c4fb9e-a474-4288-9d30-51a2fdaece1f",
+          "uuid": "715e07cd-2ed1-47d9-b467-3fa0811ba8ff"
+        }
+      ],
+      "uuid": "18cd12e1-161a-4c24-87fa-2fa39f5c1152"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "next_tip_evening",
+            "name": "next tip evening"
+          },
+          "type": "set_contact_field",
+          "uuid": "608dea8f-bad0-449c-a928-b248c15f97fb",
+          "value": "@(min(fields.next_tip_evening+1,22))"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f653cbee-6397-47d0-acb1-dc255e0a6d76",
+          "uuid": "394dfaa5-a94a-482a-8d5e-e75d34480719"
+        }
+      ],
+      "uuid": "400f42fe-7682-4538-b681-96df47775733"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "6e55b234-f4d4-4ed3-b84a-90cec755209f",
+          "uuid": "aff38ea6-becf-4066-95f1-93e21147e0db"
+        },
+        {
+          "destination_uuid": "2eb34d3c-3ed4-4d14-8078-7673ac8e2d3d",
+          "uuid": "b337f46b-e7fc-4d57-9cea-c13afe3c4227"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "0"
+            ],
+            "category_uuid": "8caa010e-75bb-48d6-8841-b6c1f05aa1b9",
+            "type": "has_number_eq",
+            "uuid": "02e80785-9f65-438f-964d-6d221f9583c8"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "aff38ea6-becf-4066-95f1-93e21147e0db",
+            "name": "calm",
+            "uuid": "8caa010e-75bb-48d6-8841-b6c1f05aa1b9"
+          },
+          {
+            "exit_uuid": "b337f46b-e7fc-4d57-9cea-c13afe3c4227",
+            "name": "Other",
+            "uuid": "7d13e6db-64e7-47ce-b0f4-b02583ece9fa"
+          }
+        ],
+        "default_category_uuid": "7d13e6db-64e7-47ce-b0f4-b02583ece9fa",
+        "operand": "@fields.evening_supportive_counter",
+        "type": "switch"
+      },
+      "uuid": "d3c4fb9e-a474-4288-9d30-51a2fdaece1f"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Evening content handler",
+            "uuid": "dec3d08d-6249-4182-af17-e177cce70e15"
+          },
+          "type": "enter_flow",
+          "uuid": "adaaa982-dc31-43c5-9acb-42225a3db71c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "b4c93ecc-6984-456e-94e1-b168849c8174",
+          "uuid": "37121723-c892-4467-a555-1ed6e4635c8b"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "b6493f1a-3cf8-43db-8a59-4cdd727c4034"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "8d0a4ba4-cc18-44f8-9fd2-01c5a0c665eb",
+            "type": "has_only_text",
+            "uuid": "88d13ace-21f2-4756-9c4d-82ae10e49e3f"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "0627f98c-58aa-4ae9-b2ae-ab8e6e579250",
+            "type": "has_only_text",
+            "uuid": "c98cedde-d9d3-40fd-b9cc-b347d43953e3"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "37121723-c892-4467-a555-1ed6e4635c8b",
+            "name": "Complete",
+            "uuid": "8d0a4ba4-cc18-44f8-9fd2-01c5a0c665eb"
+          },
+          {
+            "exit_uuid": "b6493f1a-3cf8-43db-8a59-4cdd727c4034",
+            "name": "Expired",
+            "uuid": "0627f98c-58aa-4ae9-b2ae-ab8e6e579250"
+          }
+        ],
+        "default_category_uuid": "0627f98c-58aa-4ae9-b2ae-ab8e6e579250",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "f653cbee-6397-47d0-acb1-dc255e0a6d76"
+    },
+    {
+      "uuid": "6e55b234-f4d4-4ed3-b84a-90cec755209f",
+      "actions": [
+        {
+          "uuid": "f7083345-e169-4dba-abd6-b10c1932b006",
+          "type": "enter_flow",
+          "flow": {
+            "uuid": "0838cab3-181c-496d-bd65-81c82299bbe9",
+            "name": "PLH - Supportive - Calm"
+          }
+        }
+      ],
+      "router": {
+        "type": "switch",
+        "operand": "@child.run.status",
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "b855840c-0698-414f-ac38-b12406b75991",
+            "type": "has_only_text",
+            "uuid": "82112f0b-df83-48e5-aa3a-ff0ebc11ff62"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "285454c2-ec47-4285-8212-cc1e2ed38bb7",
+            "type": "has_only_text",
+            "uuid": "ab879077-9659-4e26-8ae5-e279d13e3be3"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "d54001cf-c8a1-43a3-bf83-1f1ad64eb811",
+            "name": "Complete",
+            "uuid": "b855840c-0698-414f-ac38-b12406b75991"
+          },
+          {
+            "exit_uuid": "e8f758d9-04df-4eb4-b290-5c47191e0e38",
+            "name": "Expired",
+            "uuid": "285454c2-ec47-4285-8212-cc1e2ed38bb7"
+          }
+        ],
+        "default_category_uuid": "285454c2-ec47-4285-8212-cc1e2ed38bb7"
+      },
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "d54001cf-c8a1-43a3-bf83-1f1ad64eb811"
+        },
+        {
+          "destination_uuid": "21f2b41c-755b-4537-9382-5f8a13283791",
+          "uuid": "e8f758d9-04df-4eb4-b290-5c47191e0e38"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Supportive - Praise",
+            "uuid": "52af89ff-e05e-4d2b-a6b5-7342cb657539"
+          },
+          "type": "enter_flow",
+          "uuid": "5e3574d3-9ac0-4f47-8bfc-678861af4ea4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "65f8c0d1-66ae-465f-97e7-e81d8827300a"
+        },
+        {
+          "destination_uuid": "5c2cfacb-5319-44f4-9a2e-f5ade48135ad",
+          "uuid": "aadf6cd7-097d-49b0-810e-541070410bf8"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "640b0281-70d2-494c-a8fb-9a2c01cd1549",
+            "type": "has_only_text",
+            "uuid": "5757cda2-34fc-4314-b359-831a3b6fe73b"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "0056fcaa-2c95-4b84-a041-f4352ebcf403",
+            "type": "has_only_text",
+            "uuid": "bb5dd8ea-e3b0-42af-aae7-835ae47a3508"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "65f8c0d1-66ae-465f-97e7-e81d8827300a",
+            "name": "Complete",
+            "uuid": "640b0281-70d2-494c-a8fb-9a2c01cd1549"
+          },
+          {
+            "exit_uuid": "aadf6cd7-097d-49b0-810e-541070410bf8",
+            "name": "Expired",
+            "uuid": "0056fcaa-2c95-4b84-a041-f4352ebcf403"
+          }
+        ],
+        "default_category_uuid": "0056fcaa-2c95-4b84-a041-f4352ebcf403",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "2eb34d3c-3ed4-4d14-8078-7673ac8e2d3d"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "18cd12e1-161a-4c24-87fa-2fa39f5c1152",
+          "uuid": "d4f39b91-4aa6-4bc5-8138-fbbaa8215290"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "2dc26941-de92-40a4-954b-06d4682011e2"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "no"
+            ],
+            "category_uuid": "85e5542a-3cc3-4fe9-b179-73a3d4a9b368",
+            "type": "has_any_word",
+            "uuid": "f2d3f2cf-49ee-4765-acad-34461f69c742"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "d4f39b91-4aa6-4bc5-8138-fbbaa8215290",
+            "name": "No content",
+            "uuid": "85e5542a-3cc3-4fe9-b179-73a3d4a9b368"
+          },
+          {
+            "exit_uuid": "2dc26941-de92-40a4-954b-06d4682011e2",
+            "name": "Other",
+            "uuid": "62eed338-3f54-4144-922f-f8dbae456a80"
+          }
+        ],
+        "default_category_uuid": "62eed338-3f54-4144-922f-f8dbae456a80",
+        "operand": "@child.results.evening_content",
+        "type": "switch"
+      },
+      "uuid": "b4c93ecc-6984-456e-94e1-b168849c8174"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "has_expired",
+            "name": "has expired"
+          },
+          "type": "set_contact_field",
+          "uuid": "5a604b28-6842-425c-b576-2891a3978ca4",
+          "value": "calm"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "21f5a4b5-94e8-43ef-9b55-c1d39baaf22d",
+          "uuid": "b4414486-c90e-4af6-9e92-c708b593b453"
+        }
+      ],
+      "uuid": "21f2b41c-755b-4537-9382-5f8a13283791"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "has_expired",
+            "name": "has expired"
+          },
+          "type": "set_contact_field",
+          "uuid": "93d89485-e3b4-470e-a8c4-8721c74093c6",
+          "value": "praise"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "21f5a4b5-94e8-43ef-9b55-c1d39baaf22d",
+          "uuid": "df9d351b-efe0-4389-9726-d4834abade60"
+        }
+      ],
+      "uuid": "5c2cfacb-5319-44f4-9a2e-f5ade48135ad"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "It looks like you are busy right now. Please type “GoBack” to receive the most recent messages again.",
+          "type": "send_msg",
+          "uuid": "ac914ac5-5f94-4ba8-8d52-7a37d6e4e0b5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "0617c477-09fe-4cd8-82d4-16c901d34acc"
+        }
+      ],
+      "uuid": "21f5a4b5-94e8-43ef-9b55-c1d39baaf22d"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "ba833aeb-a05f-4302-832d-8edf3ce13e4a",
+  "revision": 2
+}

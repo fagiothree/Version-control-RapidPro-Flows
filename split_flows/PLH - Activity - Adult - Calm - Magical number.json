@@ -1,0 +1,198 @@
+{
+  "_ui": {
+    "nodes": {
+      "064566d0-8dae-43f8-94b8-6013392797d9": {
+        "position": {
+          "left": 400,
+          "top": 840
+        },
+        "type": "execute_actions"
+      },
+      "455de58b-756f-4aa1-b29f-48054cf11b46": {
+        "position": {
+          "left": 400,
+          "top": 1060
+        },
+        "type": "execute_actions"
+      },
+      "764d45ad-74b9-4daa-8d92-0e3d27ead382": {
+        "position": {
+          "left": 400,
+          "top": 600
+        },
+        "type": "execute_actions"
+      },
+      "7f160f3f-4d88-41a7-a70b-95fe7414caee": {
+        "config": {},
+        "position": {
+          "left": 440,
+          "top": 1240
+        },
+        "type": "split_by_subflow"
+      },
+      "83989f4c-9b69-4e76-aca8-606f9d969c1b": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Adult - Calm - Magical number",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Hello! Did you know that 3 is a magical number? Breathe in to the count of three and breathe out to the count of three. How do you feel now? Do you feel any different? ",
+          "type": "send_msg",
+          "uuid": "e130ec9d-4035-45c3-b599-b4160cc17124"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "764d45ad-74b9-4daa-8d92-0e3d27ead382",
+          "uuid": "bd896a7b-c80d-4945-a79d-54cb9fdd574e"
+        }
+      ],
+      "uuid": "83989f4c-9b69-4e76-aca8-606f9d969c1b"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "What are your three favourite foods? Can you name three things you can see right now? Can you hear three sounds you can hear right now? What are three things you are grateful for right now? ",
+          "type": "send_msg",
+          "uuid": "d33796be-8b57-49df-9b17-ff1375519ae6"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "064566d0-8dae-43f8-94b8-6013392797d9",
+          "uuid": "b5b4ed0d-6a3c-4f18-95b0-e88e70ee4657"
+        }
+      ],
+      "uuid": "764d45ad-74b9-4daa-8d92-0e3d27ead382"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Breathe in to the count of three and breathe out to the count of three? How do you feel now? Do you feel any different? Three is a magical number!",
+          "type": "send_msg",
+          "uuid": "9e789544-41a5-4a10-943a-bf8db95a6aa6"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "ec8f8fa2-5d0f-45c3-806e-5260191aad9d"
+        }
+      ],
+      "uuid": "064566d0-8dae-43f8-94b8-6013392797d9"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "f7c8a535-783a-4d00-8d1c-ac1fb80a7794",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "a6b1a99e-36d1-49df-bbdf-3dd85e85f99e",
+          "value": "Adult7"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7f160f3f-4d88-41a7-a70b-95fe7414caee",
+          "uuid": "e1fded7e-5fa3-42ff-96b6-6c1d6664812e"
+        }
+      ],
+      "uuid": "455de58b-756f-4aa1-b29f-48054cf11b46"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "2d2415c2-7c22-4575-8d7a-aaa69d80bafe"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "792aa389-c7ef-4c19-9b6e-2b7cc4cb7e9a"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "7a7687bc-88ac-4ed1-b3cf-48340ea6545c"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "8183f4e7-75ec-43e2-bba9-d6238d635612",
+            "type": "has_only_text",
+            "uuid": "af813ff2-8bce-45f0-812e-b2999c0e874d"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "3c70cd0d-8a97-4728-b54e-216d389782ee",
+            "type": "has_only_text",
+            "uuid": "a94f2546-e965-4ee6-b2d7-59374de13eed"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "792aa389-c7ef-4c19-9b6e-2b7cc4cb7e9a",
+            "name": "Complete",
+            "uuid": "8183f4e7-75ec-43e2-bba9-d6238d635612"
+          },
+          {
+            "exit_uuid": "7a7687bc-88ac-4ed1-b3cf-48340ea6545c",
+            "name": "Expired",
+            "uuid": "3c70cd0d-8a97-4728-b54e-216d389782ee"
+          }
+        ],
+        "default_category_uuid": "3c70cd0d-8a97-4728-b54e-216d389782ee",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "7f160f3f-4d88-41a7-a70b-95fe7414caee"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "6ab7afec-9f3e-4ae9-941f-dd0ecb1dcce0",
+  "revision": 1
+}

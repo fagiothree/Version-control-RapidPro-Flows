@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "24b5c25f-559c-4c10-a47f-21dc15aed48c": {
+        "position": {
+          "left": 220,
+          "top": 440
+        },
+        "type": "execute_actions"
+      },
+      "98708e95-2e8b-4967-819c-39a2acb2fa1d": {
+        "config": {},
+        "position": {
+          "left": 460,
+          "top": 640
+        },
+        "type": "split_by_subflow"
+      },
+      "e880a2ea-e8dd-488f-bae9-19d567c673d7": {
+        "position": {
+          "left": 240,
+          "top": 20
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Active - Co chef",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Co-chef\n•\tAsk your teen what kind of meal they would like to eat.\n•\tPrepare it together! The first time, you may need to guide them. \n•\tOnce your teen knows how to prepare the meal, let them take the lead and follow their instructions.\n•\t Let each child and teen in the house have a turn at being the head chef.\n•\tYou can even help them make a budget for ingredients!",
+          "type": "send_msg",
+          "uuid": "ad018259-8c3a-407e-858b-8f40ead566d5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "a2afc9dc-cda5-4d0a-9ecd-22e628e7d7d9"
+        }
+      ],
+      "uuid": "e880a2ea-e8dd-488f-bae9-19d567c673d7"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "7c73d63b-0661-48f7-b65c-3eca5482b984",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "06627ced-e5c7-4796-84a0-c88117b993ef",
+          "value": "Teen9"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "98708e95-2e8b-4967-819c-39a2acb2fa1d",
+          "uuid": "2e6e94e9-e854-448f-a8a8-7c5a604ccfd5"
+        }
+      ],
+      "uuid": "24b5c25f-559c-4c10-a47f-21dc15aed48c"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "0dce9417-62cd-450a-8748-ab56d57c84fb"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "63be7eaa-2195-44a7-bca9-8246d59ee5f0"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "9a26cd9e-d15d-4c25-a4ba-ef3d41fc45e3"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "74a13d45-9eb0-4d9f-8dd7-b0567240763a",
+            "type": "has_only_text",
+            "uuid": "2a6078b1-0b17-46b2-a0df-d1f740de5f8a"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "1f0845c7-3f01-41a4-b0d4-93227d59b956",
+            "type": "has_only_text",
+            "uuid": "04e52e27-54d9-4f19-aeaa-38aad5049351"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "63be7eaa-2195-44a7-bca9-8246d59ee5f0",
+            "name": "Complete",
+            "uuid": "74a13d45-9eb0-4d9f-8dd7-b0567240763a"
+          },
+          {
+            "exit_uuid": "9a26cd9e-d15d-4c25-a4ba-ef3d41fc45e3",
+            "name": "Expired",
+            "uuid": "1f0845c7-3f01-41a4-b0d4-93227d59b956"
+          }
+        ],
+        "default_category_uuid": "1f0845c7-3f01-41a4-b0d4-93227d59b956",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "98708e95-2e8b-4967-819c-39a2acb2fa1d"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "cf605e5f-a4f3-4863-9b64-20b6f3d9317d",
+  "revision": 1
+}

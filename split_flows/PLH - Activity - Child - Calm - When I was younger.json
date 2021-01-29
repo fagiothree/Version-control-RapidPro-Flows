@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "26551f2d-ae10-44a4-9ef5-9ea7a33fa033": {
+        "config": {},
+        "position": {
+          "left": 280,
+          "top": 520
+        },
+        "type": "split_by_subflow"
+      },
+      "8391fdbe-053d-4be1-acab-a5632875aef2": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "9ce3b287-7615-45a4-af67-1e9ba6a089c2": {
+        "position": {
+          "left": 0,
+          "top": 340
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Calm - When I was younger",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "When I Was Younger\n•\tChildren love to hear stories about your own life!\n•\tThink of a time when you were younger when something BIG happened to you\n•\tIt can be an adventure, happy memory, or challenge that you experienced\n•\tShare it with your child and notice how they listen!",
+          "type": "send_msg",
+          "uuid": "fa4fbddf-bec6-40e0-ae21-c214ee45583f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "c435cade-3d30-40a1-beac-69cf2a358514"
+        }
+      ],
+      "uuid": "8391fdbe-053d-4be1-acab-a5632875aef2"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "8313e6ca-f4a3-4ae9-8136-dbc55f618318",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "d7d271e9-d4ec-404e-9435-bfcccbfc0e32",
+          "value": "Child23"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "26551f2d-ae10-44a4-9ef5-9ea7a33fa033",
+          "uuid": "d3c74160-c7d5-4099-9720-031a89906263"
+        }
+      ],
+      "uuid": "9ce3b287-7615-45a4-af67-1e9ba6a089c2"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "e018ceb0-d0cb-4020-b1fc-bd2c8896672f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "d81ee76c-6006-4649-bfb1-7ce159541ff2"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "f748a70b-1994-49e1-bab8-b0fe4d1588d1"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "01d95836-8d12-431b-a2c4-832556d3e28a",
+            "type": "has_only_text",
+            "uuid": "bcbd9a20-5e16-4673-9052-e11f72afed3b"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "3ca142ba-bd0f-475c-898f-4a0c0fd05721",
+            "type": "has_only_text",
+            "uuid": "feb84388-2e2d-4350-8182-2b0cd8152aa6"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "d81ee76c-6006-4649-bfb1-7ce159541ff2",
+            "name": "Complete",
+            "uuid": "01d95836-8d12-431b-a2c4-832556d3e28a"
+          },
+          {
+            "exit_uuid": "f748a70b-1994-49e1-bab8-b0fe4d1588d1",
+            "name": "Expired",
+            "uuid": "3ca142ba-bd0f-475c-898f-4a0c0fd05721"
+          }
+        ],
+        "default_category_uuid": "3ca142ba-bd0f-475c-898f-4a0c0fd05721",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "26551f2d-ae10-44a4-9ef5-9ea7a33fa033"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "725e54cf-5002-4cc9-9ced-9d156c253771",
+  "revision": 1
+}

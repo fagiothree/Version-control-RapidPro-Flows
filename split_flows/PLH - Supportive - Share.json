@@ -1,0 +1,45 @@
+{
+  "_ui": {
+    "nodes": {
+      "1a403170-6d6d-430f-8145-2d630b957e73": {
+        "position": {
+          "left": 580,
+          "top": 20
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Supportive - Share",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "It can be much more fun doing something with another person than doing it by yourself.  \n\nHere is a link to the messages that you can share with a friend!\n*insert link*",
+          "type": "send_msg",
+          "uuid": "33c2e64d-67f2-453d-805c-f47672554bbd"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b786e0a5-8845-4d6c-bef1-2174d10a1a0a"
+        }
+      ],
+      "uuid": "1a403170-6d6d-430f-8145-2d630b957e73"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "73649a6e-3278-4312-8cd9-f7e2a06869a3",
+  "revision": 1
+}

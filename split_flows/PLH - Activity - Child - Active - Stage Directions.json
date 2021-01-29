@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "10764d0f-a356-458a-8774-6efbe0b45805": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "9b75bc51-1847-4650-bbbe-4cc6288997af": {
+        "position": {
+          "left": 0,
+          "top": 360
+        },
+        "type": "execute_actions"
+      },
+      "d5dcb232-fd64-45ee-93d5-3670117dd851": {
+        "config": {},
+        "position": {
+          "left": 320,
+          "top": 540
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Active - Stage Directions",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Stage Directions\n•\tThis is the same as Ship to Shore but with Stage Directions. This can be done in an elevated and safe area. The director gives the instructions.\n “Stage Right” means you go to the right.\n “Stage Left” means you go to the left.\n “Downstage” means you go down. \n “Upstage” means you go up.\n “Centre Stage” means you go to the centre of the stage.” \n•\tYou can have fun actions like “Dramatic Death, Take a Bow, Open the Curtain, Clean the Floor,” etc. \n•\tInstead of “Lifeboat” you make “Cast of Actors.” Those not in the cast become the director!",
+          "type": "send_msg",
+          "uuid": "e66fe5ed-0656-4647-8933-c9b99542d14e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "8ca48f3f-8c8e-4cc9-845c-bb060ac7060b"
+        }
+      ],
+      "uuid": "10764d0f-a356-458a-8774-6efbe0b45805"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "b8b85aae-8af6-48a8-a4f7-6d35104181ad",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "dff4be91-cba3-463c-acba-49d181297cb1",
+          "value": "Child20"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "d5dcb232-fd64-45ee-93d5-3670117dd851",
+          "uuid": "2b568435-4959-4e04-8e9b-896df9e257fa"
+        }
+      ],
+      "uuid": "9b75bc51-1847-4650-bbbe-4cc6288997af"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "68a601f9-d1b5-426b-b8d6-adbacf95806f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "c592095a-12f1-4bd3-9ab5-850df4096c2b"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "a33c7c9d-def0-4552-b8f5-b507cba709fd"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "4376eeb2-249e-4054-9685-baaa52c87973",
+            "type": "has_only_text",
+            "uuid": "a9103885-944e-4f8a-8fb0-82aa0315d54f"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "0a1420a3-76f1-4b0a-8856-663ceee1f4b8",
+            "type": "has_only_text",
+            "uuid": "9c5f64cd-49b7-4306-ab16-2e718242d5a5"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "c592095a-12f1-4bd3-9ab5-850df4096c2b",
+            "name": "Complete",
+            "uuid": "4376eeb2-249e-4054-9685-baaa52c87973"
+          },
+          {
+            "exit_uuid": "a33c7c9d-def0-4552-b8f5-b507cba709fd",
+            "name": "Expired",
+            "uuid": "0a1420a3-76f1-4b0a-8856-663ceee1f4b8"
+          }
+        ],
+        "default_category_uuid": "0a1420a3-76f1-4b0a-8856-663ceee1f4b8",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "d5dcb232-fd64-45ee-93d5-3670117dd851"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "516a78bc-45b1-406c-a08b-f4a62d8f0561",
+  "revision": 1
+}

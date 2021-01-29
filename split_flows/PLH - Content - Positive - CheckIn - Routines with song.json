@@ -1,0 +1,72 @@
+{
+  "_ui": {
+    "nodes": {
+      "38dba68a-910a-4efc-955e-8cef0550c57d": {
+        "position": {
+          "left": 480,
+          "top": 20
+        },
+        "type": "execute_actions"
+      },
+      "4614a6e0-e76d-491b-93f6-aa4dfd91f6da": {
+        "position": {
+          "left": 480,
+          "top": 280
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Content - Positive - CheckIn - Routines with song",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "We are models of our children's behaviour. If we practice keeping safe distances, handwashing and treating others with compassion, our children and teenagers will do the same.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "b92d3413-feb1-4902-843d-3e586abbffcb"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "4614a6e0-e76d-491b-93f6-aa4dfd91f6da",
+          "uuid": "6fcc1cda-f083-4afc-b6e7-8fd5c7ff365c"
+        }
+      ],
+      "uuid": "38dba68a-910a-4efc-955e-8cef0550c57d"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Children see and children do,\nThey like to be like me and you,\nWhat you do and what you say,\nWill help to shape them everyday!",
+          "type": "send_msg",
+          "uuid": "43466b2e-7523-4b0d-9247-dfab11f1954d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "8e8e3337-bff0-462b-8eb4-677512f6ee92"
+        }
+      ],
+      "uuid": "4614a6e0-e76d-491b-93f6-aa4dfd91f6da"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "63b7deb6-913f-4454-8ca5-271b9790c26a",
+  "revision": 2
+}

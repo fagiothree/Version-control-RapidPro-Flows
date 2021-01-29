@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "18d0df98-adee-4146-b922-25587b2c9c09": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "8d2e27f5-d527-486e-871d-47d3c07940d9": {
+        "position": {
+          "left": 0,
+          "top": 440
+        },
+        "type": "execute_actions"
+      },
+      "28a00aa4-59a1-4379-9774-fb3956752765": {
+        "config": {},
+        "position": {
+          "left": 240,
+          "top": 600
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Active - Dance party",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Dance Party\n•\tPlay or sing your favourite music and dance around the room.\n•\tDance in different ways or with different parts of your body.\n•\tFor example, “Dance like a monkey”, “Dance like a chicken” or “Dance with just our knees and hips”.\n•\tThink up different instructions. Be seriously playful! \n•\tWhen the music stops, everyone does a funny freeze. \n•\tGive your child a chance to be the one to stop the music! ",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "8f736cb8-5346-4c2b-864e-a68dc73bacf4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "a0b8ba2f-6b4f-43b2-83f8-40d729790b96"
+        }
+      ],
+      "uuid": "18d0df98-adee-4146-b922-25587b2c9c09"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "4ba5210e-6107-49ad-bb1c-fe9021d5ef82",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "3877a2c4-4fc1-4e09-a52a-bfa5d33fc237",
+          "value": "Child2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "28a00aa4-59a1-4379-9774-fb3956752765",
+          "uuid": "647d78f4-98f2-4ddf-801b-49ca3fa1649f"
+        }
+      ],
+      "uuid": "8d2e27f5-d527-486e-871d-47d3c07940d9"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow (activity or tip)",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "351092cd-1d47-4a2b-b763-d2637b415183"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "fa745bd4-5b35-4856-a2ae-3bcf7bc9c39b"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "ad7db79e-ec09-4281-bbfa-4cc4e25cb4d6"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "50d85ddf-abc5-4e35-a31c-6340a99d4a8e",
+            "type": "has_only_text",
+            "uuid": "21a772db-cc93-45a0-acf9-9b2779bbf96b"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "0574040d-2fa8-47ab-8bff-afcfc8cfc3d5",
+            "type": "has_only_text",
+            "uuid": "3dd0303e-3194-402b-9876-e95f6578fb5b"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "fa745bd4-5b35-4856-a2ae-3bcf7bc9c39b",
+            "name": "Complete",
+            "uuid": "50d85ddf-abc5-4e35-a31c-6340a99d4a8e"
+          },
+          {
+            "exit_uuid": "ad7db79e-ec09-4281-bbfa-4cc4e25cb4d6",
+            "name": "Expired",
+            "uuid": "0574040d-2fa8-47ab-8bff-afcfc8cfc3d5"
+          }
+        ],
+        "default_category_uuid": "0574040d-2fa8-47ab-8bff-afcfc8cfc3d5",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "28a00aa4-59a1-4379-9774-fb3956752765"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "ac7ea494-fc35-4274-8713-721b26380f98",
+  "revision": 2
+}

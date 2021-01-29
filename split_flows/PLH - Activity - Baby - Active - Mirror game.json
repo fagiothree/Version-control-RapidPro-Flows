@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "393c6e5e-87ae-4ab8-b473-2824f6255fa3": {
+        "config": {},
+        "position": {
+          "left": 240,
+          "top": 460
+        },
+        "type": "split_by_subflow"
+      },
+      "45bc075d-5f95-4fe2-a22c-ad24776e43e2": {
+        "position": {
+          "left": 0,
+          "top": 280
+        },
+        "type": "execute_actions"
+      },
+      "7b02fecb-9947-4885-a595-6e57ef7f6619": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Baby - Active - Mirror game",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Mirror Game\n• Get to your baby's level so they can see you and hear you. \n• Copy their facial expressions and sounds. \n• It is simple and helps create a strong bond between you and your baby!",
+          "type": "send_msg",
+          "uuid": "6267bb92-8927-40e0-909a-3754aef6954d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "5d31d79c-d449-4b39-9db0-52c257d27943"
+        }
+      ],
+      "uuid": "7b02fecb-9947-4885-a595-6e57ef7f6619"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "e569a30d-eb92-47c8-a0d8-b8674668c6b1",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "d1c33a82-9464-4772-8cd8-26fdf43b45e2",
+          "value": "Baby1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "393c6e5e-87ae-4ab8-b473-2824f6255fa3",
+          "uuid": "3b8d07a3-f605-4908-8a3e-70afaa158060"
+        }
+      ],
+      "uuid": "45bc075d-5f95-4fe2-a22c-ad24776e43e2"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow (activity or tip)",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "13797a55-c654-488d-88bb-1cbd3e754a0c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b059da1e-b913-4e32-94a5-1312d9c6f139"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "1621ebd9-ae68-4307-bc90-70724bef9872"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "1c456364-1fc1-4d0f-a2d1-b9b40926dced",
+            "type": "has_only_text",
+            "uuid": "7f975a79-5308-495c-8cfb-e9328e3cd9a6"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "da6a17d4-4751-4df2-925b-e42b0dd4296a",
+            "type": "has_only_text",
+            "uuid": "250a2340-3413-47d0-8c50-f940578a6760"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "b059da1e-b913-4e32-94a5-1312d9c6f139",
+            "name": "Complete",
+            "uuid": "1c456364-1fc1-4d0f-a2d1-b9b40926dced"
+          },
+          {
+            "exit_uuid": "1621ebd9-ae68-4307-bc90-70724bef9872",
+            "name": "Expired",
+            "uuid": "da6a17d4-4751-4df2-925b-e42b0dd4296a"
+          }
+        ],
+        "default_category_uuid": "da6a17d4-4751-4df2-925b-e42b0dd4296a",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "393c6e5e-87ae-4ab8-b473-2824f6255fa3"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "054ff285-2dc4-40a3-ab3f-9d531b6dd7ee",
+  "revision": 1
+}

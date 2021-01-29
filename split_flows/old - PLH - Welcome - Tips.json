@@ -1,0 +1,821 @@
+{
+  "_ui": {
+    "nodes": {
+      "015aaabc-82c1-41bb-b966-9da3c94be149": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "parent_teenager",
+            "name": "parent teenager",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 780,
+          "top": 5540
+        },
+        "type": "split_by_contact_field"
+      },
+      "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164": {
+        "position": {
+          "left": 380,
+          "top": 5980
+        },
+        "type": "execute_actions"
+      },
+      "0ffcf7fd-8bd0-454d-adc5-b8ceaf12cb2d": {
+        "position": {
+          "left": 360,
+          "top": 5240
+        },
+        "type": "execute_actions"
+      },
+      "1178e568-201f-49a8-9984-c43a5b0487d1": {
+        "position": {
+          "left": 1100,
+          "top": 4980
+        },
+        "type": "execute_actions"
+      },
+      "260cae6a-e3c8-478d-8aa8-9c0e722a9100": {
+        "position": {
+          "left": 1040,
+          "top": 5700
+        },
+        "type": "execute_actions"
+      },
+      "405927ef-da5c-436b-aa35-235b6f66af76": {
+        "position": {
+          "left": 20,
+          "top": 4960
+        },
+        "type": "execute_actions"
+      },
+      "492a1b44-4e35-4548-8023-1638cf8096ec": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "parent_young_child",
+            "name": "parent young child",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 860,
+          "top": 5380
+        },
+        "type": "split_by_contact_field"
+      },
+      "57962fb8-c2cf-4e67-b140-a7736c86928b": {
+        "position": {
+          "left": 120,
+          "top": 5260
+        },
+        "type": "execute_actions"
+      },
+      "5edf76b6-e894-41b5-87b8-e2c4896b5e45": {
+        "position": {
+          "left": 640,
+          "top": 100
+        },
+        "type": "execute_actions"
+      },
+      "673d83d8-9325-4716-bd50-5aff40ad6d66": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "parent_baby",
+            "name": "parent baby",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 960,
+          "top": 5260
+        },
+        "type": "split_by_contact_field"
+      },
+      "9485f85f-6984-4d25-9fcc-937c5fe0df56": {
+        "position": {
+          "left": 780,
+          "top": 5720
+        },
+        "type": "execute_actions"
+      },
+      "9b8b9ea2-22bd-4ce2-876c-33775498d653": {
+        "position": {
+          "left": 380,
+          "top": 6380
+        },
+        "type": "execute_actions"
+      },
+      "abd4a61f-d0a8-440f-827c-60343d8599cb": {
+        "position": {
+          "left": 1000,
+          "top": 4200
+        },
+        "type": "execute_actions"
+      },
+      "b6b3f858-25e8-47ab-baca-53014738b8a6": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 200,
+          "top": 3740
+        },
+        "type": "wait_for_response"
+      },
+      "bb790873-5a2d-4ca2-a3a6-34bf5048972d": {
+        "position": {
+          "left": 860,
+          "top": 4960
+        },
+        "type": "execute_actions"
+      },
+      "bcc21ffe-da46-4d17-abb9-c711e90f1309": {
+        "position": {
+          "left": 560,
+          "top": 4960
+        },
+        "type": "execute_actions"
+      },
+      "c22d623b-7e0c-490a-bc52-ee8e0cc668af": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "type_of_media",
+            "name": "type of media",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 380,
+          "top": 6240
+        },
+        "type": "split_by_contact_field"
+      },
+      "d8c0302c-7ddd-4200-9888-8a1aad164703": {
+        "position": {
+          "left": 600,
+          "top": 5240
+        },
+        "type": "execute_actions"
+      },
+      "dece6c20-6520-4772-bc36-174b04f091a1": {
+        "position": {
+          "left": 300,
+          "top": 4960
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 21
+  },
+  "name": "old - PLH - Welcome - Tips",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [
+            "image:@(fields.image_path & \"misbehaving_children.jpg\")"
+          ],
+          "quick_replies": [
+            "Things to do with my children",
+            "Managing difficult child behaviour",
+            "Talking about COVID-19",
+            "Stress, loneliness, anger",
+            "Money problems",
+            "Helping with schoolwork",
+            "Keeping children safe",
+            "Conflict in the family",
+            "Other issue"
+          ],
+          "text": "Thanks so much! Taking care of children can be difficult even in the best of times. We're here to help!\n\nWhat is the most difficult situation you have recently encountered as a parent?",
+          "type": "send_msg",
+          "uuid": "c8c68d6b-acbc-47d9-bcf3-2314252ef6b4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "b6b3f858-25e8-47ab-baca-53014738b8a6",
+          "uuid": "f41b9cce-19ce-40e1-9b12-14f00041333b"
+        }
+      ],
+      "uuid": "5edf76b6-e894-41b5-87b8-e2c4896b5e45"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "405927ef-da5c-436b-aa35-235b6f66af76",
+          "uuid": "24cc7165-9288-4ba5-a433-1dbed5402a52"
+        },
+        {
+          "destination_uuid": "57962fb8-c2cf-4e67-b140-a7736c86928b",
+          "uuid": "c09cd309-395b-4eb4-96a4-8a48b5d52480"
+        },
+        {
+          "destination_uuid": "dece6c20-6520-4772-bc36-174b04f091a1",
+          "uuid": "0e82d635-a807-434c-b3e7-d8ea05ed6f19"
+        },
+        {
+          "destination_uuid": "0ffcf7fd-8bd0-454d-adc5-b8ceaf12cb2d",
+          "uuid": "e60a5cd3-d34e-4804-bf1b-fcfa7b44f4fa"
+        },
+        {
+          "destination_uuid": "bcc21ffe-da46-4d17-abb9-c711e90f1309",
+          "uuid": "44100a06-f012-4ebb-b415-5ae768675634"
+        },
+        {
+          "destination_uuid": "d8c0302c-7ddd-4200-9888-8a1aad164703",
+          "uuid": "58f7769a-af76-4892-b2b2-e81b26ce4112"
+        },
+        {
+          "destination_uuid": "bb790873-5a2d-4ca2-a3a6-34bf5048972d",
+          "uuid": "059061b6-6b95-4cd5-9a60-5e63839550e0"
+        },
+        {
+          "destination_uuid": "673d83d8-9325-4716-bd50-5aff40ad6d66",
+          "uuid": "fa6627ab-9a2c-4b47-a539-46bfa212ccb9"
+        },
+        {
+          "destination_uuid": "1178e568-201f-49a8-9984-c43a5b0487d1",
+          "uuid": "b8d53f51-4d17-49b9-8512-411c9bce76d8"
+        },
+        {
+          "destination_uuid": "abd4a61f-d0a8-440f-827c-60343d8599cb",
+          "uuid": "9cc69e51-ca50-4e2c-8c50-60ecb6bbaf0c"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "difficult behaviour"
+            ],
+            "category_uuid": "702f7987-2698-4f9c-b761-b66c5c3d7547",
+            "type": "has_any_word",
+            "uuid": "48607386-c83a-494a-8e94-0638d58f8d7f"
+          },
+          {
+            "arguments": [
+              "conflict family"
+            ],
+            "category_uuid": "d848997f-b9cd-4c6c-ac77-e4703201b963",
+            "type": "has_any_word",
+            "uuid": "c12f9e40-250f-4b91-9a74-e8da4dddbeba"
+          },
+          {
+            "arguments": [
+              "stress loneliness anger"
+            ],
+            "category_uuid": "dbe16dee-ff71-4e10-a5ac-016f1707abf4",
+            "type": "has_any_word",
+            "uuid": "609e7595-d23a-4018-bcca-a807aa36b88f"
+          },
+          {
+            "arguments": [
+              "money"
+            ],
+            "category_uuid": "b0223b16-89ab-488c-8b8c-54337c083a13",
+            "type": "has_any_word",
+            "uuid": "5c22e573-04bf-4f17-bb37-988640bc57de"
+          },
+          {
+            "arguments": [
+              "helping schoolwork"
+            ],
+            "category_uuid": "0b0e8f76-57cd-41b1-b733-09cbf7b93e1f",
+            "type": "has_any_word",
+            "uuid": "eea06b99-5a76-421e-ab22-b42d152a7f5e"
+          },
+          {
+            "arguments": [
+              "keeping safe online"
+            ],
+            "category_uuid": "1da95358-0eea-406f-95ec-f7f047ec3990",
+            "type": "has_any_word",
+            "uuid": "c94d4c24-fb34-418a-b92c-ab10b80ace7d"
+          },
+          {
+            "arguments": [
+              "talking covid"
+            ],
+            "category_uuid": "e5d4f54e-829c-4064-9ff7-139776b28c09",
+            "type": "has_any_word",
+            "uuid": "54ae7749-e677-400d-b580-6b1353d317cc"
+          },
+          {
+            "arguments": [
+              "things"
+            ],
+            "category_uuid": "89b7fdc7-dbe9-4333-8be4-78b64aaedeae",
+            "type": "has_any_word",
+            "uuid": "00edcaf7-8233-44ef-91ea-7d64ddfe5d63"
+          },
+          {
+            "arguments": [
+              "other"
+            ],
+            "category_uuid": "3835e020-240a-4862-81b0-91fdfcd5676d",
+            "type": "has_any_word",
+            "uuid": "24e5c32d-e5cb-4932-a6cb-9ba74745fec4"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "24cc7165-9288-4ba5-a433-1dbed5402a52",
+            "name": "2 challenging child behaviour",
+            "uuid": "702f7987-2698-4f9c-b761-b66c5c3d7547"
+          },
+          {
+            "exit_uuid": "c09cd309-395b-4eb4-96a4-8a48b5d52480",
+            "name": "8 family conflict",
+            "uuid": "d848997f-b9cd-4c6c-ac77-e4703201b963"
+          },
+          {
+            "exit_uuid": "0e82d635-a807-434c-b3e7-d8ea05ed6f19",
+            "name": "4 stress and anger",
+            "uuid": "dbe16dee-ff71-4e10-a5ac-016f1707abf4"
+          },
+          {
+            "exit_uuid": "e60a5cd3-d34e-4804-bf1b-fcfa7b44f4fa",
+            "name": "5 money problems",
+            "uuid": "b0223b16-89ab-488c-8b8c-54337c083a13"
+          },
+          {
+            "exit_uuid": "44100a06-f012-4ebb-b415-5ae768675634",
+            "name": "6 helping with school work",
+            "uuid": "0b0e8f76-57cd-41b1-b733-09cbf7b93e1f"
+          },
+          {
+            "exit_uuid": "58f7769a-af76-4892-b2b2-e81b26ce4112",
+            "name": "7 keeping children safe online",
+            "uuid": "1da95358-0eea-406f-95ec-f7f047ec3990"
+          },
+          {
+            "exit_uuid": "059061b6-6b95-4cd5-9a60-5e63839550e0",
+            "name": "3 teaching children about Covid-19",
+            "uuid": "e5d4f54e-829c-4064-9ff7-139776b28c09"
+          },
+          {
+            "exit_uuid": "fa6627ab-9a2c-4b47-a539-46bfa212ccb9",
+            "name": "1 things to do with my children",
+            "uuid": "89b7fdc7-dbe9-4333-8be4-78b64aaedeae"
+          },
+          {
+            "exit_uuid": "b8d53f51-4d17-49b9-8512-411c9bce76d8",
+            "name": "9 Other issue",
+            "uuid": "3835e020-240a-4862-81b0-91fdfcd5676d"
+          },
+          {
+            "exit_uuid": "9cc69e51-ca50-4e2c-8c50-60ecb6bbaf0c",
+            "name": "Other",
+            "uuid": "932d4b7f-16b5-4b0d-880f-c08abbd559a2"
+          }
+        ],
+        "default_category_uuid": "932d4b7f-16b5-4b0d-880f-c08abbd559a2",
+        "operand": "@input.text",
+        "result_name": "MainReason",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "b6b3f858-25e8-47ab-baca-53014738b8a6"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean. ",
+          "type": "send_msg",
+          "uuid": "4463c269-079c-452b-ae49-0f151e7d6829"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "5edf76b6-e894-41b5-87b8-e2c4896b5e45",
+          "uuid": "14600939-0e48-459a-9110-72d5a097febb"
+        }
+      ],
+      "uuid": "abd4a61f-d0a8-440f-827c-60343d8599cb"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image/jpeg:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/95725/steps/ce9525df-ae28-41b7-a177-75a4ec3c0d28.jpg"
+          ],
+          "quick_replies": [],
+          "text": "All children misbehave. It is normal when children are tired, hungry, afraid, or learning independence.\n\nOne thing you can try is catching misbehavior early and distracting your kids’ attention to something positive. It actually works! ",
+          "type": "send_msg",
+          "uuid": "97b47c5e-4d54-49bb-90c3-814845b5d3d5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164",
+          "uuid": "595ccbac-5854-4386-8577-9ac790561937"
+        }
+      ],
+      "uuid": "405927ef-da5c-436b-aa35-235b6f66af76"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image/png:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/95725/steps/4f4d0d37-c125-49d4-875b-f77f5506d029.png"
+          ],
+          "quick_replies": [],
+          "text": "It is completely normal to feel stressed, afraid, angry, and depressed during this time. You are not alone. These tips will help you take care of yourself so you can take care of your children.",
+          "type": "send_msg",
+          "uuid": "e65a3541-283d-4fa3-bf67-d7dbc0f43a41"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164",
+          "uuid": "a7f81e46-c181-42ad-8311-205aba323cf8"
+        }
+      ],
+      "uuid": "dece6c20-6520-4772-bc36-174b04f091a1"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image/jpeg:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/95725/steps/b1d29853-554f-48f0-a60e-f1908568a172.jpg"
+          ],
+          "quick_replies": [],
+          "text": "It is really hard to help our children continue learning when schools are closed or part-open. \n\nOne thing that might be helpful is to try and set up a daily schedule that includes time for schoolwork and time for fun.",
+          "type": "send_msg",
+          "uuid": "c0e49327-40e6-48f6-b5d4-823b93d8c642"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164",
+          "uuid": "3f1aecea-f5ba-4ca8-8502-c1b4ecbc9f19"
+        }
+      ],
+      "uuid": "bcc21ffe-da46-4d17-abb9-c711e90f1309"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image/png:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/95725/steps/7389b4a0-3506-49a4-aea6-72992015a950.png"
+          ],
+          "quick_replies": [],
+          "text": "It can be difficult to know how to talk your children about COVID-19, especially since we are learning about it too. \n\nThe important thing is to be open and listen to your children. Be honest and supportive. Show them that you care.",
+          "type": "send_msg",
+          "uuid": "85005d93-f8b4-40a6-a8b5-d94e188df3a8"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164",
+          "uuid": "d1df18e5-69a1-493e-a65c-c16cc9720b45"
+        }
+      ],
+      "uuid": "bb790873-5a2d-4ca2-a3a6-34bf5048972d"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Parenting is really hard. But there are things we can do to make things easier. We are here to help!",
+          "type": "send_msg",
+          "uuid": "d4217a61-cff3-45ae-adab-2ddd99005536"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164",
+          "uuid": "56bfeb06-c2bc-44f8-8f56-7d36d3835d33"
+        }
+      ],
+      "uuid": "1178e568-201f-49a8-9984-c43a5b0487d1"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image/png:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/95725/steps/52f1cc1f-4c61-4e47-a7b0-9eb7f704e6ca.png"
+          ],
+          "quick_replies": [],
+          "text": "Millions are stressed about money because of COVID-19. Children or teenagers asking for things can cause arguments.  It can help them a lot when we involve them with family budgeting.",
+          "type": "send_msg",
+          "uuid": "f5cb2091-5026-412b-b746-c03bb183a172"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164",
+          "uuid": "97029989-cc3b-4f40-b018-07e8679bb811"
+        }
+      ],
+      "uuid": "0ffcf7fd-8bd0-454d-adc5-b8ceaf12cb2d"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image/png:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/95725/steps/aae0c212-42c4-4d95-9166-e54392d850b0.png"
+          ],
+          "quick_replies": [],
+          "text": "There are lots of risks to children online. But you can help protect your children by setting up easy tech fixes and creating health and safe online habits.",
+          "type": "send_msg",
+          "uuid": "1490e182-ee9c-48a7-9729-6da59202800b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164",
+          "uuid": "207c73a6-3fba-4ce8-8ebb-d8c78f93279d"
+        }
+      ],
+      "uuid": "d8c0302c-7ddd-4200-9888-8a1aad164703"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image/png:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/95725/steps/421e2c4b-aebb-4bdf-a147-9cdc0fd1396c.png"
+          ],
+          "quick_replies": [],
+          "text": "This is a stressful time for all of us. The more we listen to each other and show children how we keep ourselves healthy, the more they will feel secure and loved.",
+          "type": "send_msg",
+          "uuid": "fd75381e-6434-4b52-ae0e-d57d71f8f527"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164",
+          "uuid": "147811a7-9923-404c-9804-4ee73636d7f4"
+        }
+      ],
+      "uuid": "57962fb8-c2cf-4e67-b140-a7736c86928b"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "492a1b44-4e35-4548-8023-1638cf8096ec",
+          "uuid": "ea19faef-3d6a-4ec3-ba46-c9401e74a25e"
+        },
+        {
+          "destination_uuid": "260cae6a-e3c8-478d-8aa8-9c0e722a9100",
+          "uuid": "c6030901-ba77-4fda-9d60-1e261fb21987"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "true"
+            ],
+            "category_uuid": "30a9dd0f-9feb-4eda-aea4-a66ef7c8f0c9",
+            "type": "has_any_word",
+            "uuid": "185602d0-43bc-422c-86d1-aafd2ec53673"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "ea19faef-3d6a-4ec3-ba46-c9401e74a25e",
+            "name": "True",
+            "uuid": "30a9dd0f-9feb-4eda-aea4-a66ef7c8f0c9"
+          },
+          {
+            "exit_uuid": "c6030901-ba77-4fda-9d60-1e261fb21987",
+            "name": "Other",
+            "uuid": "63fa1d7c-0a14-495e-8db4-8c9ab68db91c"
+          }
+        ],
+        "default_category_uuid": "63fa1d7c-0a14-495e-8db4-8c9ab68db91c",
+        "operand": "@fields.parent_baby",
+        "type": "switch"
+      },
+      "uuid": "673d83d8-9325-4716-bd50-5aff40ad6d66"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "260cae6a-e3c8-478d-8aa8-9c0e722a9100",
+          "uuid": "b3b889e7-b4e6-40c4-93ee-2f721cac741e"
+        },
+        {
+          "destination_uuid": "015aaabc-82c1-41bb-b966-9da3c94be149",
+          "uuid": "8b0472e0-e696-4ff9-af6e-72ec65cc9d88"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "true"
+            ],
+            "category_uuid": "002a1a94-dbaf-480e-8d50-21312a7e8d83",
+            "type": "has_any_word",
+            "uuid": "bcd3b946-ed26-4d3e-a5dc-988cc53173da"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "b3b889e7-b4e6-40c4-93ee-2f721cac741e",
+            "name": "True",
+            "uuid": "002a1a94-dbaf-480e-8d50-21312a7e8d83"
+          },
+          {
+            "exit_uuid": "8b0472e0-e696-4ff9-af6e-72ec65cc9d88",
+            "name": "Other",
+            "uuid": "5abaefea-bfd3-4fd6-b7c9-b5495d9ecec6"
+          }
+        ],
+        "default_category_uuid": "5abaefea-bfd3-4fd6-b7c9-b5495d9ecec6",
+        "operand": "@fields.parent_young_child",
+        "type": "switch"
+      },
+      "uuid": "492a1b44-4e35-4548-8023-1638cf8096ec"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "260cae6a-e3c8-478d-8aa8-9c0e722a9100",
+          "uuid": "0900fba2-66bc-4582-ab99-964b1f5ddfb5"
+        },
+        {
+          "destination_uuid": "9485f85f-6984-4d25-9fcc-937c5fe0df56",
+          "uuid": "3ec37073-72ab-4f23-85e7-9786f99fdb51"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "true"
+            ],
+            "category_uuid": "48a45b98-4829-4e5f-a44e-da90985daa6f",
+            "type": "has_any_word",
+            "uuid": "093a6eae-a8b2-4e45-9b07-79e8c4dca129"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "0900fba2-66bc-4582-ab99-964b1f5ddfb5",
+            "name": "True",
+            "uuid": "48a45b98-4829-4e5f-a44e-da90985daa6f"
+          },
+          {
+            "exit_uuid": "3ec37073-72ab-4f23-85e7-9786f99fdb51",
+            "name": "Other",
+            "uuid": "8eda1aec-23cd-4b34-80fd-20e11c9d318b"
+          }
+        ],
+        "default_category_uuid": "8eda1aec-23cd-4b34-80fd-20e11c9d318b",
+        "operand": "@fields.parent_teenager",
+        "type": "switch"
+      },
+      "uuid": "015aaabc-82c1-41bb-b966-9da3c94be149"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image/jpeg:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/95725/steps/47814a7e-d16a-4304-86c8-0472d74c1a27.jpg"
+          ],
+          "quick_replies": [],
+          "text": "Spending even just a few minutes a day focused on having fun with your children can help your relationship. If you are really busy it could be tidying or cleaning together - just make it fun!",
+          "type": "send_msg",
+          "uuid": "ebb6c076-8155-4b8f-804b-e4aa861d2097"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164",
+          "uuid": "0140ab9e-eb4d-41d2-b8f6-2f6d1a955212"
+        }
+      ],
+      "uuid": "260cae6a-e3c8-478d-8aa8-9c0e722a9100"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image/png:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/95725/steps/e72a58a9-c4ac-4871-b9bc-ab4f48b0e738.png"
+          ],
+          "quick_replies": [],
+          "text": "We spend a lot of time indoors with a young baby, and Covid-19 makes it much more intense.  It is completely normal to feel isolated, overwhelmed, anxious, and scared for you and your baby.",
+          "type": "send_msg",
+          "uuid": "67e8a38c-a299-4fdb-90a5-9f47e8ab64c5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164",
+          "uuid": "a38f451c-2b90-48f8-bd76-4c98298e427f"
+        }
+      ],
+      "uuid": "9485f85f-6984-4d25-9fcc-937c5fe0df56"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [
+            "image/gif:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/95725/steps/c99ced19-29d9-40e7-a493-aec791a2ffa4.gif"
+          ],
+          "quick_replies": [],
+          "text": "Congratulations! You have added your first parenting skill to your Parenting Toolkit.\n\nEach day you will learn a new skill so that you can be build a happy home for you and your family.",
+          "type": "send_msg",
+          "uuid": "9c0cd5b0-d606-4181-bb47-8af2b9b20829"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "c22d623b-7e0c-490a-bc52-ee8e0cc668af",
+          "uuid": "f4bd06c1-6dbb-4c1b-969d-0bd6fac0a886"
+        }
+      ],
+      "uuid": "0ffbe7ae-11a0-4a02-8dfd-a556fd5a4164"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "uuid": "67b96dfc-ecee-43a5-8be9-71a4d330d193"
+        },
+        {
+          "destination_uuid": "9b8b9ea2-22bd-4ce2-876c-33775498d653",
+          "uuid": "e7ecbc69-9607-4d22-b4df-de42c1c38157"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "low"
+            ],
+            "category_uuid": "781240d9-d5ee-4355-b36f-8419b3ed75a6",
+            "type": "has_any_word",
+            "uuid": "65775518-1661-4bf4-a683-5728ba315afe"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "67b96dfc-ecee-43a5-8be9-71a4d330d193",
+            "name": "Low",
+            "uuid": "781240d9-d5ee-4355-b36f-8419b3ed75a6"
+          },
+          {
+            "exit_uuid": "e7ecbc69-9607-4d22-b4df-de42c1c38157",
+            "name": "Other",
+            "uuid": "d079e000-50b0-43ed-b9b7-da95adc2f8b3"
+          }
+        ],
+        "default_category_uuid": "d079e000-50b0-43ed-b9b7-da95adc2f8b3",
+        "operand": "@fields.type_of_media",
+        "type": "switch"
+      },
+      "uuid": "c22d623b-7e0c-490a-bc52-ee8e0cc668af"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "video/mp4:https://rapidpro.idems.international/media/attachments/34/9156/steps/ef535e40-2213-4de1-9668-b8c0d4e182a5.mp4"
+          ],
+          "quick_replies": [],
+          "text": "Here is a song that we made just for parents like you! \n\nRemember you can always get more tips by typing \"Help\".\n\nHave a great day!",
+          "type": "send_msg",
+          "uuid": "d2d25af1-60f2-4d3d-8c02-00d27bf7a37e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "0215862b-228a-4ec2-ab4b-3fbb392ef00e"
+        }
+      ],
+      "uuid": "9b8b9ea2-22bd-4ce2-876c-33775498d653"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "786c8228-c96d-4fce-bc94-4021be9e7b0b",
+  "revision": 2
+}

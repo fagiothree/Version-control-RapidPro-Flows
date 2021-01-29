@@ -1,0 +1,662 @@
+{
+  "version": "13",
+  "site": "https://rapidpro.idems.international",
+  "flows": [],
+  "campaigns": [
+    {
+      "uuid": "dc289443-3cd0-4396-878b-562d477a4a9a",
+      "name": "24 h timeout alert",
+      "group": {
+        "uuid": "55c96316-5fc8-4844-bf7d-c557eb769dc2",
+        "name": "in program"
+      },
+      "events": [
+        {
+          "uuid": "258528c0-0b4b-4455-826c-376b90301d55",
+          "offset": 1410,
+          "unit": "M",
+          "event_type": "F",
+          "delivery_hour": -1,
+          "message": null,
+          "relative_to": {
+            "label": "last interaction",
+            "key": "last_interaction"
+          },
+          "start_mode": "I",
+          "flow": {
+            "uuid": "4a041982-afda-4a38-ac9f-6fcc01e3a2a6",
+            "name": "PLH - Timed - 24h timeout alert"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "5f0b1630-56df-423f-b74c-e09ebc86e446",
+      "name": "plh covid program",
+      "group": {
+        "uuid": "55c96316-5fc8-4844-bf7d-c557eb769dc2",
+        "name": "in program"
+      },
+      "events": [
+        {
+          "uuid": "f3b7de88-1019-421d-93ae-8fc6a9ef16b3",
+          "offset": 0,
+          "unit": "M",
+          "event_type": "F",
+          "delivery_hour": -1,
+          "message": null,
+          "relative_to": {
+            "label": "next campaign event",
+            "key": "next_campaign_event"
+          },
+          "start_mode": "I",
+          "flow": {
+            "uuid": "455cacef-8fa3-4db8-8c95-c7189f747462",
+            "name": "PLH - Timed - Campaign"
+          }
+        }
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "trigger_type": "K",
+      "keyword": "help",
+      "flow": {
+        "uuid": "c5aacd7b-340b-4825-92f3-271b8336be00",
+        "name": "PLH - Help - Entry"
+      },
+      "groups": [],
+      "channel": null
+    },
+    {
+      "trigger_type": "K",
+      "keyword": "toolkit",
+      "flow": {
+        "uuid": "446e0f6c-8e31-4443-95b7-70aebdde599e",
+        "name": "PLH - Help - Access toolkit"
+      },
+      "groups": [],
+      "channel": null
+    },
+    {
+      "trigger_type": "K",
+      "keyword": "goback",
+      "flow": {
+        "uuid": "120a0c7c-ac72-4bcb-8117-577bd8c4c2c9",
+        "name": "PLH - Internal - Restart expired flow"
+      },
+      "groups": [],
+      "channel": null
+    },
+    {
+      "trigger_type": "K",
+      "keyword": "moretips",
+      "flow": {
+        "uuid": "0ef66b91-60ab-4894-8669-7fe2ceb344dd",
+        "name": "PLH - Internal - Restart campaign for WA"
+      },
+      "groups": [],
+      "channel": null
+    }
+  ],
+  "fields": [
+    {
+      "key": "age",
+      "name": "age",
+      "type": "text"
+    },
+    {
+      "key": "age_group_for_tips",
+      "name": "age group for tips",
+      "type": "text"
+    },
+    {
+      "key": "audio_path",
+      "name": "audio path",
+      "type": "text"
+    },
+    {
+      "key": "chosen_difficult_age",
+      "name": "chosen difficult age",
+      "type": "text"
+    },
+    {
+      "key": "comic_path",
+      "name": "comic path",
+      "type": "text"
+    },
+    {
+      "key": "completed_welcome",
+      "name": "completed welcome",
+      "type": "text"
+    },
+    {
+      "key": "current_activity",
+      "name": "current activity",
+      "type": "text"
+    },
+    {
+      "key": "current_day_in_program",
+      "name": "current day in program",
+      "type": "text"
+    },
+    {
+      "key": "current_type_assessed",
+      "name": "current type assessed",
+      "type": "text"
+    },
+    {
+      "key": "current_week_in_program",
+      "name": "current week in program",
+      "type": "text"
+    },
+    {
+      "key": "evening_counter",
+      "name": "evening counter",
+      "type": "text"
+    },
+    {
+      "key": "evening_days_to_add",
+      "name": "evening days to add",
+      "type": "text"
+    },
+    {
+      "key": "evening_excluded_days",
+      "name": "evening excluded days",
+      "type": "text"
+    },
+    {
+      "key": "evening_frequency_counter",
+      "name": "evening frequency counter",
+      "type": "text"
+    },
+    {
+      "key": "evening_supportive_counter",
+      "name": "evening supportive counter",
+      "type": "text"
+    },
+    {
+      "key": "evening_time_of_day",
+      "name": "evening time of day",
+      "type": "text"
+    },
+    {
+      "key": "feedback_storage",
+      "name": "feedback storage",
+      "type": "text"
+    },
+    {
+      "key": "frequency",
+      "name": "frequency",
+      "type": "text"
+    },
+    {
+      "key": "from_theme",
+      "name": "from theme",
+      "type": "text"
+    },
+    {
+      "key": "fromparentingbehave",
+      "name": "fromparentingbehave",
+      "type": "text"
+    },
+    {
+      "key": "gender",
+      "name": "gender",
+      "type": "text"
+    },
+    {
+      "key": "get_ipv_content",
+      "name": "get ipv content",
+      "type": "text"
+    },
+    {
+      "key": "has_disability",
+      "name": "has disability",
+      "type": "text"
+    },
+    {
+      "key": "has_expired",
+      "name": "has expired",
+      "type": "text"
+    },
+    {
+      "key": "image_path",
+      "name": "image path",
+      "type": "text"
+    },
+    {
+      "key": "incomplete_toolkit",
+      "name": "incomplete toolkit",
+      "type": "text"
+    },
+    {
+      "key": "incomplete_toolkit_history",
+      "name": "incomplete toolkit history",
+      "type": "text"
+    },
+    {
+      "key": "know_children_age_groups",
+      "name": "know children age groups",
+      "type": "text"
+    },
+    {
+      "key": "know_difficult_child",
+      "name": "know difficult child",
+      "type": "text"
+    },
+    {
+      "key": "know_survey_behave_challenge",
+      "name": "know survey behave challenge",
+      "type": "text"
+    },
+    {
+      "key": "know_survey_behave_child",
+      "name": "know survey behave child",
+      "type": "text"
+    },
+    {
+      "key": "last_feedback",
+      "name": "last feedback",
+      "type": "text"
+    },
+    {
+      "key": "last_interaction",
+      "name": "last interaction",
+      "type": "datetime"
+    },
+    {
+      "key": "main_counter",
+      "name": "main counter",
+      "type": "text"
+    },
+    {
+      "key": "main_days_to_add",
+      "name": "main days to add",
+      "type": "text"
+    },
+    {
+      "key": "main_excluded_days",
+      "name": "main excluded days",
+      "type": "text"
+    },
+    {
+      "key": "main_frequency_counter",
+      "name": "main frequency counter",
+      "type": "text"
+    },
+    {
+      "key": "main_supportive_counter",
+      "name": "main supportive counter",
+      "type": "text"
+    },
+    {
+      "key": "main_time_of_day",
+      "name": "main time of day",
+      "type": "text"
+    },
+    {
+      "key": "marital_status",
+      "name": "marital status",
+      "type": "text"
+    },
+    {
+      "key": "max_skip_survey",
+      "name": "max skip survey",
+      "type": "text"
+    },
+    {
+      "key": "morning_counter",
+      "name": "morning counter",
+      "type": "text"
+    },
+    {
+      "key": "morning_days_to_add",
+      "name": "morning days to add",
+      "type": "text"
+    },
+    {
+      "key": "morning_excluded_days",
+      "name": "morning excluded days",
+      "type": "text"
+    },
+    {
+      "key": "morning_frequency_counter",
+      "name": "morning frequency counter",
+      "type": "text"
+    },
+    {
+      "key": "morning_supportive_counter",
+      "name": "morning supportive counter",
+      "type": "text"
+    },
+    {
+      "key": "morning_time_of_day",
+      "name": "morning time of day",
+      "type": "text"
+    },
+    {
+      "key": "next_campaign_event",
+      "name": "next campaign event",
+      "type": "datetime"
+    },
+    {
+      "key": "next_congrats_day",
+      "name": "next congrats day",
+      "type": "text"
+    },
+    {
+      "key": "next_flow",
+      "name": "next flow",
+      "type": "text"
+    },
+    {
+      "key": "next_tip_evening",
+      "name": "next tip evening",
+      "type": "text"
+    },
+    {
+      "key": "next_tip_main",
+      "name": "next tip main",
+      "type": "text"
+    },
+    {
+      "key": "next_tip_morning",
+      "name": "next tip morning",
+      "type": "text"
+    },
+    {
+      "key": "parent_baby",
+      "name": "parent baby",
+      "type": "text"
+    },
+    {
+      "key": "parent_teenager",
+      "name": "parent teenager",
+      "type": "text"
+    },
+    {
+      "key": "parent_young_child",
+      "name": "parent young child",
+      "type": "text"
+    },
+    {
+      "key": "path",
+      "name": "path",
+      "type": "text"
+    },
+    {
+      "key": "periodic_congrats_days_to_add",
+      "name": "periodic congrats days to add",
+      "type": "text"
+    },
+    {
+      "key": "periodic_survey_days_to_add",
+      "name": "periodic survey days to add",
+      "type": "text"
+    },
+    {
+      "key": "program_version",
+      "name": "program version",
+      "type": "text"
+    },
+    {
+      "key": "relaxation_path",
+      "name": "relaxation path",
+      "type": "text"
+    },
+    {
+      "key": "starting_date",
+      "name": "starting date",
+      "type": "text"
+    },
+    {
+      "key": "survey_behave_age",
+      "name": "survey behave age",
+      "type": "text"
+    },
+    {
+      "key": "survey_behave_age_in_months",
+      "name": "survey behave age in months",
+      "type": "text"
+    },
+    {
+      "key": "survey_behave_child_info",
+      "name": "survey behave child info",
+      "type": "text"
+    },
+    {
+      "key": "survey_behave_count",
+      "name": "survey behave count",
+      "type": "text"
+    },
+    {
+      "key": "survey_behave_most_challenging",
+      "name": "survey behave most challenging",
+      "type": "text"
+    },
+    {
+      "key": "survey_behave_name",
+      "name": "survey behave name",
+      "type": "text"
+    },
+    {
+      "key": "survey_behave_relationship",
+      "name": "survey behave relationship",
+      "type": "text"
+    },
+    {
+      "key": "survey_behave_sex",
+      "name": "survey behave sex",
+      "type": "text"
+    },
+    {
+      "key": "survey_covid_count",
+      "name": "survey covid count",
+      "type": "text"
+    },
+    {
+      "key": "survey_parenting_count",
+      "name": "survey parenting count",
+      "type": "text"
+    },
+    {
+      "key": "survey_parentingbehave_count",
+      "name": "survey parentingbehave count",
+      "type": "text"
+    },
+    {
+      "key": "surveybehave_challenge",
+      "name": "surveybehave challenge",
+      "type": "text"
+    },
+    {
+      "key": "surveybehave_difficult_behaviuour",
+      "name": "surveybehave difficult behaviuour",
+      "type": "text"
+    },
+    {
+      "key": "surveybehave_rate",
+      "name": "surveybehave rate",
+      "type": "text"
+    },
+    {
+      "key": "surveycovid",
+      "name": "surveyCOVID",
+      "type": "text"
+    },
+    {
+      "key": "surveydiscipline",
+      "name": "surveydiscipline",
+      "type": "text"
+    },
+    {
+      "key": "surveydiscipline_fb_better",
+      "name": "surveydiscipline fb better",
+      "type": "text"
+    },
+    {
+      "key": "surveydiscipline_fb_worse",
+      "name": "surveydiscipline fb worse",
+      "type": "text"
+    },
+    {
+      "key": "surveypositive",
+      "name": "surveypositive",
+      "type": "text"
+    },
+    {
+      "key": "surveypositive_fb_better",
+      "name": "surveypositive fb better",
+      "type": "text"
+    },
+    {
+      "key": "surveypositive_fb_worse",
+      "name": "surveypositive fb worse",
+      "type": "text"
+    },
+    {
+      "key": "surveypraise",
+      "name": "surveypraise",
+      "type": "text"
+    },
+    {
+      "key": "surveypraise_fb_better",
+      "name": "surveypraise fb better",
+      "type": "text"
+    },
+    {
+      "key": "surveypraise_fb_worse",
+      "name": "surveypraise fb worse",
+      "type": "text"
+    },
+    {
+      "key": "surveysexual_fb_better",
+      "name": "surveysexual fb better",
+      "type": "text"
+    },
+    {
+      "key": "surveysexual_fb_worse",
+      "name": "surveysexual fb worse",
+      "type": "text"
+    },
+    {
+      "key": "surveysexualabuse",
+      "name": "surveysexualabuse",
+      "type": "text"
+    },
+    {
+      "key": "surveyshout",
+      "name": "surveyshout",
+      "type": "text"
+    },
+    {
+      "key": "surveyshout_fb_better",
+      "name": "surveyshout fb better",
+      "type": "text"
+    },
+    {
+      "key": "surveyshout_fb_worse",
+      "name": "surveyshout fb worse",
+      "type": "text"
+    },
+    {
+      "key": "surveystress",
+      "name": "surveystress",
+      "type": "text"
+    },
+    {
+      "key": "surveystress_fb_better",
+      "name": "surveystress fb better",
+      "type": "text"
+    },
+    {
+      "key": "surveystress_fb_worse",
+      "name": "surveystress fb worse",
+      "type": "text"
+    },
+    {
+      "key": "surveytime",
+      "name": "surveytime",
+      "type": "text"
+    },
+    {
+      "key": "surveytime_fb_better",
+      "name": "surveytime fb better",
+      "type": "text"
+    },
+    {
+      "key": "surveytime_fb_worse",
+      "name": "surveytime fb worse",
+      "type": "text"
+    },
+    {
+      "key": "surveytips",
+      "name": "surveytips",
+      "type": "text"
+    },
+    {
+      "key": "time_of_day",
+      "name": "time of day",
+      "type": "text"
+    },
+    {
+      "key": "toolkit",
+      "name": "toolkit",
+      "type": "text"
+    },
+    {
+      "key": "toolkit_history",
+      "name": "toolkit history",
+      "type": "text"
+    },
+    {
+      "key": "type_of_media",
+      "name": "type of media",
+      "type": "text"
+    },
+    {
+      "key": "video_path",
+      "name": "video path",
+      "type": "text"
+    },
+    {
+      "key": "video_script_path",
+      "name": "video script path",
+      "type": "text"
+    },
+    {
+      "key": "voiceover_audio_path",
+      "name": "voiceover audio path",
+      "type": "text"
+    },
+    {
+      "key": "voiceover_video_path",
+      "name": "voiceover video path",
+      "type": "text"
+    },
+    {
+      "key": "want_feedback_checkin",
+      "name": "want feedback checkin",
+      "type": "text"
+    },
+    {
+      "key": "week_toolkit",
+      "name": "week toolkit",
+      "type": "text"
+    },
+    {
+      "key": "week_toolkit_incompletes",
+      "name": "week toolkit incompletes",
+      "type": "text"
+    }
+  ],
+  "groups": [
+    {
+      "uuid": "55c96316-5fc8-4844-bf7d-c557eb769dc2",
+      "name": "in program",
+      "query": null
+    }
+  ]
+}

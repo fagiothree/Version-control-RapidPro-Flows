@@ -1,0 +1,662 @@
+{
+  "_ui": {
+    "nodes": {
+      "0f6867d8-4c79-44b0-b066-0b8b18b26ec1": {
+        "position": {
+          "left": 460,
+          "top": 760
+        },
+        "type": "execute_actions"
+      },
+      "2eb6ee42-d16f-47e2-a935-7c648adf7cd9": {
+        "config": {},
+        "position": {
+          "left": 280,
+          "top": 120
+        },
+        "type": "split_by_subflow"
+      },
+      "303ac3a3-b37d-4ec9-b4c0-8a9ec778a26f": {
+        "position": {
+          "left": 620,
+          "top": 240
+        },
+        "type": "execute_actions"
+      },
+      "362c1f93-f7d5-425e-bc5d-ca5f345c51fe": {
+        "position": {
+          "left": 580,
+          "top": 1380
+        },
+        "type": "execute_actions"
+      },
+      "41cfec0c-5347-4d1a-b223-73f972d6b071": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 140,
+          "top": 800
+        },
+        "type": "wait_for_response"
+      },
+      "42c7e1a2-13c7-4ced-a5c7-7ebfe02a408d": {
+        "position": {
+          "left": 420,
+          "top": 1060
+        },
+        "type": "execute_actions"
+      },
+      "6721bed3-edb3-471e-a13a-56e654b7b390": {
+        "position": {
+          "left": 100,
+          "top": 1240
+        },
+        "type": "execute_actions"
+      },
+      "72a66ee5-5a97-4e3d-9a80-a81534070272": {
+        "position": {
+          "left": 720,
+          "top": 600
+        },
+        "type": "execute_actions"
+      },
+      "9e17b083-d151-4d0b-b6b9-73574f55809c": {
+        "position": {
+          "left": 840,
+          "top": 1340
+        },
+        "type": "execute_actions"
+      },
+      "bfbdb901-0436-497b-ae93-0073bad5f04c": {
+        "position": {
+          "left": 840,
+          "top": 1460
+        },
+        "type": "execute_actions"
+      },
+      "d164c941-d5ad-459b-90f9-c3e6dc6e2b7a": {
+        "position": {
+          "left": 140,
+          "top": 600
+        },
+        "type": "execute_actions"
+      },
+      "dd6354a1-405e-45d7-83c0-071c57218392": {
+        "position": {
+          "left": 460,
+          "top": 880
+        },
+        "type": "execute_actions"
+      },
+      "df041865-6369-44bf-86bb-b10257ac1486": {
+        "position": {
+          "left": 360,
+          "top": 260
+        },
+        "type": "execute_actions"
+      },
+      "dfe40bbb-c076-4c8e-b7c5-adf3d2eabbbc": {
+        "position": {
+          "left": 280,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "e1316bcd-d2f7-4cdb-ada4-50cc55549fe6": {
+        "config": {},
+        "position": {
+          "left": 580,
+          "top": 1240
+        },
+        "type": "split_by_subflow"
+      },
+      "ec5a5f88-ef2d-42ff-86bb-036ec1636525": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "toolkit",
+            "name": "toolkit",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 440,
+          "top": 540
+        },
+        "type": "split_by_contact_field"
+      },
+      "eebfceee-49b5-4292-a7fa-80a6d02e9b32": {
+        "position": {
+          "left": 900,
+          "top": 240
+        },
+        "type": "execute_actions"
+      },
+      "f25e0a58-3c7e-4e95-a431-ccf133188b4b": {
+        "position": {
+          "left": 80,
+          "top": 1060
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 130
+  },
+  "name": "PLH - Content - Positive - Behave - Praise - Timed intro",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "category": "",
+          "name": "skill",
+          "type": "set_run_result",
+          "uuid": "12763230-8b47-4db1-8abc-7b9d2a12d715",
+          "value": "Praising your children"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "2eb6ee42-d16f-47e2-a935-7c648adf7cd9",
+          "uuid": "9c645c68-8d01-4ace-bef0-9d63f652c63a"
+        }
+      ],
+      "uuid": "dfe40bbb-c076-4c8e-b7c5-adf3d2eabbbc"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Update incomplete toolkits",
+            "uuid": "a682c361-8bea-420a-8bbc-fc84a202fbcb"
+          },
+          "type": "enter_flow",
+          "uuid": "0dc991e4-aac1-4968-8c10-d9c9e2846e06"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "df041865-6369-44bf-86bb-b10257ac1486",
+          "uuid": "c1ea30a3-eac1-4c5a-9668-d792bc4291d2"
+        },
+        {
+          "destination_uuid": "df041865-6369-44bf-86bb-b10257ac1486",
+          "uuid": "b2b6270d-0e65-40a4-aebe-1cb7137cf55a"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "d2f95d8c-4bcb-4ce4-8cfb-0ca22be4cd9f",
+            "type": "has_only_text",
+            "uuid": "ebfa0d25-0791-49eb-87ff-3734f9d2fcdb"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "57a1a7b1-5913-47d6-9e68-86ce8842d769",
+            "type": "has_only_text",
+            "uuid": "ceb46dbb-7ac8-4a6c-b91e-478aaca434ad"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "c1ea30a3-eac1-4c5a-9668-d792bc4291d2",
+            "name": "Complete",
+            "uuid": "d2f95d8c-4bcb-4ce4-8cfb-0ca22be4cd9f"
+          },
+          {
+            "exit_uuid": "b2b6270d-0e65-40a4-aebe-1cb7137cf55a",
+            "name": "Expired",
+            "uuid": "57a1a7b1-5913-47d6-9e68-86ce8842d769"
+          }
+        ],
+        "default_category_uuid": "57a1a7b1-5913-47d6-9e68-86ce8842d769",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "2eb6ee42-d16f-47e2-a935-7c648adf7cd9"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Today's Parenting Tip is all about Praise. How did the above message make you feel? We all appreciate it when the good things we do are recognised by others, especially when it is someone who is close to us.",
+          "type": "send_msg",
+          "uuid": "846f230c-305e-48c7-9de0-b282c6457126"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "eebfceee-49b5-4292-a7fa-80a6d02e9b32",
+          "uuid": "7106d7b9-9216-4f20-86d3-f2a0d5aa498f"
+        }
+      ],
+      "uuid": "303ac3a3-b37d-4ec9-b4c0-8a9ec778a26f"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Praise your children when they are behaving well! They may not show it but you’ll see them doing that good behaviour again…",
+          "type": "send_msg",
+          "uuid": "739fd8f4-3757-4449-bbf2-918b49a72986"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "ec5a5f88-ef2d-42ff-86bb-036ec1636525",
+          "uuid": "4962bdf6-4582-4390-9b9a-062b5c95a62a"
+        }
+      ],
+      "uuid": "eebfceee-49b5-4292-a7fa-80a6d02e9b32"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image:@(fields.image_path & \"you_deserve_a_star.jpg\")"
+          ],
+          "quick_replies": [],
+          "text": "Hi! I just wanted to thank you for making this commitment to improve the life of your children. It shows you really care!",
+          "type": "send_msg",
+          "uuid": "f40b54ff-c64e-469d-8824-77c956430464"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "303ac3a3-b37d-4ec9-b4c0-8a9ec778a26f",
+          "uuid": "f4196128-a01e-48ac-9394-5ed8a4cb49ec"
+        }
+      ],
+      "uuid": "df041865-6369-44bf-86bb-b10257ac1486"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "d164c941-d5ad-459b-90f9-c3e6dc6e2b7a",
+          "uuid": "3dc3d48b-f3b6-42a5-8f81-f45db8404a9e"
+        },
+        {
+          "destination_uuid": "72a66ee5-5a97-4e3d-9a80-a81534070272",
+          "uuid": "bd9e36c5-2e99-4866-b3cc-fda0df048799"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "@results.skill"
+            ],
+            "category_uuid": "bcfa39f5-1963-4683-9c23-b221415c9191",
+            "type": "has_phrase",
+            "uuid": "7a98e13d-67cd-42cc-9844-a0444f1609f2"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "3dc3d48b-f3b6-42a5-8f81-f45db8404a9e",
+            "name": "already completed",
+            "uuid": "bcfa39f5-1963-4683-9c23-b221415c9191"
+          },
+          {
+            "exit_uuid": "bd9e36c5-2e99-4866-b3cc-fda0df048799",
+            "name": "Other",
+            "uuid": "11c3c1c0-0d84-46fd-b28f-173f26ecd4fa"
+          }
+        ],
+        "default_category_uuid": "11c3c1c0-0d84-46fd-b28f-173f26ecd4fa",
+        "operand": "@fields.toolkit",
+        "type": "switch"
+      },
+      "uuid": "ec5a5f88-ef2d-42ff-86bb-036ec1636525"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "We know that you have already received this tip (well done!). Would you like to review it again?",
+          "type": "send_msg",
+          "uuid": "e0fed9ce-a815-4198-a559-84656a5cdf2b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "41cfec0c-5347-4d1a-b223-73f972d6b071",
+          "uuid": "d0b7102f-1e85-4100-9ecd-5d7d0b2e1285"
+        }
+      ],
+      "uuid": "d164c941-d5ad-459b-90f9-c3e6dc6e2b7a"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "Would you like to learn more about this tip?",
+          "type": "send_msg",
+          "uuid": "e052c748-c251-4eae-b910-ab902818db31"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "41cfec0c-5347-4d1a-b223-73f972d6b071",
+          "uuid": "b7098ef0-0141-4264-8bb5-828abad400c4"
+        }
+      ],
+      "uuid": "72a66ee5-5a97-4e3d-9a80-a81534070272"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean. ",
+          "type": "send_msg",
+          "uuid": "098a5591-179b-4185-9d52-ca296b7158cf"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "dd6354a1-405e-45d7-83c0-071c57218392",
+          "uuid": "cb4b388c-e5b5-484a-8a2e-d76187816138"
+        }
+      ],
+      "uuid": "0f6867d8-4c79-44b0-b066-0b8b18b26ec1"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "42c7e1a2-13c7-4ced-a5c7-7ebfe02a408d",
+          "uuid": "f8614684-9c94-4bb7-a600-e8cb8b9abf7b"
+        },
+        {
+          "destination_uuid": "f25e0a58-3c7e-4e95-a431-ccf133188b4b",
+          "uuid": "4ad60268-ec44-4062-aed6-c989183f2b67"
+        },
+        {
+          "destination_uuid": "0f6867d8-4c79-44b0-b066-0b8b18b26ec1",
+          "uuid": "26f3d022-887a-4edb-96cd-edabdea35fbe"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes y "
+            ],
+            "category_uuid": "788bccda-f5e6-4fc1-b529-a122dc762d1b",
+            "type": "has_any_word",
+            "uuid": "42fa91ed-2557-4978-940c-3c1d9d756c45"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "989f45ff-a72c-4da0-8524-4f1c04c250c3",
+            "type": "has_any_word",
+            "uuid": "de66b8dd-924e-4400-ba2b-08e1a676e752"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "f8614684-9c94-4bb7-a600-e8cb8b9abf7b",
+            "name": "Yes",
+            "uuid": "788bccda-f5e6-4fc1-b529-a122dc762d1b"
+          },
+          {
+            "exit_uuid": "4ad60268-ec44-4062-aed6-c989183f2b67",
+            "name": "No",
+            "uuid": "989f45ff-a72c-4da0-8524-4f1c04c250c3"
+          },
+          {
+            "exit_uuid": "26f3d022-887a-4edb-96cd-edabdea35fbe",
+            "name": "Other",
+            "uuid": "757355ba-1d05-4fa7-9366-f40b200b60cb"
+          }
+        ],
+        "default_category_uuid": "757355ba-1d05-4fa7-9366-f40b200b60cb",
+        "operand": "@input.text",
+        "result_name": "Result 4",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "41cfec0c-5347-4d1a-b223-73f972d6b071"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "1c363f7a-5cdd-4e9a-9ef9-8b54ef32a8e0",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "ec5a5f88-ef2d-42ff-86bb-036ec1636525",
+          "uuid": "9a33620e-1f9a-414c-aa3f-74f175f88f1a"
+        }
+      ],
+      "uuid": "dd6354a1-405e-45d7-83c0-071c57218392"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always type \"Help\" at anytime if you need any support with your children. Chat to you later!",
+          "type": "send_msg",
+          "uuid": "e3fbe4fb-0882-4162-ba68-ad5c0d924368"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "6721bed3-edb3-471e-a13a-56e654b7b390",
+          "uuid": "37d92f36-40c8-4045-a0c1-ed103217b7d4"
+        }
+      ],
+      "uuid": "f25e0a58-3c7e-4e95-a431-ccf133188b4b"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "0ac043cf-5f55-46d6-a21a-d201eb92f7b0",
+          "value": "@(now())"
+        },
+        {
+          "field": {
+            "key": "from_theme",
+            "name": "from theme"
+          },
+          "type": "set_contact_field",
+          "uuid": "cef40521-e595-4fae-8659-6d75d4f5d143",
+          "value": "yes"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e1316bcd-d2f7-4cdb-ada4-50cc55549fe6",
+          "uuid": "c1eb648c-5485-425f-ab06-2960ac8755c8"
+        }
+      ],
+      "uuid": "42c7e1a2-13c7-4ced-a5c7-7ebfe02a408d"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "3974c9f5-65ae-461f-955b-8bcd90516240",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "9679ed8f-f8c2-45b9-ba63-d838427764eb"
+        }
+      ],
+      "uuid": "6721bed3-edb3-471e-a13a-56e654b7b390"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Content - Positive - Behave - Praise",
+            "uuid": "bf7e25e1-69df-4e57-ba01-c501ba1b87cb"
+          },
+          "type": "enter_flow",
+          "uuid": "08d595a3-893a-43db-92a1-add449a006a6"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "362c1f93-f7d5-425e-bc5d-ca5f345c51fe",
+          "uuid": "fa358be1-32dd-44d9-bdd9-59ea78e279bc"
+        },
+        {
+          "destination_uuid": "9e17b083-d151-4d0b-b6b9-73574f55809c",
+          "uuid": "07a5bf2f-56fb-4d81-88d4-6abe20e5990f"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "721828af-f1d6-4290-abfa-236e787c9daf",
+            "type": "has_only_text",
+            "uuid": "56930faa-8723-4036-a8e0-23e9f0bd9f60"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "1ee575d7-fff8-483a-be9e-1175d092a8b6",
+            "type": "has_only_text",
+            "uuid": "2dc427f4-e1b5-477f-956b-d9eb25c5f4cb"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "fa358be1-32dd-44d9-bdd9-59ea78e279bc",
+            "name": "Complete",
+            "uuid": "721828af-f1d6-4290-abfa-236e787c9daf"
+          },
+          {
+            "exit_uuid": "07a5bf2f-56fb-4d81-88d4-6abe20e5990f",
+            "name": "Expired",
+            "uuid": "1ee575d7-fff8-483a-be9e-1175d092a8b6"
+          }
+        ],
+        "default_category_uuid": "1ee575d7-fff8-483a-be9e-1175d092a8b6",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "e1316bcd-d2f7-4cdb-ada4-50cc55549fe6"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "has_expired",
+            "name": "has expired"
+          },
+          "type": "set_contact_field",
+          "uuid": "0e5fc580-74d5-412b-83cd-510220817894",
+          "value": "tip"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "bfbdb901-0436-497b-ae93-0073bad5f04c",
+          "uuid": "7a9b0d3a-2096-4d89-8aab-61111f57f028"
+        }
+      ],
+      "uuid": "9e17b083-d151-4d0b-b6b9-73574f55809c"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "from_theme",
+            "name": "from theme"
+          },
+          "type": "set_contact_field",
+          "uuid": "fa468420-0095-451a-b531-451d9212254c",
+          "value": "no"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "09124628-2d99-43e3-9784-57ea58d34ed0"
+        }
+      ],
+      "uuid": "362c1f93-f7d5-425e-bc5d-ca5f345c51fe"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "It looks like you are busy right now. You can always type \"GoBack\" to restart this parenting tip or \"Help\" for other support.",
+          "type": "send_msg",
+          "uuid": "016b9b3e-b013-4fee-b1b7-c305c8c29962"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "362c1f93-f7d5-425e-bc5d-ca5f345c51fe",
+          "uuid": "60d9e717-a3ed-4f28-913e-8a930c49f671"
+        }
+      ],
+      "uuid": "bfbdb901-0436-497b-ae93-0073bad5f04c"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "8750b2ba-49fd-4246-956a-00b9742a2b14",
+  "revision": 1
+}

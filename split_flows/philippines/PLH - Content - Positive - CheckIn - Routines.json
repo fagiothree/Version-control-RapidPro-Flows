@@ -1,0 +1,245 @@
+{
+  "_ui": {
+    "nodes": {
+      "27d45c13-ef26-4833-837b-05930544bfe8": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "age_group_for_tips",
+            "name": "age group for tips",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 440,
+          "top": 20
+        },
+        "type": "split_by_contact_field"
+      },
+      "b9cafad3-bdc5-4124-a5bb-debc752d82a9": {
+        "position": {
+          "left": 620,
+          "top": 140
+        },
+        "type": "execute_actions"
+      },
+      "d07239b6-7908-47fa-ae9e-6b9fb2c64ca8": {
+        "position": {
+          "left": 160,
+          "top": 160
+        },
+        "type": "execute_actions"
+      },
+      "d6ec122e-03ea-4776-ae6c-ac153fbe8359": {
+        "position": {
+          "left": 420,
+          "top": 340
+        },
+        "type": "execute_actions"
+      },
+      "52f37b33-3338-4702-80ff-1578fa0dcac2": {
+        "position": {
+          "left": 680,
+          "top": 380
+        },
+        "type": "execute_actions"
+      },
+      "fc0ebf00-93a8-437a-a91d-efc7845f8f41": {
+        "position": {
+          "left": 160,
+          "top": 420
+        },
+        "type": "execute_actions"
+      },
+      "b479c780-57a1-4d73-b333-5998c193827f": {
+        "position": {
+          "left": 700,
+          "top": 560
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Content - Positive - CheckIn - Routines",
+  "nodes": [
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "d07239b6-7908-47fa-ae9e-6b9fb2c64ca8",
+          "uuid": "59ab8562-feb3-4d01-b6bf-c422a247417b"
+        },
+        {
+          "destination_uuid": "d6ec122e-03ea-4776-ae6c-ac153fbe8359",
+          "uuid": "44844776-706c-4270-9ab5-c327cd9beaa3"
+        },
+        {
+          "destination_uuid": "b9cafad3-bdc5-4124-a5bb-debc752d82a9",
+          "uuid": "1baec95b-d217-43d0-8171-45f487277f83"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "teen"
+            ],
+            "category_uuid": "8dec43d3-af9f-4106-816a-b542103f24c9",
+            "type": "has_any_word",
+            "uuid": "a46d461d-fcd3-4916-a77f-23875bc5c18e"
+          },
+          {
+            "arguments": [
+              "baby"
+            ],
+            "category_uuid": "23b02819-0f4d-49e7-ac0b-05aa63f612b2",
+            "type": "has_any_word",
+            "uuid": "2136d6e3-83f7-47d6-b782-3e57ad20fbda"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "59ab8562-feb3-4d01-b6bf-c422a247417b",
+            "name": "Teen",
+            "uuid": "8dec43d3-af9f-4106-816a-b542103f24c9"
+          },
+          {
+            "exit_uuid": "44844776-706c-4270-9ab5-c327cd9beaa3",
+            "name": "Baby",
+            "uuid": "23b02819-0f4d-49e7-ac0b-05aa63f612b2"
+          },
+          {
+            "exit_uuid": "1baec95b-d217-43d0-8171-45f487277f83",
+            "name": "Other",
+            "uuid": "4808cb3f-b974-49c6-a009-9f207b2cca90"
+          }
+        ],
+        "default_category_uuid": "4808cb3f-b974-49c6-a009-9f207b2cca90",
+        "operand": "@fields.age_group_for_tips",
+        "type": "switch"
+      },
+      "uuid": "27d45c13-ef26-4833-837b-05930544bfe8"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Routines will make your children feel safe and secure. Try to have regular mealtimes and bedtimes. Remember to schedule One-on-One time with your children, too!",
+          "type": "send_msg",
+          "uuid": "b3faece3-ec4e-4dd1-b713-6f2c97110cff"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "52f37b33-3338-4702-80ff-1578fa0dcac2",
+          "uuid": "6512761a-bf33-43c3-88c6-ed94389e966c"
+        }
+      ],
+      "uuid": "b9cafad3-bdc5-4124-a5bb-debc752d82a9"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Did you know that teens actually like having responsibilities? It makes them feel more independent and grown up. Allow your teen to choose a special job that helps out.",
+          "type": "send_msg",
+          "uuid": "2f5e57a4-3d61-4ec1-9d21-ee4f9a564f5d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "fc0ebf00-93a8-437a-a91d-efc7845f8f41",
+          "uuid": "9e6dff50-8aa1-4032-88fc-c1f441eb1db4"
+        }
+      ],
+      "uuid": "d07239b6-7908-47fa-ae9e-6b9fb2c64ca8"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Routines will make your children feel safe and secure. Try to have regular mealtimes and bedtimes. Remember to schedule One-on-One time with your children, too!",
+          "type": "send_msg",
+          "uuid": "a4396bf3-725e-4e52-b37b-242ccc5118cb"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "dcfbfe86-8f89-4072-8219-215ea0b79731"
+        }
+      ],
+      "uuid": "d6ec122e-03ea-4776-ae6c-ac153fbe8359"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "When you teach your children about safe distancing, you keep your whole family safe. You keep others safe, too!",
+          "type": "send_msg",
+          "uuid": "5031d5dd-a571-4d54-a731-c853fd943291"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "b479c780-57a1-4d73-b333-5998c193827f",
+          "uuid": "181fb844-cf40-4c80-ac95-bec6820afb8d"
+        }
+      ],
+      "uuid": "52f37b33-3338-4702-80ff-1578fa0dcac2"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "As your teen shows more responsibility, you can also give them extra privileges. Try to share responsibilities equally amongst women/men and girls/boys. Praise your teen whenever they do their job!",
+          "type": "send_msg",
+          "uuid": "83762351-09db-4e29-ae60-e50376d753e4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b61a7ddd-7f7f-470d-a438-cdaadf0ebdeb"
+        }
+      ],
+      "uuid": "fc0ebf00-93a8-437a-a91d-efc7845f8f41"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "You can even make hand washing into a game where children earn points whenever they wash their hands with soap before and after meals. The one with the most points can win a simple, free reward like extra One-on-One Time.",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [],
+          "uuid": "a3ba06d7-53ab-4faa-a70d-349b2f0783b0"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "50ad3923-1f59-43bf-b228-37c70824f655"
+        }
+      ],
+      "uuid": "b479c780-57a1-4d73-b333-5998c193827f"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "df8b19ec-9586-43b1-b61b-a10dfdc9849b",
+  "revision": 2
+}

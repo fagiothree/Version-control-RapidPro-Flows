@@ -1,0 +1,208 @@
+{
+  "_ui": {
+    "nodes": {
+      "d3ab7e8d-5e9c-405a-8f95-35a3e966a850": {
+        "position": {
+          "left": 540,
+          "top": 20
+        },
+        "type": "execute_actions"
+      },
+      "cdc4eece-66f2-4636-8fa1-433cd2ec8b3c": {
+        "position": {
+          "left": 940,
+          "top": 220
+        },
+        "type": "execute_actions"
+      },
+      "b806ff80-4872-46c9-9d71-ff6be81b576c": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 540,
+          "top": 260
+        },
+        "type": "wait_for_response"
+      },
+      "ed04e34d-e7d1-4a7a-b528-0591696881f1": {
+        "position": {
+          "left": 260,
+          "top": 380
+        },
+        "type": "execute_actions"
+      },
+      "9ab0b02a-b8ee-4ee0-b440-15dda5e5e165": {
+        "position": {
+          "left": 340,
+          "top": 620
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {
+      "c32a0215-d15f-4b40-a2ab-6ddd11b20014": {
+        "body": "trigger for receiving messages again?",
+        "color": "yellow",
+        "position": {
+          "left": 100,
+          "top": 20
+        },
+        "title": "New Note"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Help - Settings - Leave the program",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Are you sure you do not want to get these messages? If you do not want to receive any more messages, please type \"STOP MESSAGES.\"\nIf you made a mistake, please type \"back\" and choose another option.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "8e49d080-5b5a-46d0-96f7-479e5c8049cc"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "b806ff80-4872-46c9-9d71-ff6be81b576c",
+          "uuid": "c9225a85-d20c-4d06-bc38-b8747aa03dff"
+        }
+      ],
+      "uuid": "d3ab7e8d-5e9c-405a-8f95-35a3e966a850"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "83f80bd2-1214-4e34-8be0-e5ec3559d698"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "d3ab7e8d-5e9c-405a-8f95-35a3e966a850",
+          "uuid": "7dbd7d69-fa8c-4154-ae40-25ff2fc8712a"
+        }
+      ],
+      "uuid": "cdc4eece-66f2-4636-8fa1-433cd2ec8b3c"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "ed04e34d-e7d1-4a7a-b528-0591696881f1",
+          "uuid": "a4f8ba17-bf0e-40af-9833-1aa3233e8163"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "d585742b-07ea-497a-93f1-03018e98b706"
+        },
+        {
+          "destination_uuid": "cdc4eece-66f2-4636-8fa1-433cd2ec8b3c",
+          "uuid": "97c6b0db-7ad6-41a3-bc7c-6f3903dba859"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "stop messages"
+            ],
+            "category_uuid": "073ec94e-97e7-4125-91b1-c0fcb1831ec3",
+            "type": "has_only_phrase",
+            "uuid": "4e180b69-5239-48c5-b602-1fcec1c7981e"
+          },
+          {
+            "arguments": [
+              "no n not back"
+            ],
+            "category_uuid": "77b07909-6b43-47d4-acef-6ee285cc5bcc",
+            "type": "has_any_word",
+            "uuid": "222cd642-f6a2-4e1c-9de7-7b47dd70f047"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "a4f8ba17-bf0e-40af-9833-1aa3233e8163",
+            "name": "leave",
+            "uuid": "073ec94e-97e7-4125-91b1-c0fcb1831ec3"
+          },
+          {
+            "exit_uuid": "d585742b-07ea-497a-93f1-03018e98b706",
+            "name": "stay",
+            "uuid": "77b07909-6b43-47d4-acef-6ee285cc5bcc"
+          },
+          {
+            "exit_uuid": "97c6b0db-7ad6-41a3-bc7c-6f3903dba859",
+            "name": "Other",
+            "uuid": "c8593bdf-32da-4a83-8c2a-d052d7907f72"
+          }
+        ],
+        "default_category_uuid": "c8593bdf-32da-4a83-8c2a-d052d7907f72",
+        "operand": "@input.text",
+        "result_name": "Result 2",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "b806ff80-4872-46c9-9d71-ff6be81b576c"
+    },
+    {
+      "actions": [
+        {
+          "all_groups": false,
+          "groups": [
+            {
+              "name": "in program",
+              "uuid": "55c96316-5fc8-4844-bf7d-c557eb769dc2"
+            }
+          ],
+          "type": "remove_contact_groups",
+          "uuid": "922a00e7-14d9-4e79-9d44-2ce2d5d87de0"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "9ab0b02a-b8ee-4ee0-b440-15dda5e5e165",
+          "uuid": "3faeb3ec-4857-49a9-bf3c-5bf66aada4c4"
+        }
+      ],
+      "uuid": "ed04e34d-e7d1-4a7a-b528-0591696881f1"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Okay thanks! If you ever want to sign up for parenting messages, type \"MoreTips\". We are here to help!",
+          "type": "send_msg",
+          "uuid": "05356429-da8c-442a-bb3b-4698cabd16c1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "8f2db98b-be15-4a29-a732-5fb660beb33f"
+        }
+      ],
+      "uuid": "9ab0b02a-b8ee-4ee0-b440-15dda5e5e165"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "943dedb5-c7b3-48f7-b6f1-0c5dcff04740",
+  "revision": 2
+}

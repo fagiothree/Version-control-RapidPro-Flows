@@ -1,0 +1,534 @@
+{
+  "_ui": {
+    "nodes": {
+      "0e75885f-ddf8-4c2c-ae00-a92f6f1315c6": {
+        "position": {
+          "left": 800,
+          "top": 600
+        },
+        "type": "execute_actions"
+      },
+      "46ca249c-c33d-48e4-95f0-4ad983fae907": {
+        "position": {
+          "left": 480,
+          "top": 1280
+        },
+        "type": "execute_actions"
+      },
+      "6bb33690-985c-4ce4-a5d3-77bf143f09af": {
+        "position": {
+          "left": 140,
+          "top": 160
+        },
+        "type": "execute_actions"
+      },
+      "7e7f3625-281b-4aa8-9ef1-21b492c8b5e4": {
+        "position": {
+          "left": 460,
+          "top": 420
+        },
+        "type": "execute_actions"
+      },
+      "9dd14018-2427-4d5f-b55b-a702ab4c4049": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "age_group_for_tips",
+            "name": "age group for tips",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 420,
+          "top": 40
+        },
+        "type": "split_by_contact_field"
+      },
+      "a2f6281e-59f7-4a6f-84fd-3bfe7b5df705": {
+        "position": {
+          "left": 420,
+          "top": 220
+        },
+        "type": "execute_actions"
+      },
+      "c2150a1d-a21a-44f7-bce5-d142ab5a6ce3": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 460,
+          "top": 1080
+        },
+        "type": "wait_for_response"
+      },
+      "d1c590bd-2e6a-4250-a898-7b90fde3fd33": {
+        "position": {
+          "left": 700,
+          "top": 1280
+        },
+        "type": "execute_actions"
+      },
+      "e488491e-64f9-494f-bde0-d6843de77303": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 460,
+          "top": 660
+        },
+        "type": "wait_for_response"
+      },
+      "e4c920cc-2b72-4063-a37c-8192b7e50efc": {
+        "position": {
+          "left": 360,
+          "top": 840
+        },
+        "type": "execute_actions"
+      },
+      "eeff3e2b-3b97-4341-8d88-c835caa26bd2": {
+        "position": {
+          "left": 260,
+          "top": 1280
+        },
+        "type": "execute_actions"
+      },
+      "f43f9b95-10b3-4aad-b858-2cd4acb6623b": {
+        "position": {
+          "left": 800,
+          "top": 200
+        },
+        "type": "execute_actions"
+      },
+      "f7354360-d702-4631-92f7-b59241a607bb": {
+        "position": {
+          "left": 700,
+          "top": 1000
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 2
+  },
+  "name": "PLH - Help - Settings - Change age group for tips",
+  "nodes": [
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "6bb33690-985c-4ce4-a5d3-77bf143f09af",
+          "uuid": "144a0941-787c-4a64-b9a1-41b6700f5988"
+        },
+        {
+          "destination_uuid": "a2f6281e-59f7-4a6f-84fd-3bfe7b5df705",
+          "uuid": "66c850f7-83b1-4192-b7b2-7120c8b3b9b6"
+        },
+        {
+          "destination_uuid": "f43f9b95-10b3-4aad-b858-2cd4acb6623b",
+          "uuid": "9a803241-9e12-492b-b2c9-40b9f0d49321"
+        },
+        {
+          "destination_uuid": "e4c920cc-2b72-4063-a37c-8192b7e50efc",
+          "uuid": "e134cc7a-29fb-4022-b7c5-6ee937783fdb"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "baby"
+            ],
+            "category_uuid": "32f6ffbd-94a9-43da-8755-93420f35121e",
+            "type": "has_any_word",
+            "uuid": "6a1237fd-cc11-4c4d-b877-ae7d73b77c9d"
+          },
+          {
+            "arguments": [
+              "young child"
+            ],
+            "category_uuid": "24ea33aa-872f-43af-8315-1b65d6ee61c5",
+            "type": "has_any_word",
+            "uuid": "a1d87153-1b16-4790-9524-654b5e1ed794"
+          },
+          {
+            "arguments": [
+              "teen "
+            ],
+            "category_uuid": "ff147ebf-9dec-4062-9691-2c4c9db77860",
+            "type": "has_any_word",
+            "uuid": "665931cc-e5bd-4649-b72f-8c554b18ef88"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "144a0941-787c-4a64-b9a1-41b6700f5988",
+            "name": "Baby",
+            "uuid": "32f6ffbd-94a9-43da-8755-93420f35121e"
+          },
+          {
+            "exit_uuid": "66c850f7-83b1-4192-b7b2-7120c8b3b9b6",
+            "name": "Young",
+            "uuid": "24ea33aa-872f-43af-8315-1b65d6ee61c5"
+          },
+          {
+            "exit_uuid": "9a803241-9e12-492b-b2c9-40b9f0d49321",
+            "name": "Teen",
+            "uuid": "ff147ebf-9dec-4062-9691-2c4c9db77860"
+          },
+          {
+            "exit_uuid": "e134cc7a-29fb-4022-b7c5-6ee937783fdb",
+            "name": "Other",
+            "uuid": "8f0956d4-13c2-4734-a470-3f8dd5efcdc7"
+          }
+        ],
+        "default_category_uuid": "8f0956d4-13c2-4734-a470-3f8dd5efcdc7",
+        "operand": "@fields.age_group_for_tips",
+        "type": "switch"
+      },
+      "uuid": "9dd14018-2427-4d5f-b55b-a702ab4c4049"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "The age group you are currently receiving parenting tips for is: Baby (0 to 23 months old).",
+          "type": "send_msg",
+          "uuid": "af05fd51-b2af-4230-86e5-7212deb42825"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7e7f3625-281b-4aa8-9ef1-21b492c8b5e4",
+          "uuid": "c0f27b27-3b1f-41f0-8273-b0966048beab"
+        }
+      ],
+      "uuid": "6bb33690-985c-4ce4-a5d3-77bf143f09af"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "The age group you are currently receiving parenting tips for is: Teenager (10 to 17 years).",
+          "type": "send_msg",
+          "uuid": "fc47b97d-eddd-49ed-8402-3fac73780f5e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7e7f3625-281b-4aa8-9ef1-21b492c8b5e4",
+          "uuid": "fe6fb723-ced4-4321-b5cd-0876f991df33"
+        }
+      ],
+      "uuid": "f43f9b95-10b3-4aad-b858-2cd4acb6623b"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "The age group you are currently receiving parenting tips for is: Young child (2 to 9 years).",
+          "type": "send_msg",
+          "uuid": "172604e4-acbf-44ef-a16c-5f04b918392c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7e7f3625-281b-4aa8-9ef1-21b492c8b5e4",
+          "uuid": "0cd3bcf3-12ff-46c4-bdd0-702cdd48c05d"
+        }
+      ],
+      "uuid": "a2f6281e-59f7-4a6f-84fd-3bfe7b5df705"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "Would you like to receive parenting tips for another age group? ",
+          "type": "send_msg",
+          "uuid": "4e951224-629b-42c8-86b6-a0f5bd218442"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e488491e-64f9-494f-bde0-d6843de77303",
+          "uuid": "1c8465f7-1bfd-4548-97f6-25c827f3e60e"
+        }
+      ],
+      "uuid": "7e7f3625-281b-4aa8-9ef1-21b492c8b5e4"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "c58c2804-dd25-4d24-9ba5-93606deb9c89"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7e7f3625-281b-4aa8-9ef1-21b492c8b5e4",
+          "uuid": "b6509ad4-189d-4e89-84e2-330e7ff91606"
+        }
+      ],
+      "uuid": "0e75885f-ddf8-4c2c-ae00-a92f6f1315c6"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "e4c920cc-2b72-4063-a37c-8192b7e50efc",
+          "uuid": "971ecbee-9417-48f4-95ec-20df9ec82a8c"
+        },
+        {
+          "uuid": "7c5e5068-6ada-4eea-ab1c-28a5e41ac431"
+        },
+        {
+          "destination_uuid": "0e75885f-ddf8-4c2c-ae00-a92f6f1315c6",
+          "uuid": "ac41b25e-40cc-41cb-9c88-95a2a1a84fce"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes y"
+            ],
+            "category_uuid": "c56b3338-dc62-4cea-a58f-d3a391ce4a53",
+            "type": "has_any_word",
+            "uuid": "6d4e8de3-c26c-4a6b-a7b2-34c519b745c8"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "6f65e2db-64eb-4ce1-a09c-376e75c9b411",
+            "type": "has_any_word",
+            "uuid": "dfdcf40b-d51c-44c4-924b-dea3687549b4"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "971ecbee-9417-48f4-95ec-20df9ec82a8c",
+            "name": "Yes",
+            "uuid": "c56b3338-dc62-4cea-a58f-d3a391ce4a53"
+          },
+          {
+            "exit_uuid": "7c5e5068-6ada-4eea-ab1c-28a5e41ac431",
+            "name": "No",
+            "uuid": "6f65e2db-64eb-4ce1-a09c-376e75c9b411"
+          },
+          {
+            "exit_uuid": "ac41b25e-40cc-41cb-9c88-95a2a1a84fce",
+            "name": "Other",
+            "uuid": "fb3a4c1e-7756-4884-8aac-9378b8b82a4b"
+          }
+        ],
+        "default_category_uuid": "fb3a4c1e-7756-4884-8aac-9378b8b82a4b",
+        "operand": "@input.text",
+        "result_name": "Result 1",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "e488491e-64f9-494f-bde0-d6843de77303"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Baby (0 to 23 months old)",
+            "Young child (2 to 9 years)",
+            "Teenager (10 to 17 years)"
+          ],
+          "text": "Which age group would you like to receive parenting tips for? ",
+          "type": "send_msg",
+          "uuid": "36dfa1da-f24e-4ac2-9061-a44e0bf66c8a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "c2150a1d-a21a-44f7-bce5-d142ab5a6ce3",
+          "uuid": "3b64d4dd-a15d-4179-9cb8-524e6273eaa3"
+        }
+      ],
+      "uuid": "e4c920cc-2b72-4063-a37c-8192b7e50efc"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "f7b380c1-7533-47e9-85b1-894c07e6000a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e4c920cc-2b72-4063-a37c-8192b7e50efc",
+          "uuid": "4b361810-29c8-4c00-aeda-2f103895f2ba"
+        }
+      ],
+      "uuid": "f7354360-d702-4631-92f7-b59241a607bb"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "eeff3e2b-3b97-4341-8d88-c835caa26bd2",
+          "uuid": "f84e0d67-f3d5-406e-ab17-b5a4f41b0867"
+        },
+        {
+          "destination_uuid": "46ca249c-c33d-48e4-95f0-4ad983fae907",
+          "uuid": "5f291578-6338-4658-830b-8934bd5d98fe"
+        },
+        {
+          "destination_uuid": "d1c590bd-2e6a-4250-a898-7b90fde3fd33",
+          "uuid": "7e644aec-7913-4148-8d19-5d9324b555d7"
+        },
+        {
+          "destination_uuid": "f7354360-d702-4631-92f7-b59241a607bb",
+          "uuid": "a69269fd-00fb-4a4d-b403-a4c2e5c16f24"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "baby"
+            ],
+            "category_uuid": "deecfb51-1341-425c-b242-7c7d24af3f83",
+            "type": "has_any_word",
+            "uuid": "a84c5f19-e747-425f-9fc4-33c4dcfc3cfe"
+          },
+          {
+            "arguments": [
+              "young child"
+            ],
+            "category_uuid": "62f8d531-d913-4531-b711-ef54bbb5bf7c",
+            "type": "has_any_word",
+            "uuid": "746ffa3d-fe26-4bcc-9f90-07cebb5245ed"
+          },
+          {
+            "arguments": [
+              "teen teenager"
+            ],
+            "category_uuid": "472ad85a-d14f-4324-aa15-47d41186aef1",
+            "type": "has_any_word",
+            "uuid": "7e6b1c4b-b737-4840-b363-2b34fe28f3e1"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "f84e0d67-f3d5-406e-ab17-b5a4f41b0867",
+            "name": "baby",
+            "uuid": "deecfb51-1341-425c-b242-7c7d24af3f83"
+          },
+          {
+            "exit_uuid": "5f291578-6338-4658-830b-8934bd5d98fe",
+            "name": "child",
+            "uuid": "62f8d531-d913-4531-b711-ef54bbb5bf7c"
+          },
+          {
+            "exit_uuid": "7e644aec-7913-4148-8d19-5d9324b555d7",
+            "name": "teen",
+            "uuid": "472ad85a-d14f-4324-aa15-47d41186aef1"
+          },
+          {
+            "exit_uuid": "a69269fd-00fb-4a4d-b403-a4c2e5c16f24",
+            "name": "Other",
+            "uuid": "1ef4e5ab-772d-42a1-9810-8dbc3579852d"
+          }
+        ],
+        "default_category_uuid": "1ef4e5ab-772d-42a1-9810-8dbc3579852d",
+        "operand": "@input.text",
+        "result_name": "Result 2",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "c2150a1d-a21a-44f7-bce5-d142ab5a6ce3"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "age_group_for_tips",
+            "name": "age group for tips"
+          },
+          "type": "set_contact_field",
+          "uuid": "046aec2c-a3e8-4abb-97a6-ac2b56ccfce8",
+          "value": "baby"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "cfe5e36b-0f56-4518-bce7-72889fb011f2"
+        }
+      ],
+      "uuid": "eeff3e2b-3b97-4341-8d88-c835caa26bd2"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "age_group_for_tips",
+            "name": "age group for tips"
+          },
+          "type": "set_contact_field",
+          "uuid": "64cbc909-97d7-4a3a-bbf8-c1ece8ec026b",
+          "value": "young child"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "be153304-4648-4ddf-94fb-312c58459d2a"
+        }
+      ],
+      "uuid": "46ca249c-c33d-48e4-95f0-4ad983fae907"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "age_group_for_tips",
+            "name": "age group for tips"
+          },
+          "type": "set_contact_field",
+          "uuid": "ba7df72b-5398-44f1-bd87-45f485c8227d",
+          "value": "teen"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "490964b0-deb7-42ad-94e4-823abf6e777b"
+        }
+      ],
+      "uuid": "d1c590bd-2e6a-4250-a898-7b90fde3fd33"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "8dd4ac3c-e2d9-4473-b4d5-891760ee1f37",
+  "revision": 1
+}

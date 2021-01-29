@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "18dc1dd0-fb92-4b27-b9e9-06882641e380": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "4972df52-afa7-43fb-9319-8e16f951c655": {
+        "position": {
+          "left": 0,
+          "top": 380
+        },
+        "type": "execute_actions"
+      },
+      "aa7143d4-460e-420d-baea-835e492a3a93": {
+        "config": {},
+        "position": {
+          "left": 380,
+          "top": 540
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Active - Crazy chicken",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Crazy Chicken\n•\tShake your left hands in the air 8 times while counting to 8 \n•\tDo it as fast and loud as you can\n•\tRepeat with your other hand. Repeat with each foot.\n•\tDo it 7 times, then 6 times and continue until you get to 1.\n•\tEveryone calls out “Crazy chicken” and does their best crazy chicken dance!",
+          "type": "send_msg",
+          "uuid": "a43a75ae-a275-4348-a5cb-42d784695cf1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e780820a-5822-437b-8233-7e344f645715"
+        }
+      ],
+      "uuid": "18dc1dd0-fb92-4b27-b9e9-06882641e380"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "5539390d-8a69-4f1f-9522-666473aa9a7f",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "fd429d2f-2e07-4732-831a-6c260f24aaeb",
+          "value": "Child9"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "aa7143d4-460e-420d-baea-835e492a3a93",
+          "uuid": "9ab1389c-7058-471e-bbf0-4de7a846be0b"
+        }
+      ],
+      "uuid": "4972df52-afa7-43fb-9319-8e16f951c655"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "0c8a0390-89e5-4eee-bea0-38580ec7f711"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "d3517c77-e13a-46c3-8119-6bc46aafb29a"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "77ddea84-1375-4d8b-8794-b593226cc36d"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "fdd76ec4-05c0-440f-bffa-c994155920c5",
+            "type": "has_only_text",
+            "uuid": "5690c2c5-6456-4c6a-ba0a-c53f9586c6e0"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "b5020722-d9a7-4ec6-abdb-010ad0f9ffe1",
+            "type": "has_only_text",
+            "uuid": "e37e60b6-bb68-4267-bdb7-c87abf9c0b8a"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "d3517c77-e13a-46c3-8119-6bc46aafb29a",
+            "name": "Complete",
+            "uuid": "fdd76ec4-05c0-440f-bffa-c994155920c5"
+          },
+          {
+            "exit_uuid": "77ddea84-1375-4d8b-8794-b593226cc36d",
+            "name": "Expired",
+            "uuid": "b5020722-d9a7-4ec6-abdb-010ad0f9ffe1"
+          }
+        ],
+        "default_category_uuid": "b5020722-d9a7-4ec6-abdb-010ad0f9ffe1",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "aa7143d4-460e-420d-baea-835e492a3a93"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "124b989b-df4a-453a-8ce0-940573c02adf",
+  "revision": 1
+}

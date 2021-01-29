@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "7646a835-45aa-486a-ade7-b53f9b106346": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "a215ee89-067e-48ab-95d7-9c94fe07a040": {
+        "position": {
+          "left": 0,
+          "top": 340
+        },
+        "type": "execute_actions"
+      },
+      "b5062212-64f9-430c-90bd-ffb2d6a12b9f": {
+        "config": {},
+        "position": {
+          "left": 220,
+          "top": 520
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Teen - Calm - Yes No or Maybe",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Yes, No or Maybe\n•\tAsk each other questions. They can be any questions about things you like or what you did today.\n•\tThe only rule is that you can’t answer Yes, No or Maybe\n•\tHow long can you last? How creative can you get with your answers?\n•\tSwap over and play again! ",
+          "type": "send_msg",
+          "uuid": "1b254f32-0cce-453a-97a2-821ad739d44c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "3511e52e-f8af-4232-9862-1d36c6c45898"
+        }
+      ],
+      "uuid": "7646a835-45aa-486a-ade7-b53f9b106346"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "81ce21d1-1c61-4e15-bbd0-b25243fa6cc3",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "b30c56f7-9bdc-4901-9f9c-9b00e6f238e8",
+          "value": "Teen3"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "b5062212-64f9-430c-90bd-ffb2d6a12b9f",
+          "uuid": "19e2287d-298b-479c-9153-648af151102b"
+        }
+      ],
+      "uuid": "a215ee89-067e-48ab-95d7-9c94fe07a040"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "04820328-9b91-43f9-b913-5b4f0cb5b06c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "ec38fb78-f8b8-4e87-a179-c0c44e2130e7"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "b0a898dd-a2c6-4caa-b386-04dc835eba27"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "89ed5e93-cc7c-4b70-affd-edfd301e2ace",
+            "type": "has_only_text",
+            "uuid": "ee7b5ae2-28ee-49ba-88bd-8649459b297b"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "565bf36a-67f8-4658-b856-fae58e64908a",
+            "type": "has_only_text",
+            "uuid": "534bbe06-4269-4288-aab9-8245c3a97cad"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "ec38fb78-f8b8-4e87-a179-c0c44e2130e7",
+            "name": "Complete",
+            "uuid": "89ed5e93-cc7c-4b70-affd-edfd301e2ace"
+          },
+          {
+            "exit_uuid": "b0a898dd-a2c6-4caa-b386-04dc835eba27",
+            "name": "Expired",
+            "uuid": "565bf36a-67f8-4658-b856-fae58e64908a"
+          }
+        ],
+        "default_category_uuid": "565bf36a-67f8-4658-b856-fae58e64908a",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "b5062212-64f9-430c-90bd-ffb2d6a12b9f"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "b66fce13-cc9a-48ff-9df6-9ca152166a26",
+  "revision": 1
+}

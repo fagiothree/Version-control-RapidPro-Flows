@@ -1,0 +1,713 @@
+{
+  "_ui": {
+    "nodes": {
+      "aeed124d-cee5-4ff7-9774-5d0c8da09cd3": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "current_week_in_program",
+            "name": "current week in program",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 600,
+          "top": 60
+        },
+        "type": "split_by_contact_field"
+      },
+      "c62ef761-365a-4875-8b2a-ce1d8276fb46": {
+        "position": {
+          "left": 420,
+          "top": 180
+        },
+        "type": "execute_actions"
+      },
+      "784e7bd8-bbb0-4a2f-8372-c81e947400cc": {
+        "position": {
+          "left": 860,
+          "top": 240
+        },
+        "type": "execute_actions"
+      },
+      "38ee9688-fcfa-4d33-9934-efca05111d7b": {
+        "position": {
+          "left": 380,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "c35df13b-3109-41e2-a698-3ac526841d9c": {
+        "position": {
+          "left": 740,
+          "top": 500
+        },
+        "type": "execute_actions"
+      },
+      "7de7c5ec-904b-4731-8cd3-7957d9edbdba": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "n_skills_week",
+            "name": "n skills week",
+            "type": "result"
+          }
+        },
+        "position": {
+          "left": 420,
+          "top": 740
+        },
+        "type": "split_by_run_result"
+      },
+      "d463f185-570c-4da8-aadd-ae04c43860f0": {
+        "position": {
+          "left": 200,
+          "top": 880
+        },
+        "type": "execute_actions"
+      },
+      "3ee874da-e194-4986-b2ac-9a9903a5eb6e": {
+        "position": {
+          "left": 800,
+          "top": 920
+        },
+        "type": "execute_actions"
+      },
+      "eb7af719-1754-4ece-b513-91885a552d86": {
+        "position": {
+          "left": 200,
+          "top": 1020
+        },
+        "type": "execute_actions"
+      },
+      "0219665a-4077-4aee-8631-3b5988dd9b14": {
+        "config": {},
+        "position": {
+          "left": 180,
+          "top": 1140
+        },
+        "type": "split_by_subflow"
+      },
+      "7b808658-524c-4419-aea9-d671a825cda4": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "n_incompletes_week",
+            "name": "n incompletes week",
+            "type": "result"
+          }
+        },
+        "position": {
+          "left": 740,
+          "top": 1220
+        },
+        "type": "split_by_run_result"
+      },
+      "5896a477-e8f7-4c1d-a956-241fbb81f81b": {
+        "position": {
+          "left": 220,
+          "top": 1420
+        },
+        "type": "execute_actions"
+      },
+      "16f4dd43-f544-4ae8-8692-dc3178e3ef1f": {
+        "position": {
+          "left": 220,
+          "top": 1560
+        },
+        "type": "execute_actions"
+      },
+      "e27f5d14-ed77-410b-993e-8c9b43ff0170": {
+        "config": {},
+        "position": {
+          "left": 140,
+          "top": 1680
+        },
+        "type": "split_by_subflow"
+      },
+      "2e27b342-a806-4d15-b430-6b4ba4acedc6": {
+        "position": {
+          "left": 740,
+          "top": 1720
+        },
+        "type": "execute_actions"
+      },
+      "aeb39d5e-8382-4473-8d45-82ec233e7ace": {
+        "position": {
+          "left": 460,
+          "top": 1740
+        },
+        "type": "execute_actions"
+      },
+      "739ba2a3-6456-4200-a76d-57451aee2051": {
+        "position": {
+          "left": 760,
+          "top": 1900
+        },
+        "type": "execute_actions"
+      },
+      "8fe5f4a7-cfd2-4996-89c7-9587ea25055c": {
+        "position": {
+          "left": 480,
+          "top": 2060
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Supportive - Weekly congratulations",
+  "nodes": [
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "c62ef761-365a-4875-8b2a-ce1d8276fb46",
+          "uuid": "bf70217c-f999-45b7-88e2-b038de8a79eb"
+        },
+        {
+          "destination_uuid": "c35df13b-3109-41e2-a698-3ac526841d9c",
+          "uuid": "d4f1bbd4-54ce-4a1f-beaf-a7925655a67d"
+        },
+        {
+          "destination_uuid": "784e7bd8-bbb0-4a2f-8372-c81e947400cc",
+          "uuid": "88e2343c-faab-42aa-bc99-2c04e9d42a97"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "1"
+            ],
+            "category_uuid": "312a0a28-ceca-463b-bf3c-c713c91d56b8",
+            "type": "has_number_lte",
+            "uuid": "51a43ba2-7c15-4fa6-867d-85a31b3991a0"
+          },
+          {
+            "arguments": [
+              "5"
+            ],
+            "category_uuid": "ee22ba9e-d274-42de-bd2c-83385bf5a8e3",
+            "type": "has_number_eq",
+            "uuid": "cb47e3a6-9643-4b13-838f-223699642fcf"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "bf70217c-f999-45b7-88e2-b038de8a79eb",
+            "name": "first week",
+            "uuid": "312a0a28-ceca-463b-bf3c-c713c91d56b8"
+          },
+          {
+            "exit_uuid": "d4f1bbd4-54ce-4a1f-beaf-a7925655a67d",
+            "name": "last week",
+            "uuid": "ee22ba9e-d274-42de-bd2c-83385bf5a8e3"
+          },
+          {
+            "exit_uuid": "88e2343c-faab-42aa-bc99-2c04e9d42a97",
+            "name": "Other",
+            "uuid": "85d597dd-5fc5-4345-9440-994e65766343"
+          }
+        ],
+        "default_category_uuid": "85d597dd-5fc5-4345-9440-994e65766343",
+        "operand": "@fields.current_week_in_program",
+        "type": "switch"
+      },
+      "uuid": "aeed124d-cee5-4ff7-9774-5d0c8da09cd3"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image/gif:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/105149/steps/841e4461-aa3c-4268-93ce-608f95b851cd.gif"
+          ],
+          "quick_replies": [],
+          "text": "Congratulations! You have made it through your first week. How time flies! ",
+          "type": "send_msg",
+          "uuid": "216c778e-97b0-40b9-aca8-e8aaeddd5fe0"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "38ee9688-fcfa-4d33-9934-efca05111d7b",
+          "uuid": "e532af48-6e71-40cb-a9ce-32bbd40ab9e0"
+        }
+      ],
+      "uuid": "c62ef761-365a-4875-8b2a-ce1d8276fb46"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image/gif:https://dl-rapidpro-io.s3.amazonaws.com/attachments/3247/105149/steps/1a9e72da-5bc4-4b28-a945-033f765098c5.gif"
+          ],
+          "quick_replies": [],
+          "text": "Congratulations! You have made it through another week!",
+          "type": "send_msg",
+          "uuid": "d82aff8f-bf4f-4e5c-b4d2-2f17f60de41e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "38ee9688-fcfa-4d33-9934-efca05111d7b",
+          "uuid": "caf77b5f-636a-47c9-b370-325a249e2212"
+        }
+      ],
+      "uuid": "784e7bd8-bbb0-4a2f-8372-c81e947400cc"
+    },
+    {
+      "actions": [
+        {
+          "category": "",
+          "name": "n skills week",
+          "type": "set_run_result",
+          "uuid": "c61ed955-c69d-421a-b688-7f0055907fbd",
+          "value": "@(count(split(fields.week_toolkit,\",\")))"
+        },
+        {
+          "category": "",
+          "name": "n incompletes week",
+          "type": "set_run_result",
+          "uuid": "aefaf145-ed2b-4fa0-ae71-640b04c02979",
+          "value": "@(count(split(fields.week_toolkit_incompletes,\",\")))"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7de7c5ec-904b-4731-8cd3-7957d9edbdba",
+          "uuid": "6dfe6873-fb3b-4f13-a7f8-c53dca784f45"
+        }
+      ],
+      "uuid": "38ee9688-fcfa-4d33-9934-efca05111d7b"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Congratulations for finishing the ParentText programme! \n\nYou can always revisit the parenting tips by typing \"Help\". If you want to stop receiving messages, go to \"Technical Support\" and then select \"User Experience\".",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "c2e0fa7c-23e3-4a25-97db-9a95518afef5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b3314015-79ac-419e-b41c-e0f2ecca613f"
+        }
+      ],
+      "uuid": "c35df13b-3109-41e2-a698-3ac526841d9c"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "d463f185-570c-4da8-aadd-ae04c43860f0",
+          "uuid": "395e83b7-dc3a-486d-8f01-cc17bf29b220"
+        },
+        {
+          "destination_uuid": "3ee874da-e194-4986-b2ac-9a9903a5eb6e",
+          "uuid": "7ad1faa8-5c2e-436f-9286-fe049acf81ae"
+        },
+        {
+          "destination_uuid": "7b808658-524c-4419-aea9-d671a825cda4",
+          "uuid": "c59d76d5-3d15-4851-9e25-d3abf71769c6"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "1"
+            ],
+            "category_uuid": "4e5113fe-3fd2-4625-b50b-79d42431575e",
+            "type": "has_number_eq",
+            "uuid": "491320f6-6d60-4f7b-a3d7-74ee3854fb49"
+          },
+          {
+            "arguments": [
+              "2"
+            ],
+            "category_uuid": "890b82c3-46f0-4769-b4c0-3ba6988abf86",
+            "type": "has_number_gte",
+            "uuid": "7513f808-2de6-447d-91a0-63f44e9fc698"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "395e83b7-dc3a-486d-8f01-cc17bf29b220",
+            "name": "1",
+            "uuid": "4e5113fe-3fd2-4625-b50b-79d42431575e"
+          },
+          {
+            "exit_uuid": "7ad1faa8-5c2e-436f-9286-fe049acf81ae",
+            "name": ">= 2",
+            "uuid": "890b82c3-46f0-4769-b4c0-3ba6988abf86"
+          },
+          {
+            "exit_uuid": "c59d76d5-3d15-4851-9e25-d3abf71769c6",
+            "name": "Other",
+            "uuid": "7931ba94-ead1-4118-81c6-4d96a3412c93"
+          }
+        ],
+        "default_category_uuid": "7931ba94-ead1-4118-81c6-4d96a3412c93",
+        "operand": "@results.n_skills_week",
+        "type": "switch"
+      },
+      "uuid": "7de7c5ec-904b-4731-8cd3-7957d9edbdba"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You have added one skill to your Parenting Toolkit this week:",
+          "type": "send_msg",
+          "uuid": "19834c4f-8399-438c-9fab-259e9ec500af"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "eb7af719-1754-4ece-b513-91885a552d86",
+          "uuid": "2180c059-515b-497a-abbb-1c4b706204ca"
+        }
+      ],
+      "uuid": "d463f185-570c-4da8-aadd-ae04c43860f0"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You have added @results.n_skills_week skills to your Parenting Toolkit this week:",
+          "type": "send_msg",
+          "uuid": "1c94473d-a4de-48e2-87b6-0515c2ecbd40"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "eb7af719-1754-4ece-b513-91885a552d86",
+          "uuid": "b5891160-9ea8-41a7-8aad-c26e5e3ba815"
+        }
+      ],
+      "uuid": "3ee874da-e194-4986-b2ac-9a9903a5eb6e"
+    },
+    {
+      "actions": [
+        {
+          "category": "",
+          "name": "type_of_toolkit",
+          "type": "set_run_result",
+          "uuid": "bd9e1916-1a10-426a-94ea-1a32141efd83",
+          "value": "week_toolkit"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "0219665a-4077-4aee-8631-3b5988dd9b14",
+          "uuid": "93264fe6-69ba-48b3-a6a3-21fca0e0f890"
+        }
+      ],
+      "uuid": "eb7af719-1754-4ece-b513-91885a552d86"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Print parenting toolkits",
+            "uuid": "40567338-fa3b-462f-a6f6-966a6220d1d0"
+          },
+          "type": "enter_flow",
+          "uuid": "af8fb538-565f-43be-91e5-46d862d85797"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7b808658-524c-4419-aea9-d671a825cda4",
+          "uuid": "ec6627d4-4844-4e51-8a43-a9dcc9ba0338"
+        },
+        {
+          "destination_uuid": "7b808658-524c-4419-aea9-d671a825cda4",
+          "uuid": "1d52698f-94dd-4aad-a89f-23188b9be573"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "7179391c-4fc4-4c1a-8f20-1d7ac4263774",
+            "type": "has_only_text",
+            "uuid": "a1acb5b1-45e5-4f50-b9d8-912cb6df2db0"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "4e602b10-01b8-4508-b356-e29d0ff674ca",
+            "type": "has_only_text",
+            "uuid": "3ac8bb66-46ea-41df-98e4-877aa30f10c3"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "ec6627d4-4844-4e51-8a43-a9dcc9ba0338",
+            "name": "Complete",
+            "uuid": "7179391c-4fc4-4c1a-8f20-1d7ac4263774"
+          },
+          {
+            "exit_uuid": "1d52698f-94dd-4aad-a89f-23188b9be573",
+            "name": "Expired",
+            "uuid": "4e602b10-01b8-4508-b356-e29d0ff674ca"
+          }
+        ],
+        "default_category_uuid": "4e602b10-01b8-4508-b356-e29d0ff674ca",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "0219665a-4077-4aee-8631-3b5988dd9b14"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "5896a477-e8f7-4c1d-a956-241fbb81f81b",
+          "uuid": "cf40d13f-fbf9-4602-854b-c989df196860"
+        },
+        {
+          "destination_uuid": "2e27b342-a806-4d15-b430-6b4ba4acedc6",
+          "uuid": "dcb68941-d3ee-4f2f-add3-1e47a6d50053"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "0"
+            ],
+            "category_uuid": "fd6f2a64-bdda-4a3c-aabc-8228b3ce786d",
+            "type": "has_number_gt",
+            "uuid": "385c6ffc-ee0e-4d26-ab75-dc5eca1d0c98"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "cf40d13f-fbf9-4602-854b-c989df196860",
+            "name": ">0",
+            "uuid": "fd6f2a64-bdda-4a3c-aabc-8228b3ce786d"
+          },
+          {
+            "exit_uuid": "dcb68941-d3ee-4f2f-add3-1e47a6d50053",
+            "name": "Other",
+            "uuid": "1f7eee21-f8f4-45ab-8507-1d2b22c83c80"
+          }
+        ],
+        "default_category_uuid": "1f7eee21-f8f4-45ab-8507-1d2b22c83c80",
+        "operand": "@results.n_incompletes_week",
+        "type": "switch"
+      },
+      "uuid": "7b808658-524c-4419-aea9-d671a825cda4"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "You also have made progress on the following skills: ",
+          "type": "send_msg",
+          "uuid": "988780ca-e4e7-438a-9252-9772e834778a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "16f4dd43-f544-4ae8-8692-dc3178e3ef1f",
+          "uuid": "3c2020c6-e770-4f88-bbfb-5520a723cfed"
+        }
+      ],
+      "uuid": "5896a477-e8f7-4c1d-a956-241fbb81f81b"
+    },
+    {
+      "actions": [
+        {
+          "category": "",
+          "name": "type_of_toolkit",
+          "type": "set_run_result",
+          "uuid": "4bdd4ad3-685f-4cae-b8a2-a9c6929950f1",
+          "value": "full_incomplete"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "e27f5d14-ed77-410b-993e-8c9b43ff0170",
+          "uuid": "7e498918-5487-4305-9d96-b361ef044828"
+        }
+      ],
+      "uuid": "16f4dd43-f544-4ae8-8692-dc3178e3ef1f"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Print parenting toolkits",
+            "uuid": "40567338-fa3b-462f-a6f6-966a6220d1d0"
+          },
+          "type": "enter_flow",
+          "uuid": "0da50b06-7ad9-4d7f-be9f-5d4bb44355f6"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "aeb39d5e-8382-4473-8d45-82ec233e7ace",
+          "uuid": "d2e8565e-ef24-4d94-9dd6-a69220170fce"
+        },
+        {
+          "destination_uuid": "aeb39d5e-8382-4473-8d45-82ec233e7ace",
+          "uuid": "42f4dad7-3cb1-40ef-a44a-9760b6d4de5b"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "a937e101-06e4-424b-bef9-4e23f2d63c0b",
+            "type": "has_only_text",
+            "uuid": "3db6a4c0-b4d6-4822-b87e-6c2d5bc9666a"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "4f427606-5b13-4b37-b4c5-52addb89c689",
+            "type": "has_only_text",
+            "uuid": "e6f2cffe-d4f7-4b6e-880a-59cf688aa2d4"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "d2e8565e-ef24-4d94-9dd6-a69220170fce",
+            "name": "Complete",
+            "uuid": "a937e101-06e4-424b-bef9-4e23f2d63c0b"
+          },
+          {
+            "exit_uuid": "42f4dad7-3cb1-40ef-a44a-9760b6d4de5b",
+            "name": "Expired",
+            "uuid": "4f427606-5b13-4b37-b4c5-52addb89c689"
+          }
+        ],
+        "default_category_uuid": "4f427606-5b13-4b37-b4c5-52addb89c689",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "e27f5d14-ed77-410b-993e-8c9b43ff0170"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "toolkit_history",
+            "name": "toolkit history"
+          },
+          "type": "set_contact_field",
+          "uuid": "cc338552-06ec-4db5-a1be-008b1eae0e6f",
+          "value": "@(fields.toolkit_history & fields.week_toolkit)"
+        },
+        {
+          "field": {
+            "key": "incomplete_toolkit_history",
+            "name": "incomplete toolkit history"
+          },
+          "type": "set_contact_field",
+          "uuid": "3fccc3fa-6573-457d-8488-108d455f25e6",
+          "value": "@(fields.incomplete_toolkit_history & fields.week_toolkit_incompletes)"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "739ba2a3-6456-4200-a76d-57451aee2051",
+          "uuid": "8aecfcdc-fb4b-476d-b3ae-636a047bccd9"
+        }
+      ],
+      "uuid": "2e27b342-a806-4d15-b430-6b4ba4acedc6"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Type \"Toolkit\" if you want to go back and revisit any of these tips.",
+          "type": "send_msg",
+          "uuid": "f466ce0e-aa60-4c46-ba47-6d11b3853ad5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "2e27b342-a806-4d15-b430-6b4ba4acedc6",
+          "uuid": "3d4cf521-dd81-48ef-a594-bf71fd755628"
+        }
+      ],
+      "uuid": "aeb39d5e-8382-4473-8d45-82ec233e7ace"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "week_toolkit",
+            "name": "week toolkit"
+          },
+          "type": "set_contact_field",
+          "uuid": "327a5363-8683-40b3-953d-31a860115d88",
+          "value": ""
+        },
+        {
+          "field": {
+            "key": "week_toolkit_incompletes",
+            "name": "week toolkit incompletes"
+          },
+          "type": "set_contact_field",
+          "uuid": "fe5afb87-7865-4646-b524-97e51f99fc92",
+          "value": ""
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "8fe5f4a7-cfd2-4996-89c7-9587ea25055c",
+          "uuid": "dd9eda74-394f-4ca0-9819-75fa1222247d"
+        }
+      ],
+      "uuid": "739ba2a3-6456-4200-a76d-57451aee2051"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "If you have already noticed some changes in your life or relationship with your children, that's great! \n\nIf you have not noticed any changes, please keep it up. Sometimes these things take time to change.  We know you can do it!",
+          "type": "send_msg",
+          "uuid": "4096fc7a-be7c-4007-b98a-21d57d738e64"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "4ce53815-84ff-4703-8022-42c5c95f7913"
+        }
+      ],
+      "uuid": "8fe5f4a7-cfd2-4996-89c7-9587ea25055c"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "ecefe7d2-9535-4104-af2a-70ac6143208f",
+  "revision": 2
+}

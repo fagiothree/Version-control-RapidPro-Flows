@@ -1,0 +1,324 @@
+{
+  "_ui": {
+    "nodes": {
+      "d43c4d33-e9dd-4d57-a0f9-c3d51101f264": {
+        "position": {
+          "left": 440,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "25916522-1934-4abb-a5ab-d7cc0f57bf2e": {
+        "position": {
+          "left": 400,
+          "top": 240
+        },
+        "type": "execute_actions"
+      },
+      "8ecc93af-04b5-4e07-a160-4622dce244ba": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "type_of_media",
+            "name": "type of media",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 360,
+          "top": 480
+        },
+        "type": "split_by_contact_field"
+      },
+      "5bda2f59-820f-4cba-8a68-996316ad85c6": {
+        "position": {
+          "left": 840,
+          "top": 600
+        },
+        "type": "execute_actions"
+      },
+      "30c81475-f54e-4ab8-9140-11d6354622b0": {
+        "position": {
+          "left": 140,
+          "top": 620
+        },
+        "type": "execute_actions"
+      },
+      "e3f42f75-c557-42f0-907c-d867428745e8": {
+        "position": {
+          "left": 400,
+          "top": 660
+        },
+        "type": "execute_actions"
+      },
+      "fc5d85b1-398a-41d3-ae6b-17e29e6d3650": {
+        "position": {
+          "left": 840,
+          "top": 820
+        },
+        "type": "execute_actions"
+      },
+      "726e26b6-a948-4dbe-be6a-fc3d5440ce35": {
+        "position": {
+          "left": 800,
+          "top": 1040
+        },
+        "type": "execute_actions"
+      },
+      "78db8ccd-e980-4d84-9c5c-b30ec1b61cd0": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 160,
+          "top": 860
+        },
+        "config": {
+          "cases": {}
+        }
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 9
+  },
+  "name": "PLH - Content - Relax - CheckIn - Anger management",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Hi! Managing anger can be really difficult. Take a break when you feel you are getting angry at your children or someone else.",
+          "type": "send_msg",
+          "uuid": "a2af5318-6ece-4b28-b0da-ce342c9deb01"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "25916522-1934-4abb-a5ab-d7cc0f57bf2e",
+          "uuid": "bbe850ad-9561-4f2d-8c23-46b7c3f3ddee"
+        }
+      ],
+      "uuid": "d43c4d33-e9dd-4d57-a0f9-c3d51101f264"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Go somewhere else for 5 minutes to regain control of your emotions. If you have safe outdoor space, go outside. You can get through this!",
+          "type": "send_msg",
+          "uuid": "c76586a8-7a1d-48aa-9e6c-e1e81f64949d"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "8ecc93af-04b5-4e07-a160-4622dce244ba",
+          "uuid": "0eefb1f6-7614-41c0-9732-498223de96f3"
+        }
+      ],
+      "uuid": "25916522-1934-4abb-a5ab-d7cc0f57bf2e"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "30c81475-f54e-4ab8-9140-11d6354622b0",
+          "uuid": "23ad8edd-6481-4714-8d9e-ce589d04d681"
+        },
+        {
+          "destination_uuid": "e3f42f75-c557-42f0-907c-d867428745e8",
+          "uuid": "4a0e020e-3c83-4dbf-9917-84997d257363"
+        },
+        {
+          "destination_uuid": "5bda2f59-820f-4cba-8a68-996316ad85c6",
+          "uuid": "8f8940cd-5ae7-4ebf-812d-fd28fd769580"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "high"
+            ],
+            "category_uuid": "8a610af1-d534-485d-b90f-50b9ba6dbd65",
+            "type": "has_any_word",
+            "uuid": "225a49f2-d539-488a-b18f-51dabe301bd0"
+          },
+          {
+            "arguments": [
+              "medium"
+            ],
+            "category_uuid": "d3455144-7287-41e3-90a1-0c079993d353",
+            "type": "has_any_word",
+            "uuid": "d57e9586-8962-4ae6-b831-cb47fce7df15"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "23ad8edd-6481-4714-8d9e-ce589d04d681",
+            "name": "High",
+            "uuid": "8a610af1-d534-485d-b90f-50b9ba6dbd65"
+          },
+          {
+            "exit_uuid": "4a0e020e-3c83-4dbf-9917-84997d257363",
+            "name": "Medium",
+            "uuid": "d3455144-7287-41e3-90a1-0c079993d353"
+          },
+          {
+            "exit_uuid": "8f8940cd-5ae7-4ebf-812d-fd28fd769580",
+            "name": "Other",
+            "uuid": "59b2930e-a0ec-4be6-8a04-1e4e9bd9956a"
+          }
+        ],
+        "default_category_uuid": "59b2930e-a0ec-4be6-8a04-1e4e9bd9956a",
+        "operand": "@fields.type_of_media",
+        "type": "switch"
+      },
+      "uuid": "8ecc93af-04b5-4e07-a160-4622dce244ba"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Did you know that research shows if you control your anger or do something positive, you increase your child's brain development? Be proud of yourself when you manage to do it!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "2a5222df-4c29-4a84-a57f-24f0af7d658e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "fc5d85b1-398a-41d3-ae6b-17e29e6d3650",
+          "uuid": "a67db48b-a32a-4144-bdbf-e301d81d9082"
+        }
+      ],
+      "uuid": "5bda2f59-820f-4cba-8a68-996316ad85c6"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "video:@(fields.voiceover_video_path & \"Anger_Management.m4v\")"
+          ],
+          "text": "Here's a video to help you manage your anger!",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [],
+          "uuid": "6d22f58f-5c5a-4221-8791-0a0923d024a0"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "78db8ccd-e980-4d84-9c5c-b30ec1b61cd0",
+          "uuid": "73cc0e5a-d44e-4b65-8ade-67658d45dcd8"
+        }
+      ],
+      "uuid": "30c81475-f54e-4ab8-9140-11d6354622b0"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Here's an audio message to help you manage your anger!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "0c956ebd-0ea2-4d70-8f34-53593edd8be3"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "78db8ccd-e980-4d84-9c5c-b30ec1b61cd0",
+          "uuid": "4e3c674a-2216-44c1-a196-afc65a297c18"
+        }
+      ],
+      "uuid": "e3f42f75-c557-42f0-907c-d867428745e8"
+    },
+    {
+      "uuid": "fc5d85b1-398a-41d3-ae6b-17e29e6d3650",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "If you are getting angry because your baby won’t stop crying, it’s OK to leave them on their back in a safe location, like a crib, and walk away for a bit. Check on your baby every 5-10 minutes.",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [],
+          "uuid": "5be4ab37-dd93-4a5f-a11c-cc1fb175df1a"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "b8c9e2a6-ad32-4b9f-a3b0-fd4c11034dbc",
+          "destination_uuid": "726e26b6-a948-4dbe-be6a-fc3d5440ce35"
+        }
+      ]
+    },
+    {
+      "uuid": "78db8ccd-e980-4d84-9c5c-b30ec1b61cd0",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "577b3509-1087-4564-871f-be8f63d21eb4",
+        "cases": [],
+        "categories": [
+          {
+            "uuid": "577b3509-1087-4564-871f-be8f63d21eb4",
+            "name": "All Responses",
+            "exit_uuid": "956e5b26-7dd9-46f7-ad0a-ed0d06e2e117"
+          },
+          {
+            "uuid": "f5715833-6f56-44de-a0de-f8ff719e3935",
+            "name": "No Response",
+            "exit_uuid": "68c5d606-5de8-4939-a648-8c9f5d58578a"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg",
+          "timeout": {
+            "seconds": 120,
+            "category_uuid": "f5715833-6f56-44de-a0de-f8ff719e3935"
+          }
+        },
+        "result_name": "Result 1"
+      },
+      "exits": [
+        {
+          "uuid": "956e5b26-7dd9-46f7-ad0a-ed0d06e2e117",
+          "destination_uuid": "5bda2f59-820f-4cba-8a68-996316ad85c6"
+        },
+        {
+          "uuid": "68c5d606-5de8-4939-a648-8c9f5d58578a",
+          "destination_uuid": "5bda2f59-820f-4cba-8a68-996316ad85c6"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "We hope that was helpful! Remember you can always type \"Help\" at anytime if you need an activity to help you relax or reduce stress. Chat to you later!",
+          "type": "send_msg",
+          "uuid": "57ccad15-349c-471c-bc56-716d50b97cbf"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "6d9c5202-954b-4595-a847-a55be6092554"
+        }
+      ],
+      "uuid": "726e26b6-a948-4dbe-be6a-fc3d5440ce35"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "9b87431c-8b89-4be6-a0d0-21090340d521",
+  "revision": 19
+}

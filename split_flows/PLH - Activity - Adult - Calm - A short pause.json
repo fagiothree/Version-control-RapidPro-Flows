@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "178ff62a-d4cb-4815-9131-a29963afae59": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "c1547d82-6d66-443a-a52f-d8c9fa52a1b8": {
+        "position": {
+          "left": 0,
+          "top": 360
+        },
+        "type": "execute_actions"
+      },
+      "fc59d68e-3fee-4725-bb5a-90aa5b525e54": {
+        "config": {},
+        "position": {
+          "left": 240,
+          "top": 540
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Adult - Calm - A short pause",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "A Short Pause\n•\tSit down and close your eyes.\n•\tListen to your breath as it goes in and out. \n•\tNotice how you feel. \n•\tTake a few more deep breaths.\n•\tWhen you are ready open your eyes again. Do you feel any different? \n•\tRemind yourself that “Everything is ok”.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "a2352475-5fe8-49eb-828a-fdc440fe5a43"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "94f3d0df-0de3-4771-9f77-bee46a9cccb7"
+        }
+      ],
+      "uuid": "178ff62a-d4cb-4815-9131-a29963afae59"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "cafd4359-5a84-49ce-891b-bfccb969a807",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "1249442d-c909-4f02-8d0f-d570134550f2",
+          "value": "Adult1"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "fc59d68e-3fee-4725-bb5a-90aa5b525e54",
+          "uuid": "7e5373db-9ed1-445e-ae11-3c99b19a9a3c"
+        }
+      ],
+      "uuid": "c1547d82-6d66-443a-a52f-d8c9fa52a1b8"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "ec821131-752b-4ead-8855-253aeb1cb78e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "85a8a203-188d-4035-88c9-7ba0eca9c017"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "615afe27-c8b9-41a9-b199-1ecc1315a0d1"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "ea74e741-0c93-44b2-9647-f693bb8c191c",
+            "type": "has_only_text",
+            "uuid": "29839783-2fcb-4953-847c-c2bc0aeab412"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "81748cce-02e2-4249-a04c-beded6c9f29e",
+            "type": "has_only_text",
+            "uuid": "574bf53e-3ebc-48c7-9933-978edab9cdb8"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "85a8a203-188d-4035-88c9-7ba0eca9c017",
+            "name": "Complete",
+            "uuid": "ea74e741-0c93-44b2-9647-f693bb8c191c"
+          },
+          {
+            "exit_uuid": "615afe27-c8b9-41a9-b199-1ecc1315a0d1",
+            "name": "Expired",
+            "uuid": "81748cce-02e2-4249-a04c-beded6c9f29e"
+          }
+        ],
+        "default_category_uuid": "81748cce-02e2-4249-a04c-beded6c9f29e",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "fc59d68e-3fee-4725-bb5a-90aa5b525e54"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "e88bbb2e-7249-4454-a31f-1a4a94b87bb5",
+  "revision": 2
+}

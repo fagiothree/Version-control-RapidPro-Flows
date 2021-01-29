@@ -1,0 +1,242 @@
+{
+  "_ui": {
+    "nodes": {
+      "09e2bde0-a3c8-4ca1-8f65-42000ad8fce6": {
+        "position": {
+          "left": 580,
+          "top": 640
+        },
+        "type": "execute_actions"
+      },
+      "a5d442cc-e3d1-4d3a-bfe7-4b9d723195ac": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "incomplete_toolkit",
+            "name": "incomplete toolkit",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 520,
+          "top": 500
+        },
+        "type": "split_by_contact_field"
+      },
+      "c3c0899a-38ce-4795-b34b-06c0c6de5f11": {
+        "position": {
+          "left": 620,
+          "top": 340
+        },
+        "type": "execute_actions"
+      },
+      "c5c5e047-0702-4454-aa6d-bcc218981cce": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "week_toolkit_incompletes",
+            "name": "week toolkit incompletes",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 480,
+          "top": 200
+        },
+        "type": "split_by_contact_field"
+      },
+      "fb8e3c85-015e-477f-b4f6-8da32dec0bf5": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "toolkit",
+            "name": "toolkit",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 480,
+          "top": 40
+        },
+        "type": "split_by_contact_field"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Internal - Update incomplete toolkits",
+  "nodes": [
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "ba9a480c-afd1-4d6b-8d8f-8093798d6840"
+        },
+        {
+          "destination_uuid": "c5c5e047-0702-4454-aa6d-bcc218981cce",
+          "uuid": "a5960ab7-dfa3-4816-a260-a8bb0862b824"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "@parent.results.skill"
+            ],
+            "category_uuid": "f4c26f22-834b-442a-9d8e-24f9f218427a",
+            "type": "has_phrase",
+            "uuid": "019a61fa-34f9-45bf-b978-119cfb1ce484"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "ba9a480c-afd1-4d6b-8d8f-8093798d6840",
+            "name": "has skill",
+            "uuid": "f4c26f22-834b-442a-9d8e-24f9f218427a"
+          },
+          {
+            "exit_uuid": "a5960ab7-dfa3-4816-a260-a8bb0862b824",
+            "name": "Other",
+            "uuid": "181c0ee0-06e5-43ff-b4e3-4bdad4e0d935"
+          }
+        ],
+        "default_category_uuid": "181c0ee0-06e5-43ff-b4e3-4bdad4e0d935",
+        "operand": "@fields.toolkit",
+        "type": "switch"
+      },
+      "uuid": "fb8e3c85-015e-477f-b4f6-8da32dec0bf5"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "a5d442cc-e3d1-4d3a-bfe7-4b9d723195ac",
+          "uuid": "63e26a40-976e-45e2-98c0-1e4a1c6a1437"
+        },
+        {
+          "destination_uuid": "c3c0899a-38ce-4795-b34b-06c0c6de5f11",
+          "uuid": "b7d5e8f5-08db-4452-ada4-4dc134e19067"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "@parent.results.skill"
+            ],
+            "category_uuid": "0476d26b-03c6-443e-a864-364eaeb658e7",
+            "type": "has_phrase",
+            "uuid": "9ec39427-712b-422d-b32b-0cde36a86827"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "63e26a40-976e-45e2-98c0-1e4a1c6a1437",
+            "name": "has skill",
+            "uuid": "0476d26b-03c6-443e-a864-364eaeb658e7"
+          },
+          {
+            "exit_uuid": "b7d5e8f5-08db-4452-ada4-4dc134e19067",
+            "name": "Other",
+            "uuid": "fab9c16a-6dc5-4c59-aeb7-964a87c8d396"
+          }
+        ],
+        "default_category_uuid": "fab9c16a-6dc5-4c59-aeb7-964a87c8d396",
+        "operand": "@fields.week_toolkit_incompletes",
+        "type": "switch"
+      },
+      "uuid": "c5c5e047-0702-4454-aa6d-bcc218981cce"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "week_toolkit_incompletes",
+            "name": "week toolkit incompletes"
+          },
+          "type": "set_contact_field",
+          "uuid": "65858175-e7f8-41a4-8bba-ba002ba8185c",
+          "value": "@(fields.week_toolkit_incompletes & parent.results.skill & \",\")"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "a5d442cc-e3d1-4d3a-bfe7-4b9d723195ac",
+          "uuid": "1fe01526-04f2-4bd1-9126-85ceaadd5f48"
+        }
+      ],
+      "uuid": "c3c0899a-38ce-4795-b34b-06c0c6de5f11"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "c13163d2-ab72-4b4d-b370-51b5afa76b02"
+        },
+        {
+          "destination_uuid": "09e2bde0-a3c8-4ca1-8f65-42000ad8fce6",
+          "uuid": "cfb3b72d-02cf-4cec-b682-d6d2e5bea447"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "@parent.results.skill"
+            ],
+            "category_uuid": "3bc7a9ac-6f3d-42b3-bc5c-03fd14d26b93",
+            "type": "has_phrase",
+            "uuid": "b5a4214b-0b05-4274-a5fa-bdd3338f2fd9"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "c13163d2-ab72-4b4d-b370-51b5afa76b02",
+            "name": "has skill",
+            "uuid": "3bc7a9ac-6f3d-42b3-bc5c-03fd14d26b93"
+          },
+          {
+            "exit_uuid": "cfb3b72d-02cf-4cec-b682-d6d2e5bea447",
+            "name": "Other",
+            "uuid": "06fe4bc3-6b56-4942-a8d4-61324ccfbc34"
+          }
+        ],
+        "default_category_uuid": "06fe4bc3-6b56-4942-a8d4-61324ccfbc34",
+        "operand": "@fields.incomplete_toolkit",
+        "type": "switch"
+      },
+      "uuid": "a5d442cc-e3d1-4d3a-bfe7-4b9d723195ac"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "incomplete_toolkit",
+            "name": "incomplete toolkit"
+          },
+          "type": "set_contact_field",
+          "uuid": "7a9949bf-2d32-4189-8847-a48c4db172eb",
+          "value": "@(fields.incomplete_toolkit & parent.results.skill & \",\")"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "cd3a710d-b954-49f8-9b61-1548e004f3bf"
+        }
+      ],
+      "uuid": "09e2bde0-a3c8-4ca1-8f65-42000ad8fce6"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "a682c361-8bea-420a-8bbc-fc84a202fbcb",
+  "revision": 1
+}

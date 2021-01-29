@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "3706ca00-843b-4939-95b0-07168e3733fb": {
+        "position": {
+          "left": 60,
+          "top": 540
+        },
+        "type": "execute_actions"
+      },
+      "3b649c9d-85fa-4530-a662-eb70a14839e2": {
+        "config": {},
+        "position": {
+          "left": 60,
+          "top": 800
+        },
+        "type": "split_by_subflow"
+      },
+      "b084d456-89b7-4931-a36d-cd3a3a1de11d": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Adult - Active - 2 truths 1 lie",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "2 Truths, 1 Lie\n•\tThink of three statements about yourself. Two must be true and one must be a lie.\n•\tIt might help to think of wishes, dreams, likes or dislikes. For example, I hate bananas, I love ice cream and I really wish I could sing. \n•\tSay them to your partner or friends. Ask them to guess which one is a lie. \n•\tDid they guess correctly? Was it a surprise?\n•\tNow ask them to do the same. Did you learn something new about each other? ",
+          "type": "send_msg",
+          "uuid": "1f846552-990e-4645-8eff-7eda8c8aed65"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "691870ae-dbd8-45a0-953f-d02c6d6036a8"
+        }
+      ],
+      "uuid": "b084d456-89b7-4931-a36d-cd3a3a1de11d"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "07ee787c-3bed-46a7-a452-0a53759d9f3d",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "2918bcf1-8640-4561-968f-de7ef4cb39a8",
+          "value": "Adult 2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "3b649c9d-85fa-4530-a662-eb70a14839e2",
+          "uuid": "9eaedcc3-7e9d-4bef-9c8f-38b5693ee8ef"
+        }
+      ],
+      "uuid": "3706ca00-843b-4939-95b0-07168e3733fb"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow (activity or tip)",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "77c9379f-a0b3-460e-9e6a-97d544a3e3c2"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "5b711f1a-8e3e-469a-af01-a07b57365220"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "63926207-b87c-4cce-9254-a767fee88a2d"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "6fe3989a-bad6-4f2f-807c-93c54cba186c",
+            "type": "has_only_text",
+            "uuid": "6cf684be-a7c0-45a3-8dad-662b5d622437"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "3bc9a8a5-9df2-4641-b166-9ae9d1b984d0",
+            "type": "has_only_text",
+            "uuid": "d16c0fae-6744-4a01-a32d-8d24b866dd70"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "5b711f1a-8e3e-469a-af01-a07b57365220",
+            "name": "Complete",
+            "uuid": "6fe3989a-bad6-4f2f-807c-93c54cba186c"
+          },
+          {
+            "exit_uuid": "63926207-b87c-4cce-9254-a767fee88a2d",
+            "name": "Expired",
+            "uuid": "3bc9a8a5-9df2-4641-b166-9ae9d1b984d0"
+          }
+        ],
+        "default_category_uuid": "3bc9a8a5-9df2-4641-b166-9ae9d1b984d0",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "3b649c9d-85fa-4530-a662-eb70a14839e2"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "68109791-0b47-4c44-8287-24e046e058a2",
+  "revision": 1
+}

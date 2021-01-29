@@ -1,0 +1,318 @@
+{
+  "_ui": {
+    "nodes": {
+      "053f3279-82c0-4eae-996a-3e1bd032c38a": {
+        "position": {
+          "left": 600,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "59e88ff8-79f0-4ba8-b916-37f493eb7374": {
+        "position": {
+          "left": 580,
+          "top": 20
+        },
+        "type": "execute_actions"
+      },
+      "7cb3029e-c8fd-4276-8e1e-c6691af6e0a3": {
+        "config": {},
+        "position": {
+          "left": 180,
+          "top": 360
+        },
+        "type": "split_by_subflow"
+      },
+      "9fecdcbd-3f5d-4332-a531-b9adda7950e3": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 580,
+          "top": 260
+        },
+        "type": "wait_for_response"
+      },
+      "a5887364-e427-4e75-be08-e8f0144478b4": {
+        "position": {
+          "left": 580,
+          "top": 620
+        },
+        "type": "execute_actions"
+      },
+      "db33e3a4-9c4e-4a6f-a124-8d81684a25b4": {
+        "position": {
+          "left": 960,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "df98c1fb-7b54-4c0e-8a8c-83299caf466e": {
+        "position": {
+          "left": 180,
+          "top": 260
+        },
+        "type": "execute_actions"
+      },
+      "f69c81ae-0fef-4c81-a950-9a1b8e6dc1ab": {
+        "position": {
+          "left": 960,
+          "top": 340
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 4
+  },
+  "name": "PLH - Supportive - Covid",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Give me more information",
+            "I am not interested"
+          ],
+          "text": "Hi! Would you like to learn more about how to talk to your children about COVID-19?",
+          "type": "send_msg",
+          "uuid": "3b5c0ec3-268e-481c-9fb5-693c34d4c65e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "9fecdcbd-3f5d-4332-a531-b9adda7950e3",
+          "uuid": "a689ca7d-70e4-42d1-8c77-d38351e3e928"
+        }
+      ],
+      "uuid": "59e88ff8-79f0-4ba8-b916-37f493eb7374"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "90bb3eea-5f17-47fc-bcc5-fd9b328c39f1",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7cb3029e-c8fd-4276-8e1e-c6691af6e0a3",
+          "uuid": "5948c293-645d-48d5-80b9-f77802ba3ae1"
+        }
+      ],
+      "uuid": "df98c1fb-7b54-4c0e-8a8c-83299caf466e"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "df98c1fb-7b54-4c0e-8a8c-83299caf466e",
+          "uuid": "4c0775d4-da8d-4192-91c1-dab4bd05442e"
+        },
+        {
+          "destination_uuid": "053f3279-82c0-4eae-996a-3e1bd032c38a",
+          "uuid": "32f1d0bb-4177-48b8-bfbd-1d85f08c102d"
+        },
+        {
+          "destination_uuid": "f69c81ae-0fef-4c81-a950-9a1b8e6dc1ab",
+          "uuid": "c762097a-6d29-47cd-b093-39d7e6787f00"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "more information"
+            ],
+            "category_uuid": "3a64c6be-e23c-4e88-b8ae-a9d837d9d9eb",
+            "type": "has_any_word",
+            "uuid": "11f2ad5a-12cc-477c-9a31-9b404390dc83"
+          },
+          {
+            "arguments": [
+              "not no interested"
+            ],
+            "category_uuid": "802ba7a3-e57a-483b-b002-2a3fa9d503e0",
+            "type": "has_any_word",
+            "uuid": "4679838b-9ff5-4f41-9062-fcddfb6bbfbe"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "4c0775d4-da8d-4192-91c1-dab4bd05442e",
+            "name": "More",
+            "uuid": "3a64c6be-e23c-4e88-b8ae-a9d837d9d9eb"
+          },
+          {
+            "exit_uuid": "32f1d0bb-4177-48b8-bfbd-1d85f08c102d",
+            "name": "Not",
+            "uuid": "802ba7a3-e57a-483b-b002-2a3fa9d503e0"
+          },
+          {
+            "exit_uuid": "c762097a-6d29-47cd-b093-39d7e6787f00",
+            "name": "Other",
+            "uuid": "896b941c-3ba2-49e9-969e-0d0832a5b677"
+          }
+        ],
+        "default_category_uuid": "896b941c-3ba2-49e9-969e-0d0832a5b677",
+        "operand": "@input.text",
+        "result_name": "Result 1",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "9fecdcbd-3f5d-4332-a531-b9adda7950e3"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "572f4cbe-08da-48e2-9aa4-aeeaf2f1f213"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "db33e3a4-9c4e-4a6f-a124-8d81684a25b4",
+          "uuid": "abb8bda6-31b0-4c65-a3b0-44adcce40d0f"
+        }
+      ],
+      "uuid": "f69c81ae-0fef-4c81-a950-9a1b8e6dc1ab"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Content - Extra - COVID",
+            "uuid": "501fd7d5-d511-413c-a0c3-3729f8fb6b9a"
+          },
+          "type": "enter_flow",
+          "uuid": "5ce8859e-792c-4b78-9256-f8edcfd2a2e0"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "7ea5b4bc-e6b0-418a-9ab7-cc8eb76ed556"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "0fff56a6-7568-4246-a2ba-c0184a065d30"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "ebbe80e7-9cf5-4706-b83b-e18d8ebc4e8c",
+            "type": "has_only_text",
+            "uuid": "0bd247d2-890c-4371-beae-57bbd87423b3"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "7c386d31-bd31-4c08-a82c-c21576479ee4",
+            "type": "has_only_text",
+            "uuid": "62cb4d1c-da53-47dc-9206-90d67f46c0d8"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "7ea5b4bc-e6b0-418a-9ab7-cc8eb76ed556",
+            "name": "Complete",
+            "uuid": "ebbe80e7-9cf5-4706-b83b-e18d8ebc4e8c"
+          },
+          {
+            "exit_uuid": "0fff56a6-7568-4246-a2ba-c0184a065d30",
+            "name": "Expired",
+            "uuid": "7c386d31-bd31-4c08-a82c-c21576479ee4"
+          }
+        ],
+        "default_category_uuid": "7c386d31-bd31-4c08-a82c-c21576479ee4",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "7cb3029e-c8fd-4276-8e1e-c6691af6e0a3"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always get more information by typing \"Help\". Chat later!",
+          "type": "send_msg",
+          "uuid": "048e90eb-4628-4ed0-876c-6f83e227dbb6"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "a5887364-e427-4e75-be08-e8f0144478b4",
+          "uuid": "edc85304-364a-4891-b4a5-dc425e45be1a"
+        }
+      ],
+      "uuid": "053f3279-82c0-4eae-996a-3e1bd032c38a"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "0c1f0b97-c2ad-49f2-a92c-d869a699e581",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "59e88ff8-79f0-4ba8-b916-37f493eb7374",
+          "uuid": "804f213c-904f-466d-8a0a-dbcd6125eefe"
+        }
+      ],
+      "uuid": "db33e3a4-9c4e-4a6f-a124-8d81684a25b4"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "799d60d2-8a1e-42ea-93d9-fba15c5dae65",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "1ee2eed2-537f-4a8b-895c-dc8ee607edc8"
+        }
+      ],
+      "uuid": "a5887364-e427-4e75-be08-e8f0144478b4"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "8f472fe9-b761-4205-8d7b-021908199a89",
+  "revision": 1
+}

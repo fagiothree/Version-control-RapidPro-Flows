@@ -1,0 +1,147 @@
+{
+  "_ui": {
+    "nodes": {
+      "229e9ccb-5ec0-4317-b811-2f28cab25c94": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "998b215c-7c61-4751-acc6-e454b3bb391f": {
+        "position": {
+          "left": 0,
+          "top": 500
+        },
+        "type": "execute_actions"
+      },
+      "ce9f6262-7d48-49a2-9e85-0406e9071b9b": {
+        "config": {},
+        "position": {
+          "left": 240,
+          "top": 680
+        },
+        "type": "split_by_subflow"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Activity - Child - Active - Run around and do this",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Run Around and Do This \n•\tEveryone runs around the room or garden.  Make sure the space is large enough and safe.\n•\tAt any time, someone can stop somewhere and say, “When you get over here, you do this!”  \n•\tWhat you do can be anything: push-ups, singing a song, crying, jumping… \n•\tThe more you play, the more there are things to do in more and more places.  \n•\tEach person can decide where to go and when.  \n•\tIt’s fun to interact with other people who are doing the same thing as you!",
+          "type": "send_msg",
+          "uuid": "bc2dfb90-2793-4b81-9e3d-89322847e3d4"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "04f01d39-50e2-4bed-beaa-dee831880198"
+        }
+      ],
+      "uuid": "229e9ccb-5ec0-4317-b811-2f28cab25c94"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "current_type_assessed",
+            "name": "current type assessed"
+          },
+          "type": "set_contact_field",
+          "uuid": "79d5c80d-7984-4e1e-b5a9-f1eee588e98f",
+          "value": "activity"
+        },
+        {
+          "field": {
+            "key": "current_activity",
+            "name": "current activity"
+          },
+          "type": "set_contact_field",
+          "uuid": "1c835725-5bcf-4ea0-a9e8-024f1c7dfac1",
+          "value": "Child18"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "ce9f6262-7d48-49a2-9e85-0406e9071b9b",
+          "uuid": "e66a9319-2717-4194-9940-e34683d0a1f9"
+        }
+      ],
+      "uuid": "998b215c-7c61-4751-acc6-e454b3bb391f"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "Feedbak flow for activity or tip",
+            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+          },
+          "type": "enter_flow",
+          "uuid": "3fdcffad-279c-4ed3-9080-e613bc9b7637"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "03916369-184d-41e5-b34b-18ab8a050916"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "3d7ac546-1c1d-4f02-96b6-0339cc0fc0e3"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "85ce2400-0e6d-42bb-8a0c-ad741ac2db02",
+            "type": "has_only_text",
+            "uuid": "85b9cc21-2ea8-4fe7-91bf-58a59b9a6578"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "63d5db51-0e8b-4f82-9e6d-1c8bda2a5c1c",
+            "type": "has_only_text",
+            "uuid": "b5aeca56-06f6-410a-ac07-6b3e575fdf1b"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "03916369-184d-41e5-b34b-18ab8a050916",
+            "name": "Complete",
+            "uuid": "85ce2400-0e6d-42bb-8a0c-ad741ac2db02"
+          },
+          {
+            "exit_uuid": "3d7ac546-1c1d-4f02-96b6-0339cc0fc0e3",
+            "name": "Expired",
+            "uuid": "63d5db51-0e8b-4f82-9e6d-1c8bda2a5c1c"
+          }
+        ],
+        "default_category_uuid": "63d5db51-0e8b-4f82-9e6d-1c8bda2a5c1c",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "ce9f6262-7d48-49a2-9e85-0406e9071b9b"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "0de62b05-2cb9-44ad-a0bb-0711b236f568",
+  "revision": 1
+}

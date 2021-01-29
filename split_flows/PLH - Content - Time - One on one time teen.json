@@ -1,0 +1,1547 @@
+{
+  "_ui": {
+    "nodes": {
+      "0e6f76bf-b885-4a08-8401-178d3ddbbaea": {
+        "position": {
+          "left": 240,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "8fba7002-e2c5-4d91-b312-b18ae8841c1f": {
+        "config": {},
+        "position": {
+          "left": 180,
+          "top": 100
+        },
+        "type": "split_by_subflow"
+      },
+      "7558ded3-905a-4033-9f86-7238f5c2dc0f": {
+        "position": {
+          "left": 700,
+          "top": 260
+        },
+        "type": "execute_actions"
+      },
+      "42b2ea6c-29de-4c1d-a19f-df20b72d1836": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "from_theme",
+            "name": "from theme",
+            "type": "field"
+          }
+        },
+        "position": {
+          "left": 160,
+          "top": 280
+        },
+        "type": "split_by_contact_field"
+      },
+      "a5d7530b-9fcf-44ff-a882-5c2bf8b2f7ba": {
+        "position": {
+          "left": 400,
+          "top": 340
+        },
+        "type": "execute_actions"
+      },
+      "079da983-3be2-4b9d-8cd0-4dd5432e855b": {
+        "position": {
+          "left": 960,
+          "top": 480
+        },
+        "type": "execute_actions"
+      },
+      "7b71a22b-1678-44b9-aea9-245909694a53": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 600,
+          "top": 540
+        },
+        "type": "wait_for_response"
+      },
+      "c81ac958-2f7c-4590-88df-3d9007d131bc": {
+        "position": {
+          "left": 860,
+          "top": 700
+        },
+        "type": "execute_actions"
+      },
+      "e2e98211-67dd-4706-be92-a5da61c172c2": {
+        "type": "split_by_contact_field",
+        "position": {
+          "left": 860,
+          "top": 1060
+        },
+        "config": {
+          "operand": {
+            "id": "type_of_media",
+            "type": "field",
+            "name": "type of media"
+          },
+          "cases": {}
+        }
+      },
+      "3eaa8694-b734-4537-bec5-1b79c0576daa": {
+        "position": {
+          "left": 500,
+          "top": 1160
+        },
+        "type": "execute_actions"
+      },
+      "8058a27a-d7a7-4a97-ae40-350961573970": {
+        "position": {
+          "left": 1060,
+          "top": 2220
+        },
+        "type": "execute_actions"
+      },
+      "33c317cf-df13-4625-93d3-5806dc44c48e": {
+        "position": {
+          "left": 1060,
+          "top": 2480
+        },
+        "type": "execute_actions"
+      },
+      "455eecfa-fc45-449c-8213-9893f7d8f90d": {
+        "position": {
+          "left": 1060,
+          "top": 2780
+        },
+        "type": "execute_actions"
+      },
+      "d920b99b-5484-4e8b-b6ad-aa9b70e27d2f": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 260,
+          "top": 3000
+        },
+        "type": "wait_for_response"
+      },
+      "f951d789-0871-4120-a153-b26ee4b0fa8d": {
+        "position": {
+          "left": 740,
+          "top": 3000
+        },
+        "type": "execute_actions"
+      },
+      "63c09f6b-26fe-4ce0-82dc-871bd34a0e4f": {
+        "position": {
+          "left": 820,
+          "top": 3200
+        },
+        "type": "execute_actions"
+      },
+      "9db1c403-163f-47de-94c2-564b0fbff659": {
+        "position": {
+          "left": 1160,
+          "top": 3280
+        },
+        "type": "execute_actions"
+      },
+      "e906c9c3-567f-49b7-b975-4a5ec6ec6a48": {
+        "config": {},
+        "position": {
+          "left": 480,
+          "top": 3300
+        },
+        "type": "split_by_subflow"
+      },
+      "f01c95ad-09ce-4aac-a1ae-26d7b935f3ab": {
+        "position": {
+          "left": 680,
+          "top": 3520
+        },
+        "type": "execute_actions"
+      },
+      "3e2282b6-bf24-433f-a12a-49b7c451b5b8": {
+        "position": {
+          "left": 300,
+          "top": 3640
+        },
+        "type": "execute_actions"
+      },
+      "34688c4d-6b90-4c52-b2d0-bd44fded5b2f": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 360,
+          "top": 3920
+        },
+        "type": "wait_for_response"
+      },
+      "cf0485d5-1119-41f1-a744-49dccc9c1819": {
+        "position": {
+          "left": 1040,
+          "top": 3960
+        },
+        "type": "execute_actions"
+      },
+      "3797d6e0-6845-497c-9191-009e9cc20a80": {
+        "position": {
+          "left": 620,
+          "top": 4140
+        },
+        "type": "execute_actions"
+      },
+      "c183b4eb-545a-45a5-a580-c31c7dcac3f9": {
+        "position": {
+          "left": 60,
+          "top": 4160
+        },
+        "type": "execute_actions"
+      },
+      "fd273a33-7fdd-43f8-b1af-f310b13e6443": {
+        "position": {
+          "left": 1040,
+          "top": 4240
+        },
+        "type": "execute_actions"
+      },
+      "7aecca6e-5133-47fa-96c4-f53fe1add3c7": {
+        "position": {
+          "left": 320,
+          "top": 4300
+        },
+        "type": "execute_actions"
+      },
+      "c12333d6-b56c-4069-b108-7f00d7b1264f": {
+        "position": {
+          "left": 960,
+          "top": 4820
+        },
+        "type": "execute_actions"
+      },
+      "61dd528a-dfa5-4274-b314-1461b7da41f1": {
+        "position": {
+          "left": 80,
+          "top": 4940
+        },
+        "type": "execute_actions"
+      },
+      "8151102f-ec84-40eb-80d8-002c9c4e75d9": {
+        "position": {
+          "left": 960,
+          "top": 5020
+        },
+        "type": "execute_actions"
+      },
+      "f9dc5e1a-39de-47f6-9bb1-78bda855707d": {
+        "position": {
+          "left": 560,
+          "top": 5360
+        },
+        "type": "execute_actions"
+      },
+      "a5432e5a-b32a-41ec-9682-9b89dc4c359a": {
+        "position": {
+          "left": 820,
+          "top": 5780
+        },
+        "type": "execute_actions"
+      },
+      "bdae6268-e13a-4db2-a7b7-eea0836c7b7e": {
+        "position": {
+          "left": 1020,
+          "top": 6720
+        },
+        "type": "execute_actions"
+      },
+      "0a2301b0-5630-41ca-a67f-326d35e23a0b": {
+        "config": {},
+        "position": {
+          "left": 360,
+          "top": 6880
+        },
+        "type": "split_by_subflow"
+      },
+      "42fad813-da96-40b7-84de-111819221efd": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 1000,
+          "top": 6880
+        },
+        "type": "wait_for_response"
+      },
+      "19b2c132-c727-4b28-afc2-9eb3bea04e9d": {
+        "position": {
+          "left": 420,
+          "top": 7080
+        },
+        "type": "execute_actions"
+      },
+      "ad24d0c0-637c-48ee-b253-a16edb88008a": {
+        "position": {
+          "left": 1000,
+          "top": 7340
+        },
+        "type": "execute_actions"
+      },
+      "2fc84e12-2f56-4379-94c6-7c4920b4f14b": {
+        "position": {
+          "left": 720,
+          "top": 1200
+        },
+        "type": "execute_actions"
+      },
+      "c9bb1f25-4263-42c1-80e9-c11d4209f844": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 520,
+          "top": 1460
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "2bb6000c-0df7-482b-9893-783cc177bff7": {
+        "position": {
+          "left": 800,
+          "top": 5580
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 2
+  },
+  "name": "PLH - Content - Time - One on one time teen",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "category": "",
+          "name": "skill",
+          "type": "set_run_result",
+          "uuid": "830ff7e4-07c8-44ec-86df-3315d81f57ca",
+          "value": "One-on-one time"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "8fba7002-e2c5-4d91-b312-b18ae8841c1f",
+          "uuid": "ff0914b0-e80f-441e-85ad-188695ce69e0"
+        }
+      ],
+      "uuid": "0e6f76bf-b885-4a08-8401-178d3ddbbaea"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Update incomplete toolkits",
+            "uuid": "a682c361-8bea-420a-8bbc-fc84a202fbcb"
+          },
+          "type": "enter_flow",
+          "uuid": "73f9e778-2fc3-4be7-8290-17919e4a8af5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "42b2ea6c-29de-4c1d-a19f-df20b72d1836",
+          "uuid": "3996c93f-a0d6-4b42-8988-0b1c15d27f3a"
+        },
+        {
+          "destination_uuid": "42b2ea6c-29de-4c1d-a19f-df20b72d1836",
+          "uuid": "a2f8de20-2ced-4afa-a92b-3f7549b6a770"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "669f6608-9b08-4f46-a577-a2e7c454d23e",
+            "type": "has_only_text",
+            "uuid": "f95d9f8e-1268-471e-9a3a-d9e5fdc3b859"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "fe0585cb-70a6-4d80-8fb9-579c7207b9db",
+            "type": "has_only_text",
+            "uuid": "8d4aca96-3823-4cf3-816b-35830cc9eb38"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "3996c93f-a0d6-4b42-8988-0b1c15d27f3a",
+            "name": "Complete",
+            "uuid": "669f6608-9b08-4f46-a577-a2e7c454d23e"
+          },
+          {
+            "exit_uuid": "a2f8de20-2ced-4afa-a92b-3f7549b6a770",
+            "name": "Expired",
+            "uuid": "fe0585cb-70a6-4d80-8fb9-579c7207b9db"
+          }
+        ],
+        "default_category_uuid": "fe0585cb-70a6-4d80-8fb9-579c7207b9db",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "8fba7002-e2c5-4d91-b312-b18ae8841c1f"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "Would you like to learn more about this tip?",
+          "type": "send_msg",
+          "uuid": "a2004aef-8f3b-43b9-81ea-8465f1e21f77"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7b71a22b-1678-44b9-aea9-245909694a53",
+          "uuid": "361bd758-c211-410f-80e1-d6525619ca6a"
+        }
+      ],
+      "uuid": "7558ded3-905a-4033-9f86-7238f5c2dc0f"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "e2e98211-67dd-4706-be92-a5da61c172c2",
+          "uuid": "216cfd73-aec5-47d0-baef-092292ab0e43"
+        },
+        {
+          "destination_uuid": "a5d7530b-9fcf-44ff-a882-5c2bf8b2f7ba",
+          "uuid": "310bdf63-8fcd-4c9e-bfb5-a566826ef661"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes"
+            ],
+            "category_uuid": "8f6714a2-c1e9-4a63-a018-88726a100416",
+            "type": "has_any_word",
+            "uuid": "14c6ddfc-55ce-4a25-a87e-24df875e1b98"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "216cfd73-aec5-47d0-baef-092292ab0e43",
+            "name": "Yes",
+            "uuid": "8f6714a2-c1e9-4a63-a018-88726a100416"
+          },
+          {
+            "exit_uuid": "310bdf63-8fcd-4c9e-bfb5-a566826ef661",
+            "name": "Other",
+            "uuid": "c4c2c9ae-0e7f-49b5-a5a1-b1539efdd7cb"
+          }
+        ],
+        "default_category_uuid": "c4c2c9ae-0e7f-49b5-a5a1-b1539efdd7cb",
+        "operand": "@fields.from_theme",
+        "type": "switch"
+      },
+      "uuid": "42b2ea6c-29de-4c1d-a19f-df20b72d1836"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Invest in One-on-One Time! The more time you spend with your children, the more likely they will listen to you and behave well at other times. It really works!",
+          "type": "send_msg",
+          "uuid": "4d2345d7-8b58-4a09-835d-20faf7c5fc57"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7558ded3-905a-4033-9f86-7238f5c2dc0f",
+          "uuid": "997c5e1c-ae78-4a71-8042-a356260e1b5c"
+        }
+      ],
+      "uuid": "a5d7530b-9fcf-44ff-a882-5c2bf8b2f7ba"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "434a3d56-28cd-47c9-a73b-72b84db06e20"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "7558ded3-905a-4033-9f86-7238f5c2dc0f",
+          "uuid": "6b0715d8-000b-48fb-ada8-c1ef3b2c139c"
+        }
+      ],
+      "uuid": "079da983-3be2-4b9d-8cd0-4dd5432e855b"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "e2e98211-67dd-4706-be92-a5da61c172c2",
+          "uuid": "527c82d0-84bd-455a-9fad-0182193059a1"
+        },
+        {
+          "destination_uuid": "c81ac958-2f7c-4590-88df-3d9007d131bc",
+          "uuid": "34884c32-684f-4b2d-9dc9-05739878a7bd"
+        },
+        {
+          "destination_uuid": "079da983-3be2-4b9d-8cd0-4dd5432e855b",
+          "uuid": "e6059621-c080-4104-9891-2b0428ef7504"
+        },
+        {
+          "destination_uuid": "c81ac958-2f7c-4590-88df-3d9007d131bc",
+          "uuid": "231dc3a9-bace-4a53-a976-48b99cef28a5"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "Y yes"
+            ],
+            "category_uuid": "2a21dcd2-dcd2-4095-a22d-1686f0d0a439",
+            "type": "has_any_word",
+            "uuid": "8c8a0d37-ab9b-47ce-a469-a77fc83a3f47"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "a787895e-fda9-45cf-818a-aed505a8e97f",
+            "type": "has_any_word",
+            "uuid": "35b7edb7-119e-401c-92f8-69e46305fc4c"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "527c82d0-84bd-455a-9fad-0182193059a1",
+            "name": "Y",
+            "uuid": "2a21dcd2-dcd2-4095-a22d-1686f0d0a439"
+          },
+          {
+            "exit_uuid": "34884c32-684f-4b2d-9dc9-05739878a7bd",
+            "name": "No",
+            "uuid": "a787895e-fda9-45cf-818a-aed505a8e97f"
+          },
+          {
+            "exit_uuid": "e6059621-c080-4104-9891-2b0428ef7504",
+            "name": "Other",
+            "uuid": "f94ef7c9-4a38-4841-a5e8-bdc151608e63"
+          },
+          {
+            "exit_uuid": "231dc3a9-bace-4a53-a976-48b99cef28a5",
+            "name": "No Response",
+            "uuid": "48278fa3-91c1-4337-bb9d-dbd96877dd42"
+          }
+        ],
+        "default_category_uuid": "f94ef7c9-4a38-4841-a5e8-bdc151608e63",
+        "operand": "@input.text",
+        "result_name": "Result 10",
+        "type": "switch",
+        "wait": {
+          "timeout": {
+            "category_uuid": "48278fa3-91c1-4337-bb9d-dbd96877dd42",
+            "seconds": 3600
+          },
+          "type": "msg"
+        }
+      },
+      "uuid": "7b71a22b-1678-44b9-aea9-245909694a53"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always type \"Help\" if you want to receive more tips about how to manage your child's behaviour.",
+          "type": "send_msg",
+          "uuid": "b6debe54-b440-4b6a-90de-19d7496275b5"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "614ff3cb-fe55-4fdb-ab28-a5bada54b2f8"
+        }
+      ],
+      "uuid": "c81ac958-2f7c-4590-88df-3d9007d131bc"
+    },
+    {
+      "uuid": "e2e98211-67dd-4706-be92-a5da61c172c2",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "b7cf7b71-4a13-458f-8f76-7506bfe2a7d5",
+        "cases": [
+          {
+            "arguments": [
+              "high"
+            ],
+            "type": "has_any_word",
+            "uuid": "77dd4f30-4937-4d0d-92ce-0290646cd67d",
+            "category_uuid": "33c9b378-eabb-488b-8b90-3441f6b65f7e"
+          },
+          {
+            "arguments": [
+              "medium"
+            ],
+            "type": "has_any_word",
+            "uuid": "589c0dda-9036-459b-8454-f23a23c62afa",
+            "category_uuid": "0d19ab78-53fd-4448-8a1b-8d0cf7ee4936"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "fa4780fe-5d00-46cb-9e17-3fdc7c9c002c",
+            "name": "High",
+            "uuid": "33c9b378-eabb-488b-8b90-3441f6b65f7e"
+          },
+          {
+            "uuid": "0d19ab78-53fd-4448-8a1b-8d0cf7ee4936",
+            "name": "Medium",
+            "exit_uuid": "09b63d49-e2fc-477e-8f5d-20b8b6ab692a"
+          },
+          {
+            "exit_uuid": "e6e8d221-7566-44fc-ad17-b570d7898b8d",
+            "name": "Other",
+            "uuid": "b7cf7b71-4a13-458f-8f76-7506bfe2a7d5"
+          }
+        ],
+        "operand": "@fields.type_of_media"
+      },
+      "exits": [
+        {
+          "destination_uuid": "3eaa8694-b734-4537-bec5-1b79c0576daa",
+          "uuid": "fa4780fe-5d00-46cb-9e17-3fdc7c9c002c"
+        },
+        {
+          "uuid": "09b63d49-e2fc-477e-8f5d-20b8b6ab692a",
+          "destination_uuid": "2fc84e12-2f56-4379-94c6-7c4920b4f14b"
+        },
+        {
+          "destination_uuid": "8058a27a-d7a7-4a97-ae40-350961573970",
+          "uuid": "e6e8d221-7566-44fc-ad17-b570d7898b8d"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "video:@(fields.voiceover_video_path & \"One_On_One_Time_Teens.m4v\")"
+          ],
+          "text": "Here's a video about spending one-on-one time with your teen!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "a237913a-c589-4f10-a72a-d2b72262fefb"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "c9bb1f25-4263-42c1-80e9-c11d4209f844",
+          "uuid": "cd0f4f60-79bf-40be-84b6-4a20a9a18f58"
+        }
+      ],
+      "uuid": "3eaa8694-b734-4537-bec5-1b79c0576daa"
+    },
+    {
+      "uuid": "2fc84e12-2f56-4379-94c6-7c4920b4f14b",
+      "actions": [
+        {
+          "attachments": [
+            "audio:@(fields.voiceover_audio_path & \"One_On_One_Time_Teens.mp3\")"
+          ],
+          "text": "Here's an audio message about spending one-on-one time with your teen!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "2827b9be-28e2-486a-be60-74cd03ba9b35"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "a2c48cd7-5613-4faa-be18-763229dfaea8",
+          "destination_uuid": "c9bb1f25-4263-42c1-80e9-c11d4209f844"
+        }
+      ]
+    },
+    {
+      "uuid": "c9bb1f25-4263-42c1-80e9-c11d4209f844",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "5a359ea9-09bf-4f66-9eee-415a07208a83",
+        "cases": [],
+        "categories": [
+          {
+            "uuid": "5a359ea9-09bf-4f66-9eee-415a07208a83",
+            "name": "All Responses",
+            "exit_uuid": "256dd202-2f7b-4d77-be8f-7c48486003f8"
+          },
+          {
+            "uuid": "65522156-4e9c-451a-828c-303c9c5803b5",
+            "name": "No Response",
+            "exit_uuid": "961a74fe-93e6-4236-9368-4ff6668aea8f"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg",
+          "timeout": {
+            "seconds": 120,
+            "category_uuid": "65522156-4e9c-451a-828c-303c9c5803b5"
+          }
+        },
+        "result_name": "Result 6"
+      },
+      "exits": [
+        {
+          "uuid": "256dd202-2f7b-4d77-be8f-7c48486003f8",
+          "destination_uuid": "8058a27a-d7a7-4a97-ae40-350961573970"
+        },
+        {
+          "uuid": "961a74fe-93e6-4236-9368-4ff6668aea8f",
+          "destination_uuid": "8058a27a-d7a7-4a97-ae40-350961573970"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "When we have difficult relationships with our teenagers, it can be hard to find pleasure from spending time with them. Instead, we spend a lot of time disciplining them or complaining about how they are behaving.",
+          "type": "send_msg",
+          "uuid": "6cd1d467-4186-4f1c-a489-e2ec29d29758"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "33c317cf-df13-4625-93d3-5806dc44c48e",
+          "uuid": "117c8b85-4693-4f23-a7d2-eeabbd8ff9d8"
+        }
+      ],
+      "uuid": "8058a27a-d7a7-4a97-ae40-350961573970"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "One-on-One Time with your teen helps build a positive and trusting relationship. When you really notice them and listen to what they are saying and what they like, you make them feel valued and appreciated.",
+          "type": "send_msg",
+          "uuid": "93dec986-691c-45e5-9555-6426e144644a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "455eecfa-fc45-449c-8213-9893f7d8f90d",
+          "uuid": "af39504c-d2c2-40dc-b1b7-7999a79dd568"
+        }
+      ],
+      "uuid": "33c317cf-df13-4625-93d3-5806dc44c48e"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [
+            "image:@(fields.image_path & \"playing_with_teen.jpg\")"
+          ],
+          "text": "Would you like to learn more?",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "uuid": "73b7e723-bc47-4704-9d47-3f7773f7fd15"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "d920b99b-5484-4e8b-b6ad-aa9b70e27d2f",
+          "uuid": "fc80965d-8082-4163-9549-f544ede6a739"
+        }
+      ],
+      "uuid": "455eecfa-fc45-449c-8213-9893f7d8f90d"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "e906c9c3-567f-49b7-b975-4a5ec6ec6a48",
+          "uuid": "672b05bb-67fd-406f-8b72-0d969086ac2a"
+        },
+        {
+          "destination_uuid": "63c09f6b-26fe-4ce0-82dc-871bd34a0e4f",
+          "uuid": "a44e5e25-b864-4a03-9cc8-f44058889bb0"
+        },
+        {
+          "destination_uuid": "f951d789-0871-4120-a153-b26ee4b0fa8d",
+          "uuid": "6dc04819-95c7-430b-8bb7-16b135d745a1"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes y"
+            ],
+            "category_uuid": "783a4c57-091b-43c4-a37a-d16595fbc00a",
+            "type": "has_any_word",
+            "uuid": "d13e1658-63ed-4f95-be7d-3607d71c5055"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "06063273-2334-4706-b1a8-32779fc62c8f",
+            "type": "has_any_word",
+            "uuid": "d5024fc0-ea8d-485e-a048-3d09253cf5f4"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "672b05bb-67fd-406f-8b72-0d969086ac2a",
+            "name": "Yes",
+            "uuid": "783a4c57-091b-43c4-a37a-d16595fbc00a"
+          },
+          {
+            "exit_uuid": "a44e5e25-b864-4a03-9cc8-f44058889bb0",
+            "name": "No",
+            "uuid": "06063273-2334-4706-b1a8-32779fc62c8f"
+          },
+          {
+            "exit_uuid": "6dc04819-95c7-430b-8bb7-16b135d745a1",
+            "name": "Other",
+            "uuid": "11892b09-6d12-4aae-82c0-2a7f7bcffea4"
+          }
+        ],
+        "default_category_uuid": "11892b09-6d12-4aae-82c0-2a7f7bcffea4",
+        "operand": "@input.text",
+        "result_name": "Result 13",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "d920b99b-5484-4e8b-b6ad-aa9b70e27d2f"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "148ddff8-9692-4702-9f4f-10bbf9004205"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "455eecfa-fc45-449c-8213-9893f7d8f90d",
+          "uuid": "997b3c25-93c9-4cb6-916d-174d89bdf5c7"
+        }
+      ],
+      "uuid": "f951d789-0871-4120-a153-b26ee4b0fa8d"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always type \"Help\" whenever you want to learn more about how to spend One-on-One Time with your teen. Chat to you later!",
+          "type": "send_msg",
+          "uuid": "b3b24f2e-ce94-49a8-83a3-005561554cbd"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "9db1c403-163f-47de-94c2-564b0fbff659",
+          "uuid": "eb1c9046-72a2-47d9-9e9f-42cc0ba854e3"
+        }
+      ],
+      "uuid": "63c09f6b-26fe-4ce0-82dc-871bd34a0e4f"
+    },
+    {
+      "actions": [
+        {
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "type": "set_contact_field",
+          "uuid": "91ada788-c81f-4a2a-b60b-61b56fac79e7",
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "e8856a30-0e47-42ce-8de9-b87852f8ed97"
+        }
+      ],
+      "uuid": "9db1c403-163f-47de-94c2-564b0fbff659"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Internal - Update toolkits",
+            "uuid": "074bc4c5-8c69-4e5b-9176-79b44bfa40da"
+          },
+          "type": "enter_flow",
+          "uuid": "03e1e236-03a8-4a95-8771-7f295d36b4eb"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f01c95ad-09ce-4aac-a1ae-26d7b935f3ab",
+          "uuid": "eed75873-2c1b-46b7-9f57-9da14cb130a5"
+        },
+        {
+          "destination_uuid": "f01c95ad-09ce-4aac-a1ae-26d7b935f3ab",
+          "uuid": "2553f625-1779-4261-816a-885dd450f784"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "b0f1ba87-d7c6-467b-9c5c-267a6cf00220",
+            "type": "has_only_text",
+            "uuid": "ab73cdde-2e3d-4729-bfee-75cffa4e36e4"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "ce4d31a5-d6c2-4cfd-9399-485d1bb3d0cc",
+            "type": "has_only_text",
+            "uuid": "86932b0c-a57f-4c98-88ba-793715e34081"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "eed75873-2c1b-46b7-9f57-9da14cb130a5",
+            "name": "Complete",
+            "uuid": "b0f1ba87-d7c6-467b-9c5c-267a6cf00220"
+          },
+          {
+            "exit_uuid": "2553f625-1779-4261-816a-885dd450f784",
+            "name": "Expired",
+            "uuid": "ce4d31a5-d6c2-4cfd-9399-485d1bb3d0cc"
+          }
+        ],
+        "default_category_uuid": "ce4d31a5-d6c2-4cfd-9399-485d1bb3d0cc",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "e906c9c3-567f-49b7-b975-4a5ec6ec6a48"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Here are 6 tips on how to make One-on-One Time a positive experience for you and your teen:\n\n1. Do it every day\n2. Let your teen choose the activity\n3. Follow your teen's lead\n4. Give your teen your full attention\n5. Show your teen you are really listening\n6. Have fun!\n\nTo learn more about one of these tips, type \"1\" to \"6\". You can also type \"N\" to move on.",
+          "type": "send_msg",
+          "uuid": "f78dbd7b-13c8-4454-9236-fc248df07439"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "34688c4d-6b90-4c52-b2d0-bd44fded5b2f",
+          "uuid": "baa33dfb-f543-4120-b83c-2145b80f4b0d"
+        }
+      ],
+      "uuid": "f01c95ad-09ce-4aac-a1ae-26d7b935f3ab"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "1f06bd35-142d-4598-b3f8-737f13b207cd"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "f01c95ad-09ce-4aac-a1ae-26d7b935f3ab",
+          "uuid": "823a3b4d-f239-4c7e-a985-2b84f63fd862"
+        }
+      ],
+      "uuid": "3e2282b6-bf24-433f-a12a-49b7c451b5b8"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "c183b4eb-545a-45a5-a580-c31c7dcac3f9",
+          "uuid": "6a30589a-0ce7-494b-9bda-d0c9cb6f525c"
+        },
+        {
+          "destination_uuid": "cf0485d5-1119-41f1-a744-49dccc9c1819",
+          "uuid": "87f0c422-651a-4582-8f73-9f7db380018e"
+        },
+        {
+          "destination_uuid": "3797d6e0-6845-497c-9191-009e9cc20a80",
+          "uuid": "33224921-a564-44d7-9184-4e7b51d86e21"
+        },
+        {
+          "destination_uuid": "c12333d6-b56c-4069-b108-7f00d7b1264f",
+          "uuid": "68c96e57-7178-4b57-b0dd-a385aeb367ef"
+        },
+        {
+          "destination_uuid": "7aecca6e-5133-47fa-96c4-f53fe1add3c7",
+          "uuid": "7b6db812-c55c-4d30-96bc-9346d9d86bd0"
+        },
+        {
+          "destination_uuid": "f9dc5e1a-39de-47f6-9bb1-78bda855707d",
+          "uuid": "38c789b7-1e1d-4ca7-99cc-491816f776dd"
+        },
+        {
+          "destination_uuid": "2bb6000c-0df7-482b-9893-783cc177bff7",
+          "uuid": "7c93ffb7-f27e-40d3-80ac-50c72006704a"
+        },
+        {
+          "destination_uuid": "3e2282b6-bf24-433f-a12a-49b7c451b5b8",
+          "uuid": "1f77154f-f82f-49f6-9d58-74a3c5bed58f"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "1"
+            ],
+            "category_uuid": "49195f1b-a985-43df-9e33-ec5450d6af3b",
+            "type": "has_number_eq",
+            "uuid": "962d9e06-6a8b-4a7b-8bc0-44ae2d5f34a2"
+          },
+          {
+            "arguments": [
+              "2"
+            ],
+            "category_uuid": "41513968-93ec-458d-a47d-f11b51f0f89c",
+            "type": "has_number_eq",
+            "uuid": "77c65872-aa51-4cb1-8d6b-ecdbcc041857"
+          },
+          {
+            "arguments": [
+              "3"
+            ],
+            "category_uuid": "141a4922-d895-4c7f-a257-fb592b51c573",
+            "type": "has_number_eq",
+            "uuid": "f926581a-23e7-4434-b6b2-9f133add7edf"
+          },
+          {
+            "arguments": [
+              "4"
+            ],
+            "category_uuid": "8ff76aa2-2944-484d-9213-95d9da33dd5a",
+            "type": "has_number_eq",
+            "uuid": "59bbbb9a-cae4-4797-b72e-85468ad03a74"
+          },
+          {
+            "arguments": [
+              "5"
+            ],
+            "category_uuid": "cacabb4d-b98e-462f-9fa4-d1d5af1e2ac3",
+            "type": "has_number_eq",
+            "uuid": "e73de828-41ce-466f-a3bc-84b56a46b495"
+          },
+          {
+            "arguments": [
+              "6"
+            ],
+            "category_uuid": "be97849b-0d87-4dca-b62f-e810b7fbb2c7",
+            "type": "has_number_eq",
+            "uuid": "5a116bca-a2e3-48ed-b347-7b63e62ddf85"
+          },
+          {
+            "arguments": [
+              "n no"
+            ],
+            "category_uuid": "07b82c55-3faa-45ad-9fc8-2b52cc992641",
+            "type": "has_any_word",
+            "uuid": "f05a3bce-a617-44cd-86ad-4edd5c747317"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "6a30589a-0ce7-494b-9bda-d0c9cb6f525c",
+            "name": "1",
+            "uuid": "49195f1b-a985-43df-9e33-ec5450d6af3b"
+          },
+          {
+            "exit_uuid": "87f0c422-651a-4582-8f73-9f7db380018e",
+            "name": "2",
+            "uuid": "41513968-93ec-458d-a47d-f11b51f0f89c"
+          },
+          {
+            "exit_uuid": "33224921-a564-44d7-9184-4e7b51d86e21",
+            "name": "3",
+            "uuid": "141a4922-d895-4c7f-a257-fb592b51c573"
+          },
+          {
+            "exit_uuid": "68c96e57-7178-4b57-b0dd-a385aeb367ef",
+            "name": "4",
+            "uuid": "8ff76aa2-2944-484d-9213-95d9da33dd5a"
+          },
+          {
+            "exit_uuid": "7b6db812-c55c-4d30-96bc-9346d9d86bd0",
+            "name": "5",
+            "uuid": "cacabb4d-b98e-462f-9fa4-d1d5af1e2ac3"
+          },
+          {
+            "exit_uuid": "38c789b7-1e1d-4ca7-99cc-491816f776dd",
+            "name": "6",
+            "uuid": "be97849b-0d87-4dca-b62f-e810b7fbb2c7"
+          },
+          {
+            "exit_uuid": "7c93ffb7-f27e-40d3-80ac-50c72006704a",
+            "name": "N",
+            "uuid": "07b82c55-3faa-45ad-9fc8-2b52cc992641"
+          },
+          {
+            "exit_uuid": "1f77154f-f82f-49f6-9d58-74a3c5bed58f",
+            "name": "Other",
+            "uuid": "da4330cb-e49c-48fc-abd9-d1c73ce66fc1"
+          }
+        ],
+        "default_category_uuid": "da4330cb-e49c-48fc-abd9-d1c73ce66fc1",
+        "operand": "@input.text",
+        "result_name": "Result 18",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "34688c4d-6b90-4c52-b2d0-bd44fded5b2f"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "2. Let your teen choose the activity\nTell your teen that you would like to spend some time with them and that they can choose what to do or talk about. Your teen might think this is weird at first but will come to enjoy having this dedicated time with you!",
+          "type": "send_msg",
+          "uuid": "471dfd66-939d-434d-9bec-45b444b67e21"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "fd273a33-7fdd-43f8-b1af-f310b13e6443",
+          "uuid": "f0e8ae13-af34-48be-9d87-bcbc87a01963"
+        }
+      ],
+      "uuid": "cf0485d5-1119-41f1-a744-49dccc9c1819"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "3. Follow your teen's lead\nTry to follow your teen's lead during One-on-One Time. Accept their suggestions. Remember this is your teen's activity. Your job is to show an interest and say something nice.",
+          "type": "send_msg",
+          "uuid": "9daaf863-be58-4829-96e0-43dff463001c"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "61dd528a-dfa5-4274-b314-1461b7da41f1",
+          "uuid": "d9c4ffe4-14e0-448d-9f3b-895170ca5d09"
+        }
+      ],
+      "uuid": "3797d6e0-6845-497c-9191-009e9cc20a80"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "1. Do it every day\nSet aside a specific time to spend One-on-One Time with your teen each day. Choose a time when you and our teen will not be interrupted and when your teen does not have something else that they want to do, like watching TV or playing with phones.",
+          "type": "send_msg",
+          "uuid": "cff6d600-dc02-4b69-87aa-306310253e0b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "61dd528a-dfa5-4274-b314-1461b7da41f1",
+          "uuid": "1848205a-7e41-456f-84fe-2438e16ab3e6"
+        }
+      ],
+      "uuid": "c183b4eb-545a-45a5-a580-c31c7dcac3f9"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Try to do something different than watching TV or playing with a tablet/phone. However, you may need to at first join your teen and watch their favourite TV programme with them. They may feel comfortable doing other activities with time.",
+          "type": "send_msg",
+          "uuid": "cf081566-0dce-4a4e-84ed-f8ffa8b8ad48"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "61dd528a-dfa5-4274-b314-1461b7da41f1",
+          "uuid": "421f2920-2088-46e4-9476-d414c0b52e71"
+        }
+      ],
+      "uuid": "fd273a33-7fdd-43f8-b1af-f310b13e6443"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "5. Show your teen you are really listening\n\nYou can even try rephrasing back what your teen says when they speak to you. For example, when your teen says, “This math problem is really hard,” you can say, “Yeah, I see that you are finding it difficult.” It shows you are really listening to them and will make them feel supported.",
+          "type": "send_msg",
+          "uuid": "31249a38-8f54-45ef-aab9-21153d66ca69"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "61dd528a-dfa5-4274-b314-1461b7da41f1",
+          "uuid": "4c0566a3-097d-4687-be57-ccf24107e0f6"
+        }
+      ],
+      "uuid": "7aecca6e-5133-47fa-96c4-f53fe1add3c7"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "4. Give your teen all of your attention. \nSwitch off the television and put away phones. Make sure you can give all of your attention to your teen.",
+          "type": "send_msg",
+          "uuid": "28ca3b51-f619-4fd1-a9d2-ebdcb5648887"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "8151102f-ec84-40eb-80d8-002c9c4e75d9",
+          "uuid": "2b6589e8-e875-4cb5-a20a-04c67d8d952b"
+        }
+      ],
+      "uuid": "c12333d6-b56c-4069-b108-7f00d7b1264f"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Please select another number if you want to learn more about how to spend One-on-One Time with your teen:\n\n1. Do it every day\n2. Let your teen choose the activity\n3. Follow your teen's lead\n4. Give your teen your full attention\n5. Show your teen you are really listening\n6. Have fun!\n\nYou can also type \"N\" to move on.",
+          "type": "send_msg",
+          "uuid": "11d0aa0b-fc75-4eef-b647-0b6c9daa2397"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "34688c4d-6b90-4c52-b2d0-bd44fded5b2f",
+          "uuid": "ffb22bc3-d269-4d61-9ed2-ffbc5e84f099"
+        }
+      ],
+      "uuid": "61dd528a-dfa5-4274-b314-1461b7da41f1"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Look at your teen. Nodding or “I see” shows your teen you are really paying attention. Accept what they are saying without judging them.",
+          "type": "send_msg",
+          "uuid": "8211a9ba-621c-4a80-9f61-9f80bd3e2a77"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "61dd528a-dfa5-4274-b314-1461b7da41f1",
+          "uuid": "a222e49c-0815-4eb5-952e-bdf528d1b448"
+        }
+      ],
+      "uuid": "8151102f-ec84-40eb-80d8-002c9c4e75d9"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "6. Have fun!\nOne-on-One Time with your teen can be fun for you, too! You might even find that you feel less stressed after spending time with your teen.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "2c031429-b6cc-4a7b-9400-8b5fdf54d53b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "61dd528a-dfa5-4274-b314-1461b7da41f1",
+          "uuid": "ad257071-df9e-405b-aca2-ed7c2a4a37d9"
+        }
+      ],
+      "uuid": "f9dc5e1a-39de-47f6-9bb1-78bda855707d"
+    },
+    {
+      "uuid": "2bb6000c-0df7-482b-9893-783cc177bff7",
+      "actions": [
+        {
+          "attachments": [
+            "image:@(fields.comic_path & \"giving_your_teen_attention_comic.jpg\")"
+          ],
+          "text": "Here is a comic about spending one-on-one time with your teen!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "223a871a-669e-40b7-b72f-e59ec869da86"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "1286fa64-5f8a-4dea-adc9-5ad11c1ef04b",
+          "destination_uuid": "a5432e5a-b32a-41ec-9682-9b89dc4c359a"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Congratulations! You have added another skill to your Parenting Toolkit. Quality time with your children is the best gift that you can ever give them. ",
+          "type": "send_msg",
+          "uuid": "bbf11712-ff37-48d0-b863-c624aff067d8"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "bdae6268-e13a-4db2-a7b7-eea0836c7b7e",
+          "uuid": "84c90407-3908-4935-9abb-5911780389fe"
+        }
+      ],
+      "uuid": "a5432e5a-b32a-41ec-9682-9b89dc4c359a"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "Would you like some suggestions for activities to do with your teen?",
+          "type": "send_msg",
+          "uuid": "d01f9c4b-e440-4dc8-b4d8-a072c7d16a3b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "42fad813-da96-40b7-84de-111819221efd",
+          "uuid": "51404059-9ec7-4742-b59b-37a3b210743d"
+        }
+      ],
+      "uuid": "bdae6268-e13a-4db2-a7b7-eea0836c7b7e"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Handler - Activity - Teenagers",
+            "uuid": "d896682a-c5b5-4329-95e3-398010d8aa55"
+          },
+          "type": "enter_flow",
+          "uuid": "f2d40656-972b-435b-ac2c-5c1813148cf3"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "b11e7af8-2344-4645-8b34-d16986319831"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "5487bdc2-7920-4769-8e43-b04ffae3c51d"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "4819e742-eb9c-498e-9cd7-dfb5e3d46e47",
+            "type": "has_only_text",
+            "uuid": "b0c8983b-aa3a-4ba4-b2cc-17581e847dab"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "92ce0672-7043-421f-bba3-cb57b63c72dc",
+            "type": "has_only_text",
+            "uuid": "4cd33108-26cb-43a1-84c7-e5733b5234d8"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "b11e7af8-2344-4645-8b34-d16986319831",
+            "name": "Complete",
+            "uuid": "4819e742-eb9c-498e-9cd7-dfb5e3d46e47"
+          },
+          {
+            "exit_uuid": "5487bdc2-7920-4769-8e43-b04ffae3c51d",
+            "name": "Expired",
+            "uuid": "92ce0672-7043-421f-bba3-cb57b63c72dc"
+          }
+        ],
+        "default_category_uuid": "92ce0672-7043-421f-bba3-cb57b63c72dc",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "0a2301b0-5630-41ca-a67f-326d35e23a0b"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "0a2301b0-5630-41ca-a67f-326d35e23a0b",
+          "uuid": "7eefe78a-ce95-4737-93dd-99d2d34f3bfd"
+        },
+        {
+          "destination_uuid": "19b2c132-c727-4b28-afc2-9eb3bea04e9d",
+          "uuid": "0ac49f29-d8d0-49ff-ace6-d8fb02c60ad7"
+        },
+        {
+          "destination_uuid": "ad24d0c0-637c-48ee-b253-a16edb88008a",
+          "uuid": "2fd08930-2770-4958-b3cd-5a2405452280"
+        },
+        {
+          "destination_uuid": "19b2c132-c727-4b28-afc2-9eb3bea04e9d",
+          "uuid": "7117b462-6960-4ca3-a3b0-3fd45e212634"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes y"
+            ],
+            "category_uuid": "39109cdf-1b7c-47ad-bfa8-aae61686f987",
+            "type": "has_any_word",
+            "uuid": "f3cdd06d-c63b-4b27-aa28-3f1643a6dd53"
+          },
+          {
+            "arguments": [
+              "no n"
+            ],
+            "category_uuid": "37560b3d-f87e-49c1-aa5e-62b640467e62",
+            "type": "has_any_word",
+            "uuid": "310a7105-2110-4364-95de-9ae7a7649c2e"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "7eefe78a-ce95-4737-93dd-99d2d34f3bfd",
+            "name": "Yes",
+            "uuid": "39109cdf-1b7c-47ad-bfa8-aae61686f987"
+          },
+          {
+            "exit_uuid": "0ac49f29-d8d0-49ff-ace6-d8fb02c60ad7",
+            "name": "No",
+            "uuid": "37560b3d-f87e-49c1-aa5e-62b640467e62"
+          },
+          {
+            "exit_uuid": "2fd08930-2770-4958-b3cd-5a2405452280",
+            "name": "Other",
+            "uuid": "05c3a1bf-c0e9-453a-91e8-111318c2d502"
+          },
+          {
+            "exit_uuid": "7117b462-6960-4ca3-a3b0-3fd45e212634",
+            "name": "No Response",
+            "uuid": "9ce46f25-f519-4138-90ee-3192294763be"
+          }
+        ],
+        "default_category_uuid": "05c3a1bf-c0e9-453a-91e8-111318c2d502",
+        "operand": "@input.text",
+        "result_name": "Result 9",
+        "type": "switch",
+        "wait": {
+          "timeout": {
+            "category_uuid": "9ce46f25-f519-4138-90ee-3192294763be",
+            "seconds": 3600
+          },
+          "type": "msg"
+        }
+      },
+      "uuid": "42fad813-da96-40b7-84de-111819221efd"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "That's okay! You can always type \"Help\" at anytime if you need an activity. Chat to you later!",
+          "type": "send_msg",
+          "uuid": "cdbdffe6-9585-4053-a2fa-6c0edef680db"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "88676f83-ce3d-403a-ad2b-69e6d68e7418"
+        }
+      ],
+      "uuid": "19b2c132-c727-4b28-afc2-9eb3bea04e9d"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "bc090ffb-8516-4ba7-87b4-44a386b90cdf"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "bdae6268-e13a-4db2-a7b7-eea0836c7b7e",
+          "uuid": "7452f3ef-43e2-4cf7-a958-92856f8bbb50"
+        }
+      ],
+      "uuid": "ad24d0c0-637c-48ee-b253-a16edb88008a"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "6960887b-fbc8-4185-96cb-c0688bb09d37",
+  "revision": 18
+}

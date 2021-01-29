@@ -1,0 +1,674 @@
+{
+  "_ui": {
+    "nodes": {
+      "f8cdb658-7b11-4dcb-abee-8b652c3ccca1": {
+        "position": {
+          "left": 540,
+          "top": 40
+        },
+        "type": "execute_actions"
+      },
+      "00df9a77-65fb-46eb-b4c1-0936ef15a516": {
+        "position": {
+          "left": 920,
+          "top": 140
+        },
+        "type": "execute_actions"
+      },
+      "40d4e558-7d63-489f-bdf0-842cfa219ee5": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 460,
+          "top": 240
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "0d0d1db6-9f4d-4174-890f-38167b766c02": {
+        "position": {
+          "left": 920,
+          "top": 280
+        },
+        "type": "execute_actions"
+      },
+      "d755fd79-59d8-455c-9416-2a472960ee00": {
+        "position": {
+          "left": 480,
+          "top": 400
+        },
+        "type": "execute_actions"
+      },
+      "4cfba071-d082-4e5d-8cd6-1773cc3b6fe3": {
+        "position": {
+          "left": 200,
+          "top": 420
+        },
+        "type": "execute_actions"
+      },
+      "fa3fb911-7664-486c-8b57-435a134f87cd": {
+        "position": {
+          "left": 480,
+          "top": 500
+        },
+        "type": "execute_actions"
+      },
+      "1b90318c-2d1b-48f4-9ef0-2806bbf680f0": {
+        "position": {
+          "left": 180,
+          "top": 560
+        },
+        "type": "execute_actions"
+      },
+      "fd1d5613-6500-4219-ac21-b0f6fdc9aa98": {
+        "position": {
+          "left": 500,
+          "top": 620
+        },
+        "type": "execute_actions"
+      },
+      "d57fa5dc-1832-49e0-9fa4-a8a0c578e45e": {
+        "position": {
+          "left": 980,
+          "top": 720
+        },
+        "type": "execute_actions"
+      },
+      "2386e373-c370-4306-8acd-3382736141b3": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 440,
+          "top": 860
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "4481da7d-dd5e-42c2-953f-61470f9895d8": {
+        "position": {
+          "left": 220,
+          "top": 1060
+        },
+        "type": "execute_actions"
+      },
+      "08968a76-59a5-4a33-8020-d1344b94e9b7": {
+        "position": {
+          "left": 500,
+          "top": 1080
+        },
+        "type": "execute_actions"
+      },
+      "88901cd7-4d1f-4505-95a5-71d1861cc0fe": {
+        "position": {
+          "left": 740,
+          "top": 1120
+        },
+        "type": "execute_actions"
+      },
+      "8df5ab59-f395-4bd5-9f84-b02d1f8e0fd4": {
+        "position": {
+          "left": 1120,
+          "top": 1120
+        },
+        "type": "execute_actions"
+      },
+      "ebd5a973-383b-42d0-acef-e83f732a0d4a": {
+        "position": {
+          "left": 980,
+          "top": 1300
+        },
+        "type": "execute_actions"
+      },
+      "adb59795-58de-41d8-b11c-2c8ad6e263e3": {
+        "position": {
+          "left": 260,
+          "top": 1400
+        },
+        "type": "execute_actions"
+      },
+      "5dba9168-8653-482a-be79-fc8bacec5fd0": {
+        "type": "split_by_subflow",
+        "position": {
+          "left": 260,
+          "top": 1520
+        },
+        "config": {}
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 50
+  },
+  "name": "PLH - Content - Positive - CheckIn - Instructions",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "How are you doing with giving your child or teen instructions?",
+          "type": "send_msg",
+          "quick_replies": [
+            "Great",
+            "Neutral",
+            "Bad"
+          ],
+          "uuid": "f443d7de-efd9-4e6a-ba14-7eadd652d459"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "40d4e558-7d63-489f-bdf0-842cfa219ee5",
+          "uuid": "7f2cd23b-e76d-4aa2-b241-8227c9606b3b"
+        }
+      ],
+      "uuid": "f8cdb658-7b11-4dcb-abee-8b652c3ccca1"
+    },
+    {
+      "uuid": "00df9a77-65fb-46eb-b4c1-0936ef15a516",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "07dab7b3-9d32-4abf-8d54-f8d9e97318c5"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "dd096494-258f-474b-8217-3623b6c94dd8",
+          "destination_uuid": "0d0d1db6-9f4d-4174-890f-38167b766c02"
+        }
+      ]
+    },
+    {
+      "uuid": "40d4e558-7d63-489f-bdf0-842cfa219ee5",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "abbe37d3-1a73-452d-97c3-f1aed261ddf8",
+        "cases": [
+          {
+            "arguments": [
+              "great"
+            ],
+            "type": "has_any_word",
+            "uuid": "c17885fe-76cd-4cc1-9e01-de178e303c0b",
+            "category_uuid": "18ecafda-0b7e-4295-a8be-f462fe741333"
+          },
+          {
+            "arguments": [
+              "neutral bad"
+            ],
+            "type": "has_any_word",
+            "uuid": "f7ef47b6-0fa0-4803-a7c0-2a8f2a68a4da",
+            "category_uuid": "7d65865e-69c1-45ba-8bce-c204efc7be01"
+          }
+        ],
+        "categories": [
+          {
+            "uuid": "18ecafda-0b7e-4295-a8be-f462fe741333",
+            "name": "Great",
+            "exit_uuid": "5fdf3ccd-3094-48d5-8590-fa1ad4b73f6a"
+          },
+          {
+            "uuid": "7d65865e-69c1-45ba-8bce-c204efc7be01",
+            "name": "Neutral bad",
+            "exit_uuid": "4d4a654a-b4d0-4665-b03d-3878cde8d74b"
+          },
+          {
+            "exit_uuid": "bd2259cb-51e6-4991-9515-58c2cc78ecab",
+            "name": "Other",
+            "uuid": "abbe37d3-1a73-452d-97c3-f1aed261ddf8"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg"
+        },
+        "result_name": "Result 2"
+      },
+      "exits": [
+        {
+          "uuid": "5fdf3ccd-3094-48d5-8590-fa1ad4b73f6a",
+          "destination_uuid": "4cfba071-d082-4e5d-8cd6-1773cc3b6fe3"
+        },
+        {
+          "uuid": "4d4a654a-b4d0-4665-b03d-3878cde8d74b",
+          "destination_uuid": "d755fd79-59d8-455c-9416-2a472960ee00"
+        },
+        {
+          "destination_uuid": "00df9a77-65fb-46eb-b4c1-0936ef15a516",
+          "uuid": "bd2259cb-51e6-4991-9515-58c2cc78ecab"
+        }
+      ]
+    },
+    {
+      "uuid": "0d0d1db6-9f4d-4174-890f-38167b766c02",
+      "actions": [
+        {
+          "uuid": "6fb9a19f-60bf-43c0-b1fa-ad12b33b90df",
+          "type": "set_contact_field",
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "85929f34-e898-44cb-9057-bf3b738098f0",
+          "destination_uuid": "f8cdb658-7b11-4dcb-abee-8b652c3ccca1"
+        }
+      ]
+    },
+    {
+      "uuid": "d755fd79-59d8-455c-9416-2a472960ee00",
+      "actions": [
+        {
+          "uuid": "f654a059-b78c-493d-88d7-097acd1e33c4",
+          "type": "set_contact_field",
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "f96c2273-f303-4420-ab68-38fb80018d63",
+          "destination_uuid": "fa3fb911-7664-486c-8b57-435a134f87cd"
+        }
+      ]
+    },
+    {
+      "uuid": "4cfba071-d082-4e5d-8cd6-1773cc3b6fe3",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Great to hear it went well, you are a star!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "95b5f65a-a274-4dac-a47b-903c44d3bc6f"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "a26eab1e-b0d6-4982-820f-bea76d9c52b4",
+          "destination_uuid": "1b90318c-2d1b-48f4-9ef0-2806bbf680f0"
+        }
+      ]
+    },
+    {
+      "uuid": "fa3fb911-7664-486c-8b57-435a134f87cd",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sorry to hear it was difficult for you. Well done for trying!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "b364bb45-e40e-47ca-b61e-5c0cc2cb12c1"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "aa5ef5e1-5af3-4ba8-bdfb-0fb6644a9e08",
+          "destination_uuid": "fd1d5613-6500-4219-ac21-b0f6fdc9aa98"
+        }
+      ]
+    },
+    {
+      "uuid": "1b90318c-2d1b-48f4-9ef0-2806bbf680f0",
+      "actions": [
+        {
+          "uuid": "4179e48d-ac24-4fb8-ba9f-349e8ba66955",
+          "type": "set_contact_field",
+          "field": {
+            "key": "last_interaction",
+            "name": "last interaction"
+          },
+          "value": "@(now())"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "4bf8c184-1caf-4406-8b10-db262e3887ca",
+          "destination_uuid": null
+        }
+      ]
+    },
+    {
+      "uuid": "fd1d5613-6500-4219-ac21-b0f6fdc9aa98",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "What was your main challenge?",
+          "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [
+            "My child or teen did not want to follow the instruction",
+            "I gave a negative instead of a positive instruction",
+            "I gave too many instructions at once",
+            "My child or teen could not do what I asked them",
+            "I forgot to praise my child or teen for following my instruction"
+          ],
+          "uuid": "e361b4ed-5bf9-4d4e-a012-905021d9a5c7"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "176863f8-7d48-462f-a50b-67ca2b02f480",
+          "destination_uuid": "2386e373-c370-4306-8acd-3382736141b3"
+        }
+      ]
+    },
+    {
+      "uuid": "d57fa5dc-1832-49e0-9fa4-a8a0c578e45e",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "2415c314-efa2-4612-9b4d-e1a4073aca90"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "1a8bd8bb-3788-40c1-83cb-f4c4e0af7ccf",
+          "destination_uuid": "fd1d5613-6500-4219-ac21-b0f6fdc9aa98"
+        }
+      ]
+    },
+    {
+      "uuid": "2386e373-c370-4306-8acd-3382736141b3",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "56b19a0e-ec30-44ad-ba33-49f8cd33109e",
+        "cases": [
+          {
+            "arguments": [
+              "My child or teen did not want to follow the instruction"
+            ],
+            "type": "has_phrase",
+            "uuid": "5041bca7-93c5-40bf-b808-ea07d8a1d52e",
+            "category_uuid": "d7d6f773-b32c-4ab9-bb4c-090fa25344a7"
+          },
+          {
+            "arguments": [
+              "I gave a negative instead of a positive instruction"
+            ],
+            "type": "has_phrase",
+            "uuid": "76515ec3-d035-4f6c-a30f-3976a63ba954",
+            "category_uuid": "30b3b760-d81e-4983-a707-161e76b51812"
+          },
+          {
+            "arguments": [
+              "I gave too many instructions at once"
+            ],
+            "type": "has_phrase",
+            "uuid": "d8ed2c5d-6b86-4fc7-a4f6-2b3511b320d6",
+            "category_uuid": "25581f1e-a522-489a-830d-234a746bf585"
+          },
+          {
+            "arguments": [
+              "My child or teen could not do what I asked them"
+            ],
+            "type": "has_phrase",
+            "uuid": "63e34c33-3a94-49b0-8aba-4075d9c173ab",
+            "category_uuid": "09fd3041-e816-4c52-9096-87658fc9e02a"
+          },
+          {
+            "arguments": [
+              "I forgot to praise my child or teen for following my instruction"
+            ],
+            "type": "has_phrase",
+            "uuid": "a5c4ceb1-d3ba-4e3a-a3cc-20f01c0eb3ac",
+            "category_uuid": "5c7685d3-b25b-4e8d-b577-e07d0360cb1b"
+          }
+        ],
+        "categories": [
+          {
+            "uuid": "d7d6f773-b32c-4ab9-bb4c-090fa25344a7",
+            "name": "1",
+            "exit_uuid": "f07ca577-a246-4e04-859c-593cf94c3595"
+          },
+          {
+            "uuid": "30b3b760-d81e-4983-a707-161e76b51812",
+            "name": "2",
+            "exit_uuid": "6fc01d10-70a4-4bc2-b9f8-b13d8597a899"
+          },
+          {
+            "uuid": "25581f1e-a522-489a-830d-234a746bf585",
+            "name": "3",
+            "exit_uuid": "1ca006c2-8973-44e5-aa9a-f14741a99ec7"
+          },
+          {
+            "uuid": "09fd3041-e816-4c52-9096-87658fc9e02a",
+            "name": "4",
+            "exit_uuid": "9edd97d9-e9bb-484c-b65d-d8c2696085a8"
+          },
+          {
+            "uuid": "5c7685d3-b25b-4e8d-b577-e07d0360cb1b",
+            "name": "5",
+            "exit_uuid": "91ddf549-0b26-4297-80d4-ed45b69e51be"
+          },
+          {
+            "uuid": "56b19a0e-ec30-44ad-ba33-49f8cd33109e",
+            "name": "Other",
+            "exit_uuid": "4e62fb1d-c948-4b54-abcc-da2fadb123f2"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg"
+        },
+        "result_name": "Result 3"
+      },
+      "exits": [
+        {
+          "uuid": "f07ca577-a246-4e04-859c-593cf94c3595",
+          "destination_uuid": "4481da7d-dd5e-42c2-953f-61470f9895d8"
+        },
+        {
+          "uuid": "6fc01d10-70a4-4bc2-b9f8-b13d8597a899",
+          "destination_uuid": "08968a76-59a5-4a33-8020-d1344b94e9b7"
+        },
+        {
+          "uuid": "1ca006c2-8973-44e5-aa9a-f14741a99ec7",
+          "destination_uuid": "88901cd7-4d1f-4505-95a5-71d1861cc0fe"
+        },
+        {
+          "uuid": "9edd97d9-e9bb-484c-b65d-d8c2696085a8",
+          "destination_uuid": "ebd5a973-383b-42d0-acef-e83f732a0d4a"
+        },
+        {
+          "uuid": "91ddf549-0b26-4297-80d4-ed45b69e51be",
+          "destination_uuid": "8df5ab59-f395-4bd5-9f84-b02d1f8e0fd4"
+        },
+        {
+          "uuid": "4e62fb1d-c948-4b54-abcc-da2fadb123f2",
+          "destination_uuid": "d57fa5dc-1832-49e0-9fa4-a8a0c578e45e"
+        }
+      ]
+    },
+    {
+      "uuid": "4481da7d-dd5e-42c2-953f-61470f9895d8",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "I know, our children need time to learn to follow instructions. Be patient, try again, and remember to praise them every time they follow an instruction!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "fa1cdbab-466b-448e-9615-2fe212694ff9"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "26877ac7-38a7-418f-ad5d-9723de7a86e9",
+          "destination_uuid": "adb59795-58de-41d8-b11c-2c8ad6e263e3"
+        }
+      ]
+    },
+    {
+      "uuid": "08968a76-59a5-4a33-8020-d1344b94e9b7",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "I know, it takes some time to get used to giving positive instructions – it’s really worth trying again! Think about behaviour you would love to see your teen do more, and think of positive ways to give that instruction!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "7c19250b-9b2c-4826-b880-b33957fa6321"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "727cb4af-56c2-4950-946e-a61de936b234",
+          "destination_uuid": "adb59795-58de-41d8-b11c-2c8ad6e263e3"
+        }
+      ]
+    },
+    {
+      "uuid": "88901cd7-4d1f-4505-95a5-71d1861cc0fe",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "I know, it is hard to remember to give one instruction at a time. When we do it, our child is more likely to listen – so we can praise them even more!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "f58a8f19-e50d-49b5-ae55-f9867c3f6877"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "6a8c5213-40fe-41ee-a398-2441b5d19969",
+          "destination_uuid": "adb59795-58de-41d8-b11c-2c8ad6e263e3"
+        }
+      ]
+    },
+    {
+      "uuid": "8df5ab59-f395-4bd5-9f84-b02d1f8e0fd4",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Sometimes we just expect our children to do what we want them. But when we praise them for it, they feel encouraged to listen again next time!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "d4aa202c-3021-4221-b40c-d407f7e196eb"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "ca24f576-5ab0-4a7a-bbc7-b820f8e11759",
+          "destination_uuid": "adb59795-58de-41d8-b11c-2c8ad6e263e3"
+        }
+      ]
+    },
+    {
+      "uuid": "ebd5a973-383b-42d0-acef-e83f732a0d4a",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "It is hard to remember to give realistic instructions. Try to make sure that your child or teen can physically do what you want them to do. Be specific!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "f62fe2d4-feb7-4375-bca7-4b0cc7d86933"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "3c0dcbcc-fdda-444d-af41-a4141c8eac3e",
+          "destination_uuid": "adb59795-58de-41d8-b11c-2c8ad6e263e3"
+        }
+      ]
+    },
+    {
+      "uuid": "adb59795-58de-41d8-b11c-2c8ad6e263e3",
+      "actions": [
+        {
+          "uuid": "df25856f-d117-48b2-a46b-268764f64281",
+          "type": "set_contact_field",
+          "field": {
+            "key": "want_feedback_checkin",
+            "name": "want feedback checkin"
+          },
+          "value": "yes"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "bf83995b-38cf-436c-84d9-9ccedb1b84cc",
+          "destination_uuid": "5dba9168-8653-482a-be79-fc8bacec5fd0"
+        }
+      ]
+    },
+    {
+      "uuid": "5dba9168-8653-482a-be79-fc8bacec5fd0",
+      "actions": [
+        {
+          "uuid": "1fbcf252-2445-44a2-852f-e202e8174367",
+          "type": "enter_flow",
+          "flow": {
+            "uuid": "9c6ec05a-102d-457d-abe4-3056979c5d3d",
+            "name": "PLH - Feedback - Feedback for checkIn"
+          }
+        }
+      ],
+      "router": {
+        "type": "switch",
+        "operand": "@child.run.status",
+        "cases": [
+          {
+            "uuid": "d16192a7-13f3-40eb-aaf5-0766b75cf257",
+            "type": "has_only_text",
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "34fac219-3e30-4fb5-ae72-7ca863751e82"
+          },
+          {
+            "uuid": "ee6b7ca9-9742-4078-bbd2-0d86dbf6592e",
+            "arguments": [
+              "expired"
+            ],
+            "type": "has_only_text",
+            "category_uuid": "6f917bba-e650-43ef-9080-a90f3936818b"
+          }
+        ],
+        "categories": [
+          {
+            "uuid": "34fac219-3e30-4fb5-ae72-7ca863751e82",
+            "name": "Complete",
+            "exit_uuid": "e60ff8fd-aca8-4411-aabe-f8a428b41f21"
+          },
+          {
+            "uuid": "6f917bba-e650-43ef-9080-a90f3936818b",
+            "name": "Expired",
+            "exit_uuid": "2c32d4a4-fb19-4d6f-9100-6a085886e596"
+          }
+        ],
+        "default_category_uuid": "6f917bba-e650-43ef-9080-a90f3936818b"
+      },
+      "exits": [
+        {
+          "uuid": "e60ff8fd-aca8-4411-aabe-f8a428b41f21",
+          "destination_uuid": null
+        },
+        {
+          "uuid": "2c32d4a4-fb19-4d6f-9100-6a085886e596",
+          "destination_uuid": null
+        }
+      ]
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "df91f01d-fb5e-43c2-a374-81ca2966f154",
+  "revision": 52
+}
