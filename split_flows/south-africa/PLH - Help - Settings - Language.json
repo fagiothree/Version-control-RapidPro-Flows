@@ -1,0 +1,347 @@
+{
+  "_ui": {
+    "nodes": {
+      "89a27778-fdc1-4b2a-8ec9-16022cff0d64": {
+        "position": {
+          "left": 560,
+          "top": 80
+        },
+        "type": "execute_actions"
+      },
+      "c6b2b6e5-4fc9-4f79-a169-578f5c72ff64": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 440,
+          "top": 360
+        },
+        "type": "wait_for_response"
+      },
+      "bf545f96-faab-490d-9dff-3496d2003501": {
+        "position": {
+          "left": 800,
+          "top": 380
+        },
+        "type": "execute_actions"
+      },
+      "02b2fea0-699c-4047-b10f-659196dbecc8": {
+        "position": {
+          "left": 360,
+          "top": 560
+        },
+        "type": "execute_actions"
+      },
+      "e039aece-0e23-496e-863b-e2b3e898e17b": {
+        "position": {
+          "left": 1040,
+          "top": 720
+        },
+        "type": "execute_actions"
+      },
+      "d15edc9d-957d-4bcc-bb80-61296c31e87c": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 420,
+          "top": 860
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "2c2ed50f-7425-4abb-9b37-61a68652b9c1": {
+        "position": {
+          "left": 260,
+          "top": 1160
+        },
+        "type": "execute_actions"
+      }
+    },
+    "stickies": {}
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "base",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Help - Settings - Language",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [
+            "Yes",
+            "No"
+          ],
+          "text": "The language you are currently receiving messages in is \"English\".\nWould you like to change it?",
+          "type": "send_msg",
+          "uuid": "025a2110-351e-4db5-892b-d3ba5dc9e6af"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "c6b2b6e5-4fc9-4f79-a169-578f5c72ff64",
+          "uuid": "a50bf9cd-3f1e-41be-859b-379346bcd325"
+        }
+      ],
+      "uuid": "89a27778-fdc1-4b2a-8ec9-16022cff0d64"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "02b2fea0-699c-4047-b10f-659196dbecc8",
+          "uuid": "4d0268d8-ddf0-446a-9573-9f59e6b66edc"
+        },
+        {
+          "uuid": "72f18abe-a84e-4103-b03c-111e9fed31a1"
+        },
+        {
+          "destination_uuid": "bf545f96-faab-490d-9dff-3496d2003501",
+          "uuid": "cef4746b-4bc2-4e1b-907d-c4b3fbb16115"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "yes y"
+            ],
+            "category_uuid": "4c11b011-5de2-4107-a4ca-e91fafa637c2",
+            "type": "has_any_word",
+            "uuid": "e37b6374-f803-4b25-9b8c-2cafce8c94dc"
+          },
+          {
+            "arguments": [
+              "no n back"
+            ],
+            "category_uuid": "3e5ed882-1062-4c24-8dbc-b6df2ec23e3f",
+            "type": "has_any_word",
+            "uuid": "2fae06ed-51f5-4200-bc2b-ece4b7ee94d9"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "4d0268d8-ddf0-446a-9573-9f59e6b66edc",
+            "name": "Yes",
+            "uuid": "4c11b011-5de2-4107-a4ca-e91fafa637c2"
+          },
+          {
+            "exit_uuid": "72f18abe-a84e-4103-b03c-111e9fed31a1",
+            "name": "No",
+            "uuid": "3e5ed882-1062-4c24-8dbc-b6df2ec23e3f"
+          },
+          {
+            "exit_uuid": "cef4746b-4bc2-4e1b-907d-c4b3fbb16115",
+            "name": "Other",
+            "uuid": "0b64d36b-75fb-4665-a6e3-da4f0a0d2e06"
+          }
+        ],
+        "default_category_uuid": "0b64d36b-75fb-4665-a6e3-da4f0a0d2e06",
+        "operand": "@input.text",
+        "result_name": "Result 2",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "c6b2b6e5-4fc9-4f79-a169-578f5c72ff64"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean. ",
+          "type": "send_msg",
+          "uuid": "efa28c7d-0d93-4aa9-9410-edad34a0e631"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "89a27778-fdc1-4b2a-8ec9-16022cff0d64",
+          "uuid": "1c253804-65c7-48a9-a4aa-6af7b80cee20"
+        }
+      ],
+      "uuid": "bf545f96-faab-490d-9dff-3496d2003501"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Which language would you like?",
+          "type": "send_msg",
+          "quick_replies": [
+            "English",
+            "Sesotho",
+            "IsiXhosa",
+            "IsiZulu",
+            "Afrikaans"
+          ],
+          "uuid": "45345822-c9e2-4aed-8e20-6757fdfb6a7e"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "d15edc9d-957d-4bcc-bb80-61296c31e87c",
+          "uuid": "d34a0cb6-9e5f-4e7d-bd4d-3b52ce52caad"
+        }
+      ],
+      "uuid": "02b2fea0-699c-4047-b10f-659196dbecc8"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "9019b0e9-f220-4bf9-ac47-f6b6f5b5df4a"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "02b2fea0-699c-4047-b10f-659196dbecc8",
+          "uuid": "74277306-7ed4-42ec-8ada-86fac58886a2"
+        }
+      ],
+      "uuid": "e039aece-0e23-496e-863b-e2b3e898e17b"
+    },
+    {
+      "uuid": "d15edc9d-957d-4bcc-bb80-61296c31e87c",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "d5d38cf1-0e7d-48c3-a59c-91533586d81c",
+        "cases": [
+          {
+            "arguments": [
+              "engish"
+            ],
+            "type": "has_any_word",
+            "uuid": "d7176161-0308-4871-b801-1de311861a0b",
+            "category_uuid": "6ff9c611-158f-47f4-bde8-16b2b4f57f00"
+          },
+          {
+            "arguments": [
+              "sesotho"
+            ],
+            "type": "has_any_word",
+            "uuid": "0f9a29bf-b39d-47ac-8ab4-699e939908be",
+            "category_uuid": "8b879f12-7cfe-484d-b8df-4a8fd39c1499"
+          },
+          {
+            "arguments": [
+              "isixhosa"
+            ],
+            "type": "has_any_word",
+            "uuid": "0742ec8d-9b20-4eee-979b-c986ab815c6b",
+            "category_uuid": "e815ebf4-9df6-4b6a-bb30-0c3e864b3d6f"
+          },
+          {
+            "arguments": [
+              "isizulu"
+            ],
+            "type": "has_any_word",
+            "uuid": "5aab9cbc-65dd-4c50-b63f-937a91ab5d06",
+            "category_uuid": "497a9a8c-6bc3-4bb2-b913-d6e958aa1d6b"
+          },
+          {
+            "arguments": [
+              "afrikaans"
+            ],
+            "type": "has_any_word",
+            "uuid": "23ba74c9-76a9-49df-a93c-5f6e555c2fb1",
+            "category_uuid": "16403f05-86ab-41bc-9e42-a44e2ad7590d"
+          }
+        ],
+        "categories": [
+          {
+            "uuid": "6ff9c611-158f-47f4-bde8-16b2b4f57f00",
+            "name": "Engish",
+            "exit_uuid": "e90f0fff-dc5b-4063-90dc-e8c8ce40baee"
+          },
+          {
+            "uuid": "8b879f12-7cfe-484d-b8df-4a8fd39c1499",
+            "name": "Sesotho",
+            "exit_uuid": "3019a8da-71e9-411e-b5e1-ddd6998284c5"
+          },
+          {
+            "uuid": "e815ebf4-9df6-4b6a-bb30-0c3e864b3d6f",
+            "name": "Isixhosa",
+            "exit_uuid": "3edb638d-3d3c-4d1b-bfdf-11c77ca3d85c"
+          },
+          {
+            "uuid": "497a9a8c-6bc3-4bb2-b913-d6e958aa1d6b",
+            "name": "Isizulu",
+            "exit_uuid": "6989b23b-c5d4-4817-949c-b7ee4eeee3ab"
+          },
+          {
+            "uuid": "16403f05-86ab-41bc-9e42-a44e2ad7590d",
+            "name": "Afrikaans",
+            "exit_uuid": "af2524a8-76a6-4252-944f-aeb9512552f0"
+          },
+          {
+            "exit_uuid": "1af15b6a-9dfb-458c-9559-75ddf4b47b2b",
+            "name": "Other",
+            "uuid": "d5d38cf1-0e7d-48c3-a59c-91533586d81c"
+          }
+        ],
+        "operand": "@input.text",
+        "wait": {
+          "type": "msg"
+        },
+        "result_name": "language"
+      },
+      "exits": [
+        {
+          "uuid": "e90f0fff-dc5b-4063-90dc-e8c8ce40baee",
+          "destination_uuid": "2c2ed50f-7425-4abb-9b37-61a68652b9c1"
+        },
+        {
+          "uuid": "3019a8da-71e9-411e-b5e1-ddd6998284c5",
+          "destination_uuid": "2c2ed50f-7425-4abb-9b37-61a68652b9c1"
+        },
+        {
+          "uuid": "3edb638d-3d3c-4d1b-bfdf-11c77ca3d85c",
+          "destination_uuid": "2c2ed50f-7425-4abb-9b37-61a68652b9c1"
+        },
+        {
+          "uuid": "6989b23b-c5d4-4817-949c-b7ee4eeee3ab",
+          "destination_uuid": "2c2ed50f-7425-4abb-9b37-61a68652b9c1"
+        },
+        {
+          "uuid": "af2524a8-76a6-4252-944f-aeb9512552f0",
+          "destination_uuid": "2c2ed50f-7425-4abb-9b37-61a68652b9c1"
+        },
+        {
+          "destination_uuid": "e039aece-0e23-496e-863b-e2b3e898e17b",
+          "uuid": "1af15b6a-9dfb-458c-9559-75ddf4b47b2b"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "language": "eng",
+          "type": "set_contact_language",
+          "uuid": "c701f7a9-5781-4689-ad54-f896d5fe416b"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "264b1d8e-639d-44ca-b521-1b4b34c9f936"
+        }
+      ],
+      "uuid": "2c2ed50f-7425-4abb-9b37-61a68652b9c1"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "7f7c5131-4164-479b-9a96-f6e7eb3bf8cd",
+  "revision": 10
+}

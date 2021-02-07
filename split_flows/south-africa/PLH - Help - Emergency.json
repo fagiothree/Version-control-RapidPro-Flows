@@ -1,0 +1,228 @@
+{
+  "_ui": {
+    "nodes": {
+      "afa8e2d4-7f80-4ec8-a2ac-3032ddaa3dd9": {
+        "position": {
+          "left": 440,
+          "top": 20
+        },
+        "type": "execute_actions"
+      },
+      "4a3dd727-4b72-4346-826d-ad1ff7f26623": {
+        "position": {
+          "left": 440,
+          "top": 420
+        },
+        "type": "execute_actions"
+      },
+      "860b7765-27e1-4f03-a50c-88d1a0273ee0": {
+        "position": {
+          "left": 740,
+          "top": 480
+        },
+        "type": "execute_actions"
+      },
+      "112778a9-bf61-4e2b-a92a-7b523a5817da": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 440,
+          "top": 560
+        },
+        "type": "wait_for_response"
+      },
+      "5fe128c8-dffb-4bcd-831c-6f0401c21dc8": {
+        "config": {},
+        "position": {
+          "left": 380,
+          "top": 820
+        },
+        "type": "split_by_subflow"
+      }
+    },
+    "stickies": {
+      "f54bb581-549b-4e31-9426-ec9d7649961d": {
+        "body": "update with local numbers",
+        "color": "yellow",
+        "position": {
+          "left": 100,
+          "top": 60
+        },
+        "title": "New Note"
+      }
+    }
+  },
+  "expire_after_minutes": 60,
+  "ignore_triggers": true,
+  "language": "eng",
+  "localization": {},
+  "metadata": {
+    "revision": 1
+  },
+  "name": "PLH - Help - Emergency",
+  "nodes": [
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "Here are some useful numbers in South Africa:\n\nPolice: 10111\nAmbulance: 10177\nViolence at home: 0800 428 428 or SMS \"help\" to 31531\nAlcohol or drug worries: 0800 12 13 14 or SMS 32312\nChildline: 0800 55 555 or www.childlinesa.org.za\nLifeline (counselling): 0437435123 or www.lifelinesa.org.za\nFree emergency number: 112",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "8e9f84dd-d898-4ca4-8e68-cedf94c43dad"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "4a3dd727-4b72-4346-826d-ad1ff7f26623",
+          "uuid": "614044e9-e890-4936-85a8-a346830c8680"
+        }
+      ],
+      "uuid": "afa8e2d4-7f80-4ec8-a2ac-3032ddaa3dd9"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Please type \"back\" if you want to go back to the previous options.",
+          "type": "send_msg",
+          "uuid": "57f1a5bc-18ce-4b90-87f1-70da1f753d3f"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "112778a9-bf61-4e2b-a92a-7b523a5817da",
+          "uuid": "e90c951d-90cc-4720-b853-d3a41f664c4b"
+        }
+      ],
+      "uuid": "4a3dd727-4b72-4346-826d-ad1ff7f26623"
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "quick_replies": [],
+          "text": "Sorry, I don't understand what you mean.",
+          "type": "send_msg",
+          "uuid": "f552b115-b934-42be-a2a0-671568a02949"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "4a3dd727-4b72-4346-826d-ad1ff7f26623",
+          "uuid": "b98feeac-8888-4d2a-8ebe-c1460527131f"
+        }
+      ],
+      "uuid": "860b7765-27e1-4f03-a50c-88d1a0273ee0"
+    },
+    {
+      "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "5fe128c8-dffb-4bcd-831c-6f0401c21dc8",
+          "uuid": "ad492739-5441-4b51-915e-ed4af76ee1ae"
+        },
+        {
+          "destination_uuid": "860b7765-27e1-4f03-a50c-88d1a0273ee0",
+          "uuid": "bc16db4b-3960-47e9-8339-9ab13d1e6801"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "back"
+            ],
+            "category_uuid": "42b81bdb-b4e0-4058-b04b-9aafcb872720",
+            "type": "has_any_word",
+            "uuid": "7454dece-d6fd-4aca-bf49-7b7479c08094"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "ad492739-5441-4b51-915e-ed4af76ee1ae",
+            "name": "Back",
+            "uuid": "42b81bdb-b4e0-4058-b04b-9aafcb872720"
+          },
+          {
+            "exit_uuid": "bc16db4b-3960-47e9-8339-9ab13d1e6801",
+            "name": "Other",
+            "uuid": "09dff8d8-8a68-4ba1-a76e-ae9e8a373c2f"
+          }
+        ],
+        "default_category_uuid": "09dff8d8-8a68-4ba1-a76e-ae9e8a373c2f",
+        "operand": "@input.text",
+        "result_name": "Result 1",
+        "type": "switch",
+        "wait": {
+          "type": "msg"
+        }
+      },
+      "uuid": "112778a9-bf61-4e2b-a92a-7b523a5817da"
+    },
+    {
+      "actions": [
+        {
+          "flow": {
+            "name": "PLH - Help - Entry",
+            "uuid": "4771ea36-51a1-438e-8ca1-7cb3f84312c2"
+          },
+          "type": "enter_flow",
+          "uuid": "56491670-60de-4c1d-a7e5-1fd33ed3a023"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "ed40158a-1119-4be9-b189-e53867bc1576"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "6d241f74-0c42-432a-9bdb-1d6339633e18"
+        }
+      ],
+      "router": {
+        "cases": [
+          {
+            "arguments": [
+              "completed"
+            ],
+            "category_uuid": "5a39bb5d-8e70-4571-927d-c177bd2bed31",
+            "type": "has_only_text",
+            "uuid": "65a868cf-c9ee-41b8-a6a6-1280a46f235c"
+          },
+          {
+            "arguments": [
+              "expired"
+            ],
+            "category_uuid": "13f7455f-db2f-4ee1-813a-d684c9771754",
+            "type": "has_only_text",
+            "uuid": "2dae1d3a-8385-4eb1-9ce1-46dc690918ef"
+          }
+        ],
+        "categories": [
+          {
+            "exit_uuid": "ed40158a-1119-4be9-b189-e53867bc1576",
+            "name": "Complete",
+            "uuid": "5a39bb5d-8e70-4571-927d-c177bd2bed31"
+          },
+          {
+            "exit_uuid": "6d241f74-0c42-432a-9bdb-1d6339633e18",
+            "name": "Expired",
+            "uuid": "13f7455f-db2f-4ee1-813a-d684c9771754"
+          }
+        ],
+        "default_category_uuid": "13f7455f-db2f-4ee1-813a-d684c9771754",
+        "operand": "@child.run.status",
+        "type": "switch"
+      },
+      "uuid": "5fe128c8-dffb-4bcd-831c-6f0401c21dc8"
+    }
+  ],
+  "spec_version": "13.1.0",
+  "type": "messaging",
+  "uuid": "abb9e4d7-71b7-497c-a043-acc6e6bbce39",
+  "revision": 2
+}
