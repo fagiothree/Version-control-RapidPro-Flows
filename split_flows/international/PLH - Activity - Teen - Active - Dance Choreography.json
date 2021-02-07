@@ -1,27 +1,27 @@
 {
   "_ui": {
     "nodes": {
-      "e89b76b4-398b-4a66-8ebe-bc1d4e7dbab4": {
-        "position": {
-          "left": 0,
-          "top": 0
-        },
-        "type": "execute_actions"
-      },
-      "9695efdb-7fec-478a-833d-541391faff5c": {
+      "3be289ce-52f8-4619-b4dd-ba597efaa867": {
         "position": {
           "left": 0,
           "top": 300
         },
         "type": "execute_actions"
       },
-      "4654a33d-21c0-46b4-bd4a-78a74e6c7743": {
+      "c9c04306-8dca-4dad-82b1-0f9283e456a0": {
         "config": {},
         "position": {
           "left": 240,
           "top": 480
         },
         "type": "split_by_subflow"
+      },
+      "d7ab36df-c4be-41e6-99e4-ab2e8e7a900b": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
       }
     }
   },
@@ -40,19 +40,19 @@
           "attachments": [
             "image:@(fields.image_path & \"family_dancing_and_playing_instruments.jpg\")"
           ],
+          "quick_replies": [],
           "text": "Dance choreography\n•\tCreate a dance choreography to your teen's favorite songs.\n•\tFirst person does a dance move and everyone else copies. \n•\tEveryone takes turns being the leader.\n•\tPerform it for the household!",
           "type": "send_msg",
-          "quick_replies": [],
-          "uuid": "c3f1167a-7c17-45f7-9e79-4746afd4596b"
+          "uuid": "f2353482-a6a3-4574-b2b7-849a7bc44b14"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "9e112cab-e79c-462c-95a4-cfbe84b1c1f9"
+          "uuid": "f29c77dc-01d6-415a-b8a0-065ef99bb6c1"
         }
       ],
-      "uuid": "e89b76b4-398b-4a66-8ebe-bc1d4e7dbab4"
+      "uuid": "d7ab36df-c4be-41e6-99e4-ab2e8e7a900b"
     },
     {
       "actions": [
@@ -62,7 +62,7 @@
             "name": "current type assessed"
           },
           "type": "set_contact_field",
-          "uuid": "ac0c61e8-66d7-4e7c-be0f-7f76b88f92fe",
+          "uuid": "3ac18e72-af5f-47d6-806f-b9436f9c83d3",
           "value": "activity"
         },
         {
@@ -71,37 +71,37 @@
             "name": "current activity"
           },
           "type": "set_contact_field",
-          "uuid": "d1e1c887-6bb9-42ff-912d-6727a260573d",
+          "uuid": "3cb92ba9-5906-426c-ab15-07cf9644b466",
           "value": "Teen11"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "4654a33d-21c0-46b4-bd4a-78a74e6c7743",
-          "uuid": "87e10a09-edb3-4767-a896-0aa3d56918e1"
+          "destination_uuid": "c9c04306-8dca-4dad-82b1-0f9283e456a0",
+          "uuid": "2ea7e3d2-5282-4448-a14f-da384d5504cb"
         }
       ],
-      "uuid": "9695efdb-7fec-478a-833d-541391faff5c"
+      "uuid": "3be289ce-52f8-4619-b4dd-ba597efaa867"
     },
     {
       "actions": [
         {
           "flow": {
             "name": "Feedbak flow for activity or tip",
-            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+            "uuid": "2d088e4d-2c71-4480-9cac-0403ba3c5461"
           },
           "type": "enter_flow",
-          "uuid": "67e990da-9d4d-48c1-a8a9-0ddcd5643126"
+          "uuid": "15b5543d-818a-478f-8542-7d618719dad2"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "f5a692a9-04dd-4277-8e5c-d724dcf33adc"
+          "uuid": "787c85d2-97bc-4b3c-a4be-ba45fa063371"
         },
         {
           "destination_uuid": null,
-          "uuid": "7a29f8e6-0a22-43f9-a74b-a8f71d2b8fcb"
+          "uuid": "be9d1932-c325-4337-81ea-08ad480d4850"
         }
       ],
       "router": {
@@ -110,40 +110,40 @@
             "arguments": [
               "completed"
             ],
-            "category_uuid": "2434996e-0d13-44ab-a9e4-86bfd4ff5d85",
+            "category_uuid": "025b6a64-174d-4fe5-828a-06690ba80751",
             "type": "has_only_text",
-            "uuid": "ab0d6357-f7ea-484f-b518-acbfb7e60572"
+            "uuid": "a7d3af2c-5143-444a-862a-5218e00e2170"
           },
           {
             "arguments": [
               "expired"
             ],
-            "category_uuid": "791f8f0a-6b5e-480d-957d-be1555e42830",
+            "category_uuid": "7ca7fe0f-ed91-4728-afe8-dc66c0261ef8",
             "type": "has_only_text",
-            "uuid": "e0ac4669-c4cd-4f8e-bc0b-39442f6e60cd"
+            "uuid": "fbc62e60-9e95-48ac-9021-3e79d9b78662"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "f5a692a9-04dd-4277-8e5c-d724dcf33adc",
+            "exit_uuid": "787c85d2-97bc-4b3c-a4be-ba45fa063371",
             "name": "Complete",
-            "uuid": "2434996e-0d13-44ab-a9e4-86bfd4ff5d85"
+            "uuid": "025b6a64-174d-4fe5-828a-06690ba80751"
           },
           {
-            "exit_uuid": "7a29f8e6-0a22-43f9-a74b-a8f71d2b8fcb",
+            "exit_uuid": "be9d1932-c325-4337-81ea-08ad480d4850",
             "name": "Expired",
-            "uuid": "791f8f0a-6b5e-480d-957d-be1555e42830"
+            "uuid": "7ca7fe0f-ed91-4728-afe8-dc66c0261ef8"
           }
         ],
-        "default_category_uuid": "791f8f0a-6b5e-480d-957d-be1555e42830",
+        "default_category_uuid": "7ca7fe0f-ed91-4728-afe8-dc66c0261ef8",
         "operand": "@child.run.status",
         "type": "switch"
       },
-      "uuid": "4654a33d-21c0-46b4-bd4a-78a74e6c7743"
+      "uuid": "c9c04306-8dca-4dad-82b1-0f9283e456a0"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "df8dcab5-8eac-41fb-be7f-43b1fe1b4380",
-  "revision": 4
+  "uuid": "3d4ecf75-2abb-4392-acb9-13735a86611a",
+  "revision": 1
 }

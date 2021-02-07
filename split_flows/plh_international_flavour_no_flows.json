@@ -4,42 +4,15 @@
   "flows": [],
   "campaigns": [
     {
-      "uuid": "dc289443-3cd0-4396-878b-562d477a4a9a",
-      "name": "24 h timeout alert",
-      "group": {
-        "uuid": "55c96316-5fc8-4844-bf7d-c557eb769dc2",
-        "name": "in program"
-      },
-      "events": [
-        {
-          "uuid": "258528c0-0b4b-4455-826c-376b90301d55",
-          "offset": 1410,
-          "unit": "M",
-          "event_type": "F",
-          "delivery_hour": -1,
-          "message": null,
-          "relative_to": {
-            "label": "last interaction",
-            "key": "last_interaction"
-          },
-          "start_mode": "I",
-          "flow": {
-            "uuid": "4a041982-afda-4a38-ac9f-6fcc01e3a2a6",
-            "name": "PLH - Timed - 24h timeout alert"
-          }
-        }
-      ]
-    },
-    {
-      "uuid": "5f0b1630-56df-423f-b74c-e09ebc86e446",
+      "uuid": "4863253a-f98b-4c63-b842-d4f66645986b",
       "name": "plh covid program",
       "group": {
-        "uuid": "55c96316-5fc8-4844-bf7d-c557eb769dc2",
+        "uuid": "328730ed-02aa-4731-8a7c-350acde7a8f5",
         "name": "in program"
       },
       "events": [
         {
-          "uuid": "f3b7de88-1019-421d-93ae-8fc6a9ef16b3",
+          "uuid": "1de48baa-1819-4e42-b3d1-ecb0314b4a43",
           "offset": 0,
           "unit": "M",
           "event_type": "F",
@@ -51,8 +24,35 @@
           },
           "start_mode": "I",
           "flow": {
-            "uuid": "455cacef-8fa3-4db8-8c95-c7189f747462",
+            "uuid": "df5c699c-3b07-4843-b128-68864f6abb1c",
             "name": "PLH - Timed - Campaign"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "73b0b0af-1e3b-44aa-b393-fc56842971f8",
+      "name": "24 h timeout alert",
+      "group": {
+        "uuid": "328730ed-02aa-4731-8a7c-350acde7a8f5",
+        "name": "in program"
+      },
+      "events": [
+        {
+          "uuid": "baf67d9b-413c-42c5-bfee-7e7496cb3bfa",
+          "offset": 1410,
+          "unit": "M",
+          "event_type": "F",
+          "delivery_hour": -1,
+          "message": null,
+          "relative_to": {
+            "label": "last interaction",
+            "key": "last_interaction"
+          },
+          "start_mode": "I",
+          "flow": {
+            "uuid": "8bca9550-f7d9-42df-80e9-55bf584d17f2",
+            "name": "PLH - Timed - 24h timeout alert"
           }
         }
       ]
@@ -63,7 +63,7 @@
       "trigger_type": "K",
       "keyword": "help",
       "flow": {
-        "uuid": "c5aacd7b-340b-4825-92f3-271b8336be00",
+        "uuid": "3aad1291-ad9a-4a18-bb99-d5357e49345b",
         "name": "PLH - Help - Entry"
       },
       "groups": [],
@@ -73,7 +73,7 @@
       "trigger_type": "K",
       "keyword": "toolkit",
       "flow": {
-        "uuid": "446e0f6c-8e31-4443-95b7-70aebdde599e",
+        "uuid": "ddc9840d-140f-494d-bd3e-9617183ba7ee",
         "name": "PLH - Help - Access toolkit"
       },
       "groups": [],
@@ -83,7 +83,7 @@
       "trigger_type": "K",
       "keyword": "goback",
       "flow": {
-        "uuid": "120a0c7c-ac72-4bcb-8117-577bd8c4c2c9",
+        "uuid": "7286514e-b250-41bb-a616-4aa289b08518",
         "name": "PLH - Internal - Restart expired flow"
       },
       "groups": [],
@@ -93,7 +93,7 @@
       "trigger_type": "K",
       "keyword": "moretips",
       "flow": {
-        "uuid": "0ef66b91-60ab-4894-8669-7fe2ceb344dd",
+        "uuid": "fdb09625-7f46-42de-bb5e-2107e7e11bce",
         "name": "PLH - Internal - Restart campaign for WA"
       },
       "groups": [],
@@ -109,6 +109,16 @@
     {
       "key": "age_group_for_tips",
       "name": "age group for tips",
+      "type": "text"
+    },
+    {
+      "key": "animated_audio_path",
+      "name": "animated audio path",
+      "type": "text"
+    },
+    {
+      "key": "animated_video_path",
+      "name": "animated video path",
       "type": "text"
     },
     {
@@ -234,6 +244,11 @@
     {
       "key": "incomplete_toolkit_history",
       "name": "incomplete toolkit history",
+      "type": "text"
+    },
+    {
+      "key": "ipv_switch",
+      "name": "ipv switch",
       "type": "text"
     },
     {
@@ -457,6 +472,11 @@
       "type": "text"
     },
     {
+      "key": "survey_ipv_count",
+      "name": "survey ipv count",
+      "type": "text"
+    },
+    {
       "key": "survey_parenting_count",
       "name": "survey parenting count",
       "type": "text"
@@ -654,7 +674,7 @@
   ],
   "groups": [
     {
-      "uuid": "55c96316-5fc8-4844-bf7d-c557eb769dc2",
+      "uuid": "328730ed-02aa-4731-8a7c-350acde7a8f5",
       "name": "in program",
       "query": null
     }

@@ -1,29 +1,29 @@
 {
   "_ui": {
     "nodes": {
-      "5b5bc6e1-7f2e-4cf1-9194-a3b3be60ecd7": {
-        "type": "split_by_contact_field",
+      "d59fb5a3-e189-4679-8c87-9e6eaebe7a3b": {
+        "config": {
+          "cases": {},
+          "operand": {
+            "id": "want_feedback_checkin",
+            "name": "want feedback checkin",
+            "type": "field"
+          }
+        },
         "position": {
           "left": 520,
           "top": 2620
         },
-        "config": {
-          "operand": {
-            "id": "want_feedback_checkin",
-            "type": "field",
-            "name": "want feedback checkin"
-          },
-          "cases": {}
-        }
+        "type": "split_by_contact_field"
       },
-      "0d04325a-4942-4c58-9bb7-ec1f92ab3c6b": {
+      "ca06373c-5946-4eaa-81a0-a3f1053e41e9": {
         "position": {
           "left": 500,
           "top": 2760
         },
         "type": "execute_actions"
       },
-      "f3ca53f4-04de-4594-a76c-3af1e546c2c8": {
+      "197a09e3-e2c1-4963-87c4-da1225b50d8c": {
         "config": {},
         "position": {
           "left": 520,
@@ -31,7 +31,7 @@
         },
         "type": "split_by_subflow"
       },
-      "c8ddaba0-025f-44da-bc46-cb5aab4615d1": {
+      "5c8911de-1dba-4e71-9d25-1ce9ab608d5c": {
         "config": {
           "cases": {},
           "operand": {
@@ -46,24 +46,60 @@
         },
         "type": "split_by_contact_field"
       },
-      "ebc893d5-5813-4fc1-8518-b07d25726e40": {
+      "4b1b685d-6e6a-4296-b92a-ccec0be3a589": {
         "position": {
-          "left": 260,
-          "top": 3220
+          "left": 520,
+          "top": 3740
         },
         "type": "execute_actions"
       },
-      "a9e62053-2095-47d3-a543-0b7e196796ce": {
+      "00de11eb-aa23-49b8-9748-4cb0d319d215": {
         "position": {
-          "left": 620,
-          "top": 3320
+          "left": 920,
+          "top": 3240
         },
         "type": "execute_actions"
       },
-      "53e536a3-ff00-485b-bd55-f229e89f6bb0": {
+      "4fa28cfe-7d08-403f-a28b-a016411031c5": {
+        "position": {
+          "left": 240,
+          "top": 4020
+        },
+        "type": "execute_actions"
+      },
+      "8e9ac2db-c0ba-45b9-8728-17c30522e306": {
+        "type": "split_by_contact_field",
+        "position": {
+          "left": 240,
+          "top": 3600
+        },
+        "config": {
+          "operand": {
+            "id": "gender",
+            "type": "field",
+            "name": "gender"
+          },
+          "cases": {}
+        }
+      },
+      "3fd831d7-86c1-4f9c-b8d8-6bdbe4a1f129": {
         "position": {
           "left": 260,
-          "top": 3680
+          "top": 3260
+        },
+        "type": "execute_actions"
+      },
+      "0b361039-94a7-41d8-8df8-49621f7c88bd": {
+        "position": {
+          "left": 40,
+          "top": 3720
+        },
+        "type": "execute_actions"
+      },
+      "f1bf96e0-78d4-4e42-bd4e-3bd530b5c5aa": {
+        "position": {
+          "left": 260,
+          "top": 3740
         },
         "type": "execute_actions"
       }
@@ -75,98 +111,98 @@
   "language": "eng",
   "localization": {},
   "metadata": {
-    "revision": 43
+    "revision": 1
   },
   "name": "PLH - Feedback - Feedback for checkIn",
   "nodes": [
     {
-      "uuid": "5b5bc6e1-7f2e-4cf1-9194-a3b3be60ecd7",
       "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "ca06373c-5946-4eaa-81a0-a3f1053e41e9",
+          "uuid": "ccd19b57-09da-405f-9978-46dac81cfe95"
+        },
+        {
+          "uuid": "8eb19346-640b-473e-84bf-b0ed0f568211"
+        }
+      ],
       "router": {
-        "type": "switch",
-        "default_category_uuid": "70323480-9739-4ac8-a05b-a9092f279ede",
         "cases": [
           {
             "arguments": [
               "yes"
             ],
+            "category_uuid": "50ae17e7-e211-46c7-99fd-0a9871aaabb7",
             "type": "has_any_word",
-            "uuid": "89aabe6c-7bfe-4767-ae1d-b40aa9df761e",
-            "category_uuid": "b4f7139d-3427-4fbe-9e20-e17ecf19d86f"
+            "uuid": "f9f438d5-f300-4e8f-9e6b-13227f7fc9b6"
           }
         ],
         "categories": [
           {
-            "uuid": "b4f7139d-3427-4fbe-9e20-e17ecf19d86f",
+            "exit_uuid": "ccd19b57-09da-405f-9978-46dac81cfe95",
             "name": "Yes",
-            "exit_uuid": "88f895c5-1db1-4626-a5eb-bd5bfece8635"
+            "uuid": "50ae17e7-e211-46c7-99fd-0a9871aaabb7"
           },
           {
-            "uuid": "70323480-9739-4ac8-a05b-a9092f279ede",
+            "exit_uuid": "8eb19346-640b-473e-84bf-b0ed0f568211",
             "name": "Other",
-            "exit_uuid": "9fa22732-8745-4c0b-bfbc-5e650ee9f8aa"
+            "uuid": "a779cd02-e490-413a-b4fd-728e84a1fdd5"
           }
         ],
-        "operand": "@fields.want_feedback_checkin"
+        "default_category_uuid": "a779cd02-e490-413a-b4fd-728e84a1fdd5",
+        "operand": "@fields.want_feedback_checkin",
+        "type": "switch"
       },
-      "exits": [
-        {
-          "uuid": "88f895c5-1db1-4626-a5eb-bd5bfece8635",
-          "destination_uuid": "0d04325a-4942-4c58-9bb7-ec1f92ab3c6b"
-        },
-        {
-          "uuid": "9fa22732-8745-4c0b-bfbc-5e650ee9f8aa"
-        }
-      ]
+      "uuid": "d59fb5a3-e189-4679-8c87-9e6eaebe7a3b"
     },
     {
       "actions": [
         {
-          "uuid": "37a40885-8e46-4c5d-8932-0cf49af85417",
-          "type": "set_contact_field",
           "field": {
             "key": "current_type_assessed",
             "name": "current type assessed"
           },
+          "type": "set_contact_field",
+          "uuid": "32c51c16-5be0-4b08-bdf3-f866f214662d",
           "value": "checkin"
         },
         {
-          "uuid": "8e388700-5959-449c-bd43-d7a591e530c0",
-          "type": "set_contact_field",
           "field": {
             "key": "current_activity",
             "name": "current activity"
           },
+          "type": "set_contact_field",
+          "uuid": "ae7122f1-c16a-4a4f-84ad-0e48c0099e9c",
           "value": "checkIns"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "f3ca53f4-04de-4594-a76c-3af1e546c2c8",
-          "uuid": "60f3e8fd-2cb8-4624-9329-c01381c257c3"
+          "destination_uuid": "197a09e3-e2c1-4963-87c4-da1225b50d8c",
+          "uuid": "e75688d8-2501-4df8-b67c-f11c0aa9ca39"
         }
       ],
-      "uuid": "0d04325a-4942-4c58-9bb7-ec1f92ab3c6b"
+      "uuid": "ca06373c-5946-4eaa-81a0-a3f1053e41e9"
     },
     {
       "actions": [
         {
           "flow": {
             "name": "PLH - Feedback - Feedback for content",
-            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+            "uuid": "2d088e4d-2c71-4480-9cac-0403ba3c5461"
           },
           "type": "enter_flow",
-          "uuid": "b0d463c2-fb72-4cc6-917f-584f8c5298d6"
+          "uuid": "b84b6966-7ab6-42d3-a19b-d5d475ed9e95"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "c8ddaba0-025f-44da-bc46-cb5aab4615d1",
-          "uuid": "cb7cd3fe-4dd4-4701-aa28-a1bc83dd9386"
+          "destination_uuid": "5c8911de-1dba-4e71-9d25-1ce9ab608d5c",
+          "uuid": "b1cee6ad-aacf-46e0-bb19-1ad83fc2b3a2"
         },
         {
           "destination_uuid": null,
-          "uuid": "ce26b4b3-e531-4659-84ad-bf86ada22253"
+          "uuid": "3c6cc90d-ea73-4b6d-80d3-3ee0038bc007"
         }
       ],
       "router": {
@@ -175,47 +211,47 @@
             "arguments": [
               "completed"
             ],
-            "category_uuid": "584c4db4-3683-4137-96bf-38ab22556991",
+            "category_uuid": "7c7546cf-d7f7-4fe2-9166-4a1e4c8b1a92",
             "type": "has_only_text",
-            "uuid": "07d926bd-5ee7-4b82-a28d-36e21f2efc4c"
+            "uuid": "787fbe3c-4fcb-416d-816a-0e9cdfe1336b"
           },
           {
             "arguments": [
               "expired"
             ],
-            "category_uuid": "8854b478-d62d-4951-896b-6385f0e9fa9b",
+            "category_uuid": "80c7837b-25a1-4e2b-933c-d78b93191917",
             "type": "has_only_text",
-            "uuid": "6f2d3ec9-4131-4294-b74c-483c6b107290"
+            "uuid": "34fc811a-86a0-4a06-837a-09777c5c6e77"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "cb7cd3fe-4dd4-4701-aa28-a1bc83dd9386",
+            "exit_uuid": "b1cee6ad-aacf-46e0-bb19-1ad83fc2b3a2",
             "name": "Complete",
-            "uuid": "584c4db4-3683-4137-96bf-38ab22556991"
+            "uuid": "7c7546cf-d7f7-4fe2-9166-4a1e4c8b1a92"
           },
           {
-            "exit_uuid": "ce26b4b3-e531-4659-84ad-bf86ada22253",
+            "exit_uuid": "3c6cc90d-ea73-4b6d-80d3-3ee0038bc007",
             "name": "Expired",
-            "uuid": "8854b478-d62d-4951-896b-6385f0e9fa9b"
+            "uuid": "80c7837b-25a1-4e2b-933c-d78b93191917"
           }
         ],
-        "default_category_uuid": "8854b478-d62d-4951-896b-6385f0e9fa9b",
+        "default_category_uuid": "80c7837b-25a1-4e2b-933c-d78b93191917",
         "operand": "@child.run.status",
         "type": "switch"
       },
-      "uuid": "f3ca53f4-04de-4594-a76c-3af1e546c2c8"
+      "uuid": "197a09e3-e2c1-4963-87c4-da1225b50d8c"
     },
     {
       "actions": [],
       "exits": [
         {
-          "destination_uuid": "ebc893d5-5813-4fc1-8518-b07d25726e40",
-          "uuid": "f49d8f60-d62a-45a9-b110-a4d62bb93fd6"
+          "destination_uuid": "3fd831d7-86c1-4f9c-b8d8-6bdbe4a1f129",
+          "uuid": "ea0b8d5d-ba3b-4119-8a6b-d028de5ce86f"
         },
         {
-          "destination_uuid": "a9e62053-2095-47d3-a543-0b7e196796ce",
-          "uuid": "c87552c8-9726-4dd8-bb6c-ec0225230ab7"
+          "destination_uuid": "00de11eb-aa23-49b8-9748-4cb0d319d215",
+          "uuid": "e45a157e-50e2-4d9b-8931-30b833ec0ac8"
         }
       ],
       "router": {
@@ -224,46 +260,28 @@
             "arguments": [
               "bad"
             ],
-            "category_uuid": "ee709937-8a27-4c33-b8b9-6896054d227b",
+            "category_uuid": "226c633f-57ed-407c-8655-b929a73a4f1c",
             "type": "has_any_word",
-            "uuid": "4c99ac9e-3a04-4891-ac9b-44c24343c1eb"
+            "uuid": "e6f91a29-98be-4985-89af-8c57aa95378e"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "f49d8f60-d62a-45a9-b110-a4d62bb93fd6",
+            "exit_uuid": "ea0b8d5d-ba3b-4119-8a6b-d028de5ce86f",
             "name": "Bad",
-            "uuid": "ee709937-8a27-4c33-b8b9-6896054d227b"
+            "uuid": "226c633f-57ed-407c-8655-b929a73a4f1c"
           },
           {
-            "exit_uuid": "c87552c8-9726-4dd8-bb6c-ec0225230ab7",
+            "exit_uuid": "e45a157e-50e2-4d9b-8931-30b833ec0ac8",
             "name": "Other",
-            "uuid": "c9860f15-8f28-4ec0-b551-60916d3215e3"
+            "uuid": "d9d3b0c8-9890-4a74-849b-dab570aabc5f"
           }
         ],
-        "default_category_uuid": "c9860f15-8f28-4ec0-b551-60916d3215e3",
+        "default_category_uuid": "d9d3b0c8-9890-4a74-849b-dab570aabc5f",
         "operand": "@fields.last_feedback",
         "type": "switch"
       },
-      "uuid": "c8ddaba0-025f-44da-bc46-cb5aab4615d1"
-    },
-    {
-      "actions": [
-        {
-          "attachments": [],
-          "text": "We are sorry to hear that this has not been helpful. Not all solutions work for everyone. Here are 6 steps that you can try to find a solution by yourself or with someone else:\n1. Take a deep breath.\n2. Explore the challenge. \n3. Think of possible solutions. \n4. Choose a solution. \n5. Try it out!\n6. Reflect on whether it worked. \nYou should also praise yourself for trying. Parenting is not easy. You are a star just for showing up and caring. You can do it!",
-          "type": "send_msg",
-          "quick_replies": [],
-          "uuid": "ff13a3d8-0cad-4c21-bf2d-264049742263"
-        }
-      ],
-      "exits": [
-        {
-          "destination_uuid": "53e536a3-ff00-485b-bd55-f229e89f6bb0",
-          "uuid": "b38a59dc-3c09-4b2e-8b38-de3fb2293fbe"
-        }
-      ],
-      "uuid": "ebc893d5-5813-4fc1-8518-b07d25726e40"
+      "uuid": "5c8911de-1dba-4e71-9d25-1ce9ab608d5c"
     },
     {
       "actions": [
@@ -272,16 +290,146 @@
           "quick_replies": [],
           "text": "We are glad to hear that. Remember, if you ever have any challenges, you can always type \"Help\" and we will try our best to help you out. Chat to you later!",
           "type": "send_msg",
-          "uuid": "3790d1fc-94b5-41d4-8b16-da5d5f398c5b"
+          "uuid": "b9efcf8d-8363-47c5-b39c-ab87c38ec5cd"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "692d5171-bfa6-4aae-abb8-6d734362ed9d"
+          "uuid": "ff1ea3da-daf3-4b33-b00f-b9903fb21bba"
         }
       ],
-      "uuid": "a9e62053-2095-47d3-a543-0b7e196796ce"
+      "uuid": "00de11eb-aa23-49b8-9748-4cb0d319d215"
+    },
+    {
+      "uuid": "3fd831d7-86c1-4f9c-b8d8-6bdbe4a1f129",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "We are sorry to hear that this has not been helpful. Not all solutions work for everyone. Here are 6 steps that you can use to find a solution by yourself or with someone else:\n\n1. Take a deep breath. \n2. Explore the challenge. \n3. Think of possible solutions. \n4. Choose a solution \n5. Try it out!\n6. Reflect on whether it worked.",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "1fc76678-9585-4c3e-a947-e605486443fc"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "9c9a9d69-6ba7-4cc8-b842-0a7eaea6169c",
+          "destination_uuid": "8e9ac2db-c0ba-45b9-8728-17c30522e306"
+        }
+      ]
+    },
+    {
+      "uuid": "8e9ac2db-c0ba-45b9-8728-17c30522e306",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "f76dc815-7b0b-45bb-bc22-6d0d719ffecf",
+        "cases": [
+          {
+            "arguments": [
+              "man"
+            ],
+            "type": "has_any_word",
+            "uuid": "04008e05-82cf-43a1-bd8d-d0f25856b75c",
+            "category_uuid": "95a7e85e-6225-4dfc-8468-573e54cf6b9b"
+          },
+          {
+            "arguments": [
+              "woman"
+            ],
+            "type": "has_any_word",
+            "uuid": "4d3567aa-28ab-4a42-a0d6-541727884dd4",
+            "category_uuid": "429d118f-350a-4b1a-ad5f-ba15136a3bfb"
+          }
+        ],
+        "categories": [
+          {
+            "uuid": "95a7e85e-6225-4dfc-8468-573e54cf6b9b",
+            "name": "Man",
+            "exit_uuid": "465a5d23-ef80-43aa-a32e-3a2564a2ca19"
+          },
+          {
+            "uuid": "429d118f-350a-4b1a-ad5f-ba15136a3bfb",
+            "name": "Woman",
+            "exit_uuid": "b3160377-7d9f-4acf-805e-3fa7274f0794"
+          },
+          {
+            "uuid": "f76dc815-7b0b-45bb-bc22-6d0d719ffecf",
+            "name": "Other",
+            "exit_uuid": "712839db-56a3-4dfa-846a-efccd8d94cf6"
+          }
+        ],
+        "operand": "@fields.gender"
+      },
+      "exits": [
+        {
+          "uuid": "465a5d23-ef80-43aa-a32e-3a2564a2ca19",
+          "destination_uuid": "0b361039-94a7-41d8-8df8-49621f7c88bd"
+        },
+        {
+          "uuid": "b3160377-7d9f-4acf-805e-3fa7274f0794",
+          "destination_uuid": "f1bf96e0-78d4-4e42-bd4e-3bd530b5c5aa"
+        },
+        {
+          "uuid": "712839db-56a3-4dfa-846a-efccd8d94cf6",
+          "destination_uuid": "4b1b685d-6e6a-4296-b92a-ccec0be3a589"
+        }
+      ]
+    },
+    {
+      "uuid": "0b361039-94a7-41d8-8df8-49621f7c88bd",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "You should also praise yourself for trying. Being a father is not easy. You are a star just for showing up and caring. You can do it!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "ae6f915b-f64d-4532-ab02-8573d1a5ec53"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "476a8ea3-60dc-427b-ab23-c7a902b60f2e",
+          "destination_uuid": "4fa28cfe-7d08-403f-a28b-a016411031c5"
+        }
+      ]
+    },
+    {
+      "uuid": "f1bf96e0-78d4-4e42-bd4e-3bd530b5c5aa",
+      "actions": [
+        {
+          "attachments": [],
+          "text": "You should also praise yourself for trying. Being a mother is not easy. You are a star just for showing up and caring. You can do it!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "2cb158a8-6d8e-4589-935b-fc944547ebda"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "c12a9f55-3f41-411c-a760-846c38a56654",
+          "destination_uuid": "4fa28cfe-7d08-403f-a28b-a016411031c5"
+        }
+      ]
+    },
+    {
+      "actions": [
+        {
+          "attachments": [],
+          "text": "You should also praise yourself for trying. Parenting is not easy. You are a star just for showing up and caring. You can do it!",
+          "type": "send_msg",
+          "quick_replies": [],
+          "uuid": "9327ed7a-44ea-4a66-a7c2-00f37820a900"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "4fa28cfe-7d08-403f-a28b-a016411031c5",
+          "uuid": "d24eb1e7-2033-45d3-a854-fffa698860de"
+        }
+      ],
+      "uuid": "4b1b685d-6e6a-4296-b92a-ccec0be3a589"
     },
     {
       "actions": [
@@ -291,20 +439,20 @@
           "quick_replies": [],
           "text": "Remember, if you ever have any challenges, you can always type \"Help\" and we will try our best to help you out. Chat to you later!",
           "type": "send_msg",
-          "uuid": "7e713fc9-cc39-46e4-af03-4b2b66ed2ca5"
+          "uuid": "8b9947f6-6150-41d9-9c12-63e37206abf7"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "77e765e4-3d8e-4b82-9201-69a062cc0c30"
+          "uuid": "97ca7e36-947e-47d2-bc4f-7f87c0cc0eca"
         }
       ],
-      "uuid": "53e536a3-ff00-485b-bd55-f229e89f6bb0"
+      "uuid": "4fa28cfe-7d08-403f-a28b-a016411031c5"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "9c6ec05a-102d-457d-abe4-3056979c5d3d",
-  "revision": 44
+  "uuid": "8a461ecd-92c1-408e-bd05-7fc23a0488b6",
+  "revision": 26
 }

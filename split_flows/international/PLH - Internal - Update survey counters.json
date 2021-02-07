@@ -1,24 +1,31 @@
 {
   "_ui": {
     "nodes": {
-      "9a9b40a3-0252-4521-8b1d-2fe9a71f571b": {
+      "0dd4ce73-7e8e-4a7f-9825-f275458f8ca3": {
+        "position": {
+          "left": 340,
+          "top": 40
+        },
+        "type": "execute_actions"
+      },
+      "5a2e02f9-a479-4b18-8a6e-6972af1f7a5c": {
         "position": {
           "left": 340,
           "top": 140
         },
         "type": "execute_actions"
       },
-      "a62c269e-5a30-49ab-bcd5-b8b5680b7795": {
+      "140910ff-bfbe-4725-9272-12dd480a58f3": {
         "position": {
           "left": 340,
           "top": 260
         },
         "type": "execute_actions"
       },
-      "d9fb2424-ca7e-4eb8-9fbb-9cb6752b1c97": {
+      "6b731c71-5f42-4872-97a2-a89a251e8eed": {
         "position": {
           "left": 340,
-          "top": 40
+          "top": 360
         },
         "type": "execute_actions"
       }
@@ -36,22 +43,22 @@
     {
       "actions": [
         {
+          "uuid": "e08ac074-af12-4a5c-94fc-40bf4b98f274",
+          "type": "set_contact_field",
           "field": {
             "key": "survey_parenting_count",
             "name": "survey parenting count"
           },
-          "type": "set_contact_field",
-          "uuid": "f398dc7c-b7f5-45e3-b8cf-8ab685682841",
           "value": "@(if(fields.current_day_in_program>= 2, if(fields.survey_parenting_count<0,1, fields.survey_parenting_count), fields.survey_parenting_count))"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "9a9b40a3-0252-4521-8b1d-2fe9a71f571b",
-          "uuid": "af2174ef-072e-4e13-b80b-47003b987f4c"
+          "destination_uuid": "5a2e02f9-a479-4b18-8a6e-6972af1f7a5c",
+          "uuid": "76b1a939-b256-4a09-8549-99c9c6bb38b9"
         }
       ],
-      "uuid": "d9fb2424-ca7e-4eb8-9fbb-9cb6752b1c97"
+      "uuid": "0dd4ce73-7e8e-4a7f-9825-f275458f8ca3"
     },
     {
       "actions": [
@@ -61,41 +68,61 @@
             "name": "survey behave count"
           },
           "type": "set_contact_field",
-          "uuid": "fde02661-dc64-4187-ba0a-0b7620e5a04f",
+          "uuid": "ec542546-4d0f-44f6-9e55-0a88198b6dfc",
           "value": "@(if(fields.current_day_in_program>= 2, if(fields.survey_behave_count<0,1, fields.survey_behave_count), fields.survey_behave_count))"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "a62c269e-5a30-49ab-bcd5-b8b5680b7795",
-          "uuid": "064c12fe-8cde-4e8e-ba1e-4c3b0ed44092"
+          "destination_uuid": "140910ff-bfbe-4725-9272-12dd480a58f3",
+          "uuid": "3809a9b1-0f9a-41c0-87ff-78411691e23a"
         }
       ],
-      "uuid": "9a9b40a3-0252-4521-8b1d-2fe9a71f571b"
+      "uuid": "5a2e02f9-a479-4b18-8a6e-6972af1f7a5c"
     },
     {
       "actions": [
         {
+          "uuid": "fb8293ce-4de1-4713-b137-08c470e56ee3",
+          "type": "set_contact_field",
           "field": {
             "key": "survey_covid_count",
             "name": "survey covid count"
           },
-          "type": "set_contact_field",
-          "uuid": "62c23649-faa9-4daf-9fdf-6734cb23eb62",
-          "value": "@(if(fields.current_day_in_program>= 3, if(fields.survey_covid_count<0,1, fields.survey_covid_count), fields.survey_covid_count))"
+          "value": "@(if(fields.current_day_in_program>= 5, if(fields.survey_covid_count<0,1, fields.survey_covid_count), fields.survey_covid_count))"
         }
       ],
       "exits": [
         {
-          "destination_uuid": null,
-          "uuid": "26cc3377-322d-470b-b83c-8019fca7c433"
+          "destination_uuid": "6b731c71-5f42-4872-97a2-a89a251e8eed",
+          "uuid": "c3b01d76-eaae-4dbf-97f2-56866c262816"
         }
       ],
-      "uuid": "a62c269e-5a30-49ab-bcd5-b8b5680b7795"
+      "uuid": "140910ff-bfbe-4725-9272-12dd480a58f3"
+    },
+    {
+      "uuid": "6b731c71-5f42-4872-97a2-a89a251e8eed",
+      "actions": [
+        {
+          "uuid": "6e30b4a6-0ce3-469f-9413-51c07c085e95",
+          "type": "set_contact_field",
+          "field": {
+            "key": "survey_ipv_count",
+            "name": "survey ipv count"
+          },
+          "value": "@(if(fields.current_day_in_program>= 2, if(fields.survey_ipv_count<0,1, fields.survey_ipv_count), fields.survey_ipv_count))"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "20fd4d87-1057-460c-9e11-ec3a961afb93",
+          "destination_uuid": null
+        }
+      ]
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "2215997f-8256-40ff-8f62-0dd4a8f574d8",
-  "revision": 1
+  "uuid": "643b2d4a-6c71-441d-b5a5-d31faca659a0",
+  "revision": 4
 }

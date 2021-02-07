@@ -1,27 +1,27 @@
 {
   "_ui": {
     "nodes": {
-      "3ed1e91f-5297-4a70-9f8e-4b69c521018d": {
-        "position": {
-          "left": 0,
-          "top": 0
-        },
-        "type": "execute_actions"
-      },
-      "6a332ff0-6f2c-4708-b611-b76f0e1f8390": {
-        "position": {
-          "left": 0,
-          "top": 480
-        },
-        "type": "execute_actions"
-      },
-      "6d87f01a-3a48-4901-a040-e21abdaa89f2": {
+      "2560730b-7f91-49d3-86a8-b9bbab755c72": {
         "config": {},
         "position": {
           "left": 140,
           "top": 680
         },
         "type": "split_by_subflow"
+      },
+      "7d55c264-829f-44c5-9665-4b04b58defbd": {
+        "position": {
+          "left": 0,
+          "top": 480
+        },
+        "type": "execute_actions"
+      },
+      "a9e7a96c-ce52-4f43-9d55-f08982056c3e": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
       }
     }
   },
@@ -38,19 +38,19 @@
       "actions": [
         {
           "attachments": [],
+          "quick_replies": [],
           "text": "Mirror\n•\tThis game can be played in pairs or even as a group.\n•\tStand facing each other or in a circle.  \n•\tOne person leads first while everyone else must copy, trying to move exactly at the same time as the leader.\n•\tMake sure the leader moves slowly enough for everyone to follow! Explore moving different body parts and in different levels.\n•\tAfter a while, switch who is leading. Give everyone a chance to lead.\n•\tTry it with no leaders!",
           "type": "send_msg",
-          "quick_replies": [],
-          "uuid": "9ecce2a7-a0ef-4883-a60c-e0e942bebb95"
+          "uuid": "b8e60b0c-9595-49e9-b683-66a7dada82c5"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "b7349c30-d0a4-4eb8-846c-5e9e02c61ae8"
+          "uuid": "554b257c-43bd-4170-b50d-2034100cdbff"
         }
       ],
-      "uuid": "3ed1e91f-5297-4a70-9f8e-4b69c521018d"
+      "uuid": "a9e7a96c-ce52-4f43-9d55-f08982056c3e"
     },
     {
       "actions": [
@@ -60,7 +60,7 @@
             "name": "current type assessed"
           },
           "type": "set_contact_field",
-          "uuid": "79ae55c6-3b15-483f-8a14-5cf2dda33cb6",
+          "uuid": "278058cb-262e-495c-a300-96108d5c1eb7",
           "value": "activity"
         },
         {
@@ -69,37 +69,37 @@
             "name": "current activity"
           },
           "type": "set_contact_field",
-          "uuid": "fb22421a-d57d-4f71-8a42-f9957336dcd5",
+          "uuid": "0e0b14e0-7adc-4033-9f40-3b1768fa72bb",
           "value": "Child16"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "6d87f01a-3a48-4901-a040-e21abdaa89f2",
-          "uuid": "cbad6014-cc35-4962-b7c7-56eafcac7c89"
+          "destination_uuid": "2560730b-7f91-49d3-86a8-b9bbab755c72",
+          "uuid": "8bd5c255-0447-46fa-b5c6-2e4ff7f03a16"
         }
       ],
-      "uuid": "6a332ff0-6f2c-4708-b611-b76f0e1f8390"
+      "uuid": "7d55c264-829f-44c5-9665-4b04b58defbd"
     },
     {
       "actions": [
         {
           "flow": {
             "name": "Feedbak flow for activity or tip",
-            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+            "uuid": "2d088e4d-2c71-4480-9cac-0403ba3c5461"
           },
           "type": "enter_flow",
-          "uuid": "9e566f22-ad05-4076-b483-a2b56adde3eb"
+          "uuid": "a33d022c-dbd6-40e1-9b3c-265c025f3c1f"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "1416bc8b-7a99-4d2c-82e7-fb138c0d2bbd"
+          "uuid": "53a2869c-1bd1-4b90-9745-4b8c16c1e3ee"
         },
         {
           "destination_uuid": null,
-          "uuid": "854aa849-f2e9-4f5b-b594-59055c335f65"
+          "uuid": "de506066-8e70-4634-ac56-f546f9aeb68b"
         }
       ],
       "router": {
@@ -108,40 +108,40 @@
             "arguments": [
               "completed"
             ],
-            "category_uuid": "3b03845e-2a29-4f2e-9999-f257eaeff30e",
+            "category_uuid": "8b0ce242-2479-4b05-a25e-d28ce13514d8",
             "type": "has_only_text",
-            "uuid": "2c278c61-77b0-4954-b0ff-9b02b5b8e48d"
+            "uuid": "b918fc4b-0f81-4f47-b81c-29cfcc040b76"
           },
           {
             "arguments": [
               "expired"
             ],
-            "category_uuid": "0b8862ed-6e61-41d9-9f6b-e01bcfc39f3e",
+            "category_uuid": "447bcd79-4a9d-41e7-ab6e-8f4e4a93e1ea",
             "type": "has_only_text",
-            "uuid": "490a32b1-fb44-4cb4-ab4d-f88a3f5bb1c2"
+            "uuid": "8eee6368-30e7-4a41-a2ac-ed370c7f2a4e"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "1416bc8b-7a99-4d2c-82e7-fb138c0d2bbd",
+            "exit_uuid": "53a2869c-1bd1-4b90-9745-4b8c16c1e3ee",
             "name": "Complete",
-            "uuid": "3b03845e-2a29-4f2e-9999-f257eaeff30e"
+            "uuid": "8b0ce242-2479-4b05-a25e-d28ce13514d8"
           },
           {
-            "exit_uuid": "854aa849-f2e9-4f5b-b594-59055c335f65",
+            "exit_uuid": "de506066-8e70-4634-ac56-f546f9aeb68b",
             "name": "Expired",
-            "uuid": "0b8862ed-6e61-41d9-9f6b-e01bcfc39f3e"
+            "uuid": "447bcd79-4a9d-41e7-ab6e-8f4e4a93e1ea"
           }
         ],
-        "default_category_uuid": "0b8862ed-6e61-41d9-9f6b-e01bcfc39f3e",
+        "default_category_uuid": "447bcd79-4a9d-41e7-ab6e-8f4e4a93e1ea",
         "operand": "@child.run.status",
         "type": "switch"
       },
-      "uuid": "6d87f01a-3a48-4901-a040-e21abdaa89f2"
+      "uuid": "2560730b-7f91-49d3-86a8-b9bbab755c72"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "6e16ee26-759f-4dc9-ab17-da29c1525f81",
-  "revision": 2
+  "uuid": "de1d8a85-199b-4015-a43a-f8415ddc3b79",
+  "revision": 1
 }

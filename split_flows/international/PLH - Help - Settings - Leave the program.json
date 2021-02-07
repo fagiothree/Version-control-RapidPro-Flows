@@ -1,21 +1,28 @@
 {
   "_ui": {
     "nodes": {
-      "d3ab7e8d-5e9c-405a-8f95-35a3e966a850": {
+      "1807620b-2341-4b27-9d9c-cdabb7358838": {
         "position": {
-          "left": 540,
-          "top": 20
+          "left": 260,
+          "top": 380
         },
         "type": "execute_actions"
       },
-      "cdc4eece-66f2-4636-8fa1-433cd2ec8b3c": {
+      "2d4da6d6-1682-4322-aa6e-3a924cb02fb2": {
         "position": {
           "left": 940,
           "top": 220
         },
         "type": "execute_actions"
       },
-      "b806ff80-4872-46c9-9d71-ff6be81b576c": {
+      "4299c3d3-cd0d-4351-ad36-f22652d85547": {
+        "position": {
+          "left": 540,
+          "top": 20
+        },
+        "type": "execute_actions"
+      },
+      "a06e86a4-9f93-47d1-a6d7-ff141f346f5f": {
         "config": {
           "cases": {}
         },
@@ -25,14 +32,7 @@
         },
         "type": "wait_for_response"
       },
-      "ed04e34d-e7d1-4a7a-b528-0591696881f1": {
-        "position": {
-          "left": 260,
-          "top": 380
-        },
-        "type": "execute_actions"
-      },
-      "9ab0b02a-b8ee-4ee0-b440-15dda5e5e165": {
+      "dc0dd7a2-7142-4a6b-b4f5-5c781672726d": {
         "position": {
           "left": 340,
           "top": 620
@@ -41,7 +41,7 @@
       }
     },
     "stickies": {
-      "c32a0215-d15f-4b40-a2ab-6ddd11b20014": {
+      "8e7388ad-bf2d-4add-8251-6f06e4f3d3a6": {
         "body": "trigger for receiving messages again?",
         "color": "yellow",
         "position": {
@@ -65,19 +65,19 @@
       "actions": [
         {
           "attachments": [],
+          "quick_replies": [],
           "text": "Are you sure you do not want to get these messages? If you do not want to receive any more messages, please type \"STOP MESSAGES.\"\nIf you made a mistake, please type \"back\" and choose another option.",
           "type": "send_msg",
-          "quick_replies": [],
-          "uuid": "8e49d080-5b5a-46d0-96f7-479e5c8049cc"
+          "uuid": "67f78b14-e915-4b1f-96e4-87ecd4cf43c0"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "b806ff80-4872-46c9-9d71-ff6be81b576c",
-          "uuid": "c9225a85-d20c-4d06-bc38-b8747aa03dff"
+          "destination_uuid": "a06e86a4-9f93-47d1-a6d7-ff141f346f5f",
+          "uuid": "f0da5a6e-9178-4039-a0f6-78aa92e5e978"
         }
       ],
-      "uuid": "d3ab7e8d-5e9c-405a-8f95-35a3e966a850"
+      "uuid": "4299c3d3-cd0d-4351-ad36-f22652d85547"
     },
     {
       "actions": [
@@ -86,31 +86,31 @@
           "quick_replies": [],
           "text": "Sorry I don't understand what you mean.",
           "type": "send_msg",
-          "uuid": "83f80bd2-1214-4e34-8be0-e5ec3559d698"
+          "uuid": "493bbd94-dcb1-4ec7-b8af-5df381e19d3a"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "d3ab7e8d-5e9c-405a-8f95-35a3e966a850",
-          "uuid": "7dbd7d69-fa8c-4154-ae40-25ff2fc8712a"
+          "destination_uuid": "4299c3d3-cd0d-4351-ad36-f22652d85547",
+          "uuid": "3507662b-0d64-40fa-bd5c-1f5f6b163f70"
         }
       ],
-      "uuid": "cdc4eece-66f2-4636-8fa1-433cd2ec8b3c"
+      "uuid": "2d4da6d6-1682-4322-aa6e-3a924cb02fb2"
     },
     {
       "actions": [],
       "exits": [
         {
-          "destination_uuid": "ed04e34d-e7d1-4a7a-b528-0591696881f1",
-          "uuid": "a4f8ba17-bf0e-40af-9833-1aa3233e8163"
+          "destination_uuid": "1807620b-2341-4b27-9d9c-cdabb7358838",
+          "uuid": "b96497d1-054d-4b02-9ff8-0dc570ad9685"
         },
         {
           "destination_uuid": null,
-          "uuid": "d585742b-07ea-497a-93f1-03018e98b706"
+          "uuid": "e08e5d05-27dc-49bc-95cc-8517731809c5"
         },
         {
-          "destination_uuid": "cdc4eece-66f2-4636-8fa1-433cd2ec8b3c",
-          "uuid": "97c6b0db-7ad6-41a3-bc7c-6f3903dba859"
+          "destination_uuid": "2d4da6d6-1682-4322-aa6e-3a924cb02fb2",
+          "uuid": "7f41bd25-2649-4d27-8633-8973b99c4ccf"
         }
       ],
       "router": {
@@ -119,37 +119,37 @@
             "arguments": [
               "stop messages"
             ],
-            "category_uuid": "073ec94e-97e7-4125-91b1-c0fcb1831ec3",
+            "category_uuid": "0eb42a3f-78d8-4ee9-9dda-aad48a6b2dea",
             "type": "has_only_phrase",
-            "uuid": "4e180b69-5239-48c5-b602-1fcec1c7981e"
+            "uuid": "dc593bed-8ca1-49fb-a1eb-7c8143da9153"
           },
           {
             "arguments": [
               "no n not back"
             ],
-            "category_uuid": "77b07909-6b43-47d4-acef-6ee285cc5bcc",
+            "category_uuid": "16a41ded-3f4b-443a-acc0-88eef97379b0",
             "type": "has_any_word",
-            "uuid": "222cd642-f6a2-4e1c-9de7-7b47dd70f047"
+            "uuid": "f93d89e1-44c4-4b6f-8b99-22b0fa8e2c39"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "a4f8ba17-bf0e-40af-9833-1aa3233e8163",
+            "exit_uuid": "b96497d1-054d-4b02-9ff8-0dc570ad9685",
             "name": "leave",
-            "uuid": "073ec94e-97e7-4125-91b1-c0fcb1831ec3"
+            "uuid": "0eb42a3f-78d8-4ee9-9dda-aad48a6b2dea"
           },
           {
-            "exit_uuid": "d585742b-07ea-497a-93f1-03018e98b706",
+            "exit_uuid": "e08e5d05-27dc-49bc-95cc-8517731809c5",
             "name": "stay",
-            "uuid": "77b07909-6b43-47d4-acef-6ee285cc5bcc"
+            "uuid": "16a41ded-3f4b-443a-acc0-88eef97379b0"
           },
           {
-            "exit_uuid": "97c6b0db-7ad6-41a3-bc7c-6f3903dba859",
+            "exit_uuid": "7f41bd25-2649-4d27-8633-8973b99c4ccf",
             "name": "Other",
-            "uuid": "c8593bdf-32da-4a83-8c2a-d052d7907f72"
+            "uuid": "6a60a8f6-093f-479d-8406-8fe5f6343d78"
           }
         ],
-        "default_category_uuid": "c8593bdf-32da-4a83-8c2a-d052d7907f72",
+        "default_category_uuid": "6a60a8f6-093f-479d-8406-8fe5f6343d78",
         "operand": "@input.text",
         "result_name": "Result 2",
         "type": "switch",
@@ -157,7 +157,7 @@
           "type": "msg"
         }
       },
-      "uuid": "b806ff80-4872-46c9-9d71-ff6be81b576c"
+      "uuid": "a06e86a4-9f93-47d1-a6d7-ff141f346f5f"
     },
     {
       "actions": [
@@ -166,20 +166,20 @@
           "groups": [
             {
               "name": "in program",
-              "uuid": "55c96316-5fc8-4844-bf7d-c557eb769dc2"
+              "uuid": "328730ed-02aa-4731-8a7c-350acde7a8f5"
             }
           ],
           "type": "remove_contact_groups",
-          "uuid": "922a00e7-14d9-4e79-9d44-2ce2d5d87de0"
+          "uuid": "013da452-d164-4873-aa19-439a565084cc"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "9ab0b02a-b8ee-4ee0-b440-15dda5e5e165",
-          "uuid": "3faeb3ec-4857-49a9-bf3c-5bf66aada4c4"
+          "destination_uuid": "dc0dd7a2-7142-4a6b-b4f5-5c781672726d",
+          "uuid": "ce3df9b0-f974-4358-9721-66f202356609"
         }
       ],
-      "uuid": "ed04e34d-e7d1-4a7a-b528-0591696881f1"
+      "uuid": "1807620b-2341-4b27-9d9c-cdabb7358838"
     },
     {
       "actions": [
@@ -189,20 +189,20 @@
           "quick_replies": [],
           "text": "Okay thanks! If you ever want to sign up for parenting messages, type \"MoreTips\". We are here to help!",
           "type": "send_msg",
-          "uuid": "05356429-da8c-442a-bb3b-4698cabd16c1"
+          "uuid": "728ee07c-906f-4843-9641-59cfe91929c5"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "8f2db98b-be15-4a29-a732-5fb660beb33f"
+          "uuid": "f017dcf1-3b90-491b-b216-703ceb2bd497"
         }
       ],
-      "uuid": "9ab0b02a-b8ee-4ee0-b440-15dda5e5e165"
+      "uuid": "dc0dd7a2-7142-4a6b-b4f5-5c781672726d"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "943dedb5-c7b3-48f7-b6f1-0c5dcff04740",
-  "revision": 2
+  "uuid": "60861329-61ab-4836-9afa-fab172759f14",
+  "revision": 1
 }

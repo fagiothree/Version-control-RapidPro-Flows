@@ -1,14 +1,35 @@
 {
   "_ui": {
     "nodes": {
-      "be226084-53bf-4980-b9f8-9bdece479cba": {
+      "049b4035-77d7-4859-8f38-e7ad0125b437": {
+        "position": {
+          "left": 760,
+          "top": 680
+        },
+        "type": "execute_actions"
+      },
+      "260d9589-b275-435d-8a17-43aa1b96c6b2": {
         "position": {
           "left": 460,
           "top": 0
         },
         "type": "execute_actions"
       },
-      "fca9d56c-350b-4725-b2bd-2b0463b6c01a": {
+      "82b2d340-c12d-4e3c-8028-d45da3fb9cd7": {
+        "position": {
+          "left": 160,
+          "top": 400
+        },
+        "type": "execute_actions"
+      },
+      "9fed7faf-2f76-49e5-8572-a205e567eff5": {
+        "position": {
+          "left": 760,
+          "top": 460
+        },
+        "type": "execute_actions"
+      },
+      "aa59a8e6-7295-4fe4-99ed-630dbfdf9772": {
         "config": {
           "cases": {},
           "operand": {
@@ -23,41 +44,20 @@
         },
         "type": "split_by_contact_field"
       },
-      "9845b619-2358-417a-8083-46b4100b3f72": {
-        "position": {
-          "left": 160,
-          "top": 400
+      "dcdf6ce9-5784-4e6e-9a41-3571cc2a2bfc": {
+        "config": {
+          "cases": {}
         },
-        "type": "execute_actions"
-      },
-      "d266ee06-bc0a-40d2-abff-4ff229ebccd0": {
-        "position": {
-          "left": 440,
-          "top": 420
-        },
-        "type": "execute_actions"
-      },
-      "0e812181-6519-4e42-99fe-933875e48631": {
-        "position": {
-          "left": 760,
-          "top": 460
-        },
-        "type": "execute_actions"
-      },
-      "8ad9abb9-d76f-4263-9a23-d93fda843e3a": {
-        "type": "wait_for_response",
         "position": {
           "left": 420,
           "top": 600
         },
-        "config": {
-          "cases": {}
-        }
+        "type": "wait_for_response"
       },
-      "cb22661e-3f60-4e66-b887-c505996e46e0": {
+      "ec81dd3f-cba5-4682-a1a8-250ad96cd2ed": {
         "position": {
-          "left": 760,
-          "top": 680
+          "left": 440,
+          "top": 420
         },
         "type": "execute_actions"
       }
@@ -80,31 +80,31 @@
           "quick_replies": [],
           "text": "Hi! How are you feeling right now? Are you feeling stressed and worried? Have you only got 30 seconds? Let's take a quick pause together. It might be helpful.",
           "type": "send_msg",
-          "uuid": "08b53a0f-5e64-4ab2-a617-12386ed9adb0"
+          "uuid": "7eb159ef-f933-42c7-98d7-1d16c6a06d3e"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "fca9d56c-350b-4725-b2bd-2b0463b6c01a",
-          "uuid": "be981fb1-9ead-405d-a352-77319e849a8d"
+          "destination_uuid": "aa59a8e6-7295-4fe4-99ed-630dbfdf9772",
+          "uuid": "b93b1bbe-503e-4ed3-bd37-49159d9634d5"
         }
       ],
-      "uuid": "be226084-53bf-4980-b9f8-9bdece479cba"
+      "uuid": "260d9589-b275-435d-8a17-43aa1b96c6b2"
     },
     {
       "actions": [],
       "exits": [
         {
-          "destination_uuid": "9845b619-2358-417a-8083-46b4100b3f72",
-          "uuid": "74d3c083-c917-4958-a9ea-6fb0df10aa15"
+          "destination_uuid": "82b2d340-c12d-4e3c-8028-d45da3fb9cd7",
+          "uuid": "2ddb10c1-2688-4fad-9843-334a558e05f9"
         },
         {
-          "destination_uuid": "d266ee06-bc0a-40d2-abff-4ff229ebccd0",
-          "uuid": "6ba38051-174a-4226-ac44-a8a9b8e5301e"
+          "destination_uuid": "ec81dd3f-cba5-4682-a1a8-250ad96cd2ed",
+          "uuid": "cdfc1b22-c9bf-4e4f-b7e9-d8f75fee685b"
         },
         {
-          "destination_uuid": "0e812181-6519-4e42-99fe-933875e48631",
-          "uuid": "98a66ab5-178a-4566-8ad4-1fb6c82e0332"
+          "destination_uuid": "9fed7faf-2f76-49e5-8572-a205e567eff5",
+          "uuid": "3e6a4e8a-d7af-463f-9544-492a6d1deb9c"
         }
       ],
       "router": {
@@ -113,41 +113,41 @@
             "arguments": [
               "high"
             ],
-            "category_uuid": "1fbafcce-9dca-4b31-b4df-f113d601d97e",
+            "category_uuid": "6de4a12e-43dc-4c6b-898a-3b18c52f489a",
             "type": "has_any_word",
-            "uuid": "681a8be5-5723-47fa-9fd9-bd7db2ee5526"
+            "uuid": "d606ce6b-93e6-4cdb-b3d2-57b11cb8b225"
           },
           {
             "arguments": [
               "medium"
             ],
-            "category_uuid": "3940bcf2-1f57-488c-a57c-1989bff6c5b9",
+            "category_uuid": "b5ad65ca-749f-465e-87bc-e70e964df065",
             "type": "has_any_word",
-            "uuid": "5c7a75b2-6e2c-4bad-9c69-b8ea9cc2c247"
+            "uuid": "fa19f3f2-147c-4500-9948-c1540fa8ae5b"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "74d3c083-c917-4958-a9ea-6fb0df10aa15",
+            "exit_uuid": "2ddb10c1-2688-4fad-9843-334a558e05f9",
             "name": "High",
-            "uuid": "1fbafcce-9dca-4b31-b4df-f113d601d97e"
+            "uuid": "6de4a12e-43dc-4c6b-898a-3b18c52f489a"
           },
           {
-            "exit_uuid": "6ba38051-174a-4226-ac44-a8a9b8e5301e",
+            "exit_uuid": "cdfc1b22-c9bf-4e4f-b7e9-d8f75fee685b",
             "name": "medium",
-            "uuid": "3940bcf2-1f57-488c-a57c-1989bff6c5b9"
+            "uuid": "b5ad65ca-749f-465e-87bc-e70e964df065"
           },
           {
-            "exit_uuid": "98a66ab5-178a-4566-8ad4-1fb6c82e0332",
+            "exit_uuid": "3e6a4e8a-d7af-463f-9544-492a6d1deb9c",
             "name": "Other",
-            "uuid": "1ad9da06-492b-4009-bd6f-98da1f0ec3b9"
+            "uuid": "0630317f-3369-432b-8856-9a46438234d9"
           }
         ],
-        "default_category_uuid": "1ad9da06-492b-4009-bd6f-98da1f0ec3b9",
+        "default_category_uuid": "0630317f-3369-432b-8856-9a46438234d9",
         "operand": "@fields.type_of_media",
         "type": "switch"
       },
-      "uuid": "fca9d56c-350b-4725-b2bd-2b0463b6c01a"
+      "uuid": "aa59a8e6-7295-4fe4-99ed-630dbfdf9772"
     },
     {
       "actions": [
@@ -155,123 +155,123 @@
           "attachments": [
             "video:@(fields.voiceover_video_path & \"Short_Pause.m4v\")"
           ],
+          "quick_replies": [],
           "text": "Here's a quick video to help you take a pause!",
           "type": "send_msg",
-          "quick_replies": [],
-          "uuid": "5c09d1da-854a-41b4-aba8-879ee59be18f"
+          "uuid": "6e08ab16-ee86-4cae-bb6c-e471ee3e1030"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "8ad9abb9-d76f-4263-9a23-d93fda843e3a",
-          "uuid": "d4376422-cbb4-4fa4-8950-53886ca8daea"
+          "destination_uuid": "dcdf6ce9-5784-4e6e-9a41-3571cc2a2bfc",
+          "uuid": "b0fa8ad5-c11f-4645-b57a-c25b5947eabb"
         }
       ],
-      "uuid": "9845b619-2358-417a-8083-46b4100b3f72"
+      "uuid": "82b2d340-c12d-4e3c-8028-d45da3fb9cd7"
     },
     {
       "actions": [
         {
+          "all_urns": false,
           "attachments": [
             "audio:﻿@(fields.voiceover_audio_path & \"Short_Pause.mp3\")"
           ],
+          "quick_replies": [],
           "text": "Here's an audio message to help you take a pause!",
           "type": "send_msg",
-          "all_urns": false,
-          "quick_replies": [],
-          "uuid": "7f66e652-448a-4884-89fa-86a55d61b535"
+          "uuid": "80451c32-29b4-44bb-9873-5679312a07d1"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "8ad9abb9-d76f-4263-9a23-d93fda843e3a",
-          "uuid": "dc41f8f2-2297-4914-ba8d-d52706208f83"
+          "destination_uuid": "dcdf6ce9-5784-4e6e-9a41-3571cc2a2bfc",
+          "uuid": "749afcc4-6082-4e49-9a42-c1180e62d007"
         }
       ],
-      "uuid": "d266ee06-bc0a-40d2-abff-4ff229ebccd0"
+      "uuid": "ec81dd3f-cba5-4682-a1a8-250ad96cd2ed"
     },
     {
       "actions": [
         {
           "attachments": [],
+          "quick_replies": [],
           "text": "Sit down, close your eyes and listen to your breath as it goes in and out. Notice how you feel. When you are ready, open your eyes again. Everything is okay.",
           "type": "send_msg",
-          "quick_replies": [],
-          "uuid": "eba237a6-06dd-4ccb-bb74-d19825aa26a2"
+          "uuid": "8fc55b29-d9b3-4dfd-aefd-27f56079d2d7"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "cb22661e-3f60-4e66-b887-c505996e46e0",
-          "uuid": "32bcc401-2072-4816-982f-94aaf5a6ac35"
+          "destination_uuid": "049b4035-77d7-4859-8f38-e7ad0125b437",
+          "uuid": "6e293be2-a817-432c-bcae-2ebf23e4ca19"
         }
       ],
-      "uuid": "0e812181-6519-4e42-99fe-933875e48631"
+      "uuid": "9fed7faf-2f76-49e5-8572-a205e567eff5"
     },
     {
-      "uuid": "8ad9abb9-d76f-4263-9a23-d93fda843e3a",
       "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "9fed7faf-2f76-49e5-8572-a205e567eff5",
+          "uuid": "b1759ac2-2543-4aa0-837e-4757c4efd93f"
+        },
+        {
+          "destination_uuid": "9fed7faf-2f76-49e5-8572-a205e567eff5",
+          "uuid": "80f6a3d4-27c5-4655-930c-4a12ce60f3bb"
+        }
+      ],
       "router": {
-        "type": "switch",
-        "default_category_uuid": "bfe12222-3c9c-4b75-bdbc-6362c72a594a",
         "cases": [],
         "categories": [
           {
-            "uuid": "bfe12222-3c9c-4b75-bdbc-6362c72a594a",
+            "exit_uuid": "b1759ac2-2543-4aa0-837e-4757c4efd93f",
             "name": "All Responses",
-            "exit_uuid": "a401a457-f22e-425a-88a3-aee549aa6cea"
+            "uuid": "d8f18cdb-631c-4d9a-85ba-e5e5dd4070ba"
           },
           {
-            "uuid": "108bee8b-d070-4f41-a816-299e96dae45d",
+            "exit_uuid": "80f6a3d4-27c5-4655-930c-4a12ce60f3bb",
             "name": "No Response",
-            "exit_uuid": "0cc3e8a6-ab7e-415d-b4ab-322feb1994a6"
+            "uuid": "b045b7c6-f1bb-4a14-bc64-ff61b59c1b4b"
           }
         ],
+        "default_category_uuid": "d8f18cdb-631c-4d9a-85ba-e5e5dd4070ba",
         "operand": "@input.text",
+        "result_name": "Result 1",
+        "type": "switch",
         "wait": {
-          "type": "msg",
           "timeout": {
-            "seconds": 120,
-            "category_uuid": "108bee8b-d070-4f41-a816-299e96dae45d"
-          }
-        },
-        "result_name": "Result 1"
-      },
-      "exits": [
-        {
-          "uuid": "a401a457-f22e-425a-88a3-aee549aa6cea",
-          "destination_uuid": "0e812181-6519-4e42-99fe-933875e48631"
-        },
-        {
-          "uuid": "0cc3e8a6-ab7e-415d-b4ab-322feb1994a6",
-          "destination_uuid": "0e812181-6519-4e42-99fe-933875e48631"
+            "category_uuid": "b045b7c6-f1bb-4a14-bc64-ff61b59c1b4b",
+            "seconds": 120
+          },
+          "type": "msg"
         }
-      ]
+      },
+      "uuid": "dcdf6ce9-5784-4e6e-9a41-3571cc2a2bfc"
     },
     {
       "actions": [
         {
+          "all_urns": false,
           "attachments": [
             "image:@(fields.image_path & \"calm_adult.jpg\")"
           ],
+          "quick_replies": [],
           "text": "We hope that was helpful! Remember you can always type \"Help\" at anytime if you need an activity to help you relax or reduce stress. Chat to you later!",
           "type": "send_msg",
-          "all_urns": false,
-          "quick_replies": [],
-          "uuid": "2cb3d190-7a41-484d-bfe4-27a61b10a0ab"
+          "uuid": "06eeced9-0557-41fc-b260-3b7643404fcf"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "2c3d5a6a-342e-48ed-b5f8-80ac7991a9aa"
+          "uuid": "0999366f-d4f0-497e-a254-39b2157e64cf"
         }
       ],
-      "uuid": "cb22661e-3f60-4e66-b887-c505996e46e0"
+      "uuid": "049b4035-77d7-4859-8f38-e7ad0125b437"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "1703b420-0de3-4b94-9436-000fb192b6c2",
-  "revision": 14
+  "uuid": "d6a5e8a5-c174-43d5-aa10-ebb2482012a0",
+  "revision": 1
 }

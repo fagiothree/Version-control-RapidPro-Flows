@@ -1,14 +1,7 @@
 {
   "_ui": {
     "nodes": {
-      "21f97ea8-f0fd-437d-b1c5-c72ca52cd750": {
-        "position": {
-          "left": 0,
-          "top": 0
-        },
-        "type": "execute_actions"
-      },
-      "87fa6ff4-fb00-4f24-9508-f57ce3831696": {
+      "65e933c7-6d30-49eb-969a-e7be9effa8b1": {
         "config": {},
         "position": {
           "left": 280,
@@ -16,7 +9,14 @@
         },
         "type": "split_by_subflow"
       },
-      "b51bc1e3-1016-47d8-b07d-bc11585ce49e": {
+      "913b075c-a3a5-4d4a-aaa1-c5a7e7bf9c5c": {
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "type": "execute_actions"
+      },
+      "ec8161c7-52c4-4168-8c22-299549e23a5c": {
         "position": {
           "left": 20,
           "top": 480
@@ -41,16 +41,16 @@
           "quick_replies": [],
           "text": "Get active!\n•\tCome up with three types of exercise together. For example, walking, jogging, soccer or dancing\n•\tPick one together and try it out. \n•\tIf you both like it, decide how often you are going to do it. Once or twice a week? Every morning?\n•\tTogether think of ways to make it even more fun. Can you jog to a certain point? Take turns in being the coach? Motivate each other with a small free reward? ",
           "type": "send_msg",
-          "uuid": "9542f83a-e8c5-4324-af59-eb7fd7a9f196"
+          "uuid": "ca340ec9-5045-4e07-b563-5d8d8e49d909"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "80803dab-47cd-43a2-a08b-75e07879cba9"
+          "uuid": "5014cea8-0b12-45a2-94da-c57195d3f5fe"
         }
       ],
-      "uuid": "21f97ea8-f0fd-437d-b1c5-c72ca52cd750"
+      "uuid": "913b075c-a3a5-4d4a-aaa1-c5a7e7bf9c5c"
     },
     {
       "actions": [
@@ -60,7 +60,7 @@
             "name": "current type assessed"
           },
           "type": "set_contact_field",
-          "uuid": "e2a8c837-1075-473e-9d8c-5fa741e8dba6",
+          "uuid": "f24b2360-fb7f-4f1e-b909-ee444357bc65",
           "value": "activity"
         },
         {
@@ -69,37 +69,37 @@
             "name": "current activity"
           },
           "type": "set_contact_field",
-          "uuid": "b5a79995-17dc-4766-bcc6-56d2fb1f98e5",
+          "uuid": "28805e14-8460-4a7c-b866-9383b7484c4e",
           "value": "Teen8"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "87fa6ff4-fb00-4f24-9508-f57ce3831696",
-          "uuid": "a966b4b0-8556-441e-8790-983dcad8799a"
+          "destination_uuid": "65e933c7-6d30-49eb-969a-e7be9effa8b1",
+          "uuid": "cde1a559-6956-47c6-a417-993706bc2a7e"
         }
       ],
-      "uuid": "b51bc1e3-1016-47d8-b07d-bc11585ce49e"
+      "uuid": "ec8161c7-52c4-4168-8c22-299549e23a5c"
     },
     {
       "actions": [
         {
           "flow": {
             "name": "Feedbak flow for activity or tip",
-            "uuid": "7535a8c5-f7cf-4171-bb34-22381b1c91b4"
+            "uuid": "2d088e4d-2c71-4480-9cac-0403ba3c5461"
           },
           "type": "enter_flow",
-          "uuid": "04ca7fde-d5c7-47c8-85cd-b674ae340b03"
+          "uuid": "d3f7ff15-dcfc-4a2d-acc0-70915a5720de"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "e11c27d2-bdbb-4294-abce-5cda8f24623b"
+          "uuid": "dab3c88d-f578-4294-ad15-fda5bcf7a8c0"
         },
         {
           "destination_uuid": null,
-          "uuid": "6e2fca02-b33e-456b-9d83-6189fde6bf5c"
+          "uuid": "9fdff8ed-8c64-4cf7-9401-6314c1d3303d"
         }
       ],
       "router": {
@@ -108,40 +108,40 @@
             "arguments": [
               "completed"
             ],
-            "category_uuid": "fe5723eb-ffdb-486b-ace8-d1afe6d282c1",
+            "category_uuid": "9f71ef1d-7e09-401d-8521-dfa3621c0b48",
             "type": "has_only_text",
-            "uuid": "a9bdb3b9-9160-4d6b-9396-8813ae3f6ff4"
+            "uuid": "a5246411-4459-4515-a6ab-95042544ffd0"
           },
           {
             "arguments": [
               "expired"
             ],
-            "category_uuid": "86fd91f4-02cd-497c-b0b9-436efbe88fe8",
+            "category_uuid": "a49aed04-0949-4d15-b66b-5c48a6847750",
             "type": "has_only_text",
-            "uuid": "07391b9a-d1cc-4bb3-8270-b45459a00e23"
+            "uuid": "61b2d6e4-05df-4284-be06-655a897e1a3b"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "e11c27d2-bdbb-4294-abce-5cda8f24623b",
+            "exit_uuid": "dab3c88d-f578-4294-ad15-fda5bcf7a8c0",
             "name": "Complete",
-            "uuid": "fe5723eb-ffdb-486b-ace8-d1afe6d282c1"
+            "uuid": "9f71ef1d-7e09-401d-8521-dfa3621c0b48"
           },
           {
-            "exit_uuid": "6e2fca02-b33e-456b-9d83-6189fde6bf5c",
+            "exit_uuid": "9fdff8ed-8c64-4cf7-9401-6314c1d3303d",
             "name": "Expired",
-            "uuid": "86fd91f4-02cd-497c-b0b9-436efbe88fe8"
+            "uuid": "a49aed04-0949-4d15-b66b-5c48a6847750"
           }
         ],
-        "default_category_uuid": "86fd91f4-02cd-497c-b0b9-436efbe88fe8",
+        "default_category_uuid": "a49aed04-0949-4d15-b66b-5c48a6847750",
         "operand": "@child.run.status",
         "type": "switch"
       },
-      "uuid": "87fa6ff4-fb00-4f24-9508-f57ce3831696"
+      "uuid": "65e933c7-6d30-49eb-969a-e7be9effa8b1"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "444d242f-9ee7-444a-b579-4c3046feb9d4",
+  "uuid": "856c4182-a337-4772-8c8c-c7f25bba634b",
   "revision": 1
 }

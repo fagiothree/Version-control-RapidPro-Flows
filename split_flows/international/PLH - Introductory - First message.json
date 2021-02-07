@@ -1,14 +1,14 @@
 {
   "_ui": {
     "nodes": {
-      "9b943d09-f64e-4a39-833a-7febf47441d3": {
+      "254f675d-bb71-4233-88ef-1cf414e852eb": {
         "position": {
           "left": 640,
           "top": 180
         },
         "type": "execute_actions"
       },
-      "0919cf9e-82b9-4ba2-9fac-f8bd6dd5b839": {
+      "4fa260ad-e9de-4f3e-82a5-42c3d3f5e1d7": {
         "position": {
           "left": 1140,
           "top": 500
@@ -26,22 +26,22 @@
   "name": "PLH - Introductory - First message",
   "nodes": [
     {
-      "uuid": "9b943d09-f64e-4a39-833a-7febf47441d3",
       "actions": [
         {
           "attachments": [],
+          "quick_replies": [],
           "text": "Good morning! We are so happy to be sharing these parenting tips with you. ",
           "type": "send_msg",
-          "quick_replies": [],
-          "uuid": "6e3566de-552a-4a5f-8b84-09990375eea5"
+          "uuid": "5debbb03-5ee3-4a00-9970-3790190df742"
         }
       ],
       "exits": [
         {
-          "uuid": "2d2e8cda-255b-43f0-99fc-988c0eb24b48",
-          "destination_uuid": null
+          "destination_uuid": null,
+          "uuid": "8030974e-911c-41a0-9942-2abfa03fbb82"
         }
-      ]
+      ],
+      "uuid": "254f675d-bb71-4233-88ef-1cf414e852eb"
     },
     {
       "actions": [
@@ -50,20 +50,20 @@
           "quick_replies": [],
           "text": "Good morning! We are so happy to be  sharing these parenting tips with you. They were developed by Parenting for Lifelong Health (PLH) with the WHO and UNICEF for YOU. They include advice on parenting and reducing stress, as well as lots of fun activities to do with your children.\n\nYou can also come back to any topic at any time by typing \"Help\".\n\nYou can always choose to stop receiving messages by typing \"Help\" and then selecting \"Technical support\".",
           "type": "send_msg",
-          "uuid": "90800a30-34ef-4586-a855-049a908fef1f"
+          "uuid": "82c1a9e1-1a24-4814-b93e-3630aa94f9b8"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "2466cdda-d7f6-4b60-9ec2-14476e64c8e8"
+          "uuid": "a5c4fd59-1185-4b7b-9c14-58699967eafe"
         }
       ],
-      "uuid": "0919cf9e-82b9-4ba2-9fac-f8bd6dd5b839"
+      "uuid": "4fa260ad-e9de-4f3e-82a5-42c3d3f5e1d7"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "097ff24d-577e-4179-b2dd-ee7c37317f4d",
-  "revision": 17
+  "uuid": "33d019f2-bf14-4d77-b120-09673bdcc2bb",
+  "revision": 1
 }

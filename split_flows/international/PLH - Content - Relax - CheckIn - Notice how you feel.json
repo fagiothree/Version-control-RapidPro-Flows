@@ -1,24 +1,24 @@
 {
   "_ui": {
     "nodes": {
-      "ce09fcd2-a1bc-4896-80ba-0c04cff00b92": {
+      "584ff52a-9662-450b-97d0-17d2ef5dfe63": {
+        "position": {
+          "left": 420,
+          "top": 400
+        },
+        "type": "execute_actions"
+      },
+      "8dd3173f-424a-42d2-9eca-b60be32ad955": {
         "position": {
           "left": 380,
           "top": 60
         },
         "type": "execute_actions"
       },
-      "806faf60-ffa8-4430-a39b-40014c33bb6e": {
+      "c8510906-d504-4418-8905-38103ec9073f": {
         "position": {
           "left": 400,
           "top": 220
-        },
-        "type": "execute_actions"
-      },
-      "26ca7bf5-6113-4ac5-b463-4229f3fc093b": {
-        "position": {
-          "left": 420,
-          "top": 400
         },
         "type": "execute_actions"
       }
@@ -40,16 +40,16 @@
           "quick_replies": [],
           "text": "Hello! How are you feeling right now? Happy, sad, angry, excited, worried?",
           "type": "send_msg",
-          "uuid": "ce9e2a2e-2596-45e2-ab72-237c52c6d83c"
+          "uuid": "2cb601cc-6738-4bac-af19-71233e63a0ca"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "806faf60-ffa8-4430-a39b-40014c33bb6e",
-          "uuid": "641407c8-cf76-4f1a-abb8-f36a5e41a807"
+          "destination_uuid": "c8510906-d504-4418-8905-38103ec9073f",
+          "uuid": "97fa2693-e5ff-49d5-9c71-e92ced2dac1e"
         }
       ],
-      "uuid": "ce09fcd2-a1bc-4896-80ba-0c04cff00b92"
+      "uuid": "8dd3173f-424a-42d2-9eca-b60be32ad955"
     },
     {
       "actions": [
@@ -59,41 +59,41 @@
           "quick_replies": [],
           "text": "Notice where you feel it in your body. Notice what thoughts are connected to that feeling. Take a deep breath.",
           "type": "send_msg",
-          "uuid": "631565d4-5b9d-497a-8166-096a8f2d7f60"
+          "uuid": "ac68fa9a-df17-4fd3-93b6-dd1ede93d98f"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "26ca7bf5-6113-4ac5-b463-4229f3fc093b",
-          "uuid": "d2befb21-dabf-40b3-9725-24b5211340d2"
+          "destination_uuid": "584ff52a-9662-450b-97d0-17d2ef5dfe63",
+          "uuid": "57085345-3613-4266-b905-26dfceca4e81"
         }
       ],
-      "uuid": "806faf60-ffa8-4430-a39b-40014c33bb6e"
+      "uuid": "c8510906-d504-4418-8905-38103ec9073f"
     },
     {
       "actions": [
         {
+          "all_urns": false,
           "attachments": [
             "image:@(fields.image_path & \"calm_adult.jpg\")"
           ],
+          "quick_replies": [],
           "text": "Thank yourself for taking the time to check in with your feelings and thoughts! Remember, you can always type \"Help\" at anytime if you need an activity to help you relax or reduce stress. Chat later!",
           "type": "send_msg",
-          "all_urns": false,
-          "quick_replies": [],
-          "uuid": "9316516f-e57b-49ef-8d00-7b1efd28921a"
+          "uuid": "c2f5f35e-18e8-411c-a6c3-917b74b936c1"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "bf4a40a0-baf0-4e6c-a67a-72151ff9336e"
+          "uuid": "265b9779-6b2b-4a55-94b0-ac9c3e66c129"
         }
       ],
-      "uuid": "26ca7bf5-6113-4ac5-b463-4229f3fc093b"
+      "uuid": "584ff52a-9662-450b-97d0-17d2ef5dfe63"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "4f6b79e3-c686-4d8a-9a09-f898778ce160",
-  "revision": 7
+  "uuid": "ea064eba-e18b-4970-a862-728c2c654067",
+  "revision": 1
 }

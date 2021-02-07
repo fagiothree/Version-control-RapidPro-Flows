@@ -1,7 +1,7 @@
 {
   "_ui": {
     "nodes": {
-      "5b2a88d1-e438-45b7-9475-31087699bd0e": {
+      "a066037c-c103-49e2-8e8f-f748ad280559": {
         "config": {
           "cases": {}
         },
@@ -11,7 +11,7 @@
         },
         "type": "split_by_scheme"
       },
-      "7e4c2923-6ef2-4630-9df7-2ec6b671226d": {
+      "b655c029-3f9e-445b-9045-28ab8e153cce": {
         "position": {
           "left": 600,
           "top": 240
@@ -32,16 +32,16 @@
       "actions": [],
       "exits": [
         {
-          "destination_uuid": "7e4c2923-6ef2-4630-9df7-2ec6b671226d",
-          "uuid": "e3ddb33e-a929-4e6a-bb52-42628130f600"
+          "destination_uuid": "b655c029-3f9e-445b-9045-28ab8e153cce",
+          "uuid": "8df5831b-a2e8-43fc-940f-5ba01aaa2f66"
         },
         {
-          "destination_uuid": "7e4c2923-6ef2-4630-9df7-2ec6b671226d",
-          "uuid": "67c97f2c-d7cf-430c-b686-2e9655af5e2e"
+          "destination_uuid": "b655c029-3f9e-445b-9045-28ab8e153cce",
+          "uuid": "67738434-528a-4981-ac4b-2f9a636ffc42"
         },
         {
           "destination_uuid": null,
-          "uuid": "2904027b-b53c-4e0a-85e7-8f9e4daefff3"
+          "uuid": "40f0bbe1-8b59-4cab-929b-7addd1d9e2e3"
         }
       ],
       "router": {
@@ -50,42 +50,42 @@
             "arguments": [
               "whatsapp"
             ],
-            "category_uuid": "06ebad13-f963-4a8d-a524-f763be31acaf",
+            "category_uuid": "1a9659d4-0110-4bdc-b5f8-31276107316b",
             "type": "has_only_phrase",
-            "uuid": "af4c9398-4db4-436c-8117-7973dd85a48a"
+            "uuid": "ba6160c0-00e3-46a1-ae28-c353da2f746a"
           },
           {
             "arguments": [
               "facebook"
             ],
-            "category_uuid": "097d887b-1f36-4baa-b789-305f52d89d3b",
+            "category_uuid": "5d8b318d-d2f4-49f2-81f7-95bb312a764d",
             "type": "has_only_phrase",
-            "uuid": "a67120fd-aa98-4d29-a5e6-abf2575f864d"
+            "uuid": "b257f232-f95e-47c3-9de7-48bfe2d6dc32"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "e3ddb33e-a929-4e6a-bb52-42628130f600",
+            "exit_uuid": "8df5831b-a2e8-43fc-940f-5ba01aaa2f66",
             "name": "WhatsApp",
-            "uuid": "06ebad13-f963-4a8d-a524-f763be31acaf"
+            "uuid": "1a9659d4-0110-4bdc-b5f8-31276107316b"
           },
           {
-            "exit_uuid": "67c97f2c-d7cf-430c-b686-2e9655af5e2e",
+            "exit_uuid": "67738434-528a-4981-ac4b-2f9a636ffc42",
             "name": "Facebook",
-            "uuid": "097d887b-1f36-4baa-b789-305f52d89d3b"
+            "uuid": "5d8b318d-d2f4-49f2-81f7-95bb312a764d"
           },
           {
-            "exit_uuid": "2904027b-b53c-4e0a-85e7-8f9e4daefff3",
+            "exit_uuid": "40f0bbe1-8b59-4cab-929b-7addd1d9e2e3",
             "name": "Other",
-            "uuid": "f8243748-9425-48fa-9663-d20005caeee0"
+            "uuid": "3257680c-ba32-4797-ac7c-5260604d82f7"
           }
         ],
-        "default_category_uuid": "f8243748-9425-48fa-9663-d20005caeee0",
+        "default_category_uuid": "3257680c-ba32-4797-ac7c-5260604d82f7",
         "operand": "@(urn_parts(contact.urn).scheme)",
         "result_name": "",
         "type": "switch"
       },
-      "uuid": "5b2a88d1-e438-45b7-9475-31087699bd0e"
+      "uuid": "a066037c-c103-49e2-8e8f-f748ad280559"
     },
     {
       "actions": [
@@ -94,20 +94,20 @@
           "quick_replies": [],
           "text": "Hi! I hope you are finding these messages useful. Please type “MoreTips” when you want to receive your next message.",
           "type": "send_msg",
-          "uuid": "6320f752-cc1a-42da-b160-2a41ba89c2b5"
+          "uuid": "41bdb48f-e57a-4095-9af5-414df0aaf37f"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "648a1820-a5f3-4668-bfef-045c119667b6"
+          "uuid": "c34323dc-832c-4945-81c3-c9de56c4394b"
         }
       ],
-      "uuid": "7e4c2923-6ef2-4630-9df7-2ec6b671226d"
+      "uuid": "b655c029-3f9e-445b-9045-28ab8e153cce"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "4a041982-afda-4a38-ac9f-6fcc01e3a2a6",
+  "uuid": "8bca9550-f7d9-42df-80e9-55bf584d17f2",
   "revision": 1
 }

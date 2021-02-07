@@ -1,21 +1,21 @@
 {
   "_ui": {
     "nodes": {
-      "d43c4d33-e9dd-4d57-a0f9-c3d51101f264": {
+      "058f3f56-c3e0-4b28-8403-f16b6b1c42dc": {
         "position": {
           "left": 440,
           "top": 0
         },
         "type": "execute_actions"
       },
-      "25916522-1934-4abb-a5ab-d7cc0f57bf2e": {
+      "59a0bf0c-656a-497d-b052-af81c74e615b": {
         "position": {
           "left": 400,
           "top": 240
         },
         "type": "execute_actions"
       },
-      "8ecc93af-04b5-4e07-a160-4622dce244ba": {
+      "2efee00f-6901-410f-b78c-6022febcfdcf": {
         "config": {
           "cases": {},
           "operand": {
@@ -30,50 +30,50 @@
         },
         "type": "split_by_contact_field"
       },
-      "5bda2f59-820f-4cba-8a68-996316ad85c6": {
+      "a3adb708-4ab9-461b-a05a-f4c48ffa2b27": {
         "position": {
           "left": 840,
           "top": 600
         },
         "type": "execute_actions"
       },
-      "30c81475-f54e-4ab8-9140-11d6354622b0": {
+      "92c6668b-f119-4d21-bc21-7ad8824cd089": {
         "position": {
           "left": 140,
           "top": 620
         },
         "type": "execute_actions"
       },
-      "e3f42f75-c557-42f0-907c-d867428745e8": {
+      "8b6fe380-4f6d-4523-b41a-8259cc40e83a": {
         "position": {
           "left": 400,
           "top": 660
         },
         "type": "execute_actions"
       },
-      "fc5d85b1-398a-41d3-ae6b-17e29e6d3650": {
+      "ac417494-b8ce-4292-a20e-4066b12cad4e": {
         "position": {
           "left": 840,
           "top": 820
         },
         "type": "execute_actions"
       },
-      "726e26b6-a948-4dbe-be6a-fc3d5440ce35": {
+      "136f480d-5912-4aff-a71a-eeb2db045af4": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 160,
+          "top": 860
+        },
+        "type": "wait_for_response"
+      },
+      "a3a3cf1b-b6cc-434e-9f9c-2258a0009dff": {
         "position": {
           "left": 800,
           "top": 1040
         },
         "type": "execute_actions"
-      },
-      "78db8ccd-e980-4d84-9c5c-b30ec1b61cd0": {
-        "type": "wait_for_response",
-        "position": {
-          "left": 160,
-          "top": 860
-        },
-        "config": {
-          "cases": {}
-        }
       }
     }
   },
@@ -82,7 +82,7 @@
   "language": "eng",
   "localization": {},
   "metadata": {
-    "revision": 9
+    "revision": 1
   },
   "name": "PLH - Content - Relax - CheckIn - Anger management",
   "nodes": [
@@ -93,16 +93,16 @@
           "quick_replies": [],
           "text": "Hi! Managing anger can be really difficult. Take a break when you feel you are getting angry at your children or someone else.",
           "type": "send_msg",
-          "uuid": "a2af5318-6ece-4b28-b0da-ce342c9deb01"
+          "uuid": "da76ccca-ef8b-49a2-a721-f32be62332de"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "25916522-1934-4abb-a5ab-d7cc0f57bf2e",
-          "uuid": "bbe850ad-9561-4f2d-8c23-46b7c3f3ddee"
+          "destination_uuid": "59a0bf0c-656a-497d-b052-af81c74e615b",
+          "uuid": "4c45be7f-7304-481a-828c-0126bf0463a2"
         }
       ],
-      "uuid": "d43c4d33-e9dd-4d57-a0f9-c3d51101f264"
+      "uuid": "058f3f56-c3e0-4b28-8403-f16b6b1c42dc"
     },
     {
       "actions": [
@@ -112,31 +112,31 @@
           "quick_replies": [],
           "text": "Go somewhere else for 5 minutes to regain control of your emotions. If you have safe outdoor space, go outside. You can get through this!",
           "type": "send_msg",
-          "uuid": "c76586a8-7a1d-48aa-9e6c-e1e81f64949d"
+          "uuid": "22663e61-ef5b-4c01-9155-e2962b4a8a3e"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "8ecc93af-04b5-4e07-a160-4622dce244ba",
-          "uuid": "0eefb1f6-7614-41c0-9732-498223de96f3"
+          "destination_uuid": "2efee00f-6901-410f-b78c-6022febcfdcf",
+          "uuid": "88d47f06-160c-49d1-9f5b-c7c4cff29cf3"
         }
       ],
-      "uuid": "25916522-1934-4abb-a5ab-d7cc0f57bf2e"
+      "uuid": "59a0bf0c-656a-497d-b052-af81c74e615b"
     },
     {
       "actions": [],
       "exits": [
         {
-          "destination_uuid": "30c81475-f54e-4ab8-9140-11d6354622b0",
-          "uuid": "23ad8edd-6481-4714-8d9e-ce589d04d681"
+          "destination_uuid": "92c6668b-f119-4d21-bc21-7ad8824cd089",
+          "uuid": "0f073f83-d8b7-4cfa-86a1-12fc00d4a59c"
         },
         {
-          "destination_uuid": "e3f42f75-c557-42f0-907c-d867428745e8",
-          "uuid": "4a0e020e-3c83-4dbf-9917-84997d257363"
+          "destination_uuid": "8b6fe380-4f6d-4523-b41a-8259cc40e83a",
+          "uuid": "a7eb7a38-d481-4d77-9217-bc359968ec87"
         },
         {
-          "destination_uuid": "5bda2f59-820f-4cba-8a68-996316ad85c6",
-          "uuid": "8f8940cd-5ae7-4ebf-812d-fd28fd769580"
+          "destination_uuid": "a3adb708-4ab9-461b-a05a-f4c48ffa2b27",
+          "uuid": "6de7da31-09c4-4384-8eb7-03078d301464"
         }
       ],
       "router": {
@@ -145,157 +145,159 @@
             "arguments": [
               "high"
             ],
-            "category_uuid": "8a610af1-d534-485d-b90f-50b9ba6dbd65",
+            "category_uuid": "ccc742d4-a19e-4f34-bbe6-087d4da095bb",
             "type": "has_any_word",
-            "uuid": "225a49f2-d539-488a-b18f-51dabe301bd0"
+            "uuid": "c2f9cf4f-58be-484a-9128-9cf8e4b64987"
           },
           {
             "arguments": [
               "medium"
             ],
-            "category_uuid": "d3455144-7287-41e3-90a1-0c079993d353",
+            "category_uuid": "80e2945b-762b-438e-9f7b-e293a2756659",
             "type": "has_any_word",
-            "uuid": "d57e9586-8962-4ae6-b831-cb47fce7df15"
+            "uuid": "37fd0677-b76c-44b2-b702-50591307f9f4"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "23ad8edd-6481-4714-8d9e-ce589d04d681",
+            "exit_uuid": "0f073f83-d8b7-4cfa-86a1-12fc00d4a59c",
             "name": "High",
-            "uuid": "8a610af1-d534-485d-b90f-50b9ba6dbd65"
+            "uuid": "ccc742d4-a19e-4f34-bbe6-087d4da095bb"
           },
           {
-            "exit_uuid": "4a0e020e-3c83-4dbf-9917-84997d257363",
+            "exit_uuid": "a7eb7a38-d481-4d77-9217-bc359968ec87",
             "name": "Medium",
-            "uuid": "d3455144-7287-41e3-90a1-0c079993d353"
+            "uuid": "80e2945b-762b-438e-9f7b-e293a2756659"
           },
           {
-            "exit_uuid": "8f8940cd-5ae7-4ebf-812d-fd28fd769580",
+            "exit_uuid": "6de7da31-09c4-4384-8eb7-03078d301464",
             "name": "Other",
-            "uuid": "59b2930e-a0ec-4be6-8a04-1e4e9bd9956a"
+            "uuid": "0d506b87-869c-4a61-b49c-3d230baa95c6"
           }
         ],
-        "default_category_uuid": "59b2930e-a0ec-4be6-8a04-1e4e9bd9956a",
+        "default_category_uuid": "0d506b87-869c-4a61-b49c-3d230baa95c6",
         "operand": "@fields.type_of_media",
         "type": "switch"
       },
-      "uuid": "8ecc93af-04b5-4e07-a160-4622dce244ba"
+      "uuid": "2efee00f-6901-410f-b78c-6022febcfdcf"
     },
     {
       "actions": [
         {
           "attachments": [],
+          "quick_replies": [],
           "text": "Did you know that research shows if you control your anger or do something positive, you increase your child's brain development? Be proud of yourself when you manage to do it!",
           "type": "send_msg",
-          "quick_replies": [],
-          "uuid": "2a5222df-4c29-4a84-a57f-24f0af7d658e"
+          "uuid": "e53a972c-65eb-4e3e-bb22-b8e4642bad19"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "fc5d85b1-398a-41d3-ae6b-17e29e6d3650",
-          "uuid": "a67db48b-a32a-4144-bdbf-e301d81d9082"
+          "destination_uuid": "ac417494-b8ce-4292-a20e-4066b12cad4e",
+          "uuid": "9e7f7e5f-3856-4bbf-be77-61317947901a"
         }
       ],
-      "uuid": "5bda2f59-820f-4cba-8a68-996316ad85c6"
+      "uuid": "a3adb708-4ab9-461b-a05a-f4c48ffa2b27"
+    },
+    {
+      "actions": [
+        {
+          "all_urns": false,
+          "attachments": [
+            "video:@(fields.voiceover_video_path & \"Anger_Management.m4v\")"
+          ],
+          "quick_replies": [],
+          "text": "Here's a video to help you manage your anger!",
+          "type": "send_msg",
+          "uuid": "77bdb7d4-836e-45e1-a52f-3dd02914c361"
+        }
+      ],
+      "exits": [
+        {
+          "destination_uuid": "136f480d-5912-4aff-a71a-eeb2db045af4",
+          "uuid": "c81151e4-6ba6-48db-b6cc-fdd419ed3e1a"
+        }
+      ],
+      "uuid": "92c6668b-f119-4d21-bc21-7ad8824cd089"
     },
     {
       "actions": [
         {
           "attachments": [
-            "video:@(fields.voiceover_video_path & \"Anger_Management.m4v\")"
+            "audio:@(fields.relaxation_path & \"dealing_with_anger.mp3\")"
           ],
-          "text": "Here's a video to help you manage your anger!",
-          "type": "send_msg",
-          "all_urns": false,
-          "quick_replies": [],
-          "uuid": "6d22f58f-5c5a-4221-8791-0a0923d024a0"
-        }
-      ],
-      "exits": [
-        {
-          "destination_uuid": "78db8ccd-e980-4d84-9c5c-b30ec1b61cd0",
-          "uuid": "73cc0e5a-d44e-4b65-8ade-67658d45dcd8"
-        }
-      ],
-      "uuid": "30c81475-f54e-4ab8-9140-11d6354622b0"
-    },
-    {
-      "actions": [
-        {
-          "attachments": [],
           "text": "Here's an audio message to help you manage your anger!",
           "type": "send_msg",
           "quick_replies": [],
-          "uuid": "0c956ebd-0ea2-4d70-8f34-53593edd8be3"
+          "uuid": "4cc28eeb-56ed-4e5f-af65-0c72068272f0"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "78db8ccd-e980-4d84-9c5c-b30ec1b61cd0",
-          "uuid": "4e3c674a-2216-44c1-a196-afc65a297c18"
+          "destination_uuid": "136f480d-5912-4aff-a71a-eeb2db045af4",
+          "uuid": "3e6a3101-8b9d-4926-b317-61f8dc860be0"
         }
       ],
-      "uuid": "e3f42f75-c557-42f0-907c-d867428745e8"
+      "uuid": "8b6fe380-4f6d-4523-b41a-8259cc40e83a"
     },
     {
-      "uuid": "fc5d85b1-398a-41d3-ae6b-17e29e6d3650",
       "actions": [
         {
+          "all_urns": false,
           "attachments": [],
+          "quick_replies": [],
           "text": "If you are getting angry because your baby won’t stop crying, it’s OK to leave them on their back in a safe location, like a crib, and walk away for a bit. Check on your baby every 5-10 minutes.",
           "type": "send_msg",
-          "all_urns": false,
-          "quick_replies": [],
-          "uuid": "5be4ab37-dd93-4a5f-a11c-cc1fb175df1a"
+          "uuid": "aa0b26d6-e073-49a6-82d6-071a6c34f188"
         }
       ],
       "exits": [
         {
-          "uuid": "b8c9e2a6-ad32-4b9f-a3b0-fd4c11034dbc",
-          "destination_uuid": "726e26b6-a948-4dbe-be6a-fc3d5440ce35"
+          "destination_uuid": "a3a3cf1b-b6cc-434e-9f9c-2258a0009dff",
+          "uuid": "1590a813-8e36-4ca0-9da7-4feac099c4a6"
         }
-      ]
+      ],
+      "uuid": "ac417494-b8ce-4292-a20e-4066b12cad4e"
     },
     {
-      "uuid": "78db8ccd-e980-4d84-9c5c-b30ec1b61cd0",
       "actions": [],
+      "exits": [
+        {
+          "destination_uuid": "a3adb708-4ab9-461b-a05a-f4c48ffa2b27",
+          "uuid": "5ad61bee-41bf-4090-ad04-8b9628bd4176"
+        },
+        {
+          "destination_uuid": "a3adb708-4ab9-461b-a05a-f4c48ffa2b27",
+          "uuid": "1a5edc58-e22f-4392-b632-9fccfa85fa2b"
+        }
+      ],
       "router": {
-        "type": "switch",
-        "default_category_uuid": "577b3509-1087-4564-871f-be8f63d21eb4",
         "cases": [],
         "categories": [
           {
-            "uuid": "577b3509-1087-4564-871f-be8f63d21eb4",
+            "exit_uuid": "5ad61bee-41bf-4090-ad04-8b9628bd4176",
             "name": "All Responses",
-            "exit_uuid": "956e5b26-7dd9-46f7-ad0a-ed0d06e2e117"
+            "uuid": "0f41c0f8-e7ff-4b45-be53-0323b0238de4"
           },
           {
-            "uuid": "f5715833-6f56-44de-a0de-f8ff719e3935",
+            "exit_uuid": "1a5edc58-e22f-4392-b632-9fccfa85fa2b",
             "name": "No Response",
-            "exit_uuid": "68c5d606-5de8-4939-a648-8c9f5d58578a"
+            "uuid": "05277653-ba54-4b9c-9601-20a97325cab4"
           }
         ],
+        "default_category_uuid": "0f41c0f8-e7ff-4b45-be53-0323b0238de4",
         "operand": "@input.text",
+        "result_name": "Result 1",
+        "type": "switch",
         "wait": {
-          "type": "msg",
           "timeout": {
-            "seconds": 120,
-            "category_uuid": "f5715833-6f56-44de-a0de-f8ff719e3935"
-          }
-        },
-        "result_name": "Result 1"
-      },
-      "exits": [
-        {
-          "uuid": "956e5b26-7dd9-46f7-ad0a-ed0d06e2e117",
-          "destination_uuid": "5bda2f59-820f-4cba-8a68-996316ad85c6"
-        },
-        {
-          "uuid": "68c5d606-5de8-4939-a648-8c9f5d58578a",
-          "destination_uuid": "5bda2f59-820f-4cba-8a68-996316ad85c6"
+            "category_uuid": "05277653-ba54-4b9c-9601-20a97325cab4",
+            "seconds": 120
+          },
+          "type": "msg"
         }
-      ]
+      },
+      "uuid": "136f480d-5912-4aff-a71a-eeb2db045af4"
     },
     {
       "actions": [
@@ -305,20 +307,20 @@
           "quick_replies": [],
           "text": "We hope that was helpful! Remember you can always type \"Help\" at anytime if you need an activity to help you relax or reduce stress. Chat to you later!",
           "type": "send_msg",
-          "uuid": "57ccad15-349c-471c-bc56-716d50b97cbf"
+          "uuid": "29ca7058-1661-4bcb-af10-3da0ed5ee740"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "6d9c5202-954b-4595-a847-a55be6092554"
+          "uuid": "949d91f7-5573-49a2-81b5-a15c9dd7c5ff"
         }
       ],
-      "uuid": "726e26b6-a948-4dbe-be6a-fc3d5440ce35"
+      "uuid": "a3a3cf1b-b6cc-434e-9f9c-2258a0009dff"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "9b87431c-8b89-4be6-a0d0-21090340d521",
-  "revision": 19
+  "uuid": "27a51012-8e86-4e10-9b34-da64a710aa68",
+  "revision": 2
 }

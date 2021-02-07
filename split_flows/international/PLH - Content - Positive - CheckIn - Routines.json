@@ -1,21 +1,42 @@
 {
   "_ui": {
     "nodes": {
-      "29681a02-5e1f-4bfd-820d-52dc05982fd6": {
+      "2d1d4dc7-30c1-428f-a1b2-771fd40595c0": {
+        "position": {
+          "left": 700,
+          "top": 560
+        },
+        "type": "execute_actions"
+      },
+      "55c24e82-eb98-48fc-bb0b-d8fb71ea44d1": {
         "position": {
           "left": 680,
           "top": 380
         },
         "type": "execute_actions"
       },
-      "2d4d690b-fd53-4ac2-8aaf-5cec06f7b3a1": {
+      "6f729876-e0d7-4945-9010-09a4c22fdefb": {
         "position": {
           "left": 420,
           "top": 340
         },
         "type": "execute_actions"
       },
-      "59b9d465-35a0-4f9f-8d3f-3ea41b24507f": {
+      "9eb324a4-6c8c-420e-a85e-5dd2047b2b45": {
+        "position": {
+          "left": 160,
+          "top": 420
+        },
+        "type": "execute_actions"
+      },
+      "a36727ae-596b-425d-97a4-cd82351ec3c4": {
+        "position": {
+          "left": 620,
+          "top": 140
+        },
+        "type": "execute_actions"
+      },
+      "aafbcf9b-4230-4fc2-93b2-f77b54cd1583": {
         "config": {
           "cases": {},
           "operand": {
@@ -30,31 +51,10 @@
         },
         "type": "split_by_contact_field"
       },
-      "85fb9fc1-865f-4d41-8492-305b38a90a28": {
-        "position": {
-          "left": 700,
-          "top": 560
-        },
-        "type": "execute_actions"
-      },
-      "a9edddc7-97ff-458f-8a28-f1a21bd895f0": {
-        "position": {
-          "left": 620,
-          "top": 140
-        },
-        "type": "execute_actions"
-      },
-      "acdfbb4c-d497-42a4-a694-66fb9ed7660c": {
+      "ba809281-44d2-441a-b5ef-453cd690bd0b": {
         "position": {
           "left": 160,
           "top": 160
-        },
-        "type": "execute_actions"
-      },
-      "f6f531b4-ac1b-4409-b8ff-d8e17744d537": {
-        "position": {
-          "left": 160,
-          "top": 420
         },
         "type": "execute_actions"
       }
@@ -73,16 +73,16 @@
       "actions": [],
       "exits": [
         {
-          "destination_uuid": "acdfbb4c-d497-42a4-a694-66fb9ed7660c",
-          "uuid": "f5fb9321-4db6-4f40-b7e4-0f79625afe53"
+          "destination_uuid": "ba809281-44d2-441a-b5ef-453cd690bd0b",
+          "uuid": "0dac87a0-77cb-4377-8c62-d20f5366e6eb"
         },
         {
-          "destination_uuid": "2d4d690b-fd53-4ac2-8aaf-5cec06f7b3a1",
-          "uuid": "f6f4c320-1b3c-4a91-9809-c5235ffdad9b"
+          "destination_uuid": "6f729876-e0d7-4945-9010-09a4c22fdefb",
+          "uuid": "ed150d14-3c8a-4162-8dfa-39a10909c04f"
         },
         {
-          "destination_uuid": "a9edddc7-97ff-458f-8a28-f1a21bd895f0",
-          "uuid": "782494c4-5b70-4b00-aa47-6106351fa137"
+          "destination_uuid": "a36727ae-596b-425d-97a4-cd82351ec3c4",
+          "uuid": "5062e1d8-e132-4eef-afee-0aa9852de10e"
         }
       ],
       "router": {
@@ -91,41 +91,41 @@
             "arguments": [
               "teen"
             ],
-            "category_uuid": "6df98335-6b4f-47b7-b45a-a077ec209c53",
+            "category_uuid": "4dc78098-e418-4fa7-af64-59454035c315",
             "type": "has_any_word",
-            "uuid": "af31fbe2-5a42-449a-aa80-177cc56049ac"
+            "uuid": "013ea918-9b20-4f07-a85b-88c0f95fc712"
           },
           {
             "arguments": [
               "baby"
             ],
-            "category_uuid": "3c6810d2-fc20-47a2-8ad8-a680234a1916",
+            "category_uuid": "0c3f6317-a7ba-4740-944a-d1650f18969f",
             "type": "has_any_word",
-            "uuid": "402294a4-196b-4732-be48-94cd3cc2b391"
+            "uuid": "f4f9077c-4340-481d-a89f-d73ccb14c0e6"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "f5fb9321-4db6-4f40-b7e4-0f79625afe53",
+            "exit_uuid": "0dac87a0-77cb-4377-8c62-d20f5366e6eb",
             "name": "Teen",
-            "uuid": "6df98335-6b4f-47b7-b45a-a077ec209c53"
+            "uuid": "4dc78098-e418-4fa7-af64-59454035c315"
           },
           {
-            "exit_uuid": "f6f4c320-1b3c-4a91-9809-c5235ffdad9b",
+            "exit_uuid": "ed150d14-3c8a-4162-8dfa-39a10909c04f",
             "name": "Baby",
-            "uuid": "3c6810d2-fc20-47a2-8ad8-a680234a1916"
+            "uuid": "0c3f6317-a7ba-4740-944a-d1650f18969f"
           },
           {
-            "exit_uuid": "782494c4-5b70-4b00-aa47-6106351fa137",
+            "exit_uuid": "5062e1d8-e132-4eef-afee-0aa9852de10e",
             "name": "Other",
-            "uuid": "d31bb7d0-8066-41c0-bc68-d71a1f0645ab"
+            "uuid": "e23a67a9-5ed1-484c-8242-c87dad2b876c"
           }
         ],
-        "default_category_uuid": "d31bb7d0-8066-41c0-bc68-d71a1f0645ab",
+        "default_category_uuid": "e23a67a9-5ed1-484c-8242-c87dad2b876c",
         "operand": "@fields.age_group_for_tips",
         "type": "switch"
       },
-      "uuid": "59b9d465-35a0-4f9f-8d3f-3ea41b24507f"
+      "uuid": "aafbcf9b-4230-4fc2-93b2-f77b54cd1583"
     },
     {
       "actions": [
@@ -134,16 +134,16 @@
           "quick_replies": [],
           "text": "Routines will make your children feel safe and secure. Try to have regular mealtimes and bedtimes. Remember to schedule One-on-One time with your children, too!",
           "type": "send_msg",
-          "uuid": "311b046a-ff82-4747-9a6b-fec96543ef83"
+          "uuid": "f278796d-ec08-46bd-a5ec-a81ef3f3255c"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "29681a02-5e1f-4bfd-820d-52dc05982fd6",
-          "uuid": "ffc7620b-8a3f-4844-91c8-f00f30df6c97"
+          "destination_uuid": "55c24e82-eb98-48fc-bb0b-d8fb71ea44d1",
+          "uuid": "73408f6f-aa7e-471d-97e8-f363656c5cfa"
         }
       ],
-      "uuid": "a9edddc7-97ff-458f-8a28-f1a21bd895f0"
+      "uuid": "a36727ae-596b-425d-97a4-cd82351ec3c4"
     },
     {
       "actions": [
@@ -152,16 +152,16 @@
           "quick_replies": [],
           "text": "Did you know that teens actually like having responsibilities? It makes them feel more independent and grown up. Allow your teen to choose a special job that helps out.",
           "type": "send_msg",
-          "uuid": "49016fa2-15d9-4917-a5a4-0c02640c9c2e"
+          "uuid": "23ffe7bf-a307-40e5-9acb-5968f0f288f5"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "f6f531b4-ac1b-4409-b8ff-d8e17744d537",
-          "uuid": "1f72ba23-a7dc-48ad-ae7e-b6807edf1a14"
+          "destination_uuid": "9eb324a4-6c8c-420e-a85e-5dd2047b2b45",
+          "uuid": "d4db1b85-8bfe-48a5-b254-d214af0044f0"
         }
       ],
-      "uuid": "acdfbb4c-d497-42a4-a694-66fb9ed7660c"
+      "uuid": "ba809281-44d2-441a-b5ef-453cd690bd0b"
     },
     {
       "actions": [
@@ -170,16 +170,16 @@
           "quick_replies": [],
           "text": "Routines will make your children feel safe and secure. Try to have regular mealtimes and bedtimes. Remember to schedule One-on-One time with your children, too!",
           "type": "send_msg",
-          "uuid": "762c3137-c881-4c23-8eb3-90df10c70f20"
+          "uuid": "d2f20d98-7bb8-4fb2-82fe-69de5fb24db8"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "790158bf-74e1-4ac3-8213-de0add464649"
+          "uuid": "79cc635e-7a8f-49fb-bebc-65fde664c7bf"
         }
       ],
-      "uuid": "2d4d690b-fd53-4ac2-8aaf-5cec06f7b3a1"
+      "uuid": "6f729876-e0d7-4945-9010-09a4c22fdefb"
     },
     {
       "actions": [
@@ -188,16 +188,16 @@
           "quick_replies": [],
           "text": "When you teach your children about safe distancing, you keep your whole family safe. You keep others safe, too!",
           "type": "send_msg",
-          "uuid": "9e648a6b-84ec-460a-a005-fd924159d3f8"
+          "uuid": "8c1a11c9-5448-47d0-9eaa-f394747422fe"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "85fb9fc1-865f-4d41-8492-305b38a90a28",
-          "uuid": "5d1eab18-f870-4085-950a-38c20817d36b"
+          "destination_uuid": "2d1d4dc7-30c1-428f-a1b2-771fd40595c0",
+          "uuid": "b9ac7056-7f90-4183-af53-5c4b31d9e2be"
         }
       ],
-      "uuid": "29681a02-5e1f-4bfd-820d-52dc05982fd6"
+      "uuid": "55c24e82-eb98-48fc-bb0b-d8fb71ea44d1"
     },
     {
       "actions": [
@@ -207,16 +207,16 @@
           "quick_replies": [],
           "text": "As your teen shows more responsibility, you can also give them extra privileges. Try to share responsibilities equally amongst women/men and girls/boys. Praise your teen whenever they do their job!",
           "type": "send_msg",
-          "uuid": "0bf8bcc1-7ddb-46eb-9d8a-45e43d628d10"
+          "uuid": "612b239d-84b0-452a-b982-bdda6cc66c1f"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "c62a7cc1-4b6e-4b29-8377-4949944c0ebf"
+          "uuid": "9846a391-178a-482a-b1fc-71a7e2324505"
         }
       ],
-      "uuid": "f6f531b4-ac1b-4409-b8ff-d8e17744d537"
+      "uuid": "9eb324a4-6c8c-420e-a85e-5dd2047b2b45"
     },
     {
       "actions": [
@@ -226,20 +226,20 @@
           "quick_replies": [],
           "text": "You can even make safe distancing into a game where children earn points for keeping at least 1 metre away from others in public. The one with the most points can win a simple, free reward like extra One-on-One Time",
           "type": "send_msg",
-          "uuid": "76bc8ff6-3cc9-4ff8-9e57-c03e8e62d5d8"
+          "uuid": "5102f7cd-ac04-4439-ac13-66e326100461"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "57276e0a-056a-45e7-8368-ba51f3b66442"
+          "uuid": "93d0c06e-3cfd-4903-9daa-65891f1e2828"
         }
       ],
-      "uuid": "85fb9fc1-865f-4d41-8492-305b38a90a28"
+      "uuid": "2d1d4dc7-30c1-428f-a1b2-771fd40595c0"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "b4167f02-b85c-4265-b801-b50e5153bf93",
+  "uuid": "487e80f2-1639-44ee-9823-bec23f5deb79",
   "revision": 1
 }

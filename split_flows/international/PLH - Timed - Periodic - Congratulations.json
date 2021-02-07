@@ -1,7 +1,7 @@
 {
   "_ui": {
     "nodes": {
-      "0d62e82d-df9b-4ea7-b1f0-4ba52f407312": {
+      "6a18f444-7bec-4266-a1d4-cff12e2852ba": {
         "config": {
           "cases": {},
           "operand": {
@@ -16,32 +16,49 @@
         },
         "type": "split_by_contact_field"
       },
-      "32b499ef-258d-450b-8228-918603e53532": {
-        "position": {
-          "left": 420,
-          "top": 300
-        },
-        "type": "execute_actions"
-      },
-      "a66beec7-f501-40b3-a927-94ef9c91ce86": {
+      "8a406964-19f8-4a5e-89af-81ee1ea2948f": {
         "position": {
           "left": 420,
           "top": 180
         },
         "type": "execute_actions"
       },
-      "aa8de43b-2dae-4a7a-9966-45b238e8747f": {
-        "config": {},
+      "170938d2-f806-4c7e-abe0-f80e9d5be14e": {
         "position": {
           "left": 420,
-          "top": 520
+          "top": 300
         },
-        "type": "split_by_subflow"
+        "type": "execute_actions"
       },
-      "bcbc0474-ae2f-4a5b-a647-2ecdbd6c5d8a": {
+      "897e20b1-9708-4fd9-99dd-2c477e23a381": {
         "position": {
           "left": 420,
           "top": 420
+        },
+        "type": "execute_actions"
+      },
+      "388b3d16-8f57-4e63-8c6a-b021378e3b34": {
+        "config": {},
+        "position": {
+          "left": 420,
+          "top": 720
+        },
+        "type": "split_by_subflow"
+      },
+      "99d39965-e95a-424f-b74f-7a9e4f560624": {
+        "type": "split_by_expression",
+        "position": {
+          "left": 420,
+          "top": 540
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "145ece5d-6cdf-43a3-ac9d-e118a51017c1": {
+        "position": {
+          "left": 200,
+          "top": 620
         },
         "type": "execute_actions"
       }
@@ -53,7 +70,7 @@
   "language": "base",
   "localization": {},
   "metadata": {
-    "revision": 15
+    "revision": 1
   },
   "name": "PLH - Timed - Periodic - Congratulations",
   "nodes": [
@@ -61,11 +78,11 @@
       "actions": [],
       "exits": [
         {
-          "destination_uuid": "a66beec7-f501-40b3-a927-94ef9c91ce86",
-          "uuid": "eecbce9d-d3db-49c6-91eb-d958979ce31d"
+          "destination_uuid": "8a406964-19f8-4a5e-89af-81ee1ea2948f",
+          "uuid": "9592d411-60d0-4dbf-bfee-aefa6f535cfb"
         },
         {
-          "uuid": "e8b9db3c-cd56-4783-967b-a0d121ee554d"
+          "uuid": "47e830a5-c81b-4267-a351-abe110419fb7"
         }
       ],
       "router": {
@@ -74,28 +91,28 @@
             "arguments": [
               "@fields.next_congrats_day"
             ],
-            "category_uuid": "1c06b2f9-6fa3-4b11-8dd3-740defc25d3b",
+            "category_uuid": "fdb52256-79d8-45b6-bfc4-8e9e7bd7ed2e",
             "type": "has_number_gte",
-            "uuid": "3dd32e71-3606-4674-81e3-a6c5ff36d627"
+            "uuid": "cefe5eae-a9e2-4514-ba7d-467759f813af"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "eecbce9d-d3db-49c6-91eb-d958979ce31d",
+            "exit_uuid": "9592d411-60d0-4dbf-bfee-aefa6f535cfb",
             "name": "congr time",
-            "uuid": "1c06b2f9-6fa3-4b11-8dd3-740defc25d3b"
+            "uuid": "fdb52256-79d8-45b6-bfc4-8e9e7bd7ed2e"
           },
           {
-            "exit_uuid": "e8b9db3c-cd56-4783-967b-a0d121ee554d",
+            "exit_uuid": "47e830a5-c81b-4267-a351-abe110419fb7",
             "name": "Other",
-            "uuid": "b5ff3588-e818-402e-ac69-9c5aa3ca0e61"
+            "uuid": "f22fbe01-4997-4540-91bd-d5a8939895c3"
           }
         ],
-        "default_category_uuid": "b5ff3588-e818-402e-ac69-9c5aa3ca0e61",
+        "default_category_uuid": "f22fbe01-4997-4540-91bd-d5a8939895c3",
         "operand": "@fields.current_day_in_program",
         "type": "switch"
       },
-      "uuid": "0d62e82d-df9b-4ea7-b1f0-4ba52f407312"
+      "uuid": "6a18f444-7bec-4266-a1d4-cff12e2852ba"
     },
     {
       "actions": [
@@ -105,17 +122,17 @@
             "name": "next congrats day"
           },
           "type": "set_contact_field",
-          "uuid": "24c27f6d-7f5e-42c9-9b90-0504d3c9221f",
+          "uuid": "ba5fdc92-5282-4f4b-9bb1-0fd2362a3c99",
           "value": "@(fields.current_day_in_program + fields.periodic_congrats_days_to_add)"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "32b499ef-258d-450b-8228-918603e53532",
-          "uuid": "868ea0d4-ff21-4241-9c5f-f6c02f4b287f"
+          "destination_uuid": "170938d2-f806-4c7e-abe0-f80e9d5be14e",
+          "uuid": "acf6f57e-3f14-4bf0-8cf6-45022336257d"
         }
       ],
-      "uuid": "a66beec7-f501-40b3-a927-94ef9c91ce86"
+      "uuid": "8a406964-19f8-4a5e-89af-81ee1ea2948f"
     },
     {
       "actions": [
@@ -125,17 +142,17 @@
             "name": "current week in program"
           },
           "type": "set_contact_field",
-          "uuid": "d14eaed9-8756-4e35-9eb0-5ae50bb90c90",
+          "uuid": "4af58a57-903a-4dbb-a311-f33d41985003",
           "value": "@(fields.current_week_in_program+1)"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "bcbc0474-ae2f-4a5b-a647-2ecdbd6c5d8a",
-          "uuid": "f605f3f1-454a-4b40-bd89-5b49b5b5de33"
+          "destination_uuid": "897e20b1-9708-4fd9-99dd-2c477e23a381",
+          "uuid": "0aede5c2-1286-40e9-b859-88c9624ff344"
         }
       ],
-      "uuid": "32b499ef-258d-450b-8228-918603e53532"
+      "uuid": "170938d2-f806-4c7e-abe0-f80e9d5be14e"
     },
     {
       "actions": [
@@ -145,37 +162,98 @@
             "name": "survey parentingbehave count"
           },
           "type": "set_contact_field",
-          "uuid": "3829fa67-de4f-417f-b2af-5628a630d58d",
+          "uuid": "a4fc9723-8708-42f2-a543-83664913fc28",
           "value": "1"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "aa8de43b-2dae-4a7a-9966-45b238e8747f",
-          "uuid": "56899d86-97ee-4649-af26-2ced2e4c4df0"
+          "destination_uuid": "99d39965-e95a-424f-b74f-7a9e4f560624",
+          "uuid": "5a966338-2b1f-4984-82e4-8a003bc81a76"
         }
       ],
-      "uuid": "bcbc0474-ae2f-4a5b-a647-2ecdbd6c5d8a"
+      "uuid": "897e20b1-9708-4fd9-99dd-2c477e23a381"
+    },
+    {
+      "uuid": "99d39965-e95a-424f-b74f-7a9e4f560624",
+      "actions": [],
+      "router": {
+        "type": "switch",
+        "default_category_uuid": "10a2a7e3-5aec-442f-b5ea-203cd299c630",
+        "categories": [
+          {
+            "uuid": "1be1afbb-b058-48fa-ae8b-82bbda18fecd",
+            "name": "even week",
+            "exit_uuid": "4b84d05e-d34d-4677-97ca-8e6b7eea4d3e"
+          },
+          {
+            "uuid": "10a2a7e3-5aec-442f-b5ea-203cd299c630",
+            "name": "Other",
+            "exit_uuid": "1cc496db-180f-4e1d-b7d7-7bdd3dfbfe26"
+          }
+        ],
+        "cases": [
+          {
+            "arguments": [
+              "0"
+            ],
+            "type": "has_any_word",
+            "uuid": "396ecb0a-edb9-4ff6-8da6-666e852ae7d6",
+            "category_uuid": "1be1afbb-b058-48fa-ae8b-82bbda18fecd"
+          }
+        ],
+        "operand": "@(mod(fields.current_week_in_program,2))"
+      },
+      "exits": [
+        {
+          "uuid": "4b84d05e-d34d-4677-97ca-8e6b7eea4d3e",
+          "destination_uuid": "145ece5d-6cdf-43a3-ac9d-e118a51017c1"
+        },
+        {
+          "uuid": "1cc496db-180f-4e1d-b7d7-7bdd3dfbfe26",
+          "destination_uuid": "388b3d16-8f57-4e63-8c6a-b021378e3b34"
+        }
+      ]
+    },
+    {
+      "uuid": "145ece5d-6cdf-43a3-ac9d-e118a51017c1",
+      "actions": [
+        {
+          "uuid": "2ae1f745-f480-4b57-869e-5d7b13139c11",
+          "type": "set_contact_field",
+          "field": {
+            "key": "survey_ipv_count",
+            "name": "survey ipv count"
+          },
+          "value": "1"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "c3a62475-fd39-4695-8f00-9292658f54ef",
+          "destination_uuid": "388b3d16-8f57-4e63-8c6a-b021378e3b34"
+        }
+      ]
     },
     {
       "actions": [
         {
           "flow": {
             "name": "PLH - Supportive - Weekly congratulations",
-            "uuid": "ecefe7d2-9535-4104-af2a-70ac6143208f"
+            "uuid": "a345014a-5e36-403f-be0d-15045dc460e4"
           },
           "type": "enter_flow",
-          "uuid": "9afb307e-06ba-4fe4-a690-f714dd0aa933"
+          "uuid": "b31855fa-c7be-42cb-9d7f-0a6e3097fbcf"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "e2300377-ebfd-4c78-9182-6c2fffbee106"
+          "uuid": "568da723-2840-4fad-bc65-30cb05291000"
         },
         {
           "destination_uuid": null,
-          "uuid": "902d6471-bd9a-47e1-a835-cbfc3f5b4b84"
+          "uuid": "844f4877-e259-4ec0-8e40-2118070e128b"
         }
       ],
       "router": {
@@ -184,40 +262,40 @@
             "arguments": [
               "completed"
             ],
-            "category_uuid": "bcdac1fa-d78c-4c59-890c-a20bf38c3d02",
+            "category_uuid": "e07ee5f8-dcce-4a47-bda7-8fabb421813a",
             "type": "has_only_text",
-            "uuid": "80105ce2-ecc8-49c6-978b-86e01651c34d"
+            "uuid": "b0402be6-af94-4439-bf34-79190a6da993"
           },
           {
             "arguments": [
               "expired"
             ],
-            "category_uuid": "c53e679c-9f04-4036-966a-4a8d2100d8b3",
+            "category_uuid": "be39cd2a-33d0-4b71-bb14-cf9669f3d8fa",
             "type": "has_only_text",
-            "uuid": "5428ef29-dc1d-4f6a-9de5-9818ad7106ba"
+            "uuid": "479949b6-c19b-4c75-b2c9-c12682a719e3"
           }
         ],
         "categories": [
           {
-            "exit_uuid": "e2300377-ebfd-4c78-9182-6c2fffbee106",
+            "exit_uuid": "568da723-2840-4fad-bc65-30cb05291000",
             "name": "Complete",
-            "uuid": "bcdac1fa-d78c-4c59-890c-a20bf38c3d02"
+            "uuid": "e07ee5f8-dcce-4a47-bda7-8fabb421813a"
           },
           {
-            "exit_uuid": "902d6471-bd9a-47e1-a835-cbfc3f5b4b84",
+            "exit_uuid": "844f4877-e259-4ec0-8e40-2118070e128b",
             "name": "Expired",
-            "uuid": "c53e679c-9f04-4036-966a-4a8d2100d8b3"
+            "uuid": "be39cd2a-33d0-4b71-bb14-cf9669f3d8fa"
           }
         ],
-        "default_category_uuid": "c53e679c-9f04-4036-966a-4a8d2100d8b3",
+        "default_category_uuid": "be39cd2a-33d0-4b71-bb14-cf9669f3d8fa",
         "operand": "@child.run.status",
         "type": "switch"
       },
-      "uuid": "aa8de43b-2dae-4a7a-9966-45b238e8747f"
+      "uuid": "388b3d16-8f57-4e63-8c6a-b021378e3b34"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "869ee57d-00f8-437f-a3e5-65034bbd760a",
-  "revision": 1
+  "uuid": "6b6a47e1-5712-4cff-bd69-6ba9386e6d43",
+  "revision": 8
 }

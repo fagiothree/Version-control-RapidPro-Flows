@@ -1,17 +1,17 @@
 {
   "_ui": {
     "nodes": {
-      "2c9ef204-b477-4196-9185-b61c229da23f": {
-        "position": {
-          "left": 340,
-          "top": 0
-        },
-        "type": "execute_actions"
-      },
-      "6fb8fe19-246c-444e-bcfe-4dd037b4b29c": {
+      "70b4afd5-3324-4157-92be-671bf6a4bd6a": {
         "position": {
           "left": 340,
           "top": 180
+        },
+        "type": "execute_actions"
+      },
+      "f415488a-5ebb-4330-9c83-e910e85688b6": {
+        "position": {
+          "left": 340,
+          "top": 0
         },
         "type": "execute_actions"
       }
@@ -30,19 +30,19 @@
       "actions": [
         {
           "attachments": [],
+          "quick_replies": [],
           "text": "Hi! Every child has challenging behaviour sometimes. If you would like some tips on how to address these behaviours, type \"Help\".",
           "type": "send_msg",
-          "quick_replies": [],
-          "uuid": "624a9a85-5225-4f4e-b7de-ecace7a242e8"
+          "uuid": "ca119ed8-1546-4ad3-8e0a-1f209779ba18"
         }
       ],
       "exits": [
         {
-          "destination_uuid": "6fb8fe19-246c-444e-bcfe-4dd037b4b29c",
-          "uuid": "c937e5c4-618e-418e-aad5-048b45c9be74"
+          "destination_uuid": "70b4afd5-3324-4157-92be-671bf6a4bd6a",
+          "uuid": "ca4eaf09-15ea-4dc5-9f42-5ccb8dfbc120"
         }
       ],
-      "uuid": "2c9ef204-b477-4196-9185-b61c229da23f"
+      "uuid": "f415488a-5ebb-4330-9c83-e910e85688b6"
     },
     {
       "actions": [
@@ -52,20 +52,20 @@
           "quick_replies": [],
           "text": "Remember that One-on-One time, praise for being good, and consistent routines will also help reduce difficult behaviours.",
           "type": "send_msg",
-          "uuid": "78bac523-e8ed-4322-b19e-6a60075c3e52"
+          "uuid": "1f231a94-eead-4092-9c91-975457bfec73"
         }
       ],
       "exits": [
         {
           "destination_uuid": null,
-          "uuid": "cc6033cd-03ae-44da-9e21-8997a615d377"
+          "uuid": "cc3552a3-04fc-4a72-8a14-9dfef24ecc24"
         }
       ],
-      "uuid": "6fb8fe19-246c-444e-bcfe-4dd037b4b29c"
+      "uuid": "70b4afd5-3324-4157-92be-671bf6a4bd6a"
     }
   ],
   "spec_version": "13.1.0",
   "type": "messaging",
-  "uuid": "1deaec67-6e82-4f26-bfe9-ff301ab34e43",
-  "revision": 3
+  "uuid": "8489d8d5-3dc8-463b-9e17-60d5a930e390",
+  "revision": 1
 }
