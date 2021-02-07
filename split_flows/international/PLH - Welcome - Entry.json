@@ -40,12 +40,12 @@
         "type": "execute_actions"
       },
       "86511669-de25-4d1e-9a84-d8a5be3360fb": {
-        "config": {},
+        "type": "split_by_subflow",
         "position": {
           "left": 660,
           "top": 1020
         },
-        "type": "split_by_subflow"
+        "config": {}
       },
       "d8760c97-5973-46eb-96b1-abd9b231c83e": {
         "position": {
@@ -162,7 +162,7 @@
     }
   },
   "metadata": {
-    "revision": 24
+    "revision": 25
   },
   "name": "PLH - Welcome - Entry",
   "nodes": [
@@ -300,27 +300,20 @@
       "uuid": "afaec66c-361f-4dbe-b29f-57748ada3c6d"
     },
     {
+      "uuid": "86511669-de25-4d1e-9a84-d8a5be3360fb",
       "actions": [
         {
-          "flow": {
-            "name": "Set up default contact fields",
-            "uuid": "f1be0d60-d40f-4e9a-af58-253869c12f89"
-          },
+          "uuid": "5e928544-9289-4ac0-a122-6a4433644aea",
           "type": "enter_flow",
-          "uuid": "5e928544-9289-4ac0-a122-6a4433644aea"
-        }
-      ],
-      "exits": [
-        {
-          "destination_uuid": "d8760c97-5973-46eb-96b1-abd9b231c83e",
-          "uuid": "f10bd1a2-a68f-4748-87fc-82af1ab17444"
-        },
-        {
-          "destination_uuid": "d8760c97-5973-46eb-96b1-abd9b231c83e",
-          "uuid": "e973b869-f21a-4e54-a83d-9a892bf7ae25"
+          "flow": {
+            "uuid": "f1be0d60-d40f-4e9a-af58-253869c12f89",
+            "name": "PLH - Internal - Set up default contact fields"
+          }
         }
       ],
       "router": {
+        "type": "switch",
+        "operand": "@child.run.status",
         "cases": [
           {
             "arguments": [
@@ -351,11 +344,18 @@
             "uuid": "f7c06b2e-8ae8-420f-bfa6-d1a95f703f03"
           }
         ],
-        "default_category_uuid": "f7c06b2e-8ae8-420f-bfa6-d1a95f703f03",
-        "operand": "@child.run.status",
-        "type": "switch"
+        "default_category_uuid": "f7c06b2e-8ae8-420f-bfa6-d1a95f703f03"
       },
-      "uuid": "86511669-de25-4d1e-9a84-d8a5be3360fb"
+      "exits": [
+        {
+          "destination_uuid": "d8760c97-5973-46eb-96b1-abd9b231c83e",
+          "uuid": "f10bd1a2-a68f-4748-87fc-82af1ab17444"
+        },
+        {
+          "destination_uuid": "d8760c97-5973-46eb-96b1-abd9b231c83e",
+          "uuid": "e973b869-f21a-4e54-a83d-9a892bf7ae25"
+        }
+      ]
     },
     {
       "actions": [
@@ -579,5 +579,5 @@
   "spec_version": "13.1.0",
   "type": "messaging",
   "uuid": "e86d6fc1-148f-43fe-88d5-d27d239ddc44",
-  "revision": 25
+  "revision": 26
 }

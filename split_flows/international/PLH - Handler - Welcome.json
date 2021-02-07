@@ -39,6 +39,16 @@
         },
         "config": {}
       },
+      "416f10a3-a90b-4ec0-9599-5a3a80f5b186": {
+        "type": "split_by_groups",
+        "position": {
+          "left": 780,
+          "top": 380
+        },
+        "config": {
+          "cases": {}
+        }
+      },
       "90e5e6f9-d1e9-4681-b599-f34349cdfd57": {
         "position": {
           "left": 1200,
@@ -89,16 +99,6 @@
           "top": 960
         },
         "type": "execute_actions"
-      },
-      "416f10a3-a90b-4ec0-9599-5a3a80f5b186": {
-        "type": "split_by_groups",
-        "position": {
-          "left": 780,
-          "top": 380
-        },
-        "config": {
-          "cases": {}
-        }
       }
     }
   },
@@ -106,7 +106,7 @@
   "language": "base",
   "localization": {},
   "metadata": {
-    "revision": 4
+    "revision": 9
   },
   "name": "PLH - Handler - Welcome",
   "nodes": [
@@ -217,7 +217,7 @@
           "type": "enter_flow",
           "flow": {
             "uuid": "e86d6fc1-148f-43fe-88d5-d27d239ddc44",
-            "name": "test - PLH - Welcome - Entry"
+            "name": "PLH - Welcome - Entry"
           }
         }
       ],
@@ -337,7 +337,7 @@
           "type": "enter_flow",
           "flow": {
             "uuid": "7539aa80-b6cc-4480-97e3-cd18c9e0a312",
-            "name": "test - PLH - Welcome - Initial registration"
+            "name": "PLH - Welcome - Initial registration"
           }
         }
       ],
@@ -434,7 +434,7 @@
           "type": "enter_flow",
           "flow": {
             "uuid": "0163b0df-44a3-4fab-8dd8-8df60ec644d8",
-            "name": "test - PLH - Welcome - Tips"
+            "name": "PLH - Welcome - Tips"
           }
         }
       ],
@@ -528,5 +528,5 @@
   "spec_version": "13.1.0",
   "type": "messaging",
   "uuid": "7cf3d984-ac8f-4c94-ad38-677c0df7386e",
-  "revision": 9
+  "revision": 12
 }

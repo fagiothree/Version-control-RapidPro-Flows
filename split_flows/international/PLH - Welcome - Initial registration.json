@@ -84,6 +84,79 @@
         },
         "type": "execute_actions"
       },
+      "4b37cb9b-0e10-4280-acc7-cfef62c098b1": {
+        "position": {
+          "left": 460,
+          "top": 1320
+        },
+        "type": "execute_actions"
+      },
+      "f3ebd5a5-bdbe-4b43-b7de-4de578aab82a": {
+        "type": "wait_for_response",
+        "position": {
+          "left": 460,
+          "top": 1600
+        },
+        "config": {
+          "cases": {}
+        }
+      },
+      "1d6e5721-86b5-47d7-a6af-0d56ef1cc4a5": {
+        "position": {
+          "left": 1020,
+          "top": 1620
+        },
+        "type": "execute_actions"
+      },
+      "4776db6c-3ace-4f1a-8ceb-fd3015c1eebf": {
+        "position": {
+          "left": 220,
+          "top": 1760
+        },
+        "type": "execute_actions"
+      },
+      "acaeb4d2-eeb5-4be9-a932-d7b0d721c1de": {
+        "position": {
+          "left": 440,
+          "top": 1760
+        },
+        "type": "execute_actions"
+      },
+      "977685cf-da26-4a6e-960b-5414a9d49eaf": {
+        "position": {
+          "left": 680,
+          "top": 1780
+        },
+        "type": "execute_actions"
+      },
+      "2c319294-b616-48f2-8831-9e1684aaa2a0": {
+        "position": {
+          "left": 900,
+          "top": 1800
+        },
+        "type": "execute_actions"
+      },
+      "83075b92-dbc8-4725-816f-492ee51ba2b6": {
+        "position": {
+          "left": 1140,
+          "top": 1820
+        },
+        "type": "execute_actions"
+      },
+      "c638564c-28f6-4aa2-9766-bc8dbe3f2e6b": {
+        "position": {
+          "left": 500,
+          "top": 2040
+        },
+        "type": "execute_actions"
+      },
+      "2bb0f2be-5b26-4d75-aecf-58d1f20836b8": {
+        "position": {
+          "left": 220,
+          "top": 2040
+        },
+        "type": "execute_actions"
+      },
       "af6d4b9f-0299-4a90-934b-56a8c01e2195": {
         "position": {
           "left": 360,
@@ -173,79 +246,6 @@
           "top": 3480
         },
         "type": "execute_actions"
-      },
-      "4b37cb9b-0e10-4280-acc7-cfef62c098b1": {
-        "position": {
-          "left": 460,
-          "top": 1320
-        },
-        "type": "execute_actions"
-      },
-      "f3ebd5a5-bdbe-4b43-b7de-4de578aab82a": {
-        "type": "wait_for_response",
-        "position": {
-          "left": 460,
-          "top": 1600
-        },
-        "config": {
-          "cases": {}
-        }
-      },
-      "1d6e5721-86b5-47d7-a6af-0d56ef1cc4a5": {
-        "position": {
-          "left": 1020,
-          "top": 1620
-        },
-        "type": "execute_actions"
-      },
-      "4776db6c-3ace-4f1a-8ceb-fd3015c1eebf": {
-        "position": {
-          "left": 220,
-          "top": 1760
-        },
-        "type": "execute_actions"
-      },
-      "acaeb4d2-eeb5-4be9-a932-d7b0d721c1de": {
-        "position": {
-          "left": 440,
-          "top": 1760
-        },
-        "type": "execute_actions"
-      },
-      "977685cf-da26-4a6e-960b-5414a9d49eaf": {
-        "position": {
-          "left": 680,
-          "top": 1780
-        },
-        "type": "execute_actions"
-      },
-      "2c319294-b616-48f2-8831-9e1684aaa2a0": {
-        "position": {
-          "left": 900,
-          "top": 1800
-        },
-        "type": "execute_actions"
-      },
-      "83075b92-dbc8-4725-816f-492ee51ba2b6": {
-        "position": {
-          "left": 1140,
-          "top": 1820
-        },
-        "type": "execute_actions"
-      },
-      "c638564c-28f6-4aa2-9766-bc8dbe3f2e6b": {
-        "position": {
-          "left": 460,
-          "top": 1940
-        },
-        "type": "execute_actions"
-      },
-      "2bb0f2be-5b26-4d75-aecf-58d1f20836b8": {
-        "position": {
-          "left": 220,
-          "top": 2040
-        },
-        "type": "execute_actions"
       }
     },
     "stickies": {}
@@ -255,7 +255,7 @@
   "language": "base",
   "localization": {},
   "metadata": {
-    "revision": 52
+    "revision": 84
   },
   "name": "PLH - Welcome - Initial registration",
   "nodes": [
@@ -848,26 +848,6 @@
       ]
     },
     {
-      "uuid": "c638564c-28f6-4aa2-9766-bc8dbe3f2e6b",
-      "actions": [
-        {
-          "uuid": "2a11b459-be3a-4acd-a1cc-bb985d530695",
-          "type": "set_contact_field",
-          "field": {
-            "key": "get_ipv_content",
-            "name": "get ipv content"
-          },
-          "value": "\"yes\""
-        }
-      ],
-      "exits": [
-        {
-          "uuid": "9a35f3c3-574b-458e-87bf-900305770dda",
-          "destination_uuid": "af6d4b9f-0299-4a90-934b-56a8c01e2195"
-        }
-      ]
-    },
-    {
       "uuid": "2bb0f2be-5b26-4d75-aecf-58d1f20836b8",
       "actions": [
         {
@@ -883,6 +863,26 @@
       "exits": [
         {
           "uuid": "cdcdef22-05d5-4e2a-9f6a-4a2c37c0a665",
+          "destination_uuid": "af6d4b9f-0299-4a90-934b-56a8c01e2195"
+        }
+      ]
+    },
+    {
+      "uuid": "c638564c-28f6-4aa2-9766-bc8dbe3f2e6b",
+      "actions": [
+        {
+          "uuid": "2a11b459-be3a-4acd-a1cc-bb985d530695",
+          "type": "set_contact_field",
+          "field": {
+            "key": "get_ipv_content",
+            "name": "get ipv content"
+          },
+          "value": "\"yes\""
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "9a35f3c3-574b-458e-87bf-900305770dda",
           "destination_uuid": "af6d4b9f-0299-4a90-934b-56a8c01e2195"
         }
       ]
@@ -1251,5 +1251,5 @@
   "spec_version": "13.1.0",
   "type": "messaging",
   "uuid": "7539aa80-b6cc-4480-97e3-cd18c9e0a312",
-  "revision": 84
+  "revision": 85
 }
