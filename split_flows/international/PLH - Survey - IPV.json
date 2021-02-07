@@ -4,8 +4,43 @@
   "spec_version": "13.1.0",
   "language": "base",
   "type": "messaging",
-  "nodes": [],
-  "_ui": {},
-  "revision": 1,
-  "expire_after_minutes": 10080
+  "nodes": [
+    {
+      "uuid": "1ecc0e53-bcd8-4bee-86f6-ebc93c7505a5",
+      "actions": [
+        {
+          "uuid": "91554878-4892-4ae6-a4e2-3e5ebe783490",
+          "type": "set_contact_field",
+          "field": {
+            "key": "survey_ipv_count",
+            "name": "survey ipv count"
+          },
+          "value": "0"
+        }
+      ],
+      "exits": [
+        {
+          "uuid": "3028e506-2632-43d6-aa6d-9ad16bd44063",
+          "destination_uuid": null
+        }
+      ]
+    }
+  ],
+  "_ui": {
+    "nodes": {
+      "1ecc0e53-bcd8-4bee-86f6-ebc93c7505a5": {
+        "position": {
+          "left": 540,
+          "top": 40
+        },
+        "type": "execute_actions"
+      }
+    }
+  },
+  "revision": 3,
+  "expire_after_minutes": 10080,
+  "metadata": {
+    "revision": 1
+  },
+  "localization": {}
 }
