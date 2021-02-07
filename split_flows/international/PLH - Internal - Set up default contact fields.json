@@ -295,7 +295,7 @@
   "language": "eng",
   "localization": {},
   "metadata": {
-    "revision": 13
+    "revision": 17
   },
   "name": "PLH - Internal - Set up default contact fields",
   "nodes": [
@@ -1308,15 +1308,6 @@
         },
         {
           "field": {
-            "key": "video_script_path",
-            "name": "video script path"
-          },
-          "type": "set_contact_field",
-          "uuid": "11844f3b-4161-45d2-a4c1-8cc3449bae42",
-          "value": "@(fields.path & \"videoScript/\" & contact.language & \"/\")"
-        },
-        {
-          "field": {
             "key": "image_path",
             "name": "image path"
           },
@@ -1332,24 +1323,6 @@
           "type": "set_contact_field",
           "uuid": "b368c0f7-0d5b-487a-a936-bbf6323fc897",
           "value": "@(fields.path & \"comic/\" & contact.language & \"/\")"
-        },
-        {
-          "field": {
-            "key": "audio_path",
-            "name": "audio path"
-          },
-          "type": "set_contact_field",
-          "uuid": "b5f91fee-fefe-466d-8ab6-70ff7b335dac",
-          "value": "@(fields.path & \"audio/\" & contact.language & \"/\")"
-        },
-        {
-          "field": {
-            "key": "video_path",
-            "name": "video path"
-          },
-          "type": "set_contact_field",
-          "uuid": "cad917d0-0895-4176-ab64-f045655a738e",
-          "value": "@(fields.path & \"video/\" & contact.language & \"/\")"
         },
         {
           "uuid": "0e682ffe-bc04-4fa6-bf67-a3fd9301c1a5",
@@ -1438,5 +1411,5 @@
   "spec_version": "13.1.0",
   "type": "messaging",
   "uuid": "1f87fe57-93ae-4b26-befe-9831ea86b4f2",
-  "revision": 17
+  "revision": 20
 }
