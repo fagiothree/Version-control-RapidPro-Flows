@@ -81,12 +81,12 @@
         "type": "execute_actions"
       },
       "8b34d46a-2fed-40c6-8201-825a89537cfb": {
-        "config": {},
+        "type": "split_by_subflow",
         "position": {
           "left": 560,
           "top": 940
         },
-        "type": "split_by_subflow"
+        "config": {}
       },
       "13d133e5-8757-4706-a7b1-e493b2e04934": {
         "config": {
@@ -203,7 +203,7 @@
   "language": "eng",
   "localization": {},
   "metadata": {
-    "revision": 14
+    "revision": 15
   },
   "name": "PLH - Help - Settings - Manage information user",
   "nodes": [
@@ -440,27 +440,20 @@
       "uuid": "7ac482c8-763e-43eb-9aa9-0ac4a6cfa968"
     },
     {
+      "uuid": "8b34d46a-2fed-40c6-8201-825a89537cfb",
       "actions": [
         {
-          "flow": {
-            "name": "Settings -Personal information",
-            "uuid": "b0de85f8-22e4-43c6-a942-ab29edaab96a"
-          },
+          "uuid": "a0a17321-3d93-49db-8d64-0cf36a73ae0f",
           "type": "enter_flow",
-          "uuid": "a0a17321-3d93-49db-8d64-0cf36a73ae0f"
-        }
-      ],
-      "exits": [
-        {
-          "destination_uuid": null,
-          "uuid": "7ea386bc-4387-463a-89ce-e7e20bc18205"
-        },
-        {
-          "destination_uuid": null,
-          "uuid": "2bd2e7ef-6008-474a-a10e-ab990af309e8"
+          "flow": {
+            "uuid": "b0de85f8-22e4-43c6-a942-ab29edaab96a",
+            "name": "PLH - Help - Settings - Manage information"
+          }
         }
       ],
       "router": {
+        "type": "switch",
+        "operand": "@child.run.status",
         "cases": [
           {
             "arguments": [
@@ -491,11 +484,18 @@
             "uuid": "2b29da8f-e59e-4b4c-8070-d27dbdd7ac22"
           }
         ],
-        "default_category_uuid": "2b29da8f-e59e-4b4c-8070-d27dbdd7ac22",
-        "operand": "@child.run.status",
-        "type": "switch"
+        "default_category_uuid": "2b29da8f-e59e-4b4c-8070-d27dbdd7ac22"
       },
-      "uuid": "8b34d46a-2fed-40c6-8201-825a89537cfb"
+      "exits": [
+        {
+          "destination_uuid": null,
+          "uuid": "7ea386bc-4387-463a-89ce-e7e20bc18205"
+        },
+        {
+          "destination_uuid": null,
+          "uuid": "2bd2e7ef-6008-474a-a10e-ab990af309e8"
+        }
+      ]
     },
     {
       "actions": [],
@@ -968,5 +968,5 @@
   "spec_version": "13.1.0",
   "type": "messaging",
   "uuid": "60715ca3-6ddb-490c-8d01-5073a391bb68",
-  "revision": 15
+  "revision": 16
 }

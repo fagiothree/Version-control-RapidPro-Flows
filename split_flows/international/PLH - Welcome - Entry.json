@@ -1,86 +1,22 @@
 {
   "_ui": {
     "nodes": {
-      "0c9be9c1-22e1-4458-93f8-821705a2a3da": {
+      "a683af40-c4e6-4722-aecd-2b57ced71f0e": {
         "position": {
-          "left": 940,
-          "top": 1780
+          "left": 540,
+          "top": 300
         },
         "type": "execute_actions"
       },
       "19e474ca-407a-446a-92ea-b9332d4465cb": {
-        "config": {
-          "cases": {}
-        },
+        "type": "wait_for_response",
         "position": {
           "left": 520,
           "top": 540
         },
-        "type": "wait_for_response"
-      },
-      "6c4371ed-b5ca-404d-a10c-cc8ed1e2ab83": {
         "config": {
           "cases": {}
-        },
-        "position": {
-          "left": 600,
-          "top": 1900
-        },
-        "type": "wait_for_response"
-      },
-      "7243286f-fdca-479d-8ee7-30d23ea12224": {
-        "config": {},
-        "position": {
-          "left": 660,
-          "top": 1020
-        },
-        "type": "split_by_subflow"
-      },
-      "9b0e6078-c50c-42be-a723-154901dbabcc": {
-        "position": {
-          "left": 580,
-          "top": 1580
-        },
-        "type": "execute_actions"
-      },
-      "a683af40-c4e6-4722-aecd-2b57ced71f0e": {
-        "position": {
-          "left": 560,
-          "top": 80
-        },
-        "type": "execute_actions"
-      },
-      "ad2a8128-4361-40cf-abdd-549c70c427c2": {
-        "position": {
-          "left": 440,
-          "top": 860
-        },
-        "type": "execute_actions"
-      },
-      "c0a0a025-98d8-4daa-b840-429004253c6b": {
-        "config": {},
-        "position": {
-          "left": 100,
-          "top": 1640
-        },
-        "type": "split_by_subflow"
-      },
-      "c4181045-3319-448c-ad8b-22a09e3502ba": {
-        "position": {
-          "left": 580,
-          "top": 1320
-        },
-        "type": "execute_actions"
-      },
-      "ce09ee0a-b112-4ce9-9de2-1a6b45ccb51f": {
-        "config": {
-          "cases": {}
-        },
-        "position": {
-          "left": 120,
-          "top": 1800
-        },
-        "type": "split_by_groups"
+        }
       },
       "d09f7220-5d3f-4e9e-a5f6-0590df61ae87": {
         "position": {
@@ -95,6 +31,63 @@
           "top": 860
         },
         "type": "execute_actions"
+      },
+      "7243286f-fdca-479d-8ee7-30d23ea12224": {
+        "config": {},
+        "position": {
+          "left": 540,
+          "top": 1060
+        },
+        "type": "split_by_subflow"
+      },
+      "c4181045-3319-448c-ad8b-22a09e3502ba": {
+        "position": {
+          "left": 580,
+          "top": 1320
+        },
+        "type": "execute_actions"
+      },
+      "9b0e6078-c50c-42be-a723-154901dbabcc": {
+        "position": {
+          "left": 580,
+          "top": 1580
+        },
+        "type": "execute_actions"
+      },
+      "c0a0a025-98d8-4daa-b840-429004253c6b": {
+        "config": {},
+        "position": {
+          "left": 100,
+          "top": 1640
+        },
+        "type": "split_by_subflow"
+      },
+      "0c9be9c1-22e1-4458-93f8-821705a2a3da": {
+        "position": {
+          "left": 940,
+          "top": 1780
+        },
+        "type": "execute_actions"
+      },
+      "ce09ee0a-b112-4ce9-9de2-1a6b45ccb51f": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 120,
+          "top": 1800
+        },
+        "type": "split_by_groups"
+      },
+      "6c4371ed-b5ca-404d-a10c-cc8ed1e2ab83": {
+        "config": {
+          "cases": {}
+        },
+        "position": {
+          "left": 600,
+          "top": 1900
+        },
+        "type": "wait_for_response"
       }
     },
     "stickies": {
@@ -162,20 +155,20 @@
     }
   },
   "metadata": {
-    "revision": 25
+    "revision": 19
   },
   "name": "PLH - Welcome - Entry",
   "nodes": [
     {
       "actions": [
         {
-          "all_urns": false,
           "attachments": [
-            "image:@(fields.image_path & \"you_deserve_a_star.jpg\")"
+            "image:https://idems-media-recorder.web.app/storage/project/PLH/subproject/Rapidpro/deployment/Global/resourceGroup/image/universal/you_deserve_a_star.jpg"
           ],
-          "quick_replies": [],
           "text": "Hi! Thank you for signing up to receive these parenting tips. Please tell us which language you would like:",
           "type": "send_msg",
+          "all_urns": false,
+          "quick_replies": [],
           "uuid": "ad885830-8e86-4d05-9b5f-843f013060e9"
         }
       ],
@@ -188,38 +181,19 @@
       "uuid": "a683af40-c4e6-4722-aecd-2b57ced71f0e"
     },
     {
+      "uuid": "19e474ca-407a-446a-92ea-b9332d4465cb",
       "actions": [],
-      "exits": [
-        {
-          "destination_uuid": "e58c515e-4edc-497b-bfc1-0a34c04c7c37",
-          "uuid": "d9697d0c-7aab-4eba-82f9-e99bc18da150"
-        },
-        {
-          "destination_uuid": "ad2a8128-4361-40cf-abdd-549c70c427c2",
-          "uuid": "776e08e2-8c6a-466e-a249-d2af68f8144b"
-        },
-        {
-          "destination_uuid": "d09f7220-5d3f-4e9e-a5f6-0590df61ae87",
-          "uuid": "424bcd62-3dc0-4df0-9554-9c993381888c"
-        }
-      ],
       "router": {
+        "type": "switch",
+        "default_category_uuid": "aa8fdcb5-fefe-4151-8369-693cefb83f1a",
         "cases": [
           {
             "arguments": [
-              "2 english"
+              "english"
             ],
-            "category_uuid": "31b0c43a-d809-426f-b593-71da4c9a751e",
             "type": "has_any_word",
-            "uuid": "e4b3117b-71b8-4e40-bc78-2bb31ad1d42d"
-          },
-          {
-            "arguments": [
-              "1 Bahasa Melayu"
-            ],
-            "category_uuid": "0d776c34-fb25-4b2a-9b4f-20a98f7372f1",
-            "type": "has_any_word",
-            "uuid": "3cc8fce6-08ef-4c7d-84b8-b60adc5af934"
+            "uuid": "e4b3117b-71b8-4e40-bc78-2bb31ad1d42d",
+            "category_uuid": "31b0c43a-d809-426f-b593-71da4c9a751e"
           }
         ],
         "categories": [
@@ -229,25 +203,27 @@
             "uuid": "31b0c43a-d809-426f-b593-71da4c9a751e"
           },
           {
-            "exit_uuid": "776e08e2-8c6a-466e-a249-d2af68f8144b",
-            "name": "malay",
-            "uuid": "0d776c34-fb25-4b2a-9b4f-20a98f7372f1"
-          },
-          {
             "exit_uuid": "424bcd62-3dc0-4df0-9554-9c993381888c",
             "name": "Other",
             "uuid": "aa8fdcb5-fefe-4151-8369-693cefb83f1a"
           }
         ],
-        "default_category_uuid": "aa8fdcb5-fefe-4151-8369-693cefb83f1a",
         "operand": "@input.text",
-        "result_name": "language",
-        "type": "switch",
         "wait": {
           "type": "msg"
-        }
+        },
+        "result_name": "language"
       },
-      "uuid": "19e474ca-407a-446a-92ea-b9332d4465cb"
+      "exits": [
+        {
+          "destination_uuid": "e58c515e-4edc-497b-bfc1-0a34c04c7c37",
+          "uuid": "d9697d0c-7aab-4eba-82f9-e99bc18da150"
+        },
+        {
+          "destination_uuid": "d09f7220-5d3f-4e9e-a5f6-0590df61ae87",
+          "uuid": "424bcd62-3dc0-4df0-9554-9c993381888c"
+        }
+      ]
     },
     {
       "actions": [
@@ -282,22 +258,6 @@
         }
       ],
       "uuid": "e58c515e-4edc-497b-bfc1-0a34c04c7c37"
-    },
-    {
-      "actions": [
-        {
-          "language": "msa",
-          "type": "set_contact_language",
-          "uuid": "e11c476d-dc60-4f66-bd8b-fb91c86ae2b7"
-        }
-      ],
-      "exits": [
-        {
-          "destination_uuid": "7243286f-fdca-479d-8ee7-30d23ea12224",
-          "uuid": "2a365148-0433-42f5-b107-3b21c0ce93f2"
-        }
-      ],
-      "uuid": "ad2a8128-4361-40cf-abdd-549c70c427c2"
     },
     {
       "actions": [
@@ -579,5 +539,5 @@
   "spec_version": "13.1.0",
   "type": "messaging",
   "uuid": "b0718d9e-f048-473e-bb25-6a861d0d0b81",
-  "revision": 1
+  "revision": 20
 }
